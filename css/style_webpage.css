@@ -9,7 +9,7 @@ body
     overflow: auto;
 }
 
-h1, h2, h3, h4
+h1, h2, h3, h4, h5, h6, .header
 {
     font-family: 'Roboto', sans-serif;
     color:#757575;
@@ -38,8 +38,6 @@ a:hover
 {
     position:fixed;
     width:100%;
-    font-family: 'Roboto', sans-serif;
-    color:#757575;
     overflow:auto;
     background-color:white;
     text-align:left;
