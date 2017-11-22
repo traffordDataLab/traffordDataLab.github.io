@@ -5,6 +5,27 @@
         <link rel="stylesheet" href="css/style_webpage.css">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <style>
+            .resetDisplay
+            {
+                clear: both;
+            }
+
+            .thumbnail
+            {
+                float: left;
+                margin-right: 20px;
+                border: 1px solid #f0f0f0;
+                box-shadow: 3px 3px 5px #f0f0f0;
+            }
+
+            .thumbnail:hover
+            {
+                border: 1px solid #fc6721;
+                xbox-shadow: 3px 3px 5px #fc6721;
+            }
+        </style>
     </head>
     <body>
         <div class="container">
@@ -26,16 +47,21 @@
                 <p>The Lab produce interactive web applications using the <a href="http://shiny.rstudio.com">Shiny</a> R package. The apps are designed to allow users to interactively interrogate the data and also provide links to the raw data.
                 
                 <h2>November 2017</h2>
-                <ul>
-                    <li><a href="https://trafforddatalab.shinyapps.io/IMD_2015"><strong>English indices of deprivation 2015 for Greater Manchester</strong></a><br />
-                    Visualising the data released by the <a href="https://www.gov.uk/government/statistics/english-indices-of-deprivation-2015">Department for Communities and Local Government</a> for Lower-layer Super Output Areas (LSOA) in Greater Manchester.</li>
-                </ul>
+                <div>
+                    <a href="https://trafforddatalab.shinyapps.io/IMD_2015"><img src="images/imd_2015_app_thumbnail.png" class="thumbnail" border="0"/><strong>English indices of deprivation 2015 for Greater Manchester</strong></a><br />
+                    Visualising the data released by the <a href="https://www.gov.uk/government/statistics/english-indices-of-deprivation-2015">Department for Communities and Local Government</a> for Lower-layer Super Output Areas (LSOA) in Greater Manchester.
+                </div>
+
+                <br class="resetDisplay"/>
+                <br class="resetDisplay"/>
 
                 <h2>October 2017</h2>
-                <ul>
-                    <li><a href="https://trafforddatalab.shinyapps.io/road_casualty_map/"><strong>Trafford Road Casuality Map</strong></a><br />
-                    Interactive visualisation of road casualty data recorded by <a href="http://www.gmp.police.uk/">Greater Manchester Police</a> during 2016.</li>
-                </ul>
+                <div>
+                    <a href="https://trafforddatalab.shinyapps.io/road_casualty_map/"><img src="images/road_casualty_app_thumbnail.png" class="thumbnail" border="0"/><strong>Trafford Road Casuality Map</strong></a><br />
+                    Interactive visualisation of road casualty data recorded by <a href="http://www.gmp.police.uk/">Greater Manchester Police</a> during 2016.
+                </div>
+
+                <br class="resetDisplay"/>
             </div>
             
             <div class="footer">
