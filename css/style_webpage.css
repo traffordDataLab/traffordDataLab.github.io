@@ -125,7 +125,7 @@ _:-ms-fullscreen, :root #traffordDataLabLogo { width: 93px; }
     margin: auto;
     margin-top:70px;
     margin-bottom:30px;
-    padding-bottom: 80px;       /* Required for footer to be positioned always at the bottom of the page (This is the height of the footer) */
+    padding-bottom: 5em;       /* Required for footer to be positioned always at the bottom of the page (This is the height of the footer) */
     width:95%;
 }
 .main p
@@ -157,7 +157,7 @@ _:-ms-fullscreen, :root #traffordDataLabLogo { width: 93px; }
     font-family: 'Open Sans', sans-serif;
     color: #212121;
     width: 100%;
-    height: 80px;               /* Required for footer to be positioned always at the bottom of the page */
+    height: 5em;               /* Required for footer to be positioned always at the bottom of the page (matched to the height of the Trafford logo) */
     margin: 0;
     padding: 0;
     background-color:#f0f0f0;
@@ -168,7 +168,6 @@ _:-ms-fullscreen, :root #traffordDataLabLogo { width: 93px; }
 }
 .logoTrafford
 {
-    width:5em;
     height:5em;
 }
 .logoMedia
