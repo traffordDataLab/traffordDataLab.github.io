@@ -52,10 +52,11 @@ a:hover
 .homeBar
 {
     display: inline-block;
+    padding-left: 18px;
 }
 .homeLogo
 {
-    padding: 6px 12px 0px 12px;
+    padding: 6px 12px 0px 0px;
     margin: 5px 0px 0px 0px;
 }
 .searchBar
@@ -79,6 +80,7 @@ input
 {
     display: inline-block;
     float:right;
+    padding: 0px 8px 0px 8px;
 }
 .logo
 {
@@ -125,8 +127,8 @@ _:-ms-fullscreen, :root #traffordDataLabLogo { width: 93px; }
     margin: auto;
     margin-top:70px;
     margin-bottom:30px;
+    padding: 0px 20px 0px 20px;
     padding-bottom: 5em;       /* Required for footer to be positioned always at the bottom of the page (This is the height of the footer) */
-    width:95%;
 }
 .main p
 {
@@ -173,7 +175,7 @@ _:-ms-fullscreen, :root #traffordDataLabLogo { width: 93px; }
 .logoMedia
 {
     font-size:2em;
-    padding:0px 0px 0px 3.5%;
+    padding:0px 0px 0px 20px;
     margin:0;
 }
 .linkMedia
@@ -184,7 +186,7 @@ _:-ms-fullscreen, :root #traffordDataLabLogo { width: 93px; }
 .license
 {
     font-size:0.7em;
-    padding:10px 0px 0px 3.5%;
+    padding:10px 0px 0px 20px;
 }
 .rightFooter
 {
@@ -196,7 +198,7 @@ _:-ms-fullscreen, :root #traffordDataLabLogo { width: 93px; }
 .leftFooter
 {
     display:inline-block;
-    width:70%;
+    white-space: nowrap;
 }
 @media (max-width:620px)
 {
