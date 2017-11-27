@@ -48,6 +48,7 @@ a:hover
     border-width:1px;
     border-color: #757575;
     margin-bottom: 1em;
+    overflow: hidden;
 }
 .homeBar
 {
@@ -205,6 +206,7 @@ _:-ms-fullscreen, :root #traffordDataLabLogo { width: 93px; }
     .navbar
     {
         float:none;
+        width: 100%;
     }
     .main{
         margin-top:120px;
