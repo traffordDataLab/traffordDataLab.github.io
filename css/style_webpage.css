@@ -48,7 +48,6 @@ a:hover
     border-width:1px;
     border-color: #757575;
     margin-bottom: 1em;
-    overflow: hidden;
 }
 .homeBar
 {
@@ -81,7 +80,6 @@ input
 {
     display: inline-block;
     float:right;
-    xpadding: 0px 0px 0px 8px;
 }
 .logo
 {
