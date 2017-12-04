@@ -87,6 +87,11 @@ input
     height:1.8em;
 }
 
+.resetDisplay
+{
+    clear: both;
+}
+
 #traffordDataLabLogo
 {
     height:2em;
