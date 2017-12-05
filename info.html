@@ -8,7 +8,7 @@
             <script src="javascript/search.js" type="text/javascript"></script>
 
             <style>
-                .noBulletPoints, .noBulletPoints * *
+                .noBulletPoints, .noBulletPoints * * /* remove the list-item bullet from the top level and all sub-level list items */
                 {
                     list-style-type: none;
                     margin: 0;
@@ -36,11 +36,12 @@
     </head>
     <body>
         <div class="container">
-            <div class=header>
-                <ul class=homeBar>
-                    <li class="homeLogo"><a href="index.html"><img id="traffordDataLabLogo" src="https://trafforddatalab.github.io/assets/logo/trafforddatalab_logo.svg" alt="Trafford Data Lab" border="0"/></a></li>
+            <div class="header">
+                <ul class="homeBar">
+                    <li class="homeLogo"><a href="index.html"><img id="traffordDataLabLogo" src="https://trafforddatalab.github.io/assets/logo/trafforddatalab_logo.svg" width="93" alt="Trafford Data Lab" border="0"/></a></li>
                     <li class="searchBar"><i class="fa fa-search" aria-hidden="true"></i><input onchange="searchTag()" type="text" id="keyword" placeholder="Search.."></li>
                 </ul>
+                <h2 style="display: none;">Main Menu</h2>
                 <ul class="navbar">
                     <li class="menuItem"><a href="info.html">Info</a></li>
                     <li class="menuItem"><a href="apps.html">Apps</a></li>
@@ -314,8 +315,10 @@
             <div class="footer">
                 <div class="leftFooter">
                     <div class="logoMedia">
-                        <a class="linkMedia" href="https://twitter.com/traffordDataLab"><i class="fa fa-twitter-square"></i></a>
-                        <a class="linkMedia" href="https://github.com/traffordDataLab"><i class="fa fa-github"></i></a>
+                        <span style="display: none;">Visit us on </span>
+                        <a class="linkMedia" href="https://twitter.com/traffordDataLab"><span class="fa fa-twitter-square"></span><span style="display: none;">Twitter</span></a>
+                        <span style="display: none;"> and </span>
+                        <a class="linkMedia" href="https://github.com/traffordDataLab"><span class="fa fa-github"></span><span style="display: none;">Github<br /></span></a>
                     </div>
                     <div class="license">Released under <a class="footerLink" href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence</a></div>
                 </div>
