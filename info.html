@@ -6,6 +6,33 @@
             <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
             <script src="javascript/search.js" type="text/javascript"></script>
+
+            <style>
+                .noBulletPoints, .noBulletPoints * *
+                {
+                    list-style-type: none;
+                    margin: 0;
+                    padding: 0;
+                }
+
+                .expand
+                {
+                    display: none;
+                }
+
+                .expand:target
+                {
+                    display: block;
+                    margin-bottom: 3em;
+                }
+
+                .expand li
+                {
+                    float: left;
+                    margin-right: 0.5em;
+                    font-size: 0.9em;
+                }
+            </style>
     </head>
     <body>
         <div class="container">
@@ -26,7 +53,41 @@
             
             <div class="main">
                 <h1>Info</h1>
-                <p>Thematic area profiles of Trafford and its 21 wards. The profiles contain links to the raw open data and can also be downloaded as PDF documents.
+                <p>Thematic area profiles of Trafford and its 21 wards. The profiles contain links to the raw open data and can also be downloaded as PDF documents.</p>
+                <p>Please choose an area you are interested in and then a theme:</p>
+
+                <!-- Quick nav links. Displayed only if no CSS is available -->
+                <div style="display: none;">
+                    <a href="#themes_trafford">Trafford</a> | <a href="#themes_altrincham">Altrincham</a>
+                </div>
+                <!-- Quick nav links end -->
+
+                <ul class="noBulletPoints">
+                    <li class="resetDisplay"><a name="themes_trafford"><a href="#themes_trafford">Trafford</a></a>
+                        <ul id="themes_trafford" class="expand">
+                            <li>#Demographics</li>
+                            <li>#Employment</li>
+                            <li>#Health</li>
+                            <li>#Education</li>
+                            <li>#Crime</li>
+                            <li>#Economy</li>
+                            <li>#Housing</li>
+                        </ul>
+                    </li>
+                    <li class="resetDisplay"><a name="themes_altrincham"><a href="#themes_altrincham">Altrincham</a></a>
+                        <ul id="themes_altrincham" class="expand">
+                            <li>#Demographics</li>
+                            <li>#Employment</li>
+                            <li>#Health</li>
+                            <li>#Education</li>
+                            <li>#Crime</li>
+                            <li>#Economy</li>
+                            <li>#Housing</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <!--
                 <ul class="informationList">
                     <li class="wardName Trafford demographics employment health education crime economy housing">Trafford</li>
                     <li class="wardTopic Trafford demographics"><a href="#">#Demographics</a></li>
@@ -247,6 +308,7 @@
                     <li class="wardTopic"><a href="#">#Economy</a></li>
                     <li class="wardTopic"><a href="#">#Housing</a></li>
                 </ul>
+                -->
             </div>
             
             <div class="footer">
