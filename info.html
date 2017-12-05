@@ -20,7 +20,12 @@
                     display: none;
                 }
 
-                .expand:target
+                input[type="radio"]
+                {
+                    display: none;
+                }
+
+                input[type="radio"]:checked + label + ul
                 {
                     display: block;
                     margin-bottom: 3em;
@@ -43,12 +48,15 @@
                     border-radius: 3px;
                     border: 1px solid #757575;
                     margin-bottom: 3px;
+                    padding: 3px 3px;
+                    color: #757575;
                 }
 
-                .areaLink:active
+                .areaLink:hover, .areaLink:active
                 {
                     background-color: #fc6721;
                     color: #f0f0f0;
+                    cursor: pointer;
                 }
             </style>
     </head>
@@ -76,254 +84,88 @@
 
                 <!-- Quick nav links. Displayed only if no CSS is available -->
                 <div style="display: none;">
-                    <a href="#themes_trafford">Trafford</a> | <a href="#themes_altrincham">Altrincham</a>
+                    <a href="#themes_trafford">Trafford</a> | <a href="#themes_altrincham">Altrincham</a> | <a href="#themes_ashton_upon_mersey">Ashton upon Mersey</a> | <a href="#themes_bowdon">Bowdon</a> | <a href="#themes_broadheath">Broadheath</a> | <a href="#themes_brooklands">Brooklands</a> | <a href="#themes_bucklow_st_martins">Bucklow St. Martins</a>
                 </div>
                 <!-- Quick nav links end -->
 
-                <ul class="noBulletPoints">
-                    <li class="resetDisplay"><a href="#themes_trafford" class="areaLink">Trafford</a>
-                        <ul id="themes_trafford" class="expand">
-                            <li><a href="#">#Demographics</a></li>
-                            <li><a href="#">#Employment</a></li>
-                            <li><a href="#">#Health</a></li>
-                            <li><a href="#">#Education</a></li>
-                            <li><a href="#">#Crime</a></li>
-                            <li><a href="#">#Economy</a></li>
-                            <li><a href="#">#Housing</a></li>
-                        </ul>
-                    </li>
-                    <li class="resetDisplay"><a href="#themes_altrincham" class="areaLink">Altrincham</a>
-                        <ul id="themes_altrincham" class="expand">
-                            <li><a href="#">#Demographics</a></li>
-                            <li><a href="#">#Employment</a></li>
-                            <li><a href="#">#Health</a></li>
-                            <li><a href="#">#Education</a></li>
-                            <li><a href="#">#Crime</a></li>
-                            <li><a href="#">#Economy</a></li>
-                            <li><a href="#">#Housing</a></li>
-                        </ul>
-                    </li>
-                    <li class="resetDisplay"><a href="#themes_ashton_upon_mersey" class="areaLink">Ashton upon Mersey</a>
-                        <ul id="themes_ashton_upon_mersey" class="expand">
-                            <li><a href="#">#Demographics</a></li>
-                            <li><a href="#">#Employment</a></li>
-                            <li><a href="#">#Health</a></li>
-                            <li><a href="#">#Education</a></li>
-                            <li><a href="#">#Crime</a></li>
-                            <li><a href="#">#Economy</a></li>
-                            <li><a href="#">#Housing</a></li>
-                        </ul>
-                    </li>
-                    <li class="resetDisplay"><a href="#themes_bowdon" class="areaLink">Bowdon</a>
-                        <ul id="themes_bowdon" class="expand">
-                            <li><a href="#">#Demographics</a></li>
-                            <li><a href="#">#Employment</a></li>
-                            <li><a href="#">#Health</a></li>
-                            <li><a href="#">#Education</a></li>
-                            <li><a href="#">#Crime</a></li>
-                            <li><a href="#">#Economy</a></li>
-                            <li><a href="#">#Housing</a></li>
-                        </ul>
-                    </li>
-                    <li class="resetDisplay"><a href="#themes_broadheath" class="areaLink">Broadheath</a>
-                        <ul id="themes_broadheath" class="expand">
-                            <li><a href="#">#Demographics</a></li>
-                            <li><a href="#">#Employment</a></li>
-                            <li><a href="#">#Health</a></li>
-                            <li><a href="#">#Education</a></li>
-                            <li><a href="#">#Crime</a></li>
-                            <li><a href="#">#Economy</a></li>
-                            <li><a href="#">#Housing</a></li>
-                        </ul>
-                    </li>
-                    <li class="resetDisplay"><a href="#themes_brooklands" class="areaLink">Brooklands</a>
-                        <ul id="themes_brooklands" class="expand">
-                            <li><a href="#">#Demographics</a></li>
-                            <li><a href="#">#Employment</a></li>
-                            <li><a href="#">#Health</a></li>
-                            <li><a href="#">#Education</a></li>
-                            <li><a href="#">#Crime</a></li>
-                            <li><a href="#">#Economy</a></li>
-                            <li><a href="#">#Housing</a></li>
-                        </ul>
-                    </li>
-                    <li class="resetDisplay"><a href="#themes_bucklow_st_martins" class="areaLink">Bucklow-St. Martins</a>
-                        <ul id="themes_bucklow_st_martins" class="expand">
-                            <li><a href="#">#Demographics</a></li>
-                            <li><a href="#">#Employment</a></li>
-                            <li><a href="#">#Health</a></li>
-                            <li><a href="#">#Education</a></li>
-                            <li><a href="#">#Crime</a></li>
-                            <li><a href="#">#Economy</a></li>
-                            <li><a href="#">#Housing</a></li>
-                        </ul>
-                    </li>
-                    <li class="resetDisplay"><a href="#themes_clifford" class="areaLink">Clifford</a>
-                        <ul id="themes_clifford" class="expand">
-                            <li><a href="#">#Demographics</a></li>
-                            <li><a href="#">#Employment</a></li>
-                            <li><a href="#">#Health</a></li>
-                            <li><a href="#">#Education</a></li>
-                            <li><a href="#">#Crime</a></li>
-                            <li><a href="#">#Economy</a></li>
-                            <li><a href="#">#Housing</a></li>
-                        </ul>
-                    </li>
-                    <li class="resetDisplay"><a href="#themes_davyhulme_east" class="areaLink">Davyhulme East</a>
-                        <ul id="themes_davyhulme_east" class="expand">
-                            <li><a href="#">#Demographics</a></li>
-                            <li><a href="#">#Employment</a></li>
-                            <li><a href="#">#Health</a></li>
-                            <li><a href="#">#Education</a></li>
-                            <li><a href="#">#Crime</a></li>
-                            <li><a href="#">#Economy</a></li>
-                            <li><a href="#">#Housing</a></li>
-                        </ul>
-                    </li>
-                    <li class="resetDisplay"><a href="#themes_davyhulme_west" class="areaLink">Davyhulme West</a>
-                        <ul id="themes_davyhulme_west" class="expand">
-                            <li><a href="#">#Demographics</a></li>
-                            <li><a href="#">#Employment</a></li>
-                            <li><a href="#">#Health</a></li>
-                            <li><a href="#">#Education</a></li>
-                            <li><a href="#">#Crime</a></li>
-                            <li><a href="#">#Economy</a></li>
-                            <li><a href="#">#Housing</a></li>
-                        </ul>
-                    </li>
-                    <li class="resetDisplay"><a href="#themes_flixton" class="areaLink">Flixton</a>
-                        <ul id="themes_flixton" class="expand">
-                            <li><a href="#">#Demographics</a></li>
-                            <li><a href="#">#Employment</a></li>
-                            <li><a href="#">#Health</a></li>
-                            <li><a href="#">#Education</a></li>
-                            <li><a href="#">#Crime</a></li>
-                            <li><a href="#">#Economy</a></li>
-                            <li><a href="#">#Housing</a></li>
-                        </ul>
-                    </li>
-                    <li class="resetDisplay"><a href="#themes_gorse_hill" class="areaLink">Gorse Hill</a>
-                        <ul id="themes_gorse_hill" class="expand">
-                            <li><a href="#">#Demographics</a></li>
-                            <li><a href="#">#Employment</a></li>
-                            <li><a href="#">#Health</a></li>
-                            <li><a href="#">#Education</a></li>
-                            <li><a href="#">#Crime</a></li>
-                            <li><a href="#">#Economy</a></li>
-                            <li><a href="#">#Housing</a></li>
-                        </ul>
-                    </li>
-                    <li class="resetDisplay"><a href="#themes_hale_barns" class="areaLink">Hale Barns</a>
-                        <ul id="themes_hale_barns" class="expand">
-                            <li><a href="#">#Demographics</a></li>
-                            <li><a href="#">#Employment</a></li>
-                            <li><a href="#">#Health</a></li>
-                            <li><a href="#">#Education</a></li>
-                            <li><a href="#">#Crime</a></li>
-                            <li><a href="#">#Economy</a></li>
-                            <li><a href="#">#Housing</a></li>
-                        </ul>
-                    </li>
-                    <li class="resetDisplay"><a href="#themes_hale_central" class="areaLink">Hale Central</a>
-                        <ul id="themes_hale_central" class="expand">
-                            <li><a href="#">#Demographics</a></li>
-                            <li><a href="#">#Employment</a></li>
-                            <li><a href="#">#Health</a></li>
-                            <li><a href="#">#Education</a></li>
-                            <li><a href="#">#Crime</a></li>
-                            <li><a href="#">#Economy</a></li>
-                            <li><a href="#">#Housing</a></li>
-                        </ul>
-                    </li>
-                    <li class="resetDisplay"><a href="#themes_longford" class="areaLink">Longford</a>
-                        <ul id="themes_longford" class="expand">
-                            <li><a href="#">#Demographics</a></li>
-                            <li><a href="#">#Employment</a></li>
-                            <li><a href="#">#Health</a></li>
-                            <li><a href="#">#Education</a></li>
-                            <li><a href="#">#Crime</a></li>
-                            <li><a href="#">#Economy</a></li>
-                            <li><a href="#">#Housing</a></li>
-                        </ul>
-                    </li>
-                    <li class="resetDisplay"><a href="#themes_priory" class="areaLink">Priory</a>
-                        <ul id="themes_priory" class="expand">
-                            <li><a href="#">#Demographics</a></li>
-                            <li><a href="#">#Employment</a></li>
-                            <li><a href="#">#Health</a></li>
-                            <li><a href="#">#Education</a></li>
-                            <li><a href="#">#Crime</a></li>
-                            <li><a href="#">#Economy</a></li>
-                            <li><a href="#">#Housing</a></li>
-                        </ul>
-                    </li>
-                    <li class="resetDisplay"><a href="#themes_sale_moor" class="areaLink">Sale Moor</a>
-                        <ul id="themes_sale_moor" class="expand">
-                            <li><a href="#">#Demographics</a></li>
-                            <li><a href="#">#Employment</a></li>
-                            <li><a href="#">#Health</a></li>
-                            <li><a href="#">#Education</a></li>
-                            <li><a href="#">#Crime</a></li>
-                            <li><a href="#">#Economy</a></li>
-                            <li><a href="#">#Housing</a></li>
-                        </ul>
-                    </li>
-                    <li class="resetDisplay"><a href="#themes_st_marys" class="areaLink">St. Mary's</a>
-                        <ul id="themes_st_marys" class="expand">
-                            <li><a href="#">#Demographics</a></li>
-                            <li><a href="#">#Employment</a></li>
-                            <li><a href="#">#Health</a></li>
-                            <li><a href="#">#Education</a></li>
-                            <li><a href="#">#Crime</a></li>
-                            <li><a href="#">#Economy</a></li>
-                            <li><a href="#">#Housing</a></li>
-                        </ul>
-                    </li>
-                    <li class="resetDisplay"><a href="#themes_stretford" class="areaLink">Stretford</a>
-                        <ul id="themes_stretford" class="expand">
-                            <li><a href="#">#Demographics</a></li>
-                            <li><a href="#">#Employment</a></li>
-                            <li><a href="#">#Health</a></li>
-                            <li><a href="#">#Education</a></li>
-                            <li><a href="#">#Crime</a></li>
-                            <li><a href="#">#Economy</a></li>
-                            <li><a href="#">#Housing</a></li>
-                        </ul>
-                    </li>
-                    <li class="resetDisplay"><a href="#themes_timperley" class="areaLink">Timperley</a>
-                        <ul id="themes_timperley" class="expand">
-                            <li><a href="#">#Demographics</a></li>
-                            <li><a href="#">#Employment</a></li>
-                            <li><a href="#">#Health</a></li>
-                            <li><a href="#">#Education</a></li>
-                            <li><a href="#">#Crime</a></li>
-                            <li><a href="#">#Economy</a></li>
-                            <li><a href="#">#Housing</a></li>
-                        </ul>
-                    </li>
-                    <li class="resetDisplay"><a href="#themes_urmston" class="areaLink">Urmston</a>
-                        <ul id="themes_urmston" class="expand">
-                            <li><a href="#">#Demographics</a></li>
-                            <li><a href="#">#Employment</a></li>
-                            <li><a href="#">#Health</a></li>
-                            <li><a href="#">#Education</a></li>
-                            <li><a href="#">#Crime</a></li>
-                            <li><a href="#">#Economy</a></li>
-                            <li><a href="#">#Housing</a></li>
-                        </ul>
-                    </li>
-                    <li class="resetDisplay"><a href="#themes_village" class="areaLink">Village</a>
-                        <ul id="themes_village" class="expand">
-                            <li><a href="#">#Demographics</a></li>
-                            <li><a href="#">#Employment</a></li>
-                            <li><a href="#">#Health</a></li>
-                            <li><a href="#">#Education</a></li>
-                            <li><a href="#">#Crime</a></li>
-                            <li><a href="#">#Economy</a></li>
-                            <li><a href="#">#Housing</a></li>
-                        </ul>
-                    </li>
-                </ul>
+                <form>
+                    <input id="themes_trafford" type="radio" name="areas"/><label for="themes_trafford" class="areaLink">Trafford</label>
+                    <ul class="noBulletPoints expand">
+                        <li><a href="#">#Demographics</a></li>
+                        <li><a href="#">#Employment</a></li>
+                        <li><a href="#">#Health</a></li>
+                        <li><a href="#">#Education</a></li>
+                        <li><a href="#">#Crime</a></li>
+                        <li><a href="#">#Economy</a></li>
+                        <li><a href="#">#Housing</a></li>
+                    </ul>
+                    <div class="resetDisplay"></div>
+                    <input id="themes_altrincham" type="radio" name="areas"/><label for="themes_altrincham" class="areaLink">Altrincham</label>
+                    <ul class="noBulletPoints expand">
+                        <li><a href="#">#Demographics</a></li>
+                        <li><a href="#">#Employment</a></li>
+                        <li><a href="#">#Health</a></li>
+                        <li><a href="#">#Education</a></li>
+                        <li><a href="#">#Crime</a></li>
+                        <li><a href="#">#Economy</a></li>
+                        <li><a href="#">#Housing</a></li>
+                    </ul>
+                    <div class="resetDisplay"></div>
+                    <input id="themes_ashton_upon_mersey" type="radio" name="areas"/><label for="themes_ashton_upon_mersey" class="areaLink">Ashton upon Mersey</label>
+                    <ul class="noBulletPoints expand">
+                        <li><a href="#">#Demographics</a></li>
+                        <li><a href="#">#Employment</a></li>
+                        <li><a href="#">#Health</a></li>
+                        <li><a href="#">#Education</a></li>
+                        <li><a href="#">#Crime</a></li>
+                        <li><a href="#">#Economy</a></li>
+                        <li><a href="#">#Housing</a></li>
+                    </ul>
+                    <div class="resetDisplay"></div>
+                    <input id="themes_bowdon" type="radio" name="areas"/><label for="themes_bowdon" class="areaLink">Bowdon</label>
+                    <ul class="noBulletPoints expand">
+                        <li><a href="#">#Demographics</a></li>
+                        <li><a href="#">#Employment</a></li>
+                        <li><a href="#">#Health</a></li>
+                        <li><a href="#">#Education</a></li>
+                        <li><a href="#">#Crime</a></li>
+                        <li><a href="#">#Economy</a></li>
+                        <li><a href="#">#Housing</a></li>
+                    </ul>
+                    <div class="resetDisplay"></div>
+                    <input id="themes_broadheath" type="radio" name="areas"/><label for="themes_broadheath" class="areaLink">Broadheath</label>
+                    <ul class="noBulletPoints expand">
+                        <li><a href="#">#Demographics</a></li>
+                        <li><a href="#">#Employment</a></li>
+                        <li><a href="#">#Health</a></li>
+                        <li><a href="#">#Education</a></li>
+                        <li><a href="#">#Crime</a></li>
+                        <li><a href="#">#Economy</a></li>
+                        <li><a href="#">#Housing</a></li>
+                    </ul>
+                    <div class="resetDisplay"></div>
+                    <input id="themes_brooklands" type="radio" name="areas"/><label for="themes_brooklands" class="areaLink">Brooklands</label>
+                    <ul class="noBulletPoints expand">
+                        <li><a href="#">#Demographics</a></li>
+                        <li><a href="#">#Employment</a></li>
+                        <li><a href="#">#Health</a></li>
+                        <li><a href="#">#Education</a></li>
+                        <li><a href="#">#Crime</a></li>
+                        <li><a href="#">#Economy</a></li>
+                        <li><a href="#">#Housing</a></li>
+                    </ul>
+                    <div class="resetDisplay"></div>
+                    <input id="themes_bucklow_st_martins" type="radio" name="areas"/><label for="themes_bucklow_st_martins" class="areaLink">Bucklow-St. Martins</label>
+                    <ul class="noBulletPoints expand">
+                        <li><a href="#">#Demographics</a></li>
+                        <li><a href="#">#Employment</a></li>
+                        <li><a href="#">#Health</a></li>
+                        <li><a href="#">#Education</a></li>
+                        <li><a href="#">#Crime</a></li>
+                        <li><a href="#">#Economy</a></li>
+                        <li><a href="#">#Housing</a></li>
+                    </ul>
+                </form>
 
                 <!--
                 <ul class="informationList">
