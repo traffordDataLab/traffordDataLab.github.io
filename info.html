@@ -8,23 +8,21 @@
             <script src="javascript/search.js" type="text/javascript"></script>
 
             <style>
-                .noBulletPoints, .noBulletPoints * * /* remove the list-item bullet from the top level and all sub-level list items */
+                /* remove the list-item bullet from the top level and all sub-level list items */
+                .noBulletPoints, .noBulletPoints * *
                 {
                     list-style-type: none;
                     margin: 0;
                     padding: 0;
                 }
 
-                .expand
-                {
-                    display: none;
-                }
-
+                /* using the 'checkbox css trick' (or in this case radio buttons) so don't need to actually display the radio button element */
                 input[type="radio"]
                 {
                     display: none;
                 }
 
+                /* if the radio button associated to the label selected is checked then show the unordered list associated with that label */
                 input[type="radio"]:checked + label + ul
                 {
                     display: block;
@@ -32,6 +30,13 @@
                     text-indent: 1em;
                 }
 
+                /* the unordered list of themes which is displayed when the associated label is selected */
+                .expand
+                {
+                    display: none;
+                }
+
+                /* the unordered list of themes items */
                 .expand li
                 {
                     float: left;
@@ -39,7 +44,8 @@
                     font-size: 0.9em;
                 }
 
-                .areaLink
+                /* the area buttons to select before choosing a theme (Trafford and then the 21 wards) */
+                .areaButton
                 {
                     display: block;
                     width: 15em;
@@ -47,12 +53,12 @@
                     background-color: #f0f0f0;
                     border-radius: 3px;
                     border: 1px solid #757575;
-                    margin-bottom: 3px;
+                    margin-bottom: 0.5em;
                     padding: 3px 3px;
                     color: #757575;
                 }
 
-                .areaLink:hover, .areaLink:active
+                .areaButton:hover, .areaButton:active
                 {
                     background-color: #fc6721;
                     color: #f0f0f0;
@@ -90,7 +96,7 @@
                 <!-- Quick nav links end -->
 
                 <form>
-                    <input id="themes_trafford" type="radio" name="areas"/><label for="themes_trafford" class="areaLink">Trafford</label>
+                    <input id="themes_trafford" type="radio" name="areas"/><label for="themes_trafford" class="areaButton">Trafford</label>
                     <ul class="noBulletPoints expand">
                         <li><a href="#">#Demographics</a></li>
                         <li><a href="#">#Employment</a></li>
@@ -101,7 +107,7 @@
                         <li><a href="#">#Housing</a></li>
                     </ul>
                     <div class="resetDisplay"></div>
-                    <input id="themes_altrincham" type="radio" name="areas"/><label for="themes_altrincham" class="areaLink">Altrincham</label>
+                    <input id="themes_altrincham" type="radio" name="areas"/><label for="themes_altrincham" class="areaButton">Altrincham</label>
                     <ul class="noBulletPoints expand">
                         <li><a href="#">#Demographics</a></li>
                         <li><a href="#">#Employment</a></li>
@@ -112,7 +118,7 @@
                         <li><a href="#">#Housing</a></li>
                     </ul>
                     <div class="resetDisplay"></div>
-                    <input id="themes_ashton_upon_mersey" type="radio" name="areas"/><label for="themes_ashton_upon_mersey" class="areaLink">Ashton upon Mersey</label>
+                    <input id="themes_ashton_upon_mersey" type="radio" name="areas"/><label for="themes_ashton_upon_mersey" class="areaButton">Ashton upon Mersey</label>
                     <ul class="noBulletPoints expand">
                         <li><a href="#">#Demographics</a></li>
                         <li><a href="#">#Employment</a></li>
@@ -123,7 +129,7 @@
                         <li><a href="#">#Housing</a></li>
                     </ul>
                     <div class="resetDisplay"></div>
-                    <input id="themes_bowdon" type="radio" name="areas"/><label for="themes_bowdon" class="areaLink">Bowdon</label>
+                    <input id="themes_bowdon" type="radio" name="areas"/><label for="themes_bowdon" class="areaButton">Bowdon</label>
                     <ul class="noBulletPoints expand">
                         <li><a href="#">#Demographics</a></li>
                         <li><a href="#">#Employment</a></li>
@@ -134,7 +140,7 @@
                         <li><a href="#">#Housing</a></li>
                     </ul>
                     <div class="resetDisplay"></div>
-                    <input id="themes_broadheath" type="radio" name="areas"/><label for="themes_broadheath" class="areaLink">Broadheath</label>
+                    <input id="themes_broadheath" type="radio" name="areas"/><label for="themes_broadheath" class="areaButton">Broadheath</label>
                     <ul class="noBulletPoints expand">
                         <li><a href="#">#Demographics</a></li>
                         <li><a href="#">#Employment</a></li>
@@ -145,7 +151,7 @@
                         <li><a href="#">#Housing</a></li>
                     </ul>
                     <div class="resetDisplay"></div>
-                    <input id="themes_brooklands" type="radio" name="areas"/><label for="themes_brooklands" class="areaLink">Brooklands</label>
+                    <input id="themes_brooklands" type="radio" name="areas"/><label for="themes_brooklands" class="areaButton">Brooklands</label>
                     <ul class="noBulletPoints expand">
                         <li><a href="#">#Demographics</a></li>
                         <li><a href="#">#Employment</a></li>
@@ -156,7 +162,7 @@
                         <li><a href="#">#Housing</a></li>
                     </ul>
                     <div class="resetDisplay"></div>
-                    <input id="themes_bucklow_st_martins" type="radio" name="areas"/><label for="themes_bucklow_st_martins" class="areaLink">Bucklow-St. Martins</label>
+                    <input id="themes_bucklow_st_martins" type="radio" name="areas"/><label for="themes_bucklow_st_martins" class="areaButton">Bucklow-St. Martins</label>
                     <ul class="noBulletPoints expand">
                         <li><a href="#">#Demographics</a></li>
                         <li><a href="#">#Employment</a></li>
@@ -167,7 +173,7 @@
                         <li><a href="#">#Housing</a></li>
                     </ul>
                     <div class="resetDisplay"></div>
-                    <input id="themes_clifford" type="radio" name="areas"/><label for="themes_clifford" class="areaLink">Clifford</label>
+                    <input id="themes_clifford" type="radio" name="areas"/><label for="themes_clifford" class="areaButton">Clifford</label>
                     <ul class="noBulletPoints expand">
                         <li><a href="#">#Demographics</a></li>
                         <li><a href="#">#Employment</a></li>
@@ -178,7 +184,7 @@
                         <li><a href="#">#Housing</a></li>
                     </ul>
                     <div class="resetDisplay"></div>
-                    <input id="themes_davyhulme_east" type="radio" name="areas"/><label for="themes_davyhulme_east" class="areaLink">Davyhulme East</label>
+                    <input id="themes_davyhulme_east" type="radio" name="areas"/><label for="themes_davyhulme_east" class="areaButton">Davyhulme East</label>
                     <ul class="noBulletPoints expand">
                         <li><a href="#">#Demographics</a></li>
                         <li><a href="#">#Employment</a></li>
@@ -189,7 +195,7 @@
                         <li><a href="#">#Housing</a></li>
                     </ul>
                     <div class="resetDisplay"></div>
-                    <input id="themes_davyhulme_west" type="radio" name="areas"/><label for="themes_davyhulme_west" class="areaLink">Davyhulme West</label>
+                    <input id="themes_davyhulme_west" type="radio" name="areas"/><label for="themes_davyhulme_west" class="areaButton">Davyhulme West</label>
                     <ul class="noBulletPoints expand">
                         <li><a href="#">#Demographics</a></li>
                         <li><a href="#">#Employment</a></li>
@@ -200,7 +206,7 @@
                         <li><a href="#">#Housing</a></li>
                     </ul>
                     <div class="resetDisplay"></div>
-                    <input id="themes_flixton" type="radio" name="areas"/><label for="themes_flixton" class="areaLink">Flixton</label>
+                    <input id="themes_flixton" type="radio" name="areas"/><label for="themes_flixton" class="areaButton">Flixton</label>
                     <ul class="noBulletPoints expand">
                         <li><a href="#">#Demographics</a></li>
                         <li><a href="#">#Employment</a></li>
@@ -211,7 +217,7 @@
                         <li><a href="#">#Housing</a></li>
                     </ul>
                     <div class="resetDisplay"></div>
-                    <input id="themes_gorse_hill" type="radio" name="areas"/><label for="themes_gorse_hill" class="areaLink">Gorse Hill</label>
+                    <input id="themes_gorse_hill" type="radio" name="areas"/><label for="themes_gorse_hill" class="areaButton">Gorse Hill</label>
                     <ul class="noBulletPoints expand">
                         <li><a href="#">#Demographics</a></li>
                         <li><a href="#">#Employment</a></li>
@@ -222,7 +228,7 @@
                         <li><a href="#">#Housing</a></li>
                     </ul>
                     <div class="resetDisplay"></div>
-                    <input id="themes_hale_barns" type="radio" name="areas"/><label for="themes_hale_barns" class="areaLink">Hale Barns</label>
+                    <input id="themes_hale_barns" type="radio" name="areas"/><label for="themes_hale_barns" class="areaButton">Hale Barns</label>
                     <ul class="noBulletPoints expand">
                         <li><a href="#">#Demographics</a></li>
                         <li><a href="#">#Employment</a></li>
@@ -233,7 +239,7 @@
                         <li><a href="#">#Housing</a></li>
                     </ul>
                     <div class="resetDisplay"></div>
-                    <input id="themes_hale_central" type="radio" name="areas"/><label for="themes_hale_central" class="areaLink">Hale Central</label>
+                    <input id="themes_hale_central" type="radio" name="areas"/><label for="themes_hale_central" class="areaButton">Hale Central</label>
                     <ul class="noBulletPoints expand">
                         <li><a href="#">#Demographics</a></li>
                         <li><a href="#">#Employment</a></li>
@@ -244,7 +250,7 @@
                         <li><a href="#">#Housing</a></li>
                     </ul>
                     <div class="resetDisplay"></div>
-                    <input id="themes_longford" type="radio" name="areas"/><label for="themes_longford" class="areaLink">Longford</label>
+                    <input id="themes_longford" type="radio" name="areas"/><label for="themes_longford" class="areaButton">Longford</label>
                     <ul class="noBulletPoints expand">
                         <li><a href="#">#Demographics</a></li>
                         <li><a href="#">#Employment</a></li>
@@ -255,7 +261,7 @@
                         <li><a href="#">#Housing</a></li>
                     </ul>
                     <div class="resetDisplay"></div>
-                    <input id="themes_priory" type="radio" name="areas"/><label for="themes_priory" class="areaLink">Priory</label>
+                    <input id="themes_priory" type="radio" name="areas"/><label for="themes_priory" class="areaButton">Priory</label>
                     <ul class="noBulletPoints expand">
                         <li><a href="#">#Demographics</a></li>
                         <li><a href="#">#Employment</a></li>
@@ -266,7 +272,7 @@
                         <li><a href="#">#Housing</a></li>
                     </ul>
                     <div class="resetDisplay"></div>
-                    <input id="themes_sale_moor" type="radio" name="areas"/><label for="themes_sale_moor" class="areaLink">Sale Moor</label>
+                    <input id="themes_sale_moor" type="radio" name="areas"/><label for="themes_sale_moor" class="areaButton">Sale Moor</label>
                     <ul class="noBulletPoints expand">
                         <li><a href="#">#Demographics</a></li>
                         <li><a href="#">#Employment</a></li>
@@ -277,7 +283,7 @@
                         <li><a href="#">#Housing</a></li>
                     </ul>
                     <div class="resetDisplay"></div>
-                    <input id="themes_st_marys" type="radio" name="areas"/><label for="themes_st_marys" class="areaLink">St. Mary's</label>
+                    <input id="themes_st_marys" type="radio" name="areas"/><label for="themes_st_marys" class="areaButton">St. Mary's</label>
                     <ul class="noBulletPoints expand">
                         <li><a href="#">#Demographics</a></li>
                         <li><a href="#">#Employment</a></li>
@@ -288,7 +294,7 @@
                         <li><a href="#">#Housing</a></li>
                     </ul>
                     <div class="resetDisplay"></div>
-                    <input id="themes_stretford" type="radio" name="areas"/><label for="themes_stretford" class="areaLink">Stretford</label>
+                    <input id="themes_stretford" type="radio" name="areas"/><label for="themes_stretford" class="areaButton">Stretford</label>
                     <ul class="noBulletPoints expand">
                         <li><a href="#">#Demographics</a></li>
                         <li><a href="#">#Employment</a></li>
@@ -299,7 +305,7 @@
                         <li><a href="#">#Housing</a></li>
                     </ul>
                     <div class="resetDisplay"></div>
-                    <input id="themes_timperley" type="radio" name="areas"/><label for="themes_timperley" class="areaLink">Timperley</label>
+                    <input id="themes_timperley" type="radio" name="areas"/><label for="themes_timperley" class="areaButton">Timperley</label>
                     <ul class="noBulletPoints expand">
                         <li><a href="#">#Demographics</a></li>
                         <li><a href="#">#Employment</a></li>
@@ -310,7 +316,7 @@
                         <li><a href="#">#Housing</a></li>
                     </ul>
                     <div class="resetDisplay"></div>
-                    <input id="themes_urmston" type="radio" name="areas"/><label for="themes_urmston" class="areaLink">Urmston</label>
+                    <input id="themes_urmston" type="radio" name="areas"/><label for="themes_urmston" class="areaButton">Urmston</label>
                     <ul class="noBulletPoints expand">
                         <li><a href="#">#Demographics</a></li>
                         <li><a href="#">#Employment</a></li>
@@ -321,7 +327,7 @@
                         <li><a href="#">#Housing</a></li>
                     </ul>
                     <div class="resetDisplay"></div>
-                    <input id="themes_village" type="radio" name="areas"/><label for="themes_village" class="areaLink">Village</label>
+                    <input id="themes_village" type="radio" name="areas"/><label for="themes_village" class="areaButton">Village</label>
                     <ul class="noBulletPoints expand">
                         <li><a href="#">#Demographics</a></li>
                         <li><a href="#">#Employment</a></li>
@@ -355,206 +361,6 @@
                     <li class="wardTopic Altrincham crime"><a href="#">#Crime</a></li>
                     <li class="wardTopic Altrincham economy"><a href="#">#Economy</a></li>
                     <li class="wardTopic Altrincham housing"><a href="#">#Housing</a></li>
-                </ul>
-                <ul class="informationList">
-                    <li class="wardName Ashton demographics employment health education crime economy housing">Ashton upon Mersey</li>
-                    <li class="wardTopic Ashton demographics"><a href="#">#Demographics</a></li>
-                    <li class="wardTopic Ashton employment"><a href="#">#Employment</a></li>
-                    <li class="wardTopic Ashton health"><a href="#">#Health</a></li>
-                    <li class="wardTopic Ashton education"><a href="#">#Education</a></li>
-                    <li class="wardTopic Ashton crime"><a href="#">#Crime</a></li>
-                    <li class="wardTopic Ashton economy"><a href="#">#Economy</a></li>
-                    <li class="wardTopic Ashton housing"><a href="#">#Housing</a></li>
-                </ul>
-                <ul class="informationList">
-                    <li class="wardName Bowdon demographics employment health education crime economy housing">Bowdon</li>
-                    <li class="wardTopic Bowdon demographics"><a href="#">#Demographics</a></li>
-                    <li class="wardTopic Bowdon employment"><a href="#">#Employment</a></li>
-                    <li class="wardTopic Bowdon health"><a href="#">#Health</a></li>
-                    <li class="wardTopic Bowdon education"><a href="#">#Education</a></li>
-                    <li class="wardTopic Bowdon crime"><a href="#">#Crime</a></li>
-                    <li class="wardTopic Bowdon economy"><a href="#">#Economy</a></li>
-                    <li class="wardTopic Bowdon housing"><a href="#">#Housing</a></li>
-                </ul>
-                <ul class="informationList">
-                    <li class="wardName">Broadheath</li>
-                    <li class="wardTopic"><a href="#">#Demographics</a></li>
-                    <li class="wardTopic"><a href="#">#Employment</a></li>
-                    <li class="wardTopic"><a href="#">#Health</a></li>
-                    <li class="wardTopic"><a href="#">#Education</a></li>
-                    <li class="wardTopic"><a href="#">#Crime</a></li>
-                    <li class="wardTopic"><a href="#">#Economy</a></li>
-                    <li class="wardTopic"><a href="#">#Housing</a></li>
-                </ul>
-                <ul class="informationList">
-                    <li class="wardName">Brooklands</li>
-                    <li class="wardTopic"><a href="#">#Demographics</a></li>
-                    <li class="wardTopic"><a href="#">#Employment</a></li>
-                    <li class="wardTopic"><a href="#">#Health</a></li>
-                    <li class="wardTopic"><a href="#">#Education</a></li>
-                    <li class="wardTopic"><a href="#">#Crime</a></li>
-                    <li class="wardTopic"><a href="#">#Economy</a></li>
-                    <li class="wardTopic"><a href="#">#Housing</a></li>
-                </ul>
-                <ul class="informationList">
-                    <li class="wardName">Bucklow-St. Martins</li>
-                    <li class="wardTopic"><a href="#">#Demographics</a></li>
-                    <li class="wardTopic"><a href="#">#Employment</a></li>
-                    <li class="wardTopic"><a href="#">#Health</a></li>
-                    <li class="wardTopic"><a href="#">#Education</a></li>
-                    <li class="wardTopic"><a href="#">#Crime</a></li>
-                    <li class="wardTopic"><a href="#">#Economy</a></li>
-                    <li class="wardTopic"><a href="#">#Housing</a></li>
-                </ul>
-                <ul class="informationList">
-                    <li class="wardName">Clifford</li>
-                    <li class="wardTopic"><a href="#">#Demographics</a></li>
-                    <li class="wardTopic"><a href="#">#Employment</a></li>
-                    <li class="wardTopic"><a href="#">#Health</a></li>
-                    <li class="wardTopic"><a href="#">#Education</a></li>
-                    <li class="wardTopic"><a href="#">#Crime</a></li>
-                    <li class="wardTopic"><a href="#">#Economy</a></li>
-                    <li class="wardTopic"><a href="#">#Housing</a></li>
-                </ul>
-                <ul class="informationList">
-                    <li class="wardName">Davyhulme East</li>
-                    <li class="wardTopic"><a href="#">#Demographics</a></li>
-                    <li class="wardTopic"><a href="#">#Employment</a></li>
-                    <li class="wardTopic"><a href="#">#Health</a></li>
-                    <li class="wardTopic"><a href="#">#Education</a></li>
-                    <li class="wardTopic"><a href="#">#Crime</a></li>
-                    <li class="wardTopic"><a href="#">#Economy</a></li>
-                    <li class="wardTopic"><a href="#">#Housing</a></li>
-                </ul>
-                <ul class="informationList">
-                    <li class="wardName">Davyhulme West</li>
-                    <li class="wardTopic"><a href="#">#Demographics</a></li>
-                    <li class="wardTopic"><a href="#">#Employment</a></li>
-                    <li class="wardTopic"><a href="#">#Health</a></li>
-                    <li class="wardTopic"><a href="#">#Education</a></li>
-                    <li class="wardTopic"><a href="#">#Crime</a></li>
-                    <li class="wardTopic"><a href="#">#Economy</a></li>
-                    <li class="wardTopic"><a href="#">#Housing</a></li>
-                </ul>
-                <ul class="informationList">
-                    <li class="wardName">Flixton</li>
-                    <li class="wardTopic"><a href="#">#Demographics</a></li>
-                    <li class="wardTopic"><a href="#">#Employment</a></li>
-                    <li class="wardTopic"><a href="#">#Health</a></li>
-                    <li class="wardTopic"><a href="#">#Education</a></li>
-                    <li class="wardTopic"><a href="#">#Crime</a></li>
-                    <li class="wardTopic"><a href="#">#Economy</a></li>
-                    <li class="wardTopic"><a href="#">#Housing</a></li>
-                </ul>
-                <ul class="informationList">
-                    <li class="wardName">Gorse Hill</li>
-                    <li class="wardTopic"><a href="#">#Demographics</a></li>
-                    <li class="wardTopic"><a href="#">#Employment</a></li>
-                    <li class="wardTopic"><a href="#">#Health</a></li>
-                    <li class="wardTopic"><a href="#">#Education</a></li>
-                    <li class="wardTopic"><a href="#">#Crime</a></li>
-                    <li class="wardTopic"><a href="#">#Economy</a></li>
-                    <li class="wardTopic"><a href="#">#Housing</a></li>
-                </ul>
-                <ul class="informationList">
-                    <li class="wardName">Hale Barns</li>
-                    <li class="wardTopic"><a href="#">#Demographics</a></li>
-                    <li class="wardTopic"><a href="#">#Employment</a></li>
-                    <li class="wardTopic"><a href="#">#Health</a></li>
-                    <li class="wardTopic"><a href="#">#Education</a></li>
-                    <li class="wardTopic"><a href="#">#Crime</a></li>
-                    <li class="wardTopic"><a href="#">#Economy</a></li>
-                    <li class="wardTopic"><a href="#">#Housing</a></li>
-                </ul>
-                <ul class="informationList">
-                    <li class="wardName">Hale Central</li>
-                    <li class="wardTopic"><a href="#">#Demographics</a></li>
-                    <li class="wardTopic"><a href="#">#Employment</a></li>
-                    <li class="wardTopic"><a href="#">#Health</a></li>
-                    <li class="wardTopic"><a href="#">#Education</a></li>
-                    <li class="wardTopic"><a href="#">#Crime</a></li>
-                    <li class="wardTopic"><a href="#">#Economy</a></li>
-                    <li class="wardTopic"><a href="#">#Housing</a></li>
-                </ul>
-                <ul class="informationList">
-                    <li class="wardName">Longford</li>
-                    <li class="wardTopic"><a href="#">#Demographics</a></li>
-                    <li class="wardTopic"><a href="#">#Employment</a></li>
-                    <li class="wardTopic"><a href="#">#Health</a></li>
-                    <li class="wardTopic"><a href="#">#Education</a></li>
-                    <li class="wardTopic"><a href="#">#Crime</a></li>
-                    <li class="wardTopic"><a href="#">#Economy</a></li>
-                    <li class="wardTopic"><a href="#">#Housing</a></li>
-                </ul>
-                <ul class="informationList">
-                    <li class="wardName">Priory</li>
-                    <li class="wardTopic"><a href="#">#Demographics</a></li>
-                    <li class="wardTopic"><a href="#">#Employment</a></li>
-                    <li class="wardTopic"><a href="#">#Health</a></li>
-                    <li class="wardTopic"><a href="#">#Education</a></li>
-                    <li class="wardTopic"><a href="#">#Crime</a></li>
-                    <li class="wardTopic"><a href="#">#Economy</a></li>
-                    <li class="wardTopic"><a href="#">#Housing</a></li>
-                </ul>
-                <ul class="informationList">
-                    <li class="wardName">Sale Moor</li>
-                    <li class="wardTopic"><a href="#">#Demographics</a></li>
-                    <li class="wardTopic"><a href="#">#Employment</a></li>
-                    <li class="wardTopic"><a href="#">#Health</a></li>
-                    <li class="wardTopic"><a href="#">#Education</a></li>
-                    <li class="wardTopic"><a href="#">#Crime</a></li>
-                    <li class="wardTopic"><a href="#">#Economy</a></li>
-                    <li class="wardTopic"><a href="#">#Housing</a></li>
-                </ul>
-                <ul class="informationList">
-                    <li class="wardName">St. Mary's</li>
-                    <li class="wardTopic"><a href="#">#Demographics</a></li>
-                    <li class="wardTopic"><a href="#">#Employment</a></li>
-                    <li class="wardTopic"><a href="#">#Health</a></li>
-                    <li class="wardTopic"><a href="#">#Education</a></li>
-                    <li class="wardTopic"><a href="#">#Crime</a></li>
-                    <li class="wardTopic"><a href="#">#Economy</a></li>
-                    <li class="wardTopic"><a href="#">#Housing</a></li>
-                </ul>
-                <ul class="informationList">
-                    <li class="wardName">Stretford</li>
-                    <li class="wardTopic"><a href="#">#Demographics</a></li>
-                    <li class="wardTopic"><a href="#">#Employment</a></li>
-                    <li class="wardTopic"><a href="#">#Health</a></li>
-                    <li class="wardTopic"><a href="#">#Education</a></li>
-                    <li class="wardTopic"><a href="#">#Crime</a></li>
-                    <li class="wardTopic"><a href="#">#Economy</a></li>
-                    <li class="wardTopic"><a href="#">#Housing</a></li>
-                </ul>
-                <ul class="informationList">
-                    <li class="wardName">Timperley</li>
-                    <li class="wardTopic"><a href="#">#Demographics</a></li>
-                    <li class="wardTopic"><a href="#">#Employment</a></li>
-                    <li class="wardTopic"><a href="#">#Health</a></li>
-                    <li class="wardTopic"><a href="#">#Education</a></li>
-                    <li class="wardTopic"><a href="#">#Crime</a></li>
-                    <li class="wardTopic"><a href="#">#Economy</a></li>
-                    <li class="wardTopic"><a href="#">#Housing</a></li>
-                </ul>
-                <ul class="informationList">
-                    <li class="wardName">Urmston</li>
-                    <li class="wardTopic"><a href="#">#Demographics</a></li>
-                    <li class="wardTopic"><a href="#">#Employment</a></li>
-                    <li class="wardTopic"><a href="#">#Health</a></li>
-                    <li class="wardTopic"><a href="#">#Education</a></li>
-                    <li class="wardTopic"><a href="#">#Crime</a></li>
-                    <li class="wardTopic"><a href="#">#Economy</a></li>
-                    <li class="wardTopic"><a href="#">#Housing</a></li>
-                </ul>
-                <ul class="informationList">
-                    <li class="wardName">Village</li>
-                    <li class="wardTopic"><a href="#">#Demographics</a></li>
-                    <li class="wardTopic"><a href="#">#Employment</a></li>
-                    <li class="wardTopic"><a href="#">#Health</a></li>
-                    <li class="wardTopic"><a href="#">#Education</a></li>
-                    <li class="wardTopic"><a href="#">#Crime</a></li>
-                    <li class="wardTopic"><a href="#">#Economy</a></li>
-                    <li class="wardTopic"><a href="#">#Housing</a></li>
                 </ul>
                 -->
             </div>
