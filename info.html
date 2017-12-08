@@ -7,14 +7,6 @@
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
             <style>
-                /* remove the list-item bullet from the top level and all sub-level list items */
-                .noBulletPoints, .noBulletPoints * *
-                {
-                    list-style-type: none;
-                    margin: 0;
-                    padding: 0;
-                }
-
                 /* using the 'checkbox css trick' (or in this case radio buttons) so don't need to actually display the radio button element */
                 input[type="radio"]
                 {
@@ -31,14 +23,15 @@
                 .expand
                 {
                     display: none;
-                    margin-left: 1em;
+                    margin: 0 0 0 0em;
+                    padding: 0;
                 }
 
                 /* the unordered list of themes items */
                 .expand li
                 {
                     float: left;
-                    padding: 1em 0.5em;
+                    padding: 1em 1em 1em 0;
                     font-size: 0.9em;
                     border-bottom: 1px solid #757575;
                 }
@@ -48,13 +41,20 @@
                 {
                     display: block;
                     width: 15em;
-                    text-indent: 1em;
                     background-color: #f0f0f0;
                     border-radius: 3px;
                     border: 1px solid #757575;
                     margin-top: 0.5em;
                     padding: 3px 3px;
                     color: #757575;
+                }
+
+                @media (max-width:620px)
+                {
+                    .areaButton
+                    {
+                        width: 100%;
+                    }
                 }
 
                 .areaButton:hover, .areaButton:active
@@ -68,11 +68,10 @@
     <body>
         <div class="container">
             <div class="header">
-                <ul class="homeBar">
-                    <li class="homeLogo"><a href="index.html"><img id="traffordDataLabLogo" src="https://trafforddatalab.github.io/assets/logo/trafforddatalab_logo.svg" width="93" alt="Trafford Data Lab" border="0"/></a></li>
-                </ul>
+                <a href="index.html"><img src="https://trafforddatalab.github.io/assets/logo/trafforddatalab_logo.svg" alt="Trafford Data Lab" width="93" border="0" class="traffordDataLabLogo"/></a>
+                
                 <h2 style="display: none;">Main Menu</h2>   <!-- Menu heading displayed only if we don't have CSS enabled -->
-                <ul class="navbar">
+                <ul class="navbar noBulletPoints">
                     <li style="display: none;"><a href="index.html">Home</a></li>   <!-- Home link displayed only if we don't have CSS enabled -->
                     <li class="menuItem"><a href="info.html">Info</a></li>
                     <li class="menuItem"><a href="apps.html">Apps</a></li>
@@ -339,29 +338,6 @@
                 </form>
 
                 <div class="resetDisplay"></div>
-
-                <!--
-                <ul class="informationList">
-                    <li class="wardName Trafford demographics employment health education crime economy housing">Trafford</li>
-                    <li class="wardTopic Trafford demographics"><a href="#">#Demographics</a></li>
-                    <li class="wardTopic Trafford employment"><a href="#">#Employment</a></li>
-                    <li class="wardTopic Trafford health"><a href="#">#Health</a></li>
-                    <li class="wardTopic Trafford education"><a href="#">#Education</a></li>
-                    <li class="wardTopic Trafford crime"><a href="#">#Crime</a></li>
-                    <li class="wardTopic Trafford economy"><a href="#">#Economy</a></li>
-                    <li class="wardTopic Trafford housing"><a href="#">#Housing</a></li>
-                </ul>
-                <ul class="informationList">
-                    <li class="wardName Altrincham demographics employment health education crime economy housing">Altrincham</li>
-                    <li class="wardTopic Altrincham demographics"><a href="#">#Demographics</a></li>
-                    <li class="wardTopic Altrincham employment"><a href="#">#Employment</a></li>
-                    <li class="wardTopic Altrincham health"><a href="#">#Health</a></li>
-                    <li class="wardTopic Altrincham education"><a href="#">#Education</a></li>
-                    <li class="wardTopic Altrincham crime"><a href="#">#Crime</a></li>
-                    <li class="wardTopic Altrincham economy"><a href="#">#Economy</a></li>
-                    <li class="wardTopic Altrincham housing"><a href="#">#Housing</a></li>
-                </ul>
-                -->
             </div>
             
             <div class="footer">

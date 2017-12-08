@@ -5,6 +5,23 @@ html, body
     height: 100%;           /* Required for footer to be positioned always at the bottom of the page */
 }
 
+a
+{
+    color: #fc6721;
+    text-decoration: none;
+}
+
+a:hover
+{
+    text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6, .header
+{
+    font-family: 'Roboto', sans-serif;
+    color: #757575;
+}
+
 .container
 {
     overflow: auto;
@@ -12,155 +29,70 @@ html, body
     min-height: 100%;       /* Required for footer to be positioned always at the bottom of the page */
 }
 
-h1, h2, h3, h4, h5, h6, .header
-{
-    font-family: 'Roboto', sans-serif;
-    color:#757575;
-}
-.navbar, .homeBar, .informationList
-{
-    list-style-type: none;
-    margin:0;
-    padding:0;
-    overflow: hidden;
-}
-.menuItem, .searchBar, .homeLogo, .wardName, .wardTopic
-{
-    float: left;
-}
-a
-{
-    color: #fc6721;
-    text-decoration: none;
-}
-a:hover
-{
-    text-decoration: underline;
-}
 .header
 {
-    position:fixed;
-    width:100%;
-    overflow:auto;
-    background-color:white;
-    text-align:left;
-    border-bottom-style: solid;
-    border-width:1px;
-    border-color: #757575;
-    margin-bottom: 1em;
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    text-align: left;
+    border-bottom: 1px solid #757575;
 }
-.homeBar
-{
-    display: inline-block;
-    padding-left: 8px;
-}
-.homeLogo
-{
-    padding: 6px 12px 0px 3px;
-    margin: 5px 0px 0px 0px;
-}
-.searchBar
-{
-    padding: 10px 12px 5px 12px;
-    margin: 5px 0px 5px 0px;
-    
-}
-xinput
-{
-    width: 100px;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    font-family: 'Roboto', sans-serif;
-    color:#757575;
-    font-size:1em;
-    padding: 0px 0px 0px 5px;
-    margin: 0px 0px 0px 5px;
-}
+
 .navbar
 {
-    display: inline-block;
-    float:right;
+    float: right;
+    margin: 15px 0;
 }
-.logo
+
+.menuItem
 {
-    width:10em;
-    height:1.8em;
+    display: block;
+    float: left;
+    font-size: 16px;
 }
 
-.resetDisplay
-{
-    clear: both;
-}
-
-#traffordDataLabLogo
-{
-    height:2em;
-}
-
-@media screen\0 {
-    #traffordDataLabLogo { width: 93px; }
-}
-
-_:-ms-fullscreen, :root #traffordDataLabLogo { width: 93px; }
-
+/* NOTE: all sizes are expressed here in px not em as we don't want the header to increase in size. This is because it might become too big on a small phone screen and prevent the user seeing the page content. */
 .menuItem a
 {
-    font-size:16px;
-    display: block;
+    border-bottom: 1px solid white;        /* required so that we can simulate a link underline in the a:hover without the header wobbling by 1px */
+    padding: 0 12px;
+    margin: 0;
     color: #757575;
     text-decoration: none;
-    text-align: left;
-    border-bottom-style: solid;
-    border-width:1px;
-    border-color: white;
-    padding: 12px 12px 0px 12px;
-    margin: 5px 0px 12px 0px;
 }
 
-.menuItem  a:hover
+.menuItem a:hover
 {
-    border-bottom-style: solid;
-    border-width:1px;
-    border-color: #fc6721;
+    border-bottom: 1px solid #fc6721;
+}
+
+.main, .footer
+{
+    font-family: 'Open Sans', sans-serif;
 }
 
 .main
 {
-    font-family: 'Open Sans', sans-serif;
-    color:#212121;
+    color: #212121;
     margin: auto;
-    margin-top:70px;
-    margin-bottom:30px;
-    padding: 0px 12px 0px 12px;
-    padding-bottom: 5em;       /* Required for footer to be positioned always at the bottom of the page (This is the height of the footer) */
+    margin-top: 70px;
+    margin-bottom: 30px;
+    padding: 0px 12px 5em 12px;     /* 5em padding-bottom Required for footer to be positioned always at the bottom of the page (This is the height of the footer) */
+    margin-right: 8px;
 }
+
 .main p
 {
     line-height: 1.8em;
 }
+
 .main li
 {
     line-height: 2em;
 }
-.informationList li
-{
-    line-height: 1.4em;
-}
-.wardName
-{
-    color:#757575;
-    width:100%;
-    padding:0.4em 0em 0em 0;
-}
-.wardTopic
-{
-    padding:0em 0.5em 0em 0em;
-    font-size:0.9em;
-    margin:0;
-}
+
 .footer
 {
-    font-family: 'Open Sans', sans-serif;
     color: #212121;
     width: 100%;
     height: 5em;               /* Required for footer to be positioned always at the bottom of the page (matched to the height of the Trafford logo) */
@@ -172,53 +104,78 @@ _:-ms-fullscreen, :root #traffordDataLabLogo { width: 93px; }
     bottom: 0;
     left: 0;
 }
-.logoTrafford
-{
-    height:5em;
-}
-.logoMedia
-{
-    font-size:2em;
-    padding:0px 0px 0px 12px;
-    margin:0;
-}
-.linkMedia
-{
-    color:#212121;
-    padding:0px 10px 0px 0px;
-}
-.license
-{
-    font-size:0.7em;
-    padding:10px 0px 0px 12px;
-}
-.rightFooter
-{
-    background-color:white;
-    height:100%;
-    display:inline-block;
-    float:right;
-}
+
 .leftFooter
 {
-    display:inline-block;
+    display: inline-block;
     white-space: nowrap;
 }
+
+.rightFooter
+{
+    background-color: white;
+    height: 100%;
+    display: inline-block;
+    float: right;
+}
+
+/* remove the list-item bullet from the top level and all sub-level list items */
+.noBulletPoints, .noBulletPoints * *
+{
+    list-style-type: none;
+}
+
+.resetDisplay
+{
+    clear: both;
+}
+
+.traffordDataLabLogo
+{
+    margin: 9px 12px 0 12px;
+    padding: 0;
+}
+
+.logoTrafford
+{
+    height: 5em;
+}
+
+.logoMedia
+{
+    font-size: 2em;
+    padding: 0px 0px 0px 12px;
+    margin: 0;
+}
+
+.linkMedia
+{
+    color: #212121;
+    padding: 0px 10px 0px 0px;
+}
+
+.license
+{
+    font-size: 0.7em;
+    padding: 10px 0px 0px 12px;
+}
+
 @media (max-width:620px)
 {
     .navbar
     {
-        float:none;
-        width: 100%;
+        float: none;
+        padding: 0 0 20px 0;
     }
-    .main{
-        margin-top:120px;
+    .main
+    {
+        margin-top: 120px;
     }
 }
 @media (min-width:1300px)
 {
     .main
     {
-        width:1240px;           /* Amended this from 800px so that the content width stays the same once the size expands beyond 1300px */
+        width: 1240px;           /* Amended this from 800px so that the content width stays the same once the size expands beyond 1300px */
     }
 }

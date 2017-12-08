@@ -21,10 +21,11 @@
     <body>
         <div class="container">
             <div class="header">
-                <ul class="homeBar">
-                    <li class="homeLogo"><a href="index.html"><img id="traffordDataLabLogo" src="https://trafforddatalab.github.io/assets/logo/trafforddatalab_logo.svg" alt="Trafford Data Lab" border="0"/></a></li>
-                </ul>
-                <ul class="navbar">
+                <a href="index.html"><img src="https://trafforddatalab.github.io/assets/logo/trafforddatalab_logo.svg" alt="Trafford Data Lab" width="93" border="0" class="traffordDataLabLogo"/></a>
+                
+                <h2 style="display: none;">Main Menu</h2>   <!-- Menu heading displayed only if we don't have CSS enabled -->
+                <ul class="navbar noBulletPoints">
+                    <li style="display: none;"><a href="index.html">Home</a></li>   <!-- Home link displayed only if we don't have CSS enabled -->
                     <li class="menuItem"><a href="info.html">Info</a></li>
                     <li class="menuItem"><a href="apps.html">Apps</a></li>
                     <li class="menuItem"><a href="projects.html">Projects</a></li>
@@ -79,8 +80,10 @@
             <div class="footer">
                 <div class="leftFooter">
                     <div class="logoMedia">
-                        <a class="linkMedia" href="https://twitter.com/traffordDataLab"><i class="fa fa-twitter-square"></i></a>
-                        <a class="linkMedia" href="https://github.com/traffordDataLab"><i class="fa fa-github"></i></a>
+                        <span style="display: none;">Visit us on </span>
+                        <a class="linkMedia" href="https://twitter.com/traffordDataLab"><span class="fa fa-twitter-square"></span><span style="display: none;">Twitter</span></a>
+                        <span style="display: none;"> and </span>
+                        <a class="linkMedia" href="https://github.com/traffordDataLab"><span class="fa fa-github"></span><span style="display: none;">Github<br /></span></a>
                     </div>
                     <div class="license">Released under <a class="footerLink" href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence</a></div>
                 </div>
