@@ -29,6 +29,7 @@ h1, h2, h3, h4, h5, h6, .header
     min-height: 100%;       /* Required for footer to be positioned always at the bottom of the page */
 }
 
+/* NOTE: all sizes are expressed within the header elements are in px not em as we don't want the header to increase in size. This is because it might become too big on a small phone screen and prevent the user seeing the page content. */
 .header
 {
     position: fixed;
@@ -41,7 +42,7 @@ h1, h2, h3, h4, h5, h6, .header
 .navbar
 {
     float: right;
-    margin: 15px 0;
+    margin: 15px 0 0 0;
 }
 
 .menuItem
@@ -49,9 +50,9 @@ h1, h2, h3, h4, h5, h6, .header
     display: block;
     float: left;
     font-size: 16px;
+    margin-bottom: 15px;
 }
 
-/* NOTE: all sizes are expressed here in px not em as we don't want the header to increase in size. This is because it might become too big on a small phone screen and prevent the user seeing the page content. */
 .menuItem a
 {
     border-bottom: 1px solid white;        /* required so that we can simulate a link underline in the a:hover without the header wobbling by 1px */
