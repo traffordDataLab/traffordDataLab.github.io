@@ -78,8 +78,7 @@ h1, h2, h3, h4, h5, h6, .header
     margin: auto;
     margin-top: 70px;
     margin-bottom: 30px;
-    padding: 0px 12px 5em 12px;     /* 5em padding-bottom Required for footer to be positioned always at the bottom of the page (This is the height of the footer) */
-    margin-right: 8px;
+    padding: 0 20px 5em 12px;     /* 5em padding-bottom Required for footer to be positioned always at the bottom of the page (This is the height of the footer) */
 }
 
 .main p
