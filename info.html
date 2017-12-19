@@ -1,75 +1,78 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-GB">
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-            <link rel="stylesheet" href="css/style_webpage.css">
-            <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Trafford Data Lab: Info</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+        <meta charset="UTF-8"/>
+        
+        <link rel="stylesheet" href="css/style_webpage.css"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
 
-            <style>
-                /* using the 'checkbox css trick' (or in this case radio buttons) so don't need to actually display the radio button element */
-                input[type="radio"]
-                {
-                    display: none;
-                }
+        <style>
+            /* using the 'checkbox css trick' (or in this case radio buttons) so don't need to actually display the radio button element */
+            input[type="radio"]
+            {
+                display: none;
+            }
 
-                /* if the radio button associated to the label selected is checked then show the unordered list associated with that label */
-                input[type="radio"]:checked + label + ul
-                {
-                    display: block;
-                }
+            /* if the radio button associated to the label selected is checked then show the unordered list associated with that label */
+            input[type="radio"]:checked + label + ul
+            {
+                display: block;
+            }
 
-                /* the unordered list of themes which is displayed when the associated label is selected */
-                .expand
-                {
-                    display: none;
-                    margin: 0;
-                    padding: 0;
-                }
+            /* the unordered list of themes which is displayed when the associated label is selected */
+            .expand
+            {
+                display: none;
+                margin: 0;
+                padding: 0;
+            }
 
-                /* the unordered list of themes items */
-                .expand li
-                {
-                    float: left;
-                    padding: 1em 1em 1em 0;
-                    font-size: 0.9em;
-                    border-bottom: 1px solid #f0f0f0;
-                }
+            /* the unordered list of themes items */
+            .expand li
+            {
+                float: left;
+                padding: 1em 1em 1em 0;
+                font-size: 0.9em;
+                border-bottom: 1px solid #f0f0f0;
+            }
 
-                /* the area buttons to select before choosing a theme (Trafford and then the 21 wards) */
+            /* the area buttons to select before choosing a theme (Trafford and then the 21 wards) */
+            .areaButton
+            {
+                display: block;
+                width: 15em;
+                background-color: #f0f0f0;
+                border-radius: 3px;
+                border: 1px solid #757575;
+                margin-top: 0.5em;
+                padding: 3px 3px;
+                color: #757575;
+            }
+
+            @media (max-width:620px)
+            {
                 .areaButton
                 {
-                    display: block;
-                    width: 15em;
-                    background-color: #f0f0f0;
-                    border-radius: 3px;
-                    border: 1px solid #757575;
-                    margin-top: 0.5em;
-                    padding: 3px 3px;
-                    color: #757575;
+                    width: 100%;
                 }
+            }
 
-                @media (max-width:620px)
-                {
-                    .areaButton
-                    {
-                        width: 100%;
-                    }
-                }
-
-                .areaButton:hover, .areaButton:active
-                {
-                    background-color: #fc6721;
-                    color: #f0f0f0;
-                    cursor: pointer;
-                }
-            </style>
+            .areaButton:hover, .areaButton:active
+            {
+                background-color: #fc6721;
+                color: #f0f0f0;
+                cursor: pointer;
+            }
+        </style>
     </head>
     <body>
         <div class="container">
             <div class="header">
                 <a href="index.html"><img src="https://trafforddatalab.github.io/assets/logo/trafforddatalab_logo.svg" alt="Trafford Data Lab" width="93" border="0" class="traffordDataLabLogo"/></a>
-                
+
                 <h2 style="display: none;">Main Menu</h2>   <!-- Menu heading displayed only if we don't have CSS enabled -->
                 <ul class="navbar noBulletPoints">
                     <li style="display: none;"><a href="index.html">Home</a></li>   <!-- Home link displayed only if we don't have CSS enabled -->
@@ -80,7 +83,7 @@
                     <li class="menuItem"><a href="about.html">About</a></li>
                 </ul>
             </div>
-            
+
             <div class="main">
                 <h1>Info</h1>
                 <p>Thematic area profiles of <a href="https://github.com/traffordDataLab/boundaries/blob/master/trafford/trafford_local_authority.geojson">Trafford</a> and its <a href="https://github.com/traffordDataLab/boundaries/blob/master/trafford/trafford_wards.geojson">21 wards</a>. The profiles contain links to the raw <a href="data.html">open data</a> and can also be downloaded as PDF documents. Please choose an area you are interested in and then a theme:</p>
@@ -339,7 +342,7 @@
 
                 <div class="resetDisplay"></div>
             </div>
-            
+
             <div class="footer">
                 <div class="leftFooter">
                     <div class="logoMedia">
