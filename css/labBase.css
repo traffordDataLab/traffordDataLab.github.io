@@ -1,0 +1,36 @@
+/* ### Base Trafford Data Lab styles ### */
+html, body
+{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+    color: #212121;
+}
+
+a
+{
+    color: #fc6721;
+    text-decoration: none;
+}
+
+a:hover
+{
+    text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6, .header
+{
+    font-family: 'Roboto', sans-serif;
+    color: #757575;
+}
+
+.noFloat /* renamed from resetDisplay */
+{
+    clear: both;
+}
+
+.hideContent
+{
+    display: none;
+}

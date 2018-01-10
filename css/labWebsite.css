@@ -1,26 +1,4 @@
-html, body
-{
-    padding: 0;
-    margin: 0;
-    height: 100%;           /* Required for footer to be positioned always at the bottom of the page */
-}
-
-a
-{
-    color: #fc6721;
-    text-decoration: none;
-}
-
-a:hover
-{
-    text-decoration: underline;
-}
-
-h1, h2, h3, h4, h5, h6, .header
-{
-    font-family: 'Roboto', sans-serif;
-    color: #757575;
-}
+/* ### Trafford Data Lab website styles (extending the labBase styles) ### */
 
 .container
 {
@@ -65,11 +43,6 @@ h1, h2, h3, h4, h5, h6, .header
 .menuItem a:hover
 {
     border-bottom: 1px solid #fc6721;
-}
-
-.main, .footer
-{
-    font-family: 'Open Sans', sans-serif;
 }
 
 .main
@@ -123,11 +96,6 @@ h1, h2, h3, h4, h5, h6, .header
 .noBulletPoints, .noBulletPoints * *
 {
     list-style-type: none;
-}
-
-.resetDisplay
-{
-    clear: both;
 }
 
 .traffordDataLabLogo
