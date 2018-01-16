@@ -135,7 +135,34 @@
     margin: auto;
 }
 
+.doubleColumn div
+{
+    width: 50%;
+    float: left;
+}
+
+.doubleColumn:after
+{
+    content: "";
+    display: block;
+    clear: both;
+}
+
 /* changes due to screen width */
+@media (max-width:800px)
+{
+    .doubleColumn
+    {
+        width: 500px;
+        margin: auto;
+    }
+
+    .doubleColumn div
+    {
+        width: 100%;
+    }
+}
+
 @media (max-width:620px)
 {
     .navbar
@@ -143,16 +170,18 @@
         float: none;
         padding: 0 0 20px 0;
     }
+
     .main
     {
         margin-top: 120px;
     }
 
-    .singleColumn
+    .singleColumn, .doubleColumn div
     {
         width: 100%;
     }
 }
+
 @media (min-width:1300px)
 {
     .main
