@@ -149,6 +149,19 @@
 }
 
 /* changes due to screen width */
+@media (min-width:1300px)
+{
+    .main
+    {
+        width: 1240px;           /* Amended this from 800px so that the content width stays the same once the size expands beyond 1300px */
+    }
+
+    .singleColumn
+    {
+        width: 50%;
+    }
+}
+
 @media (max-width:800px)
 {
     .doubleColumn
@@ -176,21 +189,8 @@
         margin-top: 120px;
     }
 
-    .singleColumn, .doubleColumn div
+    .singleColumn, .doubleColumn, .doubleColumn div
     {
         width: 100%;
-    }
-}
-
-@media (min-width:1300px)
-{
-    .main
-    {
-        width: 1240px;           /* Amended this from 800px so that the content width stays the same once the size expands beyond 1300px */
-    }
-
-    .singleColumn
-    {
-        width: 50%;
     }
 }
