@@ -170,19 +170,13 @@
         margin: auto;
     }
 
-    .doubleColumn div, .doubleColumnImgTxt
+    .doubleColumn div, .doubleColumnImgTxt, .doubleColumnImgTxt div:nth-child(2)
     {
         width: 100%;
     }
 
-    .doubleColumnImgTxt div:nth-child(1)
+    .doubleColumnImgTxt div
     {
-        float: none;
-    }
-
-    .doubleColumnImgTxt div:nth-child(2)
-    {
-        width: 100%;
         float: none;
     }
 }
