@@ -41,7 +41,7 @@
             }
 
             /* the area buttons to select before choosing a theme (Trafford and then the 21 wards) */
-            .areaButton
+            .themeButton
             {
                 display: block;
                 width: 15em;
@@ -55,13 +55,13 @@
 
             @media (max-width:620px)
             {
-                .areaButton
+                .themeButton
                 {
                     width: 100%;
                 }
             }
 
-            .areaButton:hover, .areaButton:active
+            .themeButton:hover, .themeButton:active
             {
                 background-color: #fc6721;
                 color: #f0f0f0;
@@ -87,257 +87,106 @@
 
             <div class="main">
                 <h1>Info</h1>
-                <p>Thematic area profiles of <a href="https://github.com/traffordDataLab/boundaries/blob/master/trafford/trafford_local_authority.geojson">Trafford</a> and its <a href="https://github.com/traffordDataLab/boundaries/blob/master/trafford/trafford_wards.geojson">21 wards</a>. The profiles contain links to the raw <a href="data.html">open data</a> and can also be downloaded as PDF documents. Please choose an area you are interested in and then a theme:</p>
+                <p>Thematic profiles of <a href="https://github.com/traffordDataLab/boundaries/blob/master/trafford/trafford_local_authority.geojson">Trafford</a> and its <a href="https://github.com/traffordDataLab/boundaries/blob/master/trafford/trafford_wards.geojson">21 wards</a>. The profiles contain links to the raw <a href="data.html">open data</a> and can also be downloaded as PDF documents. Please choose a theme you are interested in and then a profile:</p>
 
                 <!-- Quick nav links. Displayed only if no CSS is available -->
                 <div class="hideContent">
                     <h2>Navigation links</h2>
-                    <a href="#themes_trafford">Trafford</a>, <a href="#themes_altrincham">Altrincham</a>, <a href="#themes_ashton_upon_mersey">Ashton upon Mersey</a>, <a href="#themes_bowdon">Bowdon</a>, <a href="#themes_broadheath">Broadheath</a>, <a href="#themes_brooklands">Brooklands</a>, <a href="#themes_bucklow_st_martins">Bucklow St. Martins</a>, <a href="#themes_clifford">Clifford</a>, <a href="#themes_davyhulme_east">Davyhulme East</a>, <a href="#themes_davyhulme_west">Davyhulme West</a>, <a href="#themes_flixton">Flixton</a>, <a href="#themes_gorse_hill">Gorse Hill</a>, <a href="#themes_hale_barns">Hale Barns</a>, <a href="#themes_hale_central">Hale Central</a>, <a href="#themes_longford">Longford</a>, <a href="#themes_priory">Priory</a>, <a href="#themes_sale_moor">Sale Moor</a>, <a href="#themes_st_marys">St. Mary's</a>, <a href="#themes_stretford">Stretford</a>, <a href="#themes_timperley">Timperley</a>, <a href="#themes_urmston">Urmston</a>, <a href="#themes_village">Village</a>
-                    <h2>Areas</h2>
+                    <a href="#themes_community_safety">Community Safety</a>,
+                    <a href="#themes_demographics">Demographics</a>,
+                    <a href="#themes_economy">Economy</a>,
+                    <a href="#themes_education">Education</a>,
+                    <a href="#themes_environment">Environment</a>,
+                    <a href="#themes_governance">Governance</a>
+                    <a href="#themes_health">Health</a>,
+                    <a href="#themes_housing">Housing</a>,
+                    <a href="#themes_labour_market">Labour Market</a>,
+                    <a href="#themes_transport">Transport</a>,
+
+                    <h2>Themes</h2>
                 </div>
                 <!-- Quick nav links end -->
 
                 <form>
-                    <input id="themes_trafford" type="radio" name="areas"/><label for="themes_trafford" class="areaButton">Trafford</label>
+                    <input id="themes_community_safety" type="radio" name="themes"/><label for="themes_community_safety" class="themeButton">Community Safety</label>
                     <ul class="noBulletPoints expand">
-                        <li><a href="#">#Demographics</a></li>
-                        <li><a href="#">#Employment</a></li>
-                        <li><a href="#">#Health</a></li>
-                        <li><a href="#">#Education</a></li>
-                        <li><a href="#">#Crime</a></li>
-                        <li><a href="#">#Economy</a></li>
-                        <li><a href="#">#Housing</a></li>
+                        <li><a href="coming_soon.html">Anti-social behaviour</a></li>
+                        <li><a href="coming_soon.html">Burglary</a></li>
+                        <li><a href="coming_soon.html">Robbery</a></li>
+                        <li><a href="coming_soon.html">Vehicle crime</a></li>
                     </ul>
                     <div class="noFloat"></div>
-                    <input id="themes_altrincham" type="radio" name="areas"/><label for="themes_altrincham" class="areaButton">Altrincham</label>
+
+                    <input id="themes_demographics" type="radio" name="themes"/><label for="themes_demographics" class="themeButton">Demographics</label>
                     <ul class="noBulletPoints expand">
-                        <li><a href="#">#Demographics</a></li>
-                        <li><a href="#">#Employment</a></li>
-                        <li><a href="#">#Health</a></li>
-                        <li><a href="#">#Education</a></li>
-                        <li><a href="#">#Crime</a></li>
-                        <li><a href="#">#Economy</a></li>
-                        <li><a href="#">#Housing</a></li>
+                        <li><a href="coming_soon.html">Ethnicity</a></li>
+                        <li><a href="coming_soon.html">Languages</a></li>
+                        <li><a href="coming_soon.html">Population</a></li>
+                        <li><a href="coming_soon.html">Religion</a></li>
                     </ul>
                     <div class="noFloat"></div>
-                    <input id="themes_ashton_upon_mersey" type="radio" name="areas"/><label for="themes_ashton_upon_mersey" class="areaButton">Ashton upon Mersey</label>
+
+                    <input id="themes_economy" type="radio" name="themes"/><label for="themes_economy" class="themeButton">Economy</label>
                     <ul class="noBulletPoints expand">
-                        <li><a href="#">#Demographics</a></li>
-                        <li><a href="#">#Employment</a></li>
-                        <li><a href="#">#Health</a></li>
-                        <li><a href="#">#Education</a></li>
-                        <li><a href="#">#Crime</a></li>
-                        <li><a href="#">#Economy</a></li>
-                        <li><a href="#">#Housing</a></li>
+                        <li><a href="coming_soon.html">Businesses</a></li>
                     </ul>
                     <div class="noFloat"></div>
-                    <input id="themes_bowdon" type="radio" name="areas"/><label for="themes_bowdon" class="areaButton">Bowdon</label>
+
+                    <input id="themes_education" type="radio" name="themes"/><label for="themes_education" class="themeButton">Education</label>
                     <ul class="noBulletPoints expand">
-                        <li><a href="#">#Demographics</a></li>
-                        <li><a href="#">#Employment</a></li>
-                        <li><a href="#">#Health</a></li>
-                        <li><a href="#">#Education</a></li>
-                        <li><a href="#">#Crime</a></li>
-                        <li><a href="#">#Economy</a></li>
-                        <li><a href="#">#Housing</a></li>
+                        <li><a href="coming_soon.html">Attainment gap</a></li>
+                        <li><a href="coming_soon.html">Unauthorised absence</a></li>
                     </ul>
                     <div class="noFloat"></div>
-                    <input id="themes_broadheath" type="radio" name="areas"/><label for="themes_broadheath" class="areaButton">Broadheath</label>
+
+                    <input id="themes_environment" type="radio" name="themes"/><label for="themes_environment" class="themeButton">Environment</label>
                     <ul class="noBulletPoints expand">
-                        <li><a href="#">#Demographics</a></li>
-                        <li><a href="#">#Employment</a></li>
-                        <li><a href="#">#Health</a></li>
-                        <li><a href="#">#Education</a></li>
-                        <li><a href="#">#Crime</a></li>
-                        <li><a href="#">#Economy</a></li>
-                        <li><a href="#">#Housing</a></li>
+                        <li><a href="coming_soon.html">Carbon emissions</a></li>
+                        <li><a href="coming_soon.html">Green spaces</a></li>
                     </ul>
                     <div class="noFloat"></div>
-                    <input id="themes_brooklands" type="radio" name="areas"/><label for="themes_brooklands" class="areaButton">Brooklands</label>
+
+                    <input id="themes_governance" type="radio" name="themes"/><label for="themes_governance" class="themeButton">Governance</label>
                     <ul class="noBulletPoints expand">
-                        <li><a href="#">#Demographics</a></li>
-                        <li><a href="#">#Employment</a></li>
-                        <li><a href="#">#Health</a></li>
-                        <li><a href="#">#Education</a></li>
-                        <li><a href="#">#Crime</a></li>
-                        <li><a href="#">#Economy</a></li>
-                        <li><a href="#">#Housing</a></li>
+                        <li><a href="coming_soon.html">Election turnout</a></li>
+                        <li><a href="coming_soon.html">Political control</a></li>
                     </ul>
                     <div class="noFloat"></div>
-                    <input id="themes_bucklow_st_martins" type="radio" name="areas"/><label for="themes_bucklow_st_martins" class="areaButton">Bucklow-St. Martins</label>
+
+                    <input id="themes_health" type="radio" name="themes"/><label for="themes_health" class="themeButton">Health</label>
                     <ul class="noBulletPoints expand">
-                        <li><a href="#">#Demographics</a></li>
-                        <li><a href="#">#Employment</a></li>
-                        <li><a href="#">#Health</a></li>
-                        <li><a href="#">#Education</a></li>
-                        <li><a href="#">#Crime</a></li>
-                        <li><a href="#">#Economy</a></li>
-                        <li><a href="#">#Housing</a></li>
+                        <li><a href="coming_soon.html">Heart disease</a></li>
+                        <li><a href="coming_soon.html">Life expectancy</a></li>
+                        <li><a href="coming_soon.html">Mental health</a></li>
+                        <li><a href="coming_soon.html">Obesity</a></li>
+                        <li><a href="coming_soon.html">Smoking</a></li>
+                        <li><a href="coming_soon.html">Teenage conception</a></li>
                     </ul>
                     <div class="noFloat"></div>
-                    <input id="themes_clifford" type="radio" name="areas"/><label for="themes_clifford" class="areaButton">Clifford</label>
+
+                    <input id="themes_housing" type="radio" name="themes"/><label for="themes_housing" class="themeButton">Housing</label>
                     <ul class="noBulletPoints expand">
-                        <li><a href="#">#Demographics</a></li>
-                        <li><a href="#">#Employment</a></li>
-                        <li><a href="#">#Health</a></li>
-                        <li><a href="#">#Education</a></li>
-                        <li><a href="#">#Crime</a></li>
-                        <li><a href="#">#Economy</a></li>
-                        <li><a href="#">#Housing</a></li>
+                        <li><a href="coming_soon.html">Housing stock</a></li>
+                        <li><a href="coming_soon.html">Median house prices</a></li>
+                        <li><a href="coming_soon.html">Tenure</a></li>
                     </ul>
                     <div class="noFloat"></div>
-                    <input id="themes_davyhulme_east" type="radio" name="areas"/><label for="themes_davyhulme_east" class="areaButton">Davyhulme East</label>
+
+                    <input id="themes_labour_market" type="radio" name="themes"/><label for="themes_labour_market" class="themeButton">Labour Market</label>
                     <ul class="noBulletPoints expand">
-                        <li><a href="#">#Demographics</a></li>
-                        <li><a href="#">#Employment</a></li>
-                        <li><a href="#">#Health</a></li>
-                        <li><a href="#">#Education</a></li>
-                        <li><a href="#">#Crime</a></li>
-                        <li><a href="#">#Economy</a></li>
-                        <li><a href="#">#Housing</a></li>
+                        <li><a href="coming_soon.html">Benefits</a></li>
+                        <li><a href="coming_soon.html">Earnings</a></li>
+                        <li><a href="coming_soon.html">Occupations</a></li>
+                        <li><a href="coming_soon.html">Qualifications</a></li>
+                        <li><a href="coming_soon.html">Unemployment</a></li>
                     </ul>
                     <div class="noFloat"></div>
-                    <input id="themes_davyhulme_west" type="radio" name="areas"/><label for="themes_davyhulme_west" class="areaButton">Davyhulme West</label>
+
+                    <input id="themes_transport" type="radio" name="themes"/><label for="themes_transport" class="themeButton">Transport</label>
                     <ul class="noBulletPoints expand">
-                        <li><a href="#">#Demographics</a></li>
-                        <li><a href="#">#Employment</a></li>
-                        <li><a href="#">#Health</a></li>
-                        <li><a href="#">#Education</a></li>
-                        <li><a href="#">#Crime</a></li>
-                        <li><a href="#">#Economy</a></li>
-                        <li><a href="#">#Housing</a></li>
-                    </ul>
-                    <div class="noFloat"></div>
-                    <input id="themes_flixton" type="radio" name="areas"/><label for="themes_flixton" class="areaButton">Flixton</label>
-                    <ul class="noBulletPoints expand">
-                        <li><a href="#">#Demographics</a></li>
-                        <li><a href="#">#Employment</a></li>
-                        <li><a href="#">#Health</a></li>
-                        <li><a href="#">#Education</a></li>
-                        <li><a href="#">#Crime</a></li>
-                        <li><a href="#">#Economy</a></li>
-                        <li><a href="#">#Housing</a></li>
-                    </ul>
-                    <div class="noFloat"></div>
-                    <input id="themes_gorse_hill" type="radio" name="areas"/><label for="themes_gorse_hill" class="areaButton">Gorse Hill</label>
-                    <ul class="noBulletPoints expand">
-                        <li><a href="#">#Demographics</a></li>
-                        <li><a href="#">#Employment</a></li>
-                        <li><a href="#">#Health</a></li>
-                        <li><a href="#">#Education</a></li>
-                        <li><a href="#">#Crime</a></li>
-                        <li><a href="#">#Economy</a></li>
-                        <li><a href="#">#Housing</a></li>
-                    </ul>
-                    <div class="noFloat"></div>
-                    <input id="themes_hale_barns" type="radio" name="areas"/><label for="themes_hale_barns" class="areaButton">Hale Barns</label>
-                    <ul class="noBulletPoints expand">
-                        <li><a href="#">#Demographics</a></li>
-                        <li><a href="#">#Employment</a></li>
-                        <li><a href="#">#Health</a></li>
-                        <li><a href="#">#Education</a></li>
-                        <li><a href="#">#Crime</a></li>
-                        <li><a href="#">#Economy</a></li>
-                        <li><a href="#">#Housing</a></li>
-                    </ul>
-                    <div class="noFloat"></div>
-                    <input id="themes_hale_central" type="radio" name="areas"/><label for="themes_hale_central" class="areaButton">Hale Central</label>
-                    <ul class="noBulletPoints expand">
-                        <li><a href="#">#Demographics</a></li>
-                        <li><a href="#">#Employment</a></li>
-                        <li><a href="#">#Health</a></li>
-                        <li><a href="#">#Education</a></li>
-                        <li><a href="#">#Crime</a></li>
-                        <li><a href="#">#Economy</a></li>
-                        <li><a href="#">#Housing</a></li>
-                    </ul>
-                    <div class="noFloat"></div>
-                    <input id="themes_longford" type="radio" name="areas"/><label for="themes_longford" class="areaButton">Longford</label>
-                    <ul class="noBulletPoints expand">
-                        <li><a href="#">#Demographics</a></li>
-                        <li><a href="#">#Employment</a></li>
-                        <li><a href="#">#Health</a></li>
-                        <li><a href="#">#Education</a></li>
-                        <li><a href="#">#Crime</a></li>
-                        <li><a href="#">#Economy</a></li>
-                        <li><a href="#">#Housing</a></li>
-                    </ul>
-                    <div class="noFloat"></div>
-                    <input id="themes_priory" type="radio" name="areas"/><label for="themes_priory" class="areaButton">Priory</label>
-                    <ul class="noBulletPoints expand">
-                        <li><a href="#">#Demographics</a></li>
-                        <li><a href="#">#Employment</a></li>
-                        <li><a href="#">#Health</a></li>
-                        <li><a href="#">#Education</a></li>
-                        <li><a href="#">#Crime</a></li>
-                        <li><a href="#">#Economy</a></li>
-                        <li><a href="#">#Housing</a></li>
-                    </ul>
-                    <div class="noFloat"></div>
-                    <input id="themes_sale_moor" type="radio" name="areas"/><label for="themes_sale_moor" class="areaButton">Sale Moor</label>
-                    <ul class="noBulletPoints expand">
-                        <li><a href="#">#Demographics</a></li>
-                        <li><a href="#">#Employment</a></li>
-                        <li><a href="#">#Health</a></li>
-                        <li><a href="#">#Education</a></li>
-                        <li><a href="#">#Crime</a></li>
-                        <li><a href="#">#Economy</a></li>
-                        <li><a href="#">#Housing</a></li>
-                    </ul>
-                    <div class="noFloat"></div>
-                    <input id="themes_st_marys" type="radio" name="areas"/><label for="themes_st_marys" class="areaButton">St. Mary's</label>
-                    <ul class="noBulletPoints expand">
-                        <li><a href="#">#Demographics</a></li>
-                        <li><a href="#">#Employment</a></li>
-                        <li><a href="#">#Health</a></li>
-                        <li><a href="#">#Education</a></li>
-                        <li><a href="#">#Crime</a></li>
-                        <li><a href="#">#Economy</a></li>
-                        <li><a href="#">#Housing</a></li>
-                    </ul>
-                    <div class="noFloat"></div>
-                    <input id="themes_stretford" type="radio" name="areas"/><label for="themes_stretford" class="areaButton">Stretford</label>
-                    <ul class="noBulletPoints expand">
-                        <li><a href="#">#Demographics</a></li>
-                        <li><a href="#">#Employment</a></li>
-                        <li><a href="#">#Health</a></li>
-                        <li><a href="#">#Education</a></li>
-                        <li><a href="#">#Crime</a></li>
-                        <li><a href="#">#Economy</a></li>
-                        <li><a href="#">#Housing</a></li>
-                    </ul>
-                    <div class="noFloat"></div>
-                    <input id="themes_timperley" type="radio" name="areas"/><label for="themes_timperley" class="areaButton">Timperley</label>
-                    <ul class="noBulletPoints expand">
-                        <li><a href="#">#Demographics</a></li>
-                        <li><a href="#">#Employment</a></li>
-                        <li><a href="#">#Health</a></li>
-                        <li><a href="#">#Education</a></li>
-                        <li><a href="#">#Crime</a></li>
-                        <li><a href="#">#Economy</a></li>
-                        <li><a href="#">#Housing</a></li>
-                    </ul>
-                    <div class="noFloat"></div>
-                    <input id="themes_urmston" type="radio" name="areas"/><label for="themes_urmston" class="areaButton">Urmston</label>
-                    <ul class="noBulletPoints expand">
-                        <li><a href="#">#Demographics</a></li>
-                        <li><a href="#">#Employment</a></li>
-                        <li><a href="#">#Health</a></li>
-                        <li><a href="#">#Education</a></li>
-                        <li><a href="#">#Crime</a></li>
-                        <li><a href="#">#Economy</a></li>
-                        <li><a href="#">#Housing</a></li>
-                    </ul>
-                    <div class="noFloat"></div>
-                    <input id="themes_village" type="radio" name="areas"/><label for="themes_village" class="areaButton">Village</label>
-                    <ul class="noBulletPoints expand">
-                        <li><a href="#">#Demographics</a></li>
-                        <li><a href="#">#Employment</a></li>
-                        <li><a href="#">#Health</a></li>
-                        <li><a href="#">#Education</a></li>
-                        <li><a href="#">#Crime</a></li>
-                        <li><a href="#">#Economy</a></li>
-                        <li><a href="#">#Housing</a></li>
+                        <li><a href="coming_soon.html">Commuting</a></li>
+                        <li><a href="coming_soon.html">Public Transport Accessibility</a></li>
+                        <li><a href="coming_soon.html">Road collisions</a></li>
                     </ul>
                 </form>
 
