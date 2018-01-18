@@ -128,7 +128,7 @@
     padding: 10px 0px 0px 12px;
 }
 
-/* chart/map content layouts */
+/* visualisations and/or text content layouts */
 .singleColumn
 {
     width: 600px;
@@ -141,7 +141,17 @@
     float: left;
 }
 
-.doubleColumn:after, .doubleColumnImgTxt:after, .doubleColumnTxtImg:after
+.doubleColumn div:nth-child(1) p, .doubleColumnTxtImg div:nth-child(1) p
+{
+    margin-right: 10px;     /* to provide space between any text content and the right column when displayed in 2-column format */
+}
+
+.doubleColumn div:nth-child(2) p, .doubleColumnImgTxt div:nth-child(2) p
+{
+    margin-left: 10px;      /* to provide space between any text content and the left column when displayed in 2-column format */
+}
+
+.doubleColumn::after, .doubleColumnImgTxt::after, .doubleColumnTxtImg::after
 {
     content: "";
     display: block;
@@ -156,6 +166,7 @@
         width: 1240px;           /* Amended this from 800px so that the content width stays the same once the size expands beyond 1300px */
     }
 
+    /* visualisations and/or text content layouts */
     .singleColumn
     {
         width: 50%;
@@ -164,6 +175,7 @@
 
 @media (max-width:800px)
 {
+    /* visualisations and/or text content layouts */
     .doubleColumn, .doubleColumnImgTxt div:nth-child(1), .doubleColumnTxtImg div:nth-child(2)
     {
         width: 500px;
@@ -178,6 +190,16 @@
     .doubleColumnImgTxt div, .doubleColumnTxtImg div
     {
         float: none;
+    }
+
+    .doubleColumn div:nth-child(1) p, .doubleColumnTxtImg div:nth-child(1) p
+    {
+        margin-right: 0px;     /* remove space between any text content and the right column when displayed in 2-column format */
+    }
+
+    .doubleColumn div:nth-child(2) p, .doubleColumnImgTxt div:nth-child(2) p
+    {
+        margin-left: 0px;      /* remove space between any text content and the left column when displayed in 2-column format */
     }
 }
 
@@ -194,8 +216,19 @@
         margin-top: 120px;
     }
 
+    /* visualisations and/or text content layouts */
     .singleColumn, .doubleColumn, .doubleColumn div, .doubleColumnImgTxt, .doubleColumnImgTxt div, .doubleColumnImgTxt div:nth-child(1), .doubleColumnTxtImg, .doubleColumnTxtImg div, .doubleColumnTxtImg div:nth-child(2)
     {
         width: 100%;
+    }
+
+    .doubleColumn div:nth-child(1) p, .doubleColumnTxtImg div:nth-child(1) p
+    {
+        margin-right: 0px;     /* remove space between any text content and the right column when displayed in 2-column format */
+    }
+
+    .doubleColumn div:nth-child(2) p, .doubleColumnImgTxt div:nth-child(2) p
+    {
+        margin-left: 0px;      /* remove space between any text content and the left column when displayed in 2-column format */
     }
 }
