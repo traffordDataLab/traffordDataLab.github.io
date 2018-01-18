@@ -128,6 +128,37 @@
     padding: 10px 0px 0px 12px;
 }
 
+/* data tables */
+.dataTable
+{
+    width: 100%;
+    border-collapse: collapse;
+    text-align: right;
+    font-size: 0.9em;
+}
+
+.dataTable th
+{
+    font-family: 'Roboto', sans-serif;
+    color: #757575;
+    font-size: 1.1em;
+}
+
+.dataTable td
+{
+    border-bottom: 1px dotted #e0e0e0;
+}
+
+.dataTable, .dataTable th, .dataTable tbody tr:last-of-type
+{
+    border-bottom: 2px solid #212121;
+}
+
+.dataTable th:nth-child(1), .dataTable td:nth-child(1)
+{
+    text-align: left;   /* the first column is left-aligned, the others are right-aligned (set in the main .dataTable class) */
+}
+
 /* visualisations and/or text content layouts */
 .singleColumn
 {
