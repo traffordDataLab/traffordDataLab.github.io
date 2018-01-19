@@ -142,6 +142,7 @@
     font-family: 'Roboto', sans-serif;
     color: #757575;
     font-size: 1.1em;
+    text-align: right;  /* IE fix - ignores the declaration set on the main table class so have to repeat here */
 }
 
 .dataTable td
