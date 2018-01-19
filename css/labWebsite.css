@@ -190,6 +190,12 @@
     clear: both;
 }
 
+/* Fix for IE not displaying the SVGs loaded via object tag correctly */
+.singleColumn object, .doubleColumn object, .doubleColumnImgTxt object, .doubleColumnTxtImg object
+{
+    width: 100%;
+}
+
 /* changes due to screen width */
 @media (min-width:1300px)
 {
