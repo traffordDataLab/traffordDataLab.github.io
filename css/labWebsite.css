@@ -175,12 +175,12 @@
 
 .doubleColumn div:nth-child(1) p, .doubleColumnTxtImg div:nth-child(1) p
 {
-    margin-right: 20px;     /* to provide space between any text content and the right column when displayed in 2-column format */
+    margin-right: 30px;     /* to provide space between any text content and the right column when displayed in 2-column format */
 }
 
 .doubleColumn div:nth-child(2) p, .doubleColumnImgTxt div:nth-child(2) p
 {
-    margin-left: 20px;      /* to provide space between any text content and the left column when displayed in 2-column format */
+    margin-left: 30px;      /* to provide space between any text content and the left column when displayed in 2-column format */
 }
 
 .doubleColumn::after, .doubleColumnImgTxt::after, .doubleColumnTxtImg::after
