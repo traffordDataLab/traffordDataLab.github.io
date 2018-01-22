@@ -92,10 +92,9 @@
     float: right;
 }
 
-/* remove the list-item bullet from the top level and all sub-level list items */
 .noBulletPoints, .noBulletPoints * *
 {
-    list-style-type: none;
+    list-style-type: none;  /* remove the list-item bullet from the top level and all sub-level list items */
 }
 
 .traffordDataLabLogo
@@ -126,6 +125,14 @@
 {
     font-size: 0.7em;
     padding: 10px 0px 0px 12px;
+}
+
+/* end notes for references/credits etc. */
+.endNotes
+{
+    border-top: 2px dotted #f0f0f0;
+    font-size: 0.8em;
+    margin-top: 30px;
 }
 
 /* data tables */
