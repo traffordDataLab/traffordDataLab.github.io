@@ -135,6 +135,12 @@
     margin-top: 30px;
 }
 
+.endNotes div p     /* these are for the references to indent any lines following the first */
+{
+    padding-left: 2em;
+    text-indent: -2em;
+}
+
 /* data tables */
 .dataTable
 {
