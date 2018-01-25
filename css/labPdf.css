@@ -1,0 +1,202 @@
+/* ### Specialised version of the Trafford Data Lab website styles specifically for output as PDF (extending the labBase styles) ### */
+
+@page
+{
+  size: A4 portrait;
+}
+
+.pageBreak
+{
+    page-break-after: always;
+}
+
+.header
+{
+    background-color: white;
+    width: 100%;
+    text-align: left;
+    border-bottom: 1px solid #757575;
+}
+
+.navbar
+{
+    float: right;
+    margin: 15px 0 0 0;
+}
+
+.menuItem
+{
+    display: block;
+    float: left;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.menuItem a
+{
+    border-bottom: 1px solid white;        /* required so that we can simulate a link underline in the a:hover without the header wobbling by 1px */
+    padding: 0 12px;
+    margin: 0;
+    color: #757575;
+    text-decoration: none;
+}
+
+.menuItem a:hover
+{
+    border-bottom: 1px solid #fc6721;
+}
+
+.main
+{
+    color: #212121;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 0 20px 2em 12px;
+}
+
+.main p
+{
+    line-height: 1.8em;
+}
+
+.main li
+{
+    line-height: 2em;
+}
+
+.footer
+{
+    color: #212121;
+    width: 100%;
+    height: 5em;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.leftFooter
+{
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.rightFooter
+{
+    background-color: white;
+    height: 100%;
+    display: inline-block;
+    float: right;
+}
+
+.noBulletPoints, .noBulletPoints * *
+{
+    list-style-type: none;  /* remove the list-item bullet from the top level and all sub-level list items */
+}
+
+.traffordDataLabLogo
+{
+    margin: 9px 12px 0 12px;
+    padding: 0;
+}
+
+.logoTrafford
+{
+    height: 5em;
+}
+
+.logoMedia
+{
+    font-size: 2em;
+    padding: 0px 0px 0px 12px;
+    margin: 0;
+}
+
+.linkMedia
+{
+    color: #212121;
+    padding: 0px 10px 0px 0px;
+}
+
+.license
+{
+    font-size: 0.7em;
+    padding: 10px 0px 0px 12px;
+    margin-top: 50px;
+}
+
+/* end notes for references/credits etc. */
+.endNotes
+{
+    border-top: 2px dotted #f0f0f0;
+    font-size: 0.8em;
+    margin-top: 30px;
+}
+
+.endNotes div p     /* these are for the references to indent any lines following the first */
+{
+    padding-left: 2em;
+    text-indent: -2em;
+}
+
+/* data tables */
+.dataTable
+{
+    width: 100%;
+    border-collapse: collapse;
+    text-align: right;
+    font-size: 0.9em;
+}
+
+.dataTable th
+{
+    font-family: 'Roboto', sans-serif;
+    color: #757575;
+    font-size: 1.1em;
+    text-align: right;  /* IE fix - ignores the declaration set on the main table class so have to repeat here */
+}
+
+.dataTable td
+{
+    border-bottom: 1px dotted #e0e0e0;
+}
+
+.dataTable, .dataTable th, .dataTable tbody tr:last-of-type
+{
+    border-bottom: 2px solid #212121;
+}
+
+.dataTable th:nth-child(1), .dataTable td:nth-child(1)
+{
+    text-align: left;   /* the first column is left-aligned, the others are right-aligned (set in the main .dataTable class) */
+}
+
+/* visualisations and/or text content layouts */
+.singleColumn
+{
+    width: 600px;
+    margin: auto;
+}
+
+.doubleColumn div, .doubleColumnImgTxt div, .doubleColumnTxtImg div
+{
+    width: 50%;
+    float: left;
+}
+
+.doubleColumn div:nth-child(1) p, .doubleColumnTxtImg div:nth-child(1) p
+{
+    margin-right: 30px;     /* to provide space between any text content and the right column when displayed in 2-column format */
+}
+
+.doubleColumn div:nth-child(2) p, .doubleColumnImgTxt div:nth-child(2) p
+{
+    margin-left: 30px;      /* to provide space between any text content and the left column when displayed in 2-column format */
+}
+
+.doubleColumn::after, .doubleColumnImgTxt::after, .doubleColumnTxtImg::after
+{
+    content: "";
+    display: block;
+    clear: both;
+}
