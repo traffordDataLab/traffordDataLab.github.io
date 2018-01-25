@@ -1,5 +1,6 @@
 /* ### Specialised version of the Trafford Data Lab website styles specifically for output as PDF (extending the labBase styles) ### */
 
+/* New styles not present in labWebsite.css */
 @page
 {
   size: A4 portrait;
@@ -10,6 +11,12 @@
     page-break-after: always;
 }
 
+.hideOnPDF
+{
+    display: none;      /* to remove the view as PDF link */
+}
+
+/* Styles from labWebsite.css with modifications */
 .header
 {
     background-color: white;
