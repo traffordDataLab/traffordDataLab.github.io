@@ -203,6 +203,11 @@
     clear: both;
 }
 
+.singleColumn img, .doubleColumn img, .doubleColumnImgTxt img, .doubleColumnTxtImg img
+{
+    width: 100%;
+}
+
 /* Fix for IE not displaying the SVGs loaded via object tag correctly */
 .singleColumn object, .doubleColumn object, .doubleColumnImgTxt object, .doubleColumnTxtImg object
 {
