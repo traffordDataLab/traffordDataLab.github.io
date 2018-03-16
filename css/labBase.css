@@ -39,3 +39,21 @@ h1, h2, h3, h4, h5, h6, .header
 {
     font-size: 0.8em;
 }
+
+.labButton
+{
+    font-size: 0.8em;
+    background-color: #757575;
+    color: #fff;
+    padding: 3px 5px 3px 5px;
+    margin: 0 10px 7px 0;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+.labButton:hover
+{
+    cursor: pointer;
+    background-color: #fc6721;
+    text-decoration: none;
+}
