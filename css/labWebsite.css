@@ -15,6 +15,7 @@
     width: 100%;
     text-align: left;
     border-bottom: 1px solid #757575;
+    z-index: 2;
 }
 
 .navbar
@@ -76,6 +77,7 @@
     position: absolute;
     bottom: 0;
     left: 0;
+    z-index: -1;
 }
 
 .leftFooter

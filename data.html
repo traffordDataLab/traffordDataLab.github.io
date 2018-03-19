@@ -11,6 +11,207 @@
         <link rel="stylesheet" href="css/labWebsite.css"/>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto"/>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+        <style>
+        .main
+        {
+          padding-right:12px;
+        }
+        .card
+        {
+          width: 20%;
+          height: 230px;
+          margin: 0.5em 2.2%;
+          display: inline-block;
+          background-color: #F8F8F8;
+          border: 1px solid #cccccc;
+          border-radius: 3px;
+          z-index: 3;
+        }
+        input[type="checkbox"]
+        {
+          display: none;
+        }
+        input[type="checkbox"]:checked + label + div
+        {
+          display: block;
+        }
+        .cardHead
+        {
+          display:block;
+          background-color: #fc6721;
+          color: #F8F8F8;
+          height: 40px;
+          line-height: 40px;
+          padding: 0em 1em;
+          border-radius: 2px 2px 0px 0px;
+        }
+        .card label:hover
+        {
+          text-decoration: underline;
+        }
+        .cardBody
+        {
+          font-size: 0.8em;
+          height: 130px;
+          overflow-y: scroll;
+          padding: 0em 1em;
+        }
+        .cardFooter
+        {
+          padding: 0em 1em;
+        }
+        .datasetInfo
+        {
+          max-width: 100%;
+          position: fixed;
+          top: 60px;
+          left: 35px;
+          right:35px;
+          bottom:10px;
+          background-color: white;
+          display: none;
+          overflow-y: scroll;
+          padding: 0 12px 0 20px;
+          box-shadow: 0px 0px 3px 3px #757575;
+        }
+        .datasetInfo > div
+        {
+          width: 50%;
+          float: left;
+        }
+        .closeButton
+        {
+          position: fixed;
+          top: 65px;
+          left: 35px;
+          width: 25px;
+          height: 25px;
+          font-size: 25px;
+          line-height: 25px;
+          color: #757575;
+          text-align: center;
+        }
+        .closeButton span:hover
+        {
+          color: #fc6721;
+        }
+        .tableFrame
+        {
+          padding: 2em 0;
+        }
+        .tableFrame table
+        {
+          table-layout: fixed;
+          word-wrap: break-word;
+          padding: 0em 1em 2em 0em;
+          width: 100%;
+        }
+        .tableFrame  table td:nth-child(1)
+        {
+          font-weight: bold;
+          -webkit-font-smoothing: antialiased;
+          font-size: 0.8em;
+          border-bottom: 1px solid #757575;
+          width: 30%;
+        }
+        .tableFrame table td:nth-child(2)
+        {
+          border-bottom: 1px solid #757575;
+          font-size: 0.9em;
+        }
+        .labButton
+        {
+          white-space: nowrap;
+          display: inline;
+        }
+        .prevGeoJson
+        {
+          padding: 2em 0;
+        }
+        .prevGeoJson img
+        {
+          width: 98%;
+        }
+        .scriptGithub iframe
+        {
+          width: 98%;
+          height: 400px;
+        }
+        .tablePreview
+        {
+          display: inline-block;
+          overflow-y: scroll;
+          width: 98%;
+        }
+        .tablePreview table
+        {
+          font-size: 0.8em;
+          text-align: left;
+          background-color: #f7f7f7;
+        }
+        .tablePreview table td,th
+        {
+          padding-left: 1em;
+        }
+        .tablePreview table
+        {
+          white-space: nowrap;
+        }
+        @media (max-width:1300px)
+        {
+          .card
+          {
+            width: 28%;
+            margin: 0.5em 2.2%;
+          }
+        }
+        @media (max-width:850px)
+        {
+          .datasetInfo>div
+          {
+            width: 100%;
+          }
+          .card
+          {
+            width: 40%;
+            margin: 0.5em 4.5%;
+          }
+        }
+        @media (max-width:620px)
+        {
+          .card
+          {
+            width: 100%;
+            height: 150px;
+            margin: 0.5em 0%;
+          }
+          .cardBody
+          {
+            height: 50px;
+          }
+          .closeButton
+          {
+            top: 100px;
+            left: 20px;
+          }
+          .datasetInfo
+          {
+            top: 100px;
+            left: 20px;
+            right: 20px;
+          }
+
+        }
+        @media (max-height:450px)
+        {
+          .scriptGithub iframe
+          {
+            height: 90vh;
+          }
+        }
+        </style>
+        
     </head>
     <body>
         <div class="container">
@@ -31,20 +232,316 @@
             <div class="main">
                 <h1>Data</h1>
                 <p>We are proactively gathering and publishing data owned by Trafford Council and its partners. The data (and metadata) can be found in our <a href="https://github.com/traffordDataLab/open_data">open_data</a> repo on GitHub. We publish our data as <a href="http://5stardata.info/en/#by-example" target="_blank">3 star open data</a> as a minimum and provide it in <a href="https://en.wikipedia.org/wiki/Comma-separated_values" target="_blank">CSV</a>, <a href="https://www.json.org/)" target="_blank">JSON</a> and <a href="http://geojson.org/" target="_blank">GeoJSON</a> formats as appropriate. Datasets available include:</p>
-                <ul>
-                    <li><a href="https://github.com/traffordDataLab/open_data/tree/master/betting_shops">Betting shops.</a> Dataset for betting shop locations within Greater Manchester derived from the Gambling Commission public register of premises licence data.</li>
-                    <li><a href="https://github.com/traffordDataLab/open_data/tree/master/claimant_count">Claimant count and rates.</a> The claimant count measures the number of people claiming unemployment related benefits. The claimant rate measures the proportion of residents aged 16-64 who are claimants. From April 2015 the count includes all Universal Credit claimants who are required to seek work as well as all JSA claimants.</li>
-                    <li><a href="https://github.com/traffordDataLab/open_data/tree/master/defibrillators">Defibrillators.</a> Approximate locations of automated external defibrillators (AEDs).</li>
-                    <li><a href="https://github.com/traffordDataLab/open_data/tree/master/esa_benefit_claimants">Employment and support allowance benefit claimants.</a> Employment and Support Allowance (ESA) replaced Incapacity Benefit and Income Support paid on the grounds of incapacity for new claims from 27th October 2008.</li>
-                    <li><a href="https://github.com/traffordDataLab/open_data/tree/master/gp_practices">GP Practices.</a> Name and address of GP Practices.</li>
-                    <li><a href="https://github.com/traffordDataLab/open_data/tree/master/grants">Grants.</a> Dataset of grants allocated by Trafford Council via <a href="http://www.traffordpartnership.org/">Trafford Partnership</a> to voluntary and community organisations.</li>
-                    <li><a href="https://github.com/traffordDataLab/open_data/tree/master/imd_2015">English Indices of Deprivation 2015.</a> The Indices of Deprivation 2015 provide a set of relative measures of deprivation for Lower Super Output Areas based on seven domains of deprivation.</li>
-                    <li><a href="https://github.com/traffordDataLab/open_data/tree/master/job_centre_plus">Jobcentre Plus offices.</a> The address and coordinates of all Jobcentre Plus offices in Greater Manchester.</li>
-                    <li><a href="https://github.com/traffordDataLab/open_data/tree/master/lone_parents_not_employed">Lone parent households with dependent children.</a> Number of households with lone parent not in employment.</li>
-                    <li><a href="https://github.com/traffordDataLab/open_data/tree/master/mid-year_pop_estimates_2016">Ward level mid-year population estimates.</a> Estimates of the usual resident population for 2016 electoral wards in Greater Manchester.</li>
-                    <li><a href="https://github.com/traffordDataLab/open_data/tree/master/no_qualifications">No qualifications.</a> Count of working-age adults with no qualifications.</li>
-                    <li><a href="https://github.com/traffordDataLab/open_data/tree/master/social_rented_households">Social rented households.</a> Tenure table classifies households by tenure. The present dataset extracts households classified as social rented.</li>
-                </ul>
+                <div class="card">
+                  <input id="Defibrillators" type="checkbox"/>
+                  <label for="Defibrillators" class="cardHead" onclick="loadPreview([this,'open_data/master/defibrillators/trafford_defibrillators_styled.geojson','open_data/defibrillators/trafford_defibrillators.csv'])">Defibrillators</label>
+                  <div class="datasetInfo">
+                    <label for="Defibrillators" class="closeButton" onclick="removePreviews(this)"><span class="fa fa-close"></span></label>
+                    <div class="tableFrame">
+                      <table>
+                          <tr>
+                            <td>Dataset name</td>
+                            <td>Defibrillators</td>
+                          </tr>
+                          <tr>
+                            <td>Dataset description</td>
+                            <td>Defibrillator locations within Trafford</td>
+                          </tr>
+                          <tr>
+                            <td>Source</td>
+                            <td>Councillor Butt's Mayoral Charity, <a href="http://www.handonheart.org/">Hand on Heart</a> and crowd sourcing</td>
+                          </tr>
+                          <tr>
+                            <td>Publisher</td>
+                            <td>Trafford Council</td>
+                          </tr>
+                          <tr>
+                            <td>Publisher URL</td>
+                            <td><a href="https://github.com/traffordDataLab/open_data/tree/master/defibrillators">https://github.com/traffordDataLab/open_data/tree/master/defibrillators</a></td>
+                          </tr>
+                          <tr>
+                            <td>Geography</td>
+                            <td>Point data</td>
+                          </tr>
+                          <tr>
+                            <td>Geographic coverage</td>
+                            <td>Trafford</td>
+                          </tr>
+                          <tr>
+                            <td>Temporal coverage</td>
+                            <td>Correct as of January 2017</td>
+                          </tr>
+                          <tr>
+                            <td>Update frequency</td>
+                            <td>Not known</td>
+                          </tr>
+                          <tr>
+                            <td>Licence</td>
+                            <td><a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence</a></td>
+                          </tr>
+                          <tr>
+                            <td>Format</td>
+                            <td>CSV, GeoJSON, JSON</td>
+                          </tr>
+                          <tr>
+                            <td>Openness rating</td>
+                            <td>&#9733&#9733&#9733&#9734&#9734&nbsp; Structured data in open format (e.g. CSV)</td>
+                          </tr>
+                          <tr>
+                            <td>Last updated</td>
+                            <td>January 2017</td>
+                          </tr>
+                          <tr>
+                            <td>Notes</td>
+                            <td>Please note that these defibrillators may have restrictions on public availability and may not be available 24/7. The locations may not be exact as they are derived from postcodes.</td>
+                          </tr>
+                      </table>
+                      <a class="labButton" href="https://www.trafforddatalab.io/open_data/defibrillators/trafford_defibrillators.csv" download>CSV <span class="fa fa-download"></span></a><a class="labButton" href="https://www.trafforddatalab.io/open_data/defibrillators/trafford_defibrillators.geojson" download>GeoJSON <span class="fa fa-download"></span></a><a class="labButton" href="https://www.trafforddatalab.io/open_data/defibrillators/trafford_defibrillators.json" download>JSON <span class="fa fa-download"></span></a>
+                    </div>
+                    <div class="prevGeoJson">
+                      <noscript>
+                      <img src="https://www.trafforddatalab.io/open_data/defibrillators/thumbnail.png">
+                    </noscript>
+                      <div class="scriptGithub">
+                      </div>
+                      <div class="tablePreview">
+                      </div>
+                    </div>
+                  </div>
+                  <p class="cardBody">Defibrillator locations within Trafford</p>
+                  <p class="cardFooter"><a class="labButton" href="https://www.trafforddatalab.io/open_data/defibrillators/trafford_defibrillators.csv" download>CSV <span class="fa fa-download"></span></a><a class="labButton" href="https://www.trafforddatalab.io/open_data/defibrillators/trafford_defibrillators.geojson" download>GeoJSON <span class="fa fa-download"></span></a><a class="labButton" href="https://www.trafforddatalab.io/open_data/defibrillators/trafford_defibrillators.json" download>JSON <span class="fa fa-download"></span></a></p>
+                </div>
+
+                <div class="card">
+                  <input id="Grants" type="checkbox"/>
+                  <label for="Grants" class="cardHead" onclick="loadPreview([this,'open_data/grants/trafford_council_voluntary_sector_grants_360_giving_format.csv'])">Grants</label>
+                  <div class="datasetInfo">
+                    <label for="Grants" class="closeButton" onclick="removePreviews(this)"><span class="fa fa-close"></span></label>
+                    <div class="tableFrame">
+                      <table>
+                        <tr>
+                          <td>Dataset name</td>
+                          <td>Grants</td>
+                        </tr>
+                        <tr>
+                          <td>Dataset description</td>
+                          <td>Grants allocated by Trafford Council via Trafford Partnership</td>
+                        </tr>
+                        <tr>
+                          <td>Source</td>
+                          <td>Trafford Council</td>
+                        </tr>
+                        <tr>
+                          <td>Publisher</td>
+                          <td>Trafford Council</td>
+                        </tr>
+                        <tr>
+                          <td>Publisher URL</td>
+                          <td><a href="https://github.com/traffordDataLab/open_data/tree/master/grants">https://github.com/traffordDataLab/open_data/tree/master/grants</a></td>
+                        </tr>
+                        <tr>
+                          <td>Geography</td>
+                          <td>Local authority</td>
+                        </tr>
+                        <tr>
+                          <td>Geographic coverage</td>
+                          <td>Trafford borough</td>
+                        </tr>
+                        <tr>
+                          <td>Temporal coverage</td>
+                          <td>2013 - 2017</td>
+                        </tr>
+                        <tr>
+                          <td>Update frequency</td>
+                          <td>Regularly</td>
+                        </tr>
+                        <tr>
+                          <td>Licence</td>
+                          <td><a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence</a></td>
+                        </tr>
+                        <tr>
+                          <td>Format</td>
+                          <td>CSV, JSON</td>
+                        </tr>
+                        <tr>
+                          <td>Openness rating</td>
+                          <td>&#9733&#9733&#9733&#9734&#9734&nbsp; Structured data in open format (e.g. CSV)</td>
+                        </tr>
+                        <tr>
+                          <td>Last updated</td>
+                          <td>November 2017</td>
+                        </tr>
+                        <tr>
+                          <td>Notes</td>
+                          <td>The data are also available to view on <a href="http://grantnav.threesixtygiving.org/funder/GB-LAE-TRF">GrantNav</a></td>
+                        </tr>
+                      </table>
+                      <a class="labButton" href="https://www.trafforddatalab.io/open_data/grants/trafford_council_voluntary_sector_grants_360_giving_format.csv" download>CSV <span class="fa fa-download"></span></a><a class="labButton" href="https://www.trafforddatalab.io/open_data/grants/trafford_council_voluntary_sector_grants_360_giving_format.json" download>JSON <span class="fa fa-download"></span></a>
+                    </div>
+                    <div class="prevGeoJson">
+                      <div class="scriptGithub">
+                      </div>
+                      <div class="tablePreview">
+                      </div>
+                    </div>
+                  </div>
+                  <p class="cardBody">Grants allocated by Trafford Council via Trafford Partnership</p>
+                  <p class="cardFooter"><a class="labButton" href="https://www.trafforddatalab.io/open_data/grants/trafford_council_voluntary_sector_grants_360_giving_format.csv" download>CSV <span class="fa fa-download"></span></a><a class="labButton" href="https://www.trafforddatalab.io/open_data/grants/trafford_council_voluntary_sector_grants_360_giving_format.json" download>JSON <span class="fa fa-download"></span></a></p>
+                </div>
+
+                <div class="card">
+                  <input id="OS Open Greenspace" type="checkbox"/>
+                  <label for="OS Open Greenspace" class="cardHead" onclick="loadPreview([this,'open_data/master/greenspaces/trafford_greenspace_sites_styled.geojson'])">OS Open Greenspace</label>
+                  <div class="datasetInfo">
+                    <label for="OS Open Greenspace" class="closeButton" onclick="removePreviews(this)"><span class="fa fa-close"></span></label>
+                    <div class="tableFrame">
+                      <table>
+                        <tr>
+                          <td>Dataset name</td>
+                          <td>Agricultural land classification</td>
+                        </tr>
+                        <tr>
+                          <td>Dataset description</td>
+                          <td>Agricultural land classification in Trafford</td>
+                        </tr>
+                        <tr>
+                          <td>Source</td>
+                          <td>Natural England</td>
+                        </tr>
+                        <tr>
+                          <td>Publisher</td>
+                          <td>Natural England</td>
+                        </tr>
+                        <tr>
+                          <td>Publisher URL</td>
+                          <td><a href="http://naturalengland-defra.opendata.arcgis.com/datasets/provisional-agricultural-land-classification-alc-england">http://naturalengland-defra.opendata.arcgis.com/datasets/provisional-agricultural-land-classification-alc-england
+                          </a></td>
+                        </tr>
+                        <tr>
+                          <td>Geography</td>
+                          <td>Local authority</td>
+                        </tr>
+                        <tr>
+                          <td>Geographic coverage</td>
+                          <td>Trafford</td>
+                        </tr>
+                        <tr>
+                          <td>Temporal coverage</td>
+                          <td>February 2018</td>
+                        </tr>
+                        <tr>
+                          <td>Update frequency</td>
+                          <td>Unknown</td>
+                        </tr>
+                        <tr>
+                          <td>Licence</td>
+                          <td><a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence</a></td>
+                        </tr>
+                        <tr>
+                          <td>Format</td>
+                          <td>GeoJSON</td>
+                        </tr>
+                        <tr>
+                          <td>Openness rating</td>
+                          <td>&#9733&#9733&#9733&#9734&#9734&nbsp; Structured data in open format (e.g. CSV)</td>
+                        </tr>
+                        <tr>
+                          <td>Last updated</td>
+                          <td>March 2018</td>
+                        </tr>
+                      </table>
+                      <a class="labButton" href="https://www.trafforddatalab.io/open_data/greenspaces/trafford_greenspace_sites.geojson" download>GeoJSON <span class="fa fa-download"></span></a>
+                    </div>
+                    <div class="prevGeoJson">
+                      <noscript>
+                        <img src="https://www.trafforddatalab.io/open_data/greenspaces/thumbnail.png">
+                      </noscript>
+                      <div class="scriptGithub">
+                      </div>
+                      <div class="tablePreview">
+                      </div>
+                    </div>
+                  </div>
+                  <p class="cardBody">Green spaces like playing fields and allotments within Trafford and Greater Manchester.</p>
+                  <p class="cardFooter"><a class="labButton" href="https://www.trafforddatalab.io/open_data/greenspaces/trafford_greenspace_sites.geojson" download>GeoJSON <span class="fa fa-download"></span></a></p>
+                </div>
+
+                <div class="card">
+                  <input id="Agricultural land classification" type="checkbox"/>
+                  <label for="Agricultural land classification" class="cardHead" onclick="loadPreview([this,'open_data/master/agricultural_land_classification/trafford_agricultural_land_classification_styled.geojson'])">Agricultural land classification</label>
+                  <div class="datasetInfo">
+                    <label for="Agricultural land classification" class="closeButton" onclick="removePreviews(this)"><span class="fa fa-close"></span></label>
+                    <div class="tableFrame">
+                      <table>
+                        <tr>
+                          <td>Dataset name</td>
+                          <td>Agricultural land classification</td>
+                        </tr>
+                        <tr>
+                          <td>Dataset description</td>
+                          <td>Agricultural land classification in Trafford</td>
+                        </tr>
+                        <tr>
+                          <td>Source</td>
+                          <td>Natural England</td>
+                        </tr>
+                        <tr>
+                          <td>Publisher</td>
+                          <td>Natural England</td>
+                        </tr>
+                        <tr>
+                          <td>Publisher URL</td>
+                          <td><a href="http://naturalengland-defra.opendata.arcgis.com/datasets/provisional-agricultural-land-classification-alc-england">http://naturalengland-defra.opendata.arcgis.com/datasets/provisional-agricultural-land-classification-alc-england
+                          </a></td>
+                        </tr>
+                        <tr>
+                          <td>Geography</td>
+                          <td>Local authority</td>
+                        </tr>
+                        <tr>
+                          <td>Geographic coverage</td>
+                          <td>Trafford</td>
+                        </tr>
+                        <tr>
+                          <td>Temporal coverage</td>
+                          <td>February 2018</td>
+                        </tr>
+                        <tr>
+                          <td>Update frequency</td>
+                          <td>Unknown</td>
+                        </tr>
+                        <tr>
+                          <td>Licence</td>
+                          <td><a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence</a></td>
+                        </tr>
+                        <tr>
+                          <td>Format</td>
+                          <td>GeoJSON</td>
+                        </tr>
+                        <tr>
+                          <td>Openness rating</td>
+                          <td>&#9733&#9733&#9733&#9734&#9734&nbsp; Structured data in open format (e.g. CSV)</td>
+                        </tr>
+                        <tr>
+                          <td>Last updated</td>
+                          <td>March 2018</td>
+                        </tr>
+                      </table>
+                      <a class="labButton" href="https://www.trafforddatalab.io/open_data/agricultural_land_classification/trafford_agricultural_land_classification.geojson" download>GeoJSON <span class="fa fa-download"></span></a>
+                    </div>
+                    <div class="prevGeoJson">
+                      <noscript>
+                        <img src="https://www.trafforddatalab.io/open_data/agricultural_land_classification/thumbnail.png">
+                      </noscript>
+                      <div class="scriptGithub">
+                      </div>
+                      <div class="tablePreview">
+                      </div>
+                    </div>
+                  </div>
+                  <p class="cardBody">Agricultural land classification in Trafford.</p>
+                  <p class="cardFooter"><a class="labButton" href="https://www.trafforddatalab.io/open_data/agricultural_land_classification/trafford_agricultural_land_classification.geojson" download>GeoJSON <span class="fa fa-download"></span></a></p>
+                </div>
             </div>
 
             <div class="footer">
@@ -62,5 +559,92 @@
                 </div>
             </div>
         </div>
+
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+        <script>
+        function loadPreview(arrayPaths){
+          var el=arrayPaths[0];
+          for (i = 1; i < arrayPaths.length; i++) {
+            if (arrayPaths[i].endsWith(".geojson")){
+              var pathMap="https://render.githubusercontent.com/view/geojson?url=https://raw.githubusercontent.com/traffordDataLab/"+ arrayPaths[i];
+              loadMap(el,pathMap);
+            }else if (arrayPaths[i].endsWith(".csv")){
+              var pathTable="https://www.trafforddatalab.io/" + arrayPaths[i];
+              loadTable(el,pathTable);
+            }
+          }
+        }
+
+        function loadMap(el,pathMap){
+          var ifr=document.createElement("iframe");
+          ifr.setAttribute("frameborder", "0");
+          ifr.setAttribute("src", pathMap);
+          el.parentNode.getElementsByClassName("scriptGithub")[0].appendChild(ifr);
+        }
+
+        function loadTable(el,pathTable){
+
+          d3.csv(pathTable, function(error, data) {
+            if (error) throw error;
+
+            var divTable=el.parentNode.getElementsByClassName("tablePreview")[0];
+            divTable.style.border = "1px solid #cccccc";
+            var isMap=el.parentNode.getElementsByTagName("iframe")[0];
+            if (isMap){
+              var data=data.slice(1,4);
+            }
+            else {
+              var data=data.slice(1,20);
+            }
+
+            var colNames=Object.keys(data[1]);
+            var tableHeader=document.createElement("thead");
+            var headRow = document.createElement("tr")
+            var arrayLength = colNames.length;
+            for (var i = 0; i < arrayLength; i++) {
+              var colName = document.createElement("th");
+              var thText = document.createTextNode(colNames[i]);
+              colName.appendChild(thText);
+              headRow.appendChild(colName);
+            }
+
+            tableHeader.appendChild(headRow);
+            var table=document.createElement("table");
+            table.appendChild(tableHeader);
+
+            var dataLength = data.length;
+            for (var i = 0; i < dataLength; i++) {
+              var tableRow = document.createElement("tr");
+              for (var j = 0; j < arrayLength; j++) {
+                var tableCell = document.createElement("td");
+                var tdText = document.createTextNode(data[i][colNames[j]]);
+                tableCell.appendChild(tdText);
+                tableRow.appendChild(tableCell);
+              }
+              table.appendChild(tableRow);
+            }
+
+            divTable.appendChild(table);
+          })
+        }
+
+        function removePreviews(el){
+
+          var iframeDiv=el.parentNode.getElementsByClassName("scriptGithub")[0];
+          var iframeNode=iframeDiv.getElementsByTagName("iframe")[0];
+          if (iframeNode){
+            iframeDiv.removeChild(iframeNode);
+          }
+
+          var tableDiv=el.parentNode.getElementsByClassName("tablePreview")[0];
+          tableDiv.style.borderStyle = "none";
+          var tableNode=tableDiv.getElementsByTagName("table")[0];
+          if (tableNode){
+            tableDiv.removeChild(tableNode);
+
+          }
+        }
+
+        </script>
     </body>
 </html>
