@@ -13,10 +13,6 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
 
         <style>
-        /*.main
-        {
-          padding-right:12px;
-        }*/
         .card
         {
           width: 20%;
@@ -144,7 +140,7 @@
         .tablePreview
         {
           display: inline-block;
-          overflow-y: auto;
+          overflow-x: auto;
           width: 97.5%;
           border-radius: 2px;
         }
@@ -159,7 +155,6 @@
         .tablePreview table th
         {
           padding-left: 1em;
-          font-size: 0.8em;
         }
         @media (max-width:1300px)
         {
@@ -207,6 +202,12 @@
           .tableFrame table
           {
             padding: 0 0 2em 0;
+          }
+          .tablePreview table td
+          {
+            -webkit-text-size-adjust:100%;
+            -moz-text-size-adjust:100%;
+            -ms-text-size-adjust:100%;
           }
         }
         @media (max-height:450px)
