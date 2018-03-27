@@ -175,6 +175,10 @@
             width: 40%;
             margin: 1em 4.5%;
           }
+          .tableFrame table
+          {
+            padding: 0 0 2em 0;
+          }
           .tablePreview table td,
           .tablePreview table th
           {
@@ -206,10 +210,6 @@
             left: 20px;
             right: 20px;
           }
-          .tableFrame table
-          {
-            padding: 0 0 2em 0;
-          }
         }
         @media (max-height:450px)
         {
@@ -240,7 +240,7 @@
             <div class="main">
                 <h1>Data</h1>
                 <p>We are proactively gathering and publishing data owned by Trafford Council and its partners. We publish our data as <a href="http://5stardata.info/en/#by-example" target="_blank">3 star open data</a> as a minimum and provide it in <a href="https://en.wikipedia.org/wiki/Comma-separated_values" target="_blank">CSV</a>, <a href="https://www.json.org/)" target="_blank">JSON</a> and <a href="http://geojson.org/" target="_blank">GeoJSON</a> formats as appropriate.</p>
-                <p>Click on the datasets below to reveal the metadata and to preview the structure of the data on the form of a map and/or a table with the first entrances. More datasets can be found in our <a href="https://github.com/traffordDataLab/open_data">open_data</a> repo on GitHub.</p>
+                <p>Click on the datasets below to see the metadata and to preview the structure of the data on the form of a map and/or a table with the first rows. More datasets can be found in our <a href="https://github.com/traffordDataLab/open_data">open_data</a> repo on GitHub.</p>
 
                 <div class="card">
                   <input id="Betting shops" type="checkbox"/>
@@ -320,87 +320,6 @@
                   </div>
                   <p class="cardBody">Premises licence data for Greater Manchester</p>
                   <p class="cardFooter"><a class="labButton" href="https://www.trafforddatalab.io/open_data/betting_shops/bettingshops_gm.csv" download>CSV <span class="fa fa-download"></span></a><a class="labButton" href="https://www.trafforddatalab.io/open_data/betting_shops/bettingshops_gm_styled.geojson" download>GeoJSON <span class="fa fa-download"></span></a><a class="labButton" href="https://www.trafforddatalab.io/open_data/betting_shops/bettingshops_gm.json" download>JSON <span class="fa fa-download"></span></a></p>
-                </div>
-
-                <div class="card">
-                  <input id="Open plaques" type="checkbox"/>
-                  <label for="Open plaques" class="cardHead" onclick="loadPreview([this,'open_data/master/open_plaques/open_plaques_trafford.styled.geojson','open_data/open_plaques/open_plaques_trafford.csv'])">Open plaques</label>
-                  <div class="datasetInfo">
-                    <label for="Open plaques" class="closeButton" onclick="removePreviews(this)"><span class="fa fa-close"></span></label>
-                    <div class="tableFrame">
-                      <table>
-                      <tr>
-                      	<td>Dataset name</td>
-                      	<td>Open plaques</td>
-                      </tr>
-                      <tr>
-                      	<td>Dataset description</td>
-                      	<td>Inscriptions on and locations of Open plaques in Trafford</td>
-                      </tr>
-                      <tr>
-                      	<td>Source</td>
-                      	<td>Various</td>
-                      </tr>
-                      <tr>
-                      	<td>Publisher</td>
-                      	<td>Open Plaques</td>
-                      </tr>
-                      <tr>
-                      	<td>Publisher URL</td>
-                      	<td><a href="http://openplaques.org/"></a>http://openplaques.org/</td>
-                      </tr>
-                      <tr>
-                      	<td>Geography</td>
-                      	<td>Point data</td>
-                      </tr>
-                      <tr>
-                      	<td>Geographic coverage</td>
-                      	<td>Trafford</td>
-                      </tr>
-                      <tr>
-                      	<td>Temporal coverage</td>
-                      	<td>8 November 2017</td>
-                      </tr>
-                      <tr>
-                      	<td>Update frequency</td>
-                      	<td>Regularly</td>
-                      </tr>
-                      <tr>
-                      	<td>Licence</td>
-                      	<td><a href="http://www.opendatacommons.org/licenses/pddl/summary/">Public Domain Dedication and License 1.0</a></td>
-                      </tr>
-                      <tr>
-                      	<td>Attribution</td>
-                      	<td>Data gathered by Open Plaques</td>
-                      </tr>
-                      <tr>
-                      	<td>Format</td>
-                      	<td>CSV, GeoJSON</td>
-                      </tr>
-                      <tr>
-                      	<td>Openness rating</td>
-                      	<td>&#9733&#9733&#9733&#9734&#9734&nbsp; Structured data in open format (e.g. CSV)</td>
-                      </tr>
-                      <tr>
-                      	<td>Last updated</td>
-                      	<td>March 2018</td>
-                      </tr>
-                      <tr>
-                      </table>
-                      <a class="labButton" href="https://www.trafforddatalab.io/open_data/open_plaques/open_plaques_trafford.csv" download>CSV <span class="fa fa-download"></span></a><a class="labButton" href="https://www.trafforddatalab.io/open_data/open_plaques/open_plaques_trafford.geojson" download>GeoJSON <span class="fa fa-download"></span></a>
-                    </div>
-                    <div class="prevGeoJson">
-                      <noscript>
-                      <img src="https://www.trafforddatalab.io/open_data/open_plaques/thumbnail.png">
-                    </noscript>
-                      <div class="scriptGithub">
-                      </div>
-                      <div class="tablePreview">
-                      </div>
-                    </div>
-                  </div>
-                  <p class="cardBody">Inscriptions on and locations of Open plaques in Trafford</p>
-                  <p class="cardFooter"><a class="labButton" href="https://www.trafforddatalab.io/open_data/open_plaques/open_plaques_trafford.csv" download>CSV <span class="fa fa-download"></span></a><a class="labButton" href="https://www.trafforddatalab.io/open_data/open_plaques/open_plaques_trafford.geojson" download>GeoJSON <span class="fa fa-download"></span></a></p>
                 </div>
 
                 <div class="card">
@@ -641,6 +560,171 @@
                 </div>
 
                 <div class="card">
+                  <input id="Jobcentre Plus offices" type="checkbox"/>
+                  <label for="Jobcentre Plus offices" class="cardHead" onclick="loadPreview([this,'open_data/master/job_centre_plus/jobcentreplus_gm.styled.geojson','open_data/job_centre_plus/jobcentreplus_gm.csv'])">Jobcentre Plus offices</label>
+                  <div class="datasetInfo">
+                    <label for="Jobcentre Plus offices" class="closeButton" onclick="removePreviews(this)"><span class="fa fa-close"></span></label>
+                    <div class="tableFrame">
+                      <table>
+                      <tr>
+                      	<td>Dataset name</td>
+                      	<td>Jobcentre Plus offices</td>
+                      </tr>
+                      <tr>
+                      	<td>Dataset description</td>
+                      	<td>The address and coordinates of all Jobcentre Plus offices in Greater Manchester</td>
+                      </tr>
+                      <tr>
+                      	<td>Source</td>
+                      	<td>Department for Work and Pensions</td>
+                      </tr>
+                      <tr>
+                      	<td>Publisher</td>
+                      	<td>WhatDoTheyKnow</td>
+                      </tr>
+                      <tr>
+                      	<td>Publisher URL</td>
+                      	<td><a href="https://www.whatdotheyknow.com/request/jobcentre_plus_district"></a>https://www.whatdotheyknow.com/request/jobcentre_plus_district</td>
+                      </tr>
+                      <tr>
+                      	<td>Geography</td>
+                      	<td>Point data</td>
+                      </tr>
+                      <tr>
+                      	<td>Geographic coverage</td>
+                      	<td>Greater Manchester</td>
+                      </tr>
+                      <tr>
+                      	<td>Temporal coverage</td>
+                      	<td>November 2017</td>
+                      </tr>
+                      <tr>
+                      	<td>Update frequency</td>
+                      	<td></td>
+                      </tr>
+                      <tr>
+                      	<td>Licence</td>
+                      	<td><a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence</a></td>
+                      </tr>
+                      <tr>
+                      	<td>Attribution</td>
+                      	<td></td>
+                      </tr>
+                      <tr>
+                      	<td>Format</td>
+                      	<td>CSV, GeoJSON, JSON</td>
+                      </tr>
+                      <tr>
+                      	<td>Openness rating</td>
+                      	<td>&#9733&#9733&#9733&#9734&#9734&nbsp; Structured data in open format (e.g. CSV)</td>
+                      </tr>
+                      <tr>
+                      	<td>Last updated</td>
+                      	<td>November 2017</td>
+                      </tr>
+                      <tr>
+                      	<td>Notes</td>
+                      	<td>The addresses were batch geocoded using Google Maps with the [ggmap](https://cran.r-project.org/web/packages/ggmap/index.html) R package.</td>
+                      </tr>
+                      </table>
+                      <a class="labButton" href="https://www.trafforddatalab.io/open_data/job_centre_plus/jobcentreplus_gm.csv" download>CSV <span class="fa fa-download"></span></a><a class="labButton" href="https://www.trafforddatalab.io/open_data/job_centre_plus/jobcentreplus_gm.geojson" download>GeoJSON <span class="fa fa-download"></span></a><a class="labButton" href="https://www.trafforddatalab.io/open_data/job_centre_plus/jobcentreplus_gm.json" download>JSON <span class="fa fa-download"></span></a>
+                    </div>
+                    <div class="prevGeoJson">
+                      <noscript>
+                      <img src="https://www.trafforddatalab.io/open_data/job_centre_plus/thumbnail.png">
+                    </noscript>
+                      <div class="scriptGithub">
+                      </div>
+                      <div class="tablePreview">
+                      </div>
+                    </div>
+                  </div>
+                  <p class="cardBody">Defibrillator locations within Trafford</p>
+                  <p class="cardFooter"><a class="labButton" href="https://www.trafforddatalab.io/open_data/job_centre_plus/jobcentreplus_gm.csv" download>CSV <span class="fa fa-download"></span></a><a class="labButton" href="https://www.trafforddatalab.io/open_data/job_centre_plus/jobcentreplus_gm.geojson" download>GeoJSON <span class="fa fa-download"></span></a><a class="labButton" href="https://www.trafforddatalab.io/open_data/job_centre_plus/jobcentreplus_gm.json" download>JSON <span class="fa fa-download"></span></a></p>
+                </div>
+
+                <div class="card">
+                  <input id="Open plaques" type="checkbox"/>
+                  <label for="Open plaques" class="cardHead" onclick="loadPreview([this,'open_data/master/open_plaques/open_plaques_trafford.styled.geojson','open_data/open_plaques/open_plaques_trafford.csv'])">Open plaques</label>
+                  <div class="datasetInfo">
+                    <label for="Open plaques" class="closeButton" onclick="removePreviews(this)"><span class="fa fa-close"></span></label>
+                    <div class="tableFrame">
+                      <table>
+                      <tr>
+                      	<td>Dataset name</td>
+                      	<td>Open plaques</td>
+                      </tr>
+                      <tr>
+                      	<td>Dataset description</td>
+                      	<td>Inscriptions on and locations of Open plaques in Trafford</td>
+                      </tr>
+                      <tr>
+                      	<td>Source</td>
+                      	<td>Various</td>
+                      </tr>
+                      <tr>
+                      	<td>Publisher</td>
+                      	<td>Open Plaques</td>
+                      </tr>
+                      <tr>
+                      	<td>Publisher URL</td>
+                      	<td><a href="http://openplaques.org/"></a>http://openplaques.org/</td>
+                      </tr>
+                      <tr>
+                      	<td>Geography</td>
+                      	<td>Point data</td>
+                      </tr>
+                      <tr>
+                      	<td>Geographic coverage</td>
+                      	<td>Trafford</td>
+                      </tr>
+                      <tr>
+                      	<td>Temporal coverage</td>
+                      	<td>8 November 2017</td>
+                      </tr>
+                      <tr>
+                      	<td>Update frequency</td>
+                      	<td>Regularly</td>
+                      </tr>
+                      <tr>
+                      	<td>Licence</td>
+                      	<td><a href="http://www.opendatacommons.org/licenses/pddl/summary/">Public Domain Dedication and License 1.0</a></td>
+                      </tr>
+                      <tr>
+                      	<td>Attribution</td>
+                      	<td>Data gathered by Open Plaques</td>
+                      </tr>
+                      <tr>
+                      	<td>Format</td>
+                      	<td>CSV, GeoJSON</td>
+                      </tr>
+                      <tr>
+                      	<td>Openness rating</td>
+                      	<td>&#9733&#9733&#9733&#9734&#9734&nbsp; Structured data in open format (e.g. CSV)</td>
+                      </tr>
+                      <tr>
+                      	<td>Last updated</td>
+                      	<td>March 2018</td>
+                      </tr>
+                      <tr>
+                      </table>
+                      <a class="labButton" href="https://www.trafforddatalab.io/open_data/open_plaques/open_plaques_trafford.csv" download>CSV <span class="fa fa-download"></span></a><a class="labButton" href="https://www.trafforddatalab.io/open_data/open_plaques/open_plaques_trafford.geojson" download>GeoJSON <span class="fa fa-download"></span></a>
+                    </div>
+                    <div class="prevGeoJson">
+                      <noscript>
+                      <img src="https://www.trafforddatalab.io/open_data/open_plaques/thumbnail.png">
+                    </noscript>
+                      <div class="scriptGithub">
+                      </div>
+                      <div class="tablePreview">
+                      </div>
+                    </div>
+                  </div>
+                  <p class="cardBody">Inscriptions on and locations of Open plaques in Trafford</p>
+                  <p class="cardFooter"><a class="labButton" href="https://www.trafforddatalab.io/open_data/open_plaques/open_plaques_trafford.csv" download>CSV <span class="fa fa-download"></span></a><a class="labButton" href="https://www.trafforddatalab.io/open_data/open_plaques/open_plaques_trafford.geojson" download>GeoJSON <span class="fa fa-download"></span></a></p>
+                </div>
+
+                <div class="card">
                   <input id="OS Open Greenspace" type="checkbox"/>
                   <label for="OS Open Greenspace" class="cardHead" onclick="loadPreview([this,'open_data/master/greenspaces/trafford_greenspace_sites_styled.geojson'])">OS Open Greenspace</label>
                   <div class="datasetInfo">
@@ -726,90 +810,6 @@
                   </div>
                   <p class="cardBody">Green spaces like playing fields and allotments within Trafford and Greater Manchester.</p>
                   <p class="cardFooter"><a class="labButton" href="https://www.trafforddatalab.io/open_data/greenspaces/trafford_greenspace_sites.geojson" download>GeoJSON <span class="fa fa-download"></span></a></p>
-                </div>
-
-                <div class="card">
-                  <input id="Jobcentre Plus offices" type="checkbox"/>
-                  <label for="Jobcentre Plus offices" class="cardHead" onclick="loadPreview([this,'open_data/master/job_centre_plus/jobcentreplus_gm.styled.geojson','open_data/job_centre_plus/jobcentreplus_gm.csv'])">Jobcentre Plus offices</label>
-                  <div class="datasetInfo">
-                    <label for="Jobcentre Plus offices" class="closeButton" onclick="removePreviews(this)"><span class="fa fa-close"></span></label>
-                    <div class="tableFrame">
-                      <table>
-                      <tr>
-                      	<td>Dataset name</td>
-                      	<td>Jobcentre Plus offices</td>
-                      </tr>
-                      <tr>
-                      	<td>Dataset description</td>
-                      	<td>The address and coordinates of all Jobcentre Plus offices in Greater Manchester</td>
-                      </tr>
-                      <tr>
-                      	<td>Source</td>
-                      	<td>Department for Work and Pensions</td>
-                      </tr>
-                      <tr>
-                      	<td>Publisher</td>
-                      	<td>WhatDoTheyKnow</td>
-                      </tr>
-                      <tr>
-                      	<td>Publisher URL</td>
-                      	<td><a href="https://www.whatdotheyknow.com/request/jobcentre_plus_district"></a>https://www.whatdotheyknow.com/request/jobcentre_plus_district</td>
-                      </tr>
-                      <tr>
-                      	<td>Geography</td>
-                      	<td>Point data</td>
-                      </tr>
-                      <tr>
-                      	<td>Geographic coverage</td>
-                      	<td>Greater Manchester</td>
-                      </tr>
-                      <tr>
-                      	<td>Temporal coverage</td>
-                      	<td>November 2017</td>
-                      </tr>
-                      <tr>
-                      	<td>Update frequency</td>
-                      	<td></td>
-                      </tr>
-                      <tr>
-                      	<td>Licence</td>
-                      	<td><a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence</a></td>
-                      </tr>
-                      <tr>
-                      	<td>Attribution</td>
-                      	<td></td>
-                      </tr>
-                      <tr>
-                      	<td>Format</td>
-                      	<td>CSV, GeoJSON, JSON</td>
-                      </tr>
-                      <tr>
-                      	<td>Openness rating</td>
-                      	<td>&#9733&#9733&#9733&#9734&#9734&nbsp; Structured data in open format (e.g. CSV)</td>
-                      </tr>
-                      <tr>
-                      	<td>Last updated</td>
-                      	<td>November 2017</td>
-                      </tr>
-                      <tr>
-                      	<td>Notes</td>
-                      	<td>The addresses were batch geocoded using Google Maps with the [ggmap](https://cran.r-project.org/web/packages/ggmap/index.html) R package.</td>
-                      </tr>
-                      </table>
-                      <a class="labButton" href="https://www.trafforddatalab.io/open_data/job_centre_plus/jobcentreplus_gm.csv" download>CSV <span class="fa fa-download"></span></a><a class="labButton" href="https://www.trafforddatalab.io/open_data/job_centre_plus/jobcentreplus_gm.geojson" download>GeoJSON <span class="fa fa-download"></span></a><a class="labButton" href="https://www.trafforddatalab.io/open_data/job_centre_plus/jobcentreplus_gm.json" download>JSON <span class="fa fa-download"></span></a>
-                    </div>
-                    <div class="prevGeoJson">
-                      <noscript>
-                      <img src="https://www.trafforddatalab.io/open_data/job_centre_plus/thumbnail.png">
-                    </noscript>
-                      <div class="scriptGithub">
-                      </div>
-                      <div class="tablePreview">
-                      </div>
-                    </div>
-                  </div>
-                  <p class="cardBody">Defibrillator locations within Trafford</p>
-                  <p class="cardFooter"><a class="labButton" href="https://www.trafforddatalab.io/open_data/job_centre_plus/jobcentreplus_gm.csv" download>CSV <span class="fa fa-download"></span></a><a class="labButton" href="https://www.trafforddatalab.io/open_data/job_centre_plus/jobcentreplus_gm.geojson" download>GeoJSON <span class="fa fa-download"></span></a><a class="labButton" href="https://www.trafforddatalab.io/open_data/job_centre_plus/jobcentreplus_gm.json" download>JSON <span class="fa fa-download"></span></a></p>
                 </div>
 
             </div>
