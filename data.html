@@ -239,8 +239,8 @@
 
             <div class="main">
                 <h1>Data</h1>
-                <p>We are proactively gathering and publishing data owned by Trafford Council and its partners. We publish our data as <a href="http://5stardata.info/en/#by-example" target="_blank">3 star open data</a> as a minimum and provide it in <a href="https://en.wikipedia.org/wiki/Comma-separated_values" target="_blank">CSV</a>, <a href="https://www.json.org/)" target="_blank">JSON</a> and <a href="http://geojson.org/" target="_blank">GeoJSON</a> formats as appropriate.</p>
-                <p>Click on the datasets below to see the metadata and to preview the structure of the data on the form of a map and/or a table with the first rows. More datasets can be found in our <a href="https://github.com/traffordDataLab/open_data">open_data</a> repo on GitHub.</p>
+                <p>We are committed to the sourcing, preparation and publication of open data. We aim to ensure that all the open data we publish has a minimum <a href="http://5stardata.info/en/#by-example">3-star openness rating</a>. Our data must be accessible on the Web in a machine readable non-proprietary format with a licence that permits anyone to reuse it.</p>
+                <p>Click on the data cards below to reveal information about the data (metadata) and preview it in maps and tables. The datasets can also be found on our dedicated repository on <a href="https://github.com/traffordDataLab/open_data">GitHub</a>.</p>
 
                 <div class="card">
                   <input id="Betting shops" type="checkbox"/>
@@ -851,7 +851,12 @@
           var ifr=document.createElement("iframe");
           ifr.setAttribute("frameborder", "0");
           ifr.setAttribute("src", pathMap);
+          try{
           el.parentNode.getElementsByClassName("scriptGithub")[0].appendChild(ifr);
+          }
+          catch(error){
+            console.log(error+"error")
+          }
         }
 
         function loadTable(el,pathTable){
