@@ -175,6 +175,20 @@
     text-align: left;   /* the first column is left-aligned, the others are right-aligned (set in the main .dataTable class) */
 }
 
+/* thumbnail images */
+.thumbnail
+{
+    float: left;
+    margin-right: 20px;
+    border: 1px solid #f0f0f0;
+    box-shadow: 3px 3px 5px #f0f0f0;
+}
+
+.thumbnail:hover
+{
+    border: 1px solid #fc6721;
+}
+
 /* visualisations and/or text content layouts */
 .singleColumn
 {
