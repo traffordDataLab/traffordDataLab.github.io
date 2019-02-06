@@ -10,64 +10,22 @@
         <link rel="stylesheet" href="css/labBase.css"/>
         <link rel="stylesheet" href="css/labWebsite.css"/>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto"/>
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
         <style>
-            /* using the 'checkbox css trick' (or in this case radio buttons) so don't need to actually display the radio button element */
-            input[type="radio"]
+            .fas
             {
-                display: none;
+                font-size: 50px;
+                margin-top: 12px;
             }
 
-            /* if the radio button associated to the label selected is checked then show the unordered list associated with that label */
-            input[type="radio"]:checked + label + ul
+            .iconThumbnail
             {
-                display: block;
-            }
-
-            /* the unordered list of themes which is displayed when the associated label is selected */
-            .expand
-            {
-                display: none;
-                margin: 0;
-                padding: 0;
-            }
-
-            /* the unordered list of themes items */
-            .expand li
-            {
-                float: left;
-                padding: 1em 1em 1em 0;
-                font-size: 0.9em;
-                border-bottom: 1px solid #f0f0f0;
-            }
-
-            /* the area buttons to select before choosing a theme (Trafford and then the 21 wards) */
-            .themeButton
-            {
-                display: block;
-                width: 15em;
-                background-color: #f0f0f0;
-                border-radius: 3px;
-                border: 1px solid #757575;
-                margin-top: 0.5em;
-                padding: 3px 3px;
-                color: #757575;
-            }
-
-            @media (max-width:620px)
-            {
-                .themeButton
-                {
-                    width: 100%;
-                }
-            }
-
-            .themeButton:hover, .themeButton:active
-            {
-                background-color: #fc6721;
-                color: #f0f0f0;
-                cursor: pointer;
+                color: #fc6721;
+                display: inline-block;
+                width: 150px;
+                height: 100px;
+                text-align: center;
             }
         </style>
     </head>
@@ -89,21 +47,21 @@
 
             <div class="main">
                 <h1>Info</h1>
-                <p>Statistical information about <a href="https://github.com/traffordDataLab/spatial_data/blob/master/local_authority/2016/trafford_local_authority_full_resolution.geojson" target="_blank">Trafford</a> and the smaller geographical areas which make up the borough. The information is provided via interactive applications and static reports.</p>
+                <p>Statistical information about <a href="https://github.com/traffordDataLab/spatial_data/blob/master/local_authority/2016/trafford_local_authority_full_resolution.geojson" target="_blank">Trafford</a> and the smaller geographical areas which make up the borough. The information is provided via interactive applications.</p>
                 <br />
 
-                <h2>Interactive</h2>
+                <h2>Applications</h2>
                 <div>
-                    <a href="http://www.trafforddatalab.io/crime_scanner/" target="_blank"><img src="images/crime_scanner_thumbnail.png" class="thumbnail" alt="Crime Scanner" border="0"/><strong>Crime Scanner</strong></a><br />
-                    Interactively visualise street level crime and anti-social behaviour (ASB) incidents in your area.
+                    <a href="https://www.trafforddatalab.io/ward_profiler/" target="_blank"><img src="images/ward_profiler_thumbnail.png" class="thumbnail" alt="Ward Profiler" border="0"/><strong>Ward Profiler</strong></a><br />
+                    In-depth information focussing on each of <a href="https://github.com/traffordDataLab/spatial_data/blob/master/ward/2017/trafford_ward_full_resolution.geojson" target="_blank">Trafford's wards</a>. The information is presented in thematic sections as interactive maps and charts allowing for easy comparisons to be made. You can also download the data and code behind the visualisations.
                 </div>
 
                 <br class="noFloat"/>
                 <br />
 
                 <div>
-                    <a href="https://trafforddatalab.shinyapps.io/ward_profiler" target="_blank"><img src="images/ward_profiler_thumbnail.png" class="thumbnail" alt="Ward Profiler" border="0"/><strong>Ward Profiler</strong></a><br />
-                    In-depth information focussing on each of <a href="https://github.com/traffordDataLab/spatial_data/blob/master/ward/2017/trafford_ward_full_resolution.geojson" target="_blank">Trafford's wards</a>. The information is presented in thematic sections complimenting our static profiles below, allowing for specific information about a ward to be understood in the wider context.
+                    <a href="http://www.trafforddatalab.io/crime_scanner/" target="_blank"><img src="images/crime_scanner_thumbnail.png" class="thumbnail" alt="Crime Scanner" border="0"/><strong>Crime Scanner</strong></a><br />
+                    Interactively visualise street level crime and anti-social behaviour (ASB) incidents in your area.
                 </div>
 
                 <br class="noFloat"/>
@@ -116,117 +74,31 @@
                 <br class="noFloat"/>
                 <br /><br/>
 
-                <h2>Static</h2>
-                <p>This section contains thematic profiles comparing the <a href="https://github.com/traffordDataLab/spatial_data/blob/master/ward/2017/trafford_ward_full_resolution.geojson" target="_blank">21 wards</a> in Trafford. The profiles contain links to the raw <a href="data.html">open data</a> and can also be downloaded as PDF documents. Please choose a theme you are interested in and then a profile from the list below.</p>
+                <h2>Resources</h2>
+                <p>Additional helpful resources, such as our tutorial guides for the various technologies that we use.</p>
 
-                <!-- Quick nav links. Displayed only if no CSS is available -->
-                <div class="hideContent">
-                    <h2>Navigation links</h2>
-                    <a href="#themes_community_safety">Community Safety</a>,
-                    <a href="#themes_demographics">Demographics</a>,
-                    <a href="#themes_economy">Economy</a>,
-                    <a href="#themes_education">Education</a>,
-                    <a href="#themes_environment">Environment</a>,
-                    <a href="#themes_governance">Governance</a>
-                    <a href="#themes_health">Health</a>,
-                    <a href="#themes_housing">Housing</a>,
-                    <a href="#themes_labour_market">Labour Market</a>,
-                    <a href="#themes_transport">Transport</a>,
-
-                    <h2>Themes</h2>
+                <div>
+                    <a href="https://www.trafforddatalab.io/interactive_graphics_companion/" target="_blank"><div class="thumbnail iconThumbnail"><span class="fas fa-book-open"></span><br />Vega-Lite</div><strong>Interactive Graphics Companion</strong></a><br />
+                    A guide to creating interactive data visualisations using <a href="https://vega.github.io/vega-lite/" target="_blank">Vega-Lite</a>. Our accompanying blog post on <a href="https://medium.com/@traffordDataLab/take-back-control-of-your-data-visualisations-c56ec121b231" target="_blank">Medium</a> provides a useful introduction.
                 </div>
-                <!-- Quick nav links end -->
 
-                <form>
-                    <input id="themes_community_safety" type="radio" name="themes"/><label for="themes_community_safety" class="themeButton">Community Safety</label>
-                    <ul class="noBulletPoints expand">
-                        <li><a href="https://www.trafforddatalab.io/info/community_safety/asb/index.html">Anti-social behaviour</a></li>
-                        <li><a href="https://www.trafforddatalab.io/info/community_safety/bicycle_theft/index.html">Bicycle theft</a></li>
-                        <li><a href="https://www.trafforddatalab.io/info/community_safety/burglary/index.html">Burglary</a></li>
-                        <li><a href="https://www.trafforddatalab.io/info/community_safety/robbery/index.html">Robbery</a></li>
-                        <li><a href="https://www.trafforddatalab.io/info/community_safety/vehicle_crime/index.html">Vehicle crime</a></li>
-                        <li><a href="https://www.trafforddatalab.io/info/community_safety/violent_crime/index.html">Violent crime</a></li>
-                    </ul>
-                    <div class="noFloat"></div>
-
-                    <input id="themes_demographics" type="radio" name="themes"/><label for="themes_demographics" class="themeButton">Demographics</label>
-                    <ul class="noBulletPoints expand">
-                        <li><a href="https://www.trafforddatalab.io/info/demographics/ethnicity/index.html">Ethnicity</a></li>
-                        <li><a href="https://www.trafforddatalab.io/info/demographics/languages/index.html">Languages</a></li>
-                        <li><a href="https://www.trafforddatalab.io/info/demographics/population/index.html">Population</a></li>
-                        <li><a href="https://www.trafforddatalab.io/info/demographics/religion/index.html">Religion</a></li>
-                    </ul>
-                    <div class="noFloat"></div>
-
-                    <input id="themes_economy" type="radio" name="themes"/><label for="themes_economy" class="themeButton">Economy</label>
-                    <ul class="noBulletPoints expand">
-                        <li><a href="coming_soon.html">Businesses</a></li>
-                    </ul>
-                    <div class="noFloat"></div>
-
-                    <input id="themes_education" type="radio" name="themes"/><label for="themes_education" class="themeButton">Education</label>
-                    <ul class="noBulletPoints expand">
-                        <li><a href="coming_soon.html">Attainment gap</a></li>
-                        <li><a href="coming_soon.html">Unauthorised absence</a></li>
-                    </ul>
-                    <div class="noFloat"></div>
-
-                    <input id="themes_environment" type="radio" name="themes"/><label for="themes_environment" class="themeButton">Environment</label>
-                    <ul class="noBulletPoints expand">
-                        <li><a href="coming_soon.html">Carbon emissions</a></li>
-                        <li><a href="coming_soon.html">Green spaces</a></li>
-                    </ul>
-                    <div class="noFloat"></div>
-
-                    <input id="themes_governance" type="radio" name="themes"/><label for="themes_governance" class="themeButton">Governance</label>
-                    <ul class="noBulletPoints expand">
-                        <li><a href="coming_soon.html">Election turnout</a></li>
-                        <li><a href="coming_soon.html">Political control</a></li>
-                    </ul>
-                    <div class="noFloat"></div>
-
-                    <input id="themes_health" type="radio" name="themes"/><label for="themes_health" class="themeButton">Health</label>
-                    <ul class="noBulletPoints expand">
-                        <li><a href="coming_soon.html">Heart disease</a></li>
-                        <li><a href="https://www.trafforddatalab.io/info/health/life_expectancy/index.html">Life expectancy</a></li>
-                        <li><a href="coming_soon.html">Mental health</a></li>
-                        <li><a href="coming_soon.html">Obesity</a></li>
-                        <li><a href="coming_soon.html">Smoking</a></li>
-                        <li><a href="coming_soon.html">Teenage conception</a></li>
-                    </ul>
-                    <div class="noFloat"></div>
-
-                    <input id="themes_housing" type="radio" name="themes"/><label for="themes_housing" class="themeButton">Housing</label>
-                    <ul class="noBulletPoints expand">
-                        <li><a href="coming_soon.html">Housing stock</a></li>
-                        <li><a href="coming_soon.html">Median house prices</a></li>
-                        <li><a href="coming_soon.html">Tenure</a></li>
-                    </ul>
-                    <div class="noFloat"></div>
-
-                    <input id="themes_labour_market" type="radio" name="themes"/><label for="themes_labour_market" class="themeButton">Labour Market</label>
-                    <ul class="noBulletPoints expand">
-                        <li><a href="coming_soon.html">Benefits</a></li>
-                        <li><a href="coming_soon.html">Earnings</a></li>
-                        <li><a href="coming_soon.html">Occupations</a></li>
-                        <li><a href="coming_soon.html">Qualifications</a></li>
-                        <li><a href="https://www.trafforddatalab.io/info/labour_market/unemployment/index.html">Unemployment</a></li>
-                    </ul>
-                    <div class="noFloat"></div>
-
-                    <input id="themes_transport" type="radio" name="themes"/><label for="themes_transport" class="themeButton">Transport</label>
-                    <ul class="noBulletPoints expand">
-                        <li><a href="coming_soon.html">Commuting</a></li>
-                        <li><a href="coming_soon.html">Public Transport Accessibility</a></li>
-                        <li><a href="https://www.trafforddatalab.io/info/transport/road_safety/index.html">Road safety</a></li>
-                    </ul>
-                </form>
-
-                <div class="noFloat"></div>
+                <br class="noFloat"/>
                 <br />
-                <p>
-                    If you are interested in learning how we produce the data visualisations found within our profiles you may like to read our <a href="https://www.trafforddatalab.io/graphics_companion/" target="_blank">ggplot2 graphics companion</a>. This demonstrates the different types of visualisation that are possible with the <a href="http://ggplot2.tidyverse.org" target="_blank">ggplot2</a> package in <a href="https://cran.r-project.org" target="_blank">R</a>, providing code for each of the examples.
-                </p>
+
+                <div>
+                    <a href="https://www.trafforddatalab.io/open_data_companion/" target="_blank"><div class="thumbnail iconThumbnail"><span class="fas fa-book-open"></span><br />Open Data</div><strong>Open Data Companion</strong></a><br />
+                    This companion provides <a href="https://cran.r-project.org" target="_blank">R</a> code demonstrating how to retrieve and tidy open data from a number of government APIs.
+                </div>
+
+                <br class="noFloat"/>
+                <br />
+
+                <div>
+                    <a href="https://www.trafforddatalab.io/graphics_companion/" target="_blank"><div class="thumbnail iconThumbnail"><span class="fas fa-book-open"></span><br />ggplot2</div><strong>ggplot2 Graphics Companion</strong></a><br />
+                    This demonstrates the different types of visualisation that are possible with the <a href="http://ggplot2.tidyverse.org" target="_blank">ggplot2</a> package in <a href="https://cran.r-project.org" target="_blank">R</a>, providing code for each of the examples.
+                </div>
+
+                <br class="noFloat"/>
             </div>
 
             <div class="footer">
