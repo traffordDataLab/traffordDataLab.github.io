@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+    <head>
+        <title>Trafford Data Lab: Learning</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+        <meta charset="UTF-8"/>
+        <meta name="keywords" content="open, data, open data, data visualisation, visualisation, visualisations, profile, profiles, information, map, maps, mapping"/>
+        <meta name="description" content="The Trafford Data Lab supports decision-making in Trafford, Greater Manchester, by revealing patterns in data through visualisation. We have created visualisations from raw open data as thematic profiles of Trafford."/>
+
+        <link rel="stylesheet" href="css/labBase.css"/>
+        <link rel="stylesheet" href="css/labWebsite.css"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto"/>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+        <style>
+            .fas
+            {
+                font-size: 50px;
+                margin-top: 12px;
+            }
+
+            .iconThumbnail
+            {
+                color: #fc6721;
+                display: inline-block;
+                width: 150px;
+                height: 100px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <a href="index.html"><img src="https://www.trafforddatalab.io/assets/logo/trafforddatalab_logo.svg" alt="Trafford Data Lab" width="93" border="0" class="traffordDataLabLogo"/></a>
+
+                <h2 class="hideContent">Main Menu</h2>   <!-- Menu heading displayed only if we don't have CSS enabled -->
+                <ul class="navbar noBulletPoints">
+                    <li class="hideContent"><a href="index.html">Home</a></li>   <!-- Home link displayed only if we don't have CSS enabled -->
+                    <li class="menuItem"><a href="projects.html">Projects</a></li>
+                    <li class="menuItem"><a href="data.html">Data</a></li>
+                    <li class="menuItem"><a href="learning.html">Learning</a></li>
+                    <li class="menuItem"><a href="about.html">About</a></li>
+                </ul>
+            </div>
+
+            <div class="main">
+                <h1>Learning</h1>
+                <p>Helpful learning resources, such as our tutorial guides for the various technologies that we use in the form of companions and tutorials.</p>
+                <br />
+
+                <h2>Companions</h2>
+
+                <div>
+                    <a href="https://www.trafforddatalab.io/interactive_graphics_companion/" target="_blank"><div class="thumbnail iconThumbnail"><span class="fas fa-book-open"></span><br />Vega-Lite</div><strong>Interactive Graphics Companion</strong></a><br />
+                    A guide to creating interactive data visualisations using <a href="https://vega.github.io/vega-lite/" target="_blank">Vega-Lite</a>. Our accompanying blog post on <a href="https://medium.com/@traffordDataLab/take-back-control-of-your-data-visualisations-c56ec121b231" target="_blank">Medium</a> provides a useful introduction.
+                </div>
+
+                <br class="noFloat"/>
+                <br />
+
+                <div>
+                    <a href="https://www.trafforddatalab.io/open_data_companion/" target="_blank"><div class="thumbnail iconThumbnail"><span class="fas fa-book-open"></span><br />Open Data</div><strong>Open Data Companion</strong></a><br />
+                    This companion provides <a href="https://cran.r-project.org" target="_blank">R</a> code demonstrating how to retrieve and tidy open data from a number of government APIs.
+                </div>
+
+                <br class="noFloat"/>
+                <br />
+
+                <div>
+                    <a href="https://www.trafforddatalab.io/graphics_companion/" target="_blank"><div class="thumbnail iconThumbnail"><span class="fas fa-book-open"></span><br />ggplot2</div><strong>ggplot2 Graphics Companion</strong></a><br />
+                    This demonstrates the different types of visualisation that are possible with the <a href="http://ggplot2.tidyverse.org" target="_blank">ggplot2</a> package in <a href="https://cran.r-project.org" target="_blank">R</a>, providing code for each of the examples.
+                </div>
+
+                <br class="noFloat"/>
+                <br /><br />
+
+                <h2>Tutorials</h2>
+
+                <div>
+                  <a href="https://medium.com/@traffordDataLab/pushing-the-boundaries-with-the-open-geography-portal-api-4d70637bddc3"><img src="images/tutorial_OGP_API_thumbnail.png" class="thumbnail" alt="Pushing the boundaries with the Open Geography Portal API" border="0"/><strong>Pushing the boundaries with the Open Geography Portal API</strong></a><br />
+                  This post will show you how to download digital vector boundaries for custom administrative geographies using the <a href="http://geoportal.statistics.gov.uk" target="_blank">Open Geography Portal</a> API.
+                </div>
+
+                <br class="noFloat"/>
+                <br />
+
+                <div>
+                  <a href="https://medium.com/@traffordDataLab/lets-make-a-map-in-vega-lite-75c24428275"><img src="images/tutorial_map_vegalite_thumbnail.png" class="thumbnail" alt="Let’s Make a Map in Vega-Lite*" border="0"/><strong>Let’s Make a Map in Vega-Lite*</strong></a><br />
+                  This is a short introduction to creating choropleth maps in <a href="https://vega.github.io/vega-lite/" target="_blank">Vega-Lite</a>. We’ll show you how to load geospatial data, customise maps and join attributes.
+                </div>
+
+                <br class="noFloat"/>
+                <br />
+
+                <div>
+                  <a href="https://medium.com/@traffordDataLab/take-back-control-of-your-data-visualisations-c56ec121b231"><img src="images/tutorial_take_control_vegalite_thumbnail.png" class="thumbnail" alt="Take back control … of your data visualisations" border="0"/><strong>Take back control … of your data visualisations</strong></a><br />
+                  This tutorial explain step-by-step how to create chart using <a href="https://vega.github.io/vega-lite/" target="_blank">Vega-Lite</a> that allows users to quickly build visually appealing static and interactive data visualisations in their web browser.
+                </div>
+
+                <br class="noFloat"/>
+                <br />
+
+                <div>
+                  <a href="https://medium.com/@traffordDataLab/querying-apis-in-r-39029b73d5f1"><img src="images/tutorial_querying_api_thumbnail.png" class="thumbnail" alt="Querying APIs in R" border="0"/><strong>Querying APIs in R</strong></a><br />
+                  This article details the steps required to request data from Governments and other organisations Web service APIs using R.
+                </div>
+
+                <br class="noFloat"/>
+                <br />
+
+                <div>
+                  <a href="https://medium.com/@traffordDataLab/lets-make-a-map-in-r-7bd1d9366098"><img src="images/tutorial_map_r_thumbnail.png" class="thumbnail" alt="Let’s Make a Map in R*" border="0"/><strong>Let’s Make a Map in R*</strong></a><br />
+                  This is a short introduction to creating choropleth maps in R. The tutorial will show you how to download <a href="https://www.ordnancesurvey.co.uk" target="_blank">Ordnance Survey</a> boundary layers, merge them with 2011 Census data and visualise the results in classed and unclassed choropleth maps.
+                </div>
+
+                <br class="noFloat"/>
+                <br />
+
+                <div>
+                  <a href="https://medium.com/@traffordDataLab/public-health-data-at-your-fingertips-d17523664d19"><img src="images/tutorial_fingertipsR_thumbnail.png" class="thumbnail" alt="Public health data at your fingertips" border="0"/><strong>Public health data at your fingertips</strong></a><br />
+                  Using the <a href="https://cran.r-project.org/web/packages/fingertipsR/index.html" target="_blank">fingertipsR</a> package the tutorial show you how to download some data from Public Health England’s <a href="https://fingertips.phe.org.uk" target="_blank">Fingertips</a> repository and visualise it in R.
+                </div>
+
+                <br class="noFloat"/>
+                <br /><br />
+
+            </div>
+
+            <div class="footer">
+                <div class="leftFooter">
+                    <div class="logoMedia">
+                        <span class="hideContent">Visit us on </span>
+                        <a class="linkMedia" href="https://twitter.com/traffordDataLab" target="_blank"><span class="fab fa-twitter-square"></span><span class="hideContent">Twitter</span></a>
+                        <span class="hideContent">, </span>
+                        <a class="linkMedia" href="https://github.com/traffordDataLab" target="_blank"><span class="fab fa-github"></span><span class="hideContent">Github</span></a>
+                        <span class="hideContent"> and </span>
+                        <a class="linkMedia" href="https://medium.com/@traffordDataLab" target="_blank"><span class="fab fa-medium"></span><span class="hideContent">Medium<br /></span></a>
+                    </div>
+                    <div class="license">Code <a class="footerLink" href="LICENSE.txt" target="_blank">licensed</a> under MIT, data under OGL</div>
+                </div>
+                <div class="rightFooter">
+                    <a href="https://www.trafford.gov.uk" target="_blank"><img class="logoTrafford" src="images/trafford_council_logo_black_on_white_100px.png" alt="Trafford Council" border="0"/></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

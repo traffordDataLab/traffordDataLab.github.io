@@ -46,10 +46,9 @@
                 <h2 class="hideContent">Main Menu</h2>   <!-- Menu heading displayed only if we don't have CSS enabled -->
                 <ul class="navbar noBulletPoints">
                     <li class="hideContent"><a href="index.html">Home</a></li>   <!-- Home link displayed only if we don't have CSS enabled -->
-                    <li class="menuItem"><a href="info.html">Info</a></li>
-                    <li class="menuItem"><a href="maps.html">Maps</a></li>
                     <li class="menuItem"><a href="projects.html">Projects</a></li>
                     <li class="menuItem"><a href="data.html">Data</a></li>
+                    <li class="menuItem"><a href="learning.html">Learning</a></li>
                     <li class="menuItem"><a href="about.html">About</a></li>
                 </ul>
             </div>
@@ -57,49 +56,101 @@
             <div id="banner"></div>
 
             <div class="main">
-                <p>The Trafford Data Lab supports decision-making in <a href="https://www.trafford.gov.uk">Trafford</a>, Greater Manchester, by revealing patterns in data through visualisation. You can find out more <a href="about.html">about us here</a>. We provide various outputs from raw <a href="data.html">open data</a> to visualisations as <a href="info.html">thematic profiles</a> and <a href="maps.html">interactive maps</a>. We are also involved in various open data and data visualisation <a href="projects.html">projects</a>.</p>
+                <p>The Trafford Data Lab supports decision-making in <a href="https://www.trafford.gov.uk">Trafford</a>, Greater Manchester, by revealing patterns in data through visualisation. You can find out more <a href="about.html">about us here</a>. We provide various interactive and static outputs listed below, additionally we provide raw <a href="data.html">open data</a> and <a href="learning.html">learning</a> materials for the technologies we use. We are also involved in various open data and data visualisation <a href="projects.html">projects</a>.</p>
+                <br />
 
-                <h1>News</h1>
-                <p>Below you can find links to recent publications by the Lab including instructive <a href="https://medium.com/@traffordDataLab" target="_blank">blog posts</a> and data releases.</p>
+                <h2>Applications</h2>
 
-                <h2>February 2019</h2>
-                <ul>
-                    <li><strong>Info:</strong> Launch of our new <a href="https://www.trafforddatalab.io/ward_profiler/"><strong>Ward Profiler</strong></a> application<br />
-                    The app visualises over 70 different ward level indicators in a map and linked lollipop chart.</li>
-                </ul>
+                <div>
+                    <a href="https://www.trafforddatalab.io/ward_profiler/" target="_blank"><img src="images/ward_profiler_thumbnail.png" class="thumbnail" alt="Ward Profiler" border="0"/><strong>Ward Profiler</strong></a><br />
+                    In-depth information focussing on each of <a href="https://github.com/traffordDataLab/spatial_data/blob/master/ward/2017/trafford_ward_full_resolution.geojson" target="_blank">Trafford's wards</a>. The information is presented in thematic sections as interactive maps and charts allowing for easy comparisons to be made. You can also download the data and code behind the visualisations.
+                </div>
 
-                <h2>January 2019</h2>
-                <ul>
-                    <li><strong>Info:</strong> Publication of our <a href="https://www.trafforddatalab.io/interactive_graphics_companion/"><strong>Interactive Graphics Companion</strong></a><br />
-                    The Companion provides the code to create different interactive data visualisations in <a href="https://vega.github.io/vega-lite/" target="_blank">Vega-Lite</a>.</li>
-                </ul>
+                <br class="noFloat"/>
+                <br />
 
-                <h2>December 2018</h2>
-                <ul>
-                    <li>We published daily digital literacy tips for colleagues at Trafford Council during the run up to Christmas.</li>
-                </ul>
+                <div>
+                    <a href="https://www.trafforddatalab.io/maps/explore"><img src="images/explore_thumbnail.png" class="thumbnail" alt="Explore" border="0"/><strong>Explore</strong></a><br />
+                    Discover the different geographic areas of Trafford and visualise all of our spatial datasets in one application. Use the geolocation facility (on supported devices with the user's permission) to see where you are and discover what is around you.
+                </div>
 
-                <h2>November 2018</h2>
-                <ul>
-                    <li><strong>Info:</strong> Launch of our interactive <a href="https://www.trafforddatalab.io/crime_scanner/"><strong>Crime Scanner</strong></a> application.<br />
-                    Interactively visualise street level crime and anti-social behaviour (ASB) incidents in your area using data from <a href="https://data.police.uk/" target="_blank">data.police.uk</a>. View and export data for the last 3 years for the whole of England at Local Authority level through to Electoral Ward and LSOA where available, filtered by category.</li>
-                    <li><strong>Tool:</strong> Leaflet accepts our <a href="https://github.com/traffordDataLab/leaflet.reachability/" target="_blank"><strong>Reachability plugin</strong></a>.<br />
-                    Following the release in September, the <a href="https://leafletjs.com/" target="_blank">Leaflet mapping library</a> have included our reachability plugin in their list of <a href="https://leafletjs.com/plugins.html#routing" target="_blank">approved plugins</a>.</li>
-                </ul>
+                <br class="noFloat"/>
+                <br />
 
-                <h2>October 2018</h2>
-                <ul>
-                    <li><strong>Project:</strong> Release of our <a href="http://www.trafforddatalab.io/opengovintelligence/"><strong>OpenGovIntelligence</strong></a> applications.<br />
-                    A suite of three web applications have been developed as part of the OpenGovIntelligence project. The apps with accompanying documentation can be found on our <a href="http://www.trafforddatalab.io/opengovintelligence/">dedicated project landing page</a>. We have also published a Medium article on <a href="https://medium.com/@traffordDataLab/improving-the-discoverability-of-worklessness-data-b91bf28e6fd6" target="_blank">improving the discoverability of worklessness data</a> to accompany this release.</li>
-                    <li><strong>Map:</strong> Updated <a href="https://www.trafforddatalab.io/maps/road_casualties/"><strong>road casualties data</strong></a> interactive application.<br />
-                    We have released an update to our web application that allows users to explore road casualties reported in Trafford during 2017.</li>
-                </ul>
+                <div>
+                    <a href="http://www.trafforddatalab.io/crime_scanner/" target="_blank"><img src="images/crime_scanner_thumbnail.png" class="thumbnail" alt="Crime Scanner" border="0"/><strong>Crime Scanner</strong></a><br />
+                    Interactively visualise street level crime and anti-social behaviour (ASB) incidents in your area.
+                </div>
 
-                <h2>September 2018</h2>
-                <ul>
-                    <li><strong>Map:</strong> Release of our new reachability plugin for our <a href="https://www.trafforddatalab.io/maps/explore"><strong>Explore</strong></a> mapping application.<br />
-                    Read more about it in our <a href="https://medium.com/@traffordDataLab/out-of-reach-introducing-our-distance-and-travel-time-plugin-859932cb12e5" target="_blank">Medium article</a>.</li>
-                </ul>
+                <br class="noFloat"/>
+                <br />
+
+                <div>
+                    <a href="https://trafforddatalab.shinyapps.io/population_picker" target="_blank"><img src="images/population_picker_thumbnail.png" class="thumbnail" alt="Population Picker" border="0"/><strong>Population Picker</strong></a><br />
+                    Discover single or aggregated population figures for the different statistical and administrative geographies. Choose the age range of interest by single year of age and export the data in various formats.
+                </div>
+                <br class="noFloat"/>
+                <br />
+
+                <div>
+                    <a href="https://trafforddatalab.shinyapps.io/postcode_loader/"><img src="images/postcode_loader_thumbnail.png" class="thumbnail" alt="Explore" border="0"/><strong>Postcode Loader</strong></a><br />
+                    An <a href="https://cran.r-project.org/" target="_blank">R</a> <a href="https://cran.r-project.org/web/packages/shiny/index.html" target="_blank">Shiny</a> app allowing users to download the <a href="https://geoportal.statistics.gov.uk/datasets/ons-postcode-directory-latest-centroids" target="_blank">latest postcode centroids</a> from the <a href="https://www.ons.gov.uk/" target="_blank">Office for National Statistics</a>' <a href="https://geoportal.statistics.gov.uk/" target="_blank">Open Geography Portal</a> API.
+                </div>
+
+                <br class="noFloat"/>
+                <br />
+
+                <div>
+                    <a href="https://www.trafforddatalab.io/tools/plotter"><img src="images/plotter_thumbnail.png" class="thumbnail" alt="Plotter" border="0"/><strong>Plotter</strong></a><br />
+                    Create and edit map features in the form of lines, polygons, circles and markers and save the results. Load previously saved data and add to it, or use it in other applications such as Graphical Information Systems (GIS) software.
+                </div>
+
+                <br class="noFloat"/>
+                <br />
+
+                <div>
+                    <a href="https://trafforddatalab.shinyapps.io/IMD_2015"><img src="images/imd_2015_app_thumbnail.png" class="thumbnail" alt="Indices of deprivation application" border="0"/><strong>English indices of deprivation 2015 for Greater Manchester</strong></a><br />
+                    Visualising the data released by the <a href="https://www.gov.uk/government/statistics/english-indices-of-deprivation-2015" target="_blank">Ministry of Housing, Communities & Local Government</a> for Lower-layer Super Output Areas (LSOA) in Greater Manchester.
+                </div>
+
+                <br class="noFloat"/>
+                <br />
+
+                <div>
+                    <a href="https://www.trafforddatalab.io/maps/road_casualties"><img src="images/road_casualty_app_thumbnail.png" class="thumbnail" alt="Road casualty application" border="0"/><strong>Trafford Road Casuality Map</strong></a><br />
+                    Interactive visualisation of road casualty data recorded by <a href="http://www.gmp.police.uk/" target="_blank">Greater Manchester Police</a> during 2017.
+                </div>
+
+                <br class="noFloat"/>
+                <br /><br />
+
+                <h2>Static maps</h2>
+                <p>Static maps about <a href="https://github.com/traffordDataLab/spatial_data/blob/master/local_authority/2016/trafford_local_authority_full_resolution.geojson" target="_blank">Trafford</a> and the smaller geographical areas which make up the borough.<p>
+                <div>
+                    <a href="https://www.trafforddatalab.io/maps/static/output/trafford_imd.png" target="_blank"><img src="images/static_trafford_imd_2015_thumbnail.png" class="thumbnail" alt="Indices of deprivation 2015" border="0"/><strong>English indices of deprivation 2015 for Trafford</strong></a><br />
+                    Visualising the data released by the <a href="https://www.gov.uk/government/statistics/english-indices-of-deprivation-2015" target="_blank">Ministry of Housing, Communities & Local Government</a> for Lower-layer Super Output Areas (LSOA) in Trafford.
+                </div>
+
+                <br class="noFloat"/>
+                <br />
+
+                <div>
+                    <a href="https://www.trafforddatalab.io/maps/static/output/trafford_population.png" target="_blank"><img src="images/static_trafford_population_thumbnail.png" class="thumbnail" alt="Trafford mid-year 2017 population estimates" border="0"/><strong>Resident population of Trafford</strong></a><br />
+                    Mid-year 2017 resident population estimates for Trafford visualised by electoral ward.
+                </div>
+
+                <br class="noFloat"/>
+                <br />
+
+                <div>
+                    <a href="https://www.trafforddatalab.io/maps/static/output/trafford_localities.png" target="_blank"><img src="images/static_trafford_localities_thumbnail.png" class="thumbnail" alt="Trafford locality and ward boundaries" border="0"/><strong>Trafford locality and ward boundaries</strong></a><br />
+                    Map showing the boundaries of Trafford's localities and electoral wards.
+                </div>
+
+                <br class="noFloat"/>
+              <br /><br/>
+
+
             </div>
 
             <div class="footer">
