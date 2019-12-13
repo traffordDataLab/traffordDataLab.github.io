@@ -94,6 +94,13 @@
     float: right;
 }
 
+/* Additions to the classes defined above - this is because we are using the <header>, <section> and <footer> HTML 5 tags */
+.header, .main, .footer
+{
+    display: block;
+    box-sizing: border-box;
+}
+
 .noBulletPoints, .noBulletPoints * *
 {
     list-style-type: none;  /* remove the list-item bullet from the top level and all sub-level list items */
