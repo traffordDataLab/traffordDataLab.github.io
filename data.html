@@ -51,7 +51,7 @@
           cursor: pointer;
         }
 
-        .card label:hover
+        .cardHead:hover
         {
           text-decoration: underline;
         }
@@ -276,10 +276,10 @@
                 <p>Click on the data cards below to reveal information about the data (metadata) and preview it in maps and tables. The datasets can also be found on our dedicated repository on <a href="https://github.com/traffordDataLab/open_data">GitHub</a>.</p>
 
                 <div class="card">
-                    <input id="cctv" type="checkbox"/>
-                    <label for="cctv" class="cardHead" onclick="loadPreview([this,'open_data/master/cctv/trafford_cctv_cameras.geojson','open_data/cctv/trafford_cctv_cameras.csv'])">CCTV cameras</label>
+                    <input id="cctv" type="checkbox" aria-labelledby="cctvHeaderLabel cctvCloseLabel"/>
+                    <label id="cctvHeaderLabel" for="cctv" class="cardHead" onclick="loadPreview([this,'open_data/master/cctv/trafford_cctv_cameras.geojson','open_data/cctv/trafford_cctv_cameras.csv'])">CCTV cameras</label>
                     <div class="datasetInfo">
-                        <span class="fas fa-times closeButton" onclick="removePreviews(this, 'cctv')"></span>
+                        <label id="cctvCloseLabel" for="cctv" class="fas fa-times closeButton" onclick="removePreviews(this)"><span class="hideContent">close preview</span></label>
                         <div class="tableFrame">
                             <table>
                                 <thead>
@@ -370,10 +370,10 @@
                 </div>
 
                 <div class="card">
-                    <input id="Grants" type="checkbox"/>
-                    <label for="Grants" class="cardHead" onclick="loadPreview([this,'open_data/grants/trafford_council_voluntary_sector_grants_360_giving_format.csv'])">Grants</label>
+                    <input id="grants" type="checkbox"/>
+                    <label for="grants" class="cardHead" onclick="loadPreview([this,'open_data/grants/trafford_council_voluntary_sector_grants_360_giving_format.csv'])">Grants</label>
                     <div class="datasetInfo">
-                        <span class="fas fa-times closeButton" onclick="removePreviews(this, 'Grants')"></span>
+                        <label for="grants" class="fas fa-times closeButton" onclick="removePreviews(this)"><span class="hideContent">close preview</span></label>
                         <div class="tableFrame">
                             <table>
                                 <thead>
@@ -456,7 +456,7 @@
                     <input id="local_elections" type="checkbox"/>
                     <label for="local_elections" class="cardHead" onclick="loadPreview([this,'open_data/master/elections/trafford_council_election_results.csv','open_data/elections/trafford_council_election_results.csv'])">Local election results</label>
                     <div class="datasetInfo">
-                        <span class="fas fa-times closeButton" onclick="removePreviews(this, 'local_elections')"></span>
+                        <label for="local_elections" class="fas fa-times closeButton" onclick="removePreviews(this)"><span class="hideContent">close preview</span></label>
                         <div class="tableFrame">
                             <table>
                                 <thead>
@@ -547,10 +547,10 @@
                 </div>
 
                 <div class="card">
-                    <input id="Postcodes" type="checkbox"/>
-                    <label for="Postcodes" class="cardHead" onclick="loadPreview([this,'spatial_data/postcodes/trafford_postcodes.csv'])">Postcodes</label>
+                    <input id="postcodes" type="checkbox"/>
+                    <label for="postcodes" class="cardHead" onclick="loadPreview([this,'spatial_data/postcodes/trafford_postcodes.csv'])">Postcodes</label>
                     <div class="datasetInfo">
-                        <span class="fas fa-times closeButton" onclick="removePreviews(this, 'Postcodes')"></span>
+                        <label for="postcodes" class="fas fa-times closeButton" onclick="removePreviews(this)"><span class="hideContent">close preview</span></label>
                         <div class="tableFrame">
                             <table>
                                 <thead>
@@ -638,10 +638,10 @@
                 </div>
 
                 <div class="card">
-                    <input id="TraffordOAs" type="checkbox"/>
-                    <label for="TraffordOAs" class="cardHead" onclick="loadPreview([this,'spatial_data/master/oa/2011/trafford_oa_generalised.geojson'])">Trafford OAs</label>
+                    <input id="trafford_oa" type="checkbox"/>
+                    <label for="trafford_oa" class="cardHead" onclick="loadPreview([this,'spatial_data/master/oa/2011/trafford_oa_generalised.geojson'])">Trafford OAs</label>
                     <div class="datasetInfo">
-                        <span class="fas fa-times closeButton" onclick="removePreviews(this, 'TraffordOAs')"></span>
+                        <label for="trafford_oa" class="fas fa-times closeButton" onclick="removePreviews(this)"><span class="hideContent">close preview</span></label>
                         <div class="tableFrame">
                             <table>
                                 <thead>
@@ -729,10 +729,10 @@
                 </div>
 
                 <div class="card">
-                    <input id="TraffordLSOAs" type="checkbox"/>
-                    <label for="TraffordLSOAs" class="cardHead" onclick="loadPreview([this,'spatial_data/master/lsoa/2011/trafford_lsoa_generalised.geojson'])">Trafford LSOAs</label>
+                    <input id="trafford_lsoa" type="checkbox"/>
+                    <label for="trafford_lsoa" class="cardHead" onclick="loadPreview([this,'spatial_data/master/lsoa/2011/trafford_lsoa_generalised.geojson'])">Trafford LSOAs</label>
                     <div class="datasetInfo">
-                        <span class="fas fa-times closeButton" onclick="removePreviews(this, 'TraffordLSOAs')"></span>
+                        <label for="trafford_lsoa" class="fas fa-times closeButton" onclick="removePreviews(this)"><span class="hideContent">close preview</span></label>
                         <div class="tableFrame">
                             <table>
                                 <thead>
@@ -820,10 +820,10 @@
                 </div>
 
                 <div class="card">
-                    <input id="TraffordMSOAs" type="checkbox"/>
-                    <label for="TraffordMSOAs" class="cardHead" onclick="loadPreview([this,'spatial_data/master/msoa/2011/trafford_msoa_generalised.geojson'])">Trafford MSOAs</label>
+                    <input id="trafford_msoa" type="checkbox"/>
+                    <label for="trafford_msoa" class="cardHead" onclick="loadPreview([this,'spatial_data/master/msoa/2011/trafford_msoa_generalised.geojson'])">Trafford MSOAs</label>
                     <div class="datasetInfo">
-                        <span class="fas fa-times closeButton" onclick="removePreviews(this, 'TraffordMSOAs')"></span>
+                        <label for="trafford_msoa" class="fas fa-times closeButton" onclick="removePreviews(this)"><span class="hideContent">close preview</span></label>
                         <div class="tableFrame">
                             <table>
                                 <thead>
@@ -911,10 +911,10 @@
                 </div>
 
                 <div class="card">
-                    <input id="TraffordWards" type="checkbox"/>
-                    <label for="TraffordWards" class="cardHead" onclick="loadPreview([this,'spatial_data/master/ward/2017/trafford_ward_generalised.geojson'])">Trafford wards</label>
+                    <input id="trafford_ward" type="checkbox"/>
+                    <label for="trafford_ward" class="cardHead" onclick="loadPreview([this,'spatial_data/master/ward/2017/trafford_ward_generalised.geojson'])">Trafford wards</label>
                     <div class="datasetInfo">
-                        <span class="fas fa-times closeButton" onclick="removePreviews(this, 'TraffordWards')"></span>
+                        <label for="trafford_ward" class="fas fa-times closeButton" onclick="removePreviews(this)"><span class="hideContent">close preview</span></label>
                         <div class="tableFrame">
                             <table>
                                 <thead>
@@ -1002,10 +1002,10 @@
                 </div>
 
                 <div class="card">
-                    <input id="TraffordBoundary" type="checkbox"/>
-                    <label for="TraffordBoundary" class="cardHead" onclick="loadPreview([this,'spatial_data/master/local_authority/2016/trafford_local_authority_generalised.geojson'])">Trafford boundary</label>
+                    <input id="trafford_boundary" type="checkbox"/>
+                    <label for="trafford_boundary" class="cardHead" onclick="loadPreview([this,'spatial_data/master/local_authority/2016/trafford_local_authority_generalised.geojson'])">Trafford boundary</label>
                     <div class="datasetInfo">
-                        <span class="fas fa-times closeButton" onclick="removePreviews(this, 'TraffordBoundary')"></span>
+                        <label for="trafford_boundary" class="fas fa-times closeButton" onclick="removePreviews(this)"><span class="hideContent">close preview</span></label>
                         <div class="tableFrame">
                             <table>
                                 <thead>
@@ -1093,10 +1093,10 @@
                 </div>
 
                 <div class="card">
-                    <input id="TraffordLocalities" type="checkbox"/>
-                    <label for="TraffordLocalities" class="cardHead" onclick="loadPreview([this,'spatial_data/master/council_defined/trafford_localities.geojson'])">Trafford localities</label>
+                    <input id="trafford_localities" type="checkbox"/>
+                    <label for="trafford_localities" class="cardHead" onclick="loadPreview([this,'spatial_data/master/council_defined/trafford_localities.geojson'])">Trafford localities</label>
                     <div class="datasetInfo">
-                        <span class="fas fa-times closeButton" onclick="removePreviews(this, 'TraffordLocalities')"></span>
+                        <label for="trafford_localities" class="fas fa-times closeButton" onclick="removePreviews(this)"><span class="hideContent">close preview</span></label>
                         <div class="tableFrame">
                             <table>
                                 <thead>
@@ -1277,7 +1277,7 @@
           })
         }
 
-        function removePreviews(el, checkboxId){
+        function removePreviews(el){
           var iframeDiv=el.parentNode.getElementsByClassName("scriptGithub")[0];
           var iframeNode=iframeDiv.getElementsByTagName("iframe")[0];
           if (iframeNode){
@@ -1290,8 +1290,6 @@
           if (tableNode){
             tableDiv.removeChild(tableNode);
           }
-
-          document.getElementById(checkboxId).checked = false;  // un-check the checkbox to remove the preview div (NOTE: this was done via a label but for accessibility you cannot have more than one label associated to a form element).
         }
 
         </script>
