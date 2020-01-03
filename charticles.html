@@ -94,7 +94,7 @@
 
             <main class="main">
                 <h1>Charticles</h1>
-                <p>Bitesize articles with a chart or a map. Choose a charticle to read from the list below, the latest ones are presented first.<span id="filterContainer" style="display: block;"></span></p>
+                <p>Bite-size articles with a chart or a map. Choose a charticle to read from the list below, the latest ones are presented first. <span id="filterContainer" style="display: block;"></span></p>
                 <div>
                     <a class="card" href="https://www.trafforddatalab.io/charticles/2019-11-13-green-flags/" target="_blank"><span class="filterTags"><!-- green flags parks awards --></span>Green Flag Awards<img src="https://www.trafforddatalab.io/charticles/2019-11-13-green-flags/plot.svg" alt=""/></a>
                     <a class="card" href="https://www.trafforddatalab.io/charticles/2019-11-12-living-wage/" target="_blank"><span class="filterTags"><!-- living wages employment jobs deprivation poverty working --></span>Living wage<img src="https://www.trafforddatalab.io/charticles/2019-11-12-living-wage/plot.svg" alt=""/></a>
@@ -146,7 +146,9 @@
                 filterContainer: document.getElementById('filterContainer'),    // where we want the filter input box creating
                 matchedClass: 'card',   // the charticle boxes need the CSS class 'card' adding when they are a match and removing when they aren't
                 filterClass: 'filter',  // creates the orange focus outline
-                filterTitle: 'Filter the charticles by entering keywords into the box',
+                filterPlaceholder: 'enter keywords...',
+                filterTitle: '',
+                filterLabel: 'Search charticles: ',
                 contentElements: document.getElementsByClassName('filterTags')
             })
         </script>
