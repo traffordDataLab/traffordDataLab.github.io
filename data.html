@@ -43,7 +43,7 @@
         {
           display:block;
           background-color: #db3a00;
-          color: #F8F8F8;
+          color: #fff;
           height: 40px;
           line-height: 40px;
           padding: 0em 1em;
@@ -256,7 +256,7 @@
         }
         </style>
     </head>
-    
+
     <body>
         <div class="container">
             <header class="header">
@@ -274,7 +274,7 @@
             <main class="main">
                 <h1>Data</h1>
                 <p>We are committed to the sourcing, preparation and publication of open data. We aim to ensure that all the open data we publish has a minimum <a href="http://5stardata.info/en/#by-example">3-star openness rating</a>. Our data must be accessible on the Web in a machine readable non-proprietary format with a licence that permits anyone to reuse it.</p>
-                <p>Click on the data cards below to reveal information about the data (metadata) and preview it in maps and tables. The datasets can also be found on our dedicated repository on <a href="https://github.com/traffordDataLab/open_data">GitHub</a>.</p>
+                <p>Select the datasets below to reveal information about them (metadata) and preview them in maps and tables. The datasets can be downloaded using the links provided and can also be found in our dedicated <a href="https://github.com/traffordDataLab/open_data" target="_blank">open_data repository</a> on GitHub.</p>
 
                 <div class="card">
                     <input id="cctv" type="checkbox" aria-labelledby="cctvHeaderLabel cctvCloseLabel" onChange="cardStateChange(this, [this,'open_data/master/cctv/trafford_cctv_cameras.geojson','open_data/cctv/trafford_cctv_cameras.csv'], document.getElementById('cctvCloseLabel'))"/>
@@ -356,8 +356,8 @@
                                     </tr>
                                 </tbody>
                             </table>
-                            <a class="labButton" href="https://www.trafforddatalab.io/open_data/cctv/trafford_cctv_cameras.csv" download>CSV <span class="fas fa-download"></span></a>
-                            <a class="labButton" href="https://www.trafforddatalab.io/open_data/cctv/trafford_cctv_cameras.geojson" download>GeoJSON <span class="fas fa-download"></span></a>
+                            <a class="labButton" href="https://www.trafforddatalab.io/open_data/cctv/trafford_cctv_cameras.csv" aria-label="download in CSV format" download>CSV <span class="fas fa-download"></span></a>
+                            <a class="labButton" href="https://www.trafforddatalab.io/open_data/cctv/trafford_cctv_cameras.geojson" aria-label="download in GeoJSON format" download>GeoJSON <span class="fas fa-download"></span></a>
                         </div>
                         <div class="prevGeoJson">
                             <noscript>
@@ -369,8 +369,8 @@
                     </div>
                     <p class="cardBody">Locations of Local Authority controlled Closed-Circuit Television (CCTV) cameras in Trafford.</p>
                     <p class="cardFooter">
-                        <a class="labButton" href="https://www.trafforddatalab.io/open_data/cctv/trafford_cctv_cameras.csv" download>CSV <span class="fas fa-download"></span></a>
-                        <a class="labButton" href="https://www.trafforddatalab.io/open_data/cctv/trafford_cctv_cameras.geojson" download>GeoJSON <span class="fas fa-download"></span></a>
+                        <a class="labButton" href="https://www.trafforddatalab.io/open_data/cctv/trafford_cctv_cameras.csv" aria-label="download in CSV format" download>CSV <span class="fas fa-download"></span></a>
+                        <a class="labButton" href="https://www.trafforddatalab.io/open_data/cctv/trafford_cctv_cameras.geojson" aria-label="download in GeoJSON format" download>GeoJSON <span class="fas fa-download"></span></a>
                     </p>
                 </div>
 
@@ -446,8 +446,8 @@
                                     </tr>
                                 </tbody>
                             </table>
-                            <a class="labButton" href="https://www.trafforddatalab.io/open_data/grants/trafford_council_voluntary_sector_grants_360_giving_format.csv" download>CSV <span class="fas fa-download"></span></a>
-                            <a class="labButton" href="https://www.trafforddatalab.io/open_data/grants/trafford_council_voluntary_sector_grants_360_giving_format.json" download>JSON <span class="fas fa-download"></span></a>
+                            <a class="labButton" href="https://www.trafforddatalab.io/open_data/grants/trafford_council_voluntary_sector_grants_360_giving_format.csv" aria-label="download in CSV format" download>CSV <span class="fas fa-download"></span></a>
+                            <a class="labButton" href="https://www.trafforddatalab.io/open_data/grants/trafford_council_voluntary_sector_grants_360_giving_format.json" aria-label="download in JSON format" download>JSON <span class="fas fa-download"></span></a>
                         </div>
                         <div class="prevGeoJson">
                             <div class="scriptGithub"></div>
@@ -456,8 +456,8 @@
                     </div>
                     <p class="cardBody">Grants allocated by Trafford Council via Trafford Partnership</p>
                     <p class="cardFooter">
-                        <a class="labButton" href="https://www.trafforddatalab.io/open_data/grants/trafford_council_voluntary_sector_grants_360_giving_format.csv" download>CSV <span class="fas fa-download"></span></a>
-                        <a class="labButton" href="https://www.trafforddatalab.io/open_data/grants/trafford_council_voluntary_sector_grants_360_giving_format.json" download>JSON <span class="fas fa-download"></span></a>
+                        <a class="labButton" href="https://www.trafforddatalab.io/open_data/grants/trafford_council_voluntary_sector_grants_360_giving_format.csv" aria-label="download in CSV format" download>CSV <span class="fas fa-download"></span></a>
+                        <a class="labButton" href="https://www.trafforddatalab.io/open_data/grants/trafford_council_voluntary_sector_grants_360_giving_format.json" aria-label="download in JSON format" download>JSON <span class="fas fa-download"></span></a>
                     </p>
                 </div>
 
@@ -541,7 +541,7 @@
                                     </tr>
                                 </tbody>
                             </table>
-                            <a class="labButton" href="https://www.trafforddatalab.io/open_data/elections/trafford_council_election_results.csv" download>CSV <span class="fas fa-download"></span></a>
+                            <a class="labButton" href="https://www.trafforddatalab.io/open_data/elections/trafford_council_election_results.csv" aria-label="download in CSV format" download>CSV <span class="fas fa-download"></span></a>
                         </div>
                         <div class="prevGeoJson">
                             <div class="scriptGithub"></div>
@@ -550,7 +550,7 @@
                     </div>
                     <p class="cardBody">Results from Trafford council local elections/by-elections from 2016 onwards.</p>
                     <p class="cardFooter">
-                        <a class="labButton" href="https://www.trafforddatalab.io/open_data/elections/trafford_council_election_results.csv" download>CSV <span class="fas fa-download"></span></a>
+                        <a class="labButton" href="https://www.trafforddatalab.io/open_data/elections/trafford_council_election_results.csv" aria-label="download in CSV format" download>CSV <span class="fas fa-download"></span></a>
                     </p>
                 </div>
 
@@ -634,7 +634,7 @@
                                     </tr>
                                 </tbody>
                             </table>
-                            <a class="labButton" href="https://www.trafforddatalab.io/spatial_data/postcodes/trafford_postcodes.csv" download>CSV <span class="fas fa-download"></span></a>
+                            <a class="labButton" href="https://www.trafforddatalab.io/spatial_data/postcodes/trafford_postcodes.csv" aria-label="download in CSV format" download>CSV <span class="fas fa-download"></span></a>
                         </div>
                         <div class="prevGeoJson">
                             <div class="scriptGithub"></div>
@@ -643,7 +643,7 @@
                     </div>
                     <p class="cardBody">Postcode list for Trafford</p>
                     <p class="cardFooter">
-                        <a class="labButton" href="https://www.trafforddatalab.io/spatial_data/postcodes/trafford_postcodes.csv" download>CSV <span class="fas fa-download"></span></a>
+                        <a class="labButton" href="https://www.trafforddatalab.io/spatial_data/postcodes/trafford_postcodes.csv" aria-label="download in CSV format" download>CSV <span class="fas fa-download"></span></a>
                     </p>
                 </div>
 
@@ -727,7 +727,7 @@
                                     </tr>
                                 </tbody>
                             </table>
-                            <a class="labButton" href="https://www.trafforddatalab.io/spatial_data/oa/2011/trafford_oa_generalised.geojson" download>GeoJSON <span class="fas fa-download"></span></a>
+                            <a class="labButton" href="https://www.trafforddatalab.io/spatial_data/oa/2011/trafford_oa_generalised.geojson" aria-label="download in GeoJSON format" download>GeoJSON <span class="fas fa-download"></span></a>
                         </div>
                         <div class="prevGeoJson">
                             <div class="scriptGithub"></div>
@@ -736,7 +736,7 @@
                     </div>
                     <p class="cardBody">Boundaries of Trafford's OAs</p>
                     <p class="cardFooter">
-                        <a class="labButton" href="https://www.trafforddatalab.io/spatial_data/oa/2011/trafford_oa_generalised.geojson" download>GeoJSON <span class="fas fa-download"></span></a>
+                        <a class="labButton" href="https://www.trafforddatalab.io/spatial_data/oa/2011/trafford_oa_generalised.geojson" aria-label="download in GeoJSON format" download>GeoJSON <span class="fas fa-download"></span></a>
                     </p>
                 </div>
 
@@ -820,7 +820,7 @@
                                     </tr>
                                 </tbody>
                             </table>
-                            <a class="labButton" href="https://www.trafforddatalab.io/spatial_data/lsoa/2011/trafford_lsoa_generalised.geojson" download>GeoJSON <span class="fas fa-download"></span></a>
+                            <a class="labButton" href="https://www.trafforddatalab.io/spatial_data/lsoa/2011/trafford_lsoa_generalised.geojson" aria-label="download in GeoJSON format" download>GeoJSON <span class="fas fa-download"></span></a>
                         </div>
                         <div class="prevGeoJson">
                             <div class="scriptGithub"></div>
@@ -829,7 +829,7 @@
                     </div>
                     <p class="cardBody">Boundaries of Trafford's LSOAs</p>
                     <p class="cardFooter">
-                        <a class="labButton" href="https://www.trafforddatalab.io/spatial_data/lsoa/2011/trafford_lsoa_generalised.geojson" download>GeoJSON <span class="fas fa-download"></span></a>
+                        <a class="labButton" href="https://www.trafforddatalab.io/spatial_data/lsoa/2011/trafford_lsoa_generalised.geojson" aria-label="download in GeoJSON format" download>GeoJSON <span class="fas fa-download"></span></a>
                     </p>
                 </div>
 
@@ -913,7 +913,7 @@
                                     </tr>
                                 </tbody>
                             </table>
-                            <a class="labButton" href="https://www.trafforddatalab.io/spatial_data/msoa/2011/trafford_msoa_generalised.geojson" download>GeoJSON <span class="fas fa-download"></span></a>
+                            <a class="labButton" href="https://www.trafforddatalab.io/spatial_data/msoa/2011/trafford_msoa_generalised.geojson" aria-label="download in GeoJSON format" download>GeoJSON <span class="fas fa-download"></span></a>
                         </div>
                         <div class="prevGeoJson">
                             <div class="scriptGithub"></div>
@@ -922,7 +922,7 @@
                     </div>
                     <p class="cardBody">Boundaries of Trafford's MSOAs</p>
                     <p class="cardFooter">
-                        <a class="labButton" href="https://www.trafforddatalab.io/spatial_data/msoa/2011/trafford_msoa_generalised.geojson" download>GeoJSON <span class="fas fa-download"></span></a>
+                        <a class="labButton" href="https://www.trafforddatalab.io/spatial_data/msoa/2011/trafford_msoa_generalised.geojson" aria-label="download in GeoJSON format" download>GeoJSON <span class="fas fa-download"></span></a>
                     </p>
                 </div>
 
@@ -1006,7 +1006,7 @@
                                     </tr>
                                 </tbody>
                             </table>
-                            <a class="labButton" href="https://www.trafforddatalab.io/spatial_data/ward/2017/trafford_ward_generalised.geojson" download>GeoJSON <span class="fas fa-download"></span></a>
+                            <a class="labButton" href="https://www.trafforddatalab.io/spatial_data/ward/2017/trafford_ward_generalised.geojson" aria-label="download in GeoJSON format" download>GeoJSON <span class="fas fa-download"></span></a>
                         </div>
                         <div class="prevGeoJson">
                             <div class="scriptGithub"></div>
@@ -1015,7 +1015,7 @@
                     </div>
                     <p class="cardBody">Boundaries of Trafford's wards</p>
                     <p class="cardFooter">
-                        <a class="labButton" href="https://www.trafforddatalab.io/spatial_data/ward/2017/trafford_ward_generalised.geojson" download>GeoJSON <span class="fas fa-download"></span></a>
+                        <a class="labButton" href="https://www.trafforddatalab.io/spatial_data/ward/2017/trafford_ward_generalised.geojson" aria-label="download in GeoJSON format" download>GeoJSON <span class="fas fa-download"></span></a>
                     </p>
                 </div>
 
@@ -1099,7 +1099,7 @@
                                     </tr>
                                 </tbody>
                             </table>
-                            <a class="labButton" href="https://www.trafforddatalab.io/spatial_data/local_authority/2016/trafford_local_authority_generalised.geojson" download>GeoJSON <span class="fas fa-download"></span></a>
+                            <a class="labButton" href="https://www.trafforddatalab.io/spatial_data/local_authority/2016/trafford_local_authority_generalised.geojson" aria-label="download in GeoJSON format" download>GeoJSON <span class="fas fa-download"></span></a>
                         </div>
                         <div class="prevGeoJson">
                             <div class="scriptGithub"></div>
@@ -1108,7 +1108,7 @@
                     </div>
                     <p class="cardBody">Trafford boundary</p>
                     <p class="cardFooter">
-                        <a class="labButton" href="https://www.trafforddatalab.io/spatial_data/local_authority/2016/trafford_local_authority_generalised.geojson" download>GeoJSON <span class="fas fa-download"></span></a>
+                        <a class="labButton" href="https://www.trafforddatalab.io/spatial_data/local_authority/2016/trafford_local_authority_generalised.geojson" aria-label="download in GeoJSON format" download>GeoJSON <span class="fas fa-download"></span></a>
                     </p>
                 </div>
 
@@ -1192,7 +1192,7 @@
                                     </tr>
                                 </tbody>
                             </table>
-                            <a class="labButton" href="https://www.trafforddatalab.io/spatial_data/council_defined/trafford_localities.geojson" download>GeoJSON <span class="fas fa-download"></span></a>
+                            <a class="labButton" href="https://www.trafforddatalab.io/spatial_data/council_defined/trafford_localities.geojson" aria-label="download in GeoJSON format" download>GeoJSON <span class="fas fa-download"></span></a>
                         </div>
                         <div class="prevGeoJson">
                             <div class="scriptGithub"></div>
@@ -1201,7 +1201,7 @@
                     </div>
                     <p class="cardBody">Boundaries of the four Trafford's localities</p>
                     <p class="cardFooter">
-                        <a class="labButton" href="https://www.trafforddatalab.io/spatial_data/council_defined/trafford_localities.geojson" download>GeoJSON <span class="fas fa-download"></span></a>
+                        <a class="labButton" href="https://www.trafforddatalab.io/spatial_data/council_defined/trafford_localities.geojson" aria-label="download in GeoJSON format" download>GeoJSON <span class="fas fa-download"></span></a>
                     </p>
                 </div>
             </main>
