@@ -43,7 +43,7 @@
 
 .menuItem a:hover
 {
-    border-bottom: 1px solid #fc6721;
+    border-bottom: 1px solid #db3a00;
 }
 
 .main
@@ -193,7 +193,7 @@
 
 .thumbnail:hover
 {
-    border: 1px solid #fc6721;
+    border: 1px solid #db3a00;
 }
 
 /* visualisations and/or text content layouts */

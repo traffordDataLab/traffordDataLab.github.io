@@ -10,7 +10,7 @@ html, body
 
 a
 {
-    color: #fc6721;
+    color: #db3a00;
     text-decoration: none;
 }
 
@@ -59,6 +59,6 @@ img
 .labButton:hover
 {
     cursor: pointer;
-    background-color: #fc6721;
+    background-color: #db3a00;
     text-decoration: none;
 }
