@@ -196,6 +196,23 @@
     border: 1px solid #db3a00;
 }
 
+/* These are for form elements such as the input used on pages containing the filter. Creates a Lab-orange gradient border which fades in when the element has focus. */
+.highlightFormElement
+{
+    transition: all 0.30s ease-in-out;
+    outline: none;  /* a custom outline is implemented in .highlightFormElement:focus maintaining accessibility and providing uniform appearance cross-browser */
+    padding: 3px 0px 3px 3px;
+    margin: 5px 1px 3px 0px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.highlightFormElement:focus
+{
+    border: 1px solid #db3a00;
+    box-shadow: 0 0 5px #db3a00;
+}
+
 /* visualisations and/or text content layouts */
 .singleColumn
 {

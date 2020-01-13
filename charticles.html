@@ -28,22 +28,6 @@
                 border: 1px solid #db3a00;
             }
 
-            .filter
-            {
-                transition: all 0.30s ease-in-out;
-                outline: none;  /* a custom outline is implemented in .filter:focus maintaining accessibility and providing uniform appearance cross-browser */
-                padding: 3px 0px 3px 3px;
-                margin: 5px 1px 3px 0px;
-                border: 1px solid #ccc;
-                border-radius: 3px;
-            }
-
-            .filter:focus
-            {
-                border: 1px solid #db3a00;
-                box-shadow: 0 0 5px #db3a00;
-            }
-
             .filterTags
             {
                 display: none;
@@ -146,7 +130,7 @@
             var charticleFilter = new LabFilter({
                 filterContainer: document.getElementById('filterContainer'),    // where we want the filter input box creating
                 matchedClass: 'card',   // the charticle boxes need the CSS class 'card' adding when they are a match and removing when they aren't
-                filterClass: 'filter',  // creates the orange focus outline
+                filterClass: 'highlightFormElement',  // creates the orange focus outline
                 filterPlaceholder: 'enter keywords...',
                 filterTitle: '',
                 filterLabel: 'Search charticles: ',
