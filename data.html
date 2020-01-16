@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
         <meta charset="UTF-8"/>
         <meta name="keywords" content="trafford data lab, trafford, data, lab, open data, open, 3 star, csv, json, geojson"/>
-        <meta name="description" content="The Trafford Data Lab are proactively gathering and publishing data owned by Trafford Council and its partners. The data (and metadata) can be found in our open_data repo on GitHub. We publish our data as 3 star open data as a minimum and provide it in CSV, JSON and GeoJSON formats as appropriate."/>
+        <meta name="description" content="The Trafford Data Lab are proactively gathering and publishing data owned by Trafford Council and its partners. The data (and metadata) can be found in our open_data repo on GitHub. We publish our data as 3 star open data as a minimum and provide it in open non-proprietary formats such as CSV and GeoJSON."/>
 
         <link rel="stylesheet" href="css/labBase.css"/>
         <link rel="stylesheet" href="css/labWebsite.css"/>
@@ -13,174 +13,46 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
 
         <style>
-        thead
-        {
-            display: none;
-        }
-
         .card
         {
           width: 20%;
-          height: 230px;
+          height: 170px;
           margin: 1em 2.2%;
           display: inline-block;
-          background-color: #F8F8F8;
-          border: 1px solid #cccccc;
+          background-color: #f8f8f8;
+          border: 1px solid #ccc;
           border-radius: 3px;
+          vertical-align:top;
         }
 
-        input[type="checkbox"]
+        .card:hover
         {
-          display: none;
+            border: 1px solid #db3a00;
+            text-decoration: none;
         }
 
-        input[type="checkbox"]:checked + label + div
+        .card:hover span
         {
-          display: block;
+            text-decoration: underline;
         }
 
         .cardHead
         {
-          display:block;
+          display: block;
           background-color: #db3a00;
           color: #fff;
           height: 40px;
           line-height: 40px;
           padding: 0em 1em;
-          border-radius: 2px 2px 0px 0px;
-          cursor: pointer;
-        }
-
-        .cardHead:hover
-        {
-          text-decoration: underline;
         }
 
         .cardBody
         {
           font-size: 0.8em;
-          height: 125px;
+          height: 103px;
           overflow-y: auto;
           padding: 0em 1em;
-        }
-
-        .cardFooter
-        {
-          padding: 0em 1em;
-        }
-
-        .datasetInfo
-        {
-          max-width: 100%;
-          position: fixed;
-          top: 60px;
-          left: 35px;
-          right:35px;
-          bottom:10px;
-          background-color: white;
-          display: none;
-          overflow-y: auto;
-          padding: 0 30px 0 12px;
-          box-shadow: 0px 0px 3px 3px #757575;
-          z-index: 3;
-        }
-
-        .datasetInfo > div
-        {
-          width: 50%;
-          float: left;
-        }
-
-        .closeButton
-        {
-          position: fixed;
-          top: 60px;
-          right: 35px;
-          width: 25px;
-          height: 25px;
-          font-size: 25px;
-          line-height: 25px;
-          color: #757575;
-          text-align: center;
-          cursor: pointer;
-        }
-
-        .closeButton:hover
-        {
-          color: #db3a00;
-        }
-
-        .tableFrame
-        {
-          padding: 2em 0;
-        }
-
-        .tableFrame table
-        {
-          table-layout: fixed;
-          word-wrap: break-word;
-          padding: 0em 1em 2em 0em;
-          width: 98%;
-        }
-
-        .tableFrame  table td:nth-child(1)
-        {
-          font-weight: bold;
-          -webkit-font-smoothing: antialiased;
-          font-size: 0.8em;
-          border-bottom: 1px solid #757575;
-          width: 30%;
-          vertical-align: top;
-        }
-
-        .tableFrame table td:nth-child(2)
-        {
-          border-bottom: 1px solid #757575;
-          font-size: 0.9em;
-        }
-
-        .labButton
-        {
-          white-space: nowrap;
-          display: inline;
-        }
-
-        .prevGeoJson
-        {
-          padding: 2em 0;
-        }
-
-        .prevGeoJson img
-        {
-          width: 98%;
-        }
-
-        .scriptGithub iframe
-        {
-          width: 98%;
-          height: 400px;
-        }
-
-        .tablePreview
-        {
-          display: inline-block;
-          overflow-x: auto;
-          width: 97.5%;
-          border-radius: 2px;
-        }
-
-        .tablePreview table
-        {
-          font-size: 0.8em;
-          text-align: left;
-          background-color: #f7f7f7;
-          white-space: nowrap;
-        }
-
-        .tablePreview table td,
-        .tablePreview table th
-        {
-          padding-left: 1em;
+          color: #212121;
         }
 
         @media (max-width:1300px)
@@ -194,28 +66,10 @@
 
         @media (max-width:850px)
         {
-          .datasetInfo>div
-          {
-            width: 100%;
-          }
-
           .card
           {
             width: 40%;
             margin: 1em 4.5%;
-          }
-
-          .tableFrame table
-          {
-            padding: 0 0 2em 0;
-          }
-
-          .tablePreview table td,
-          .tablePreview table th
-          {
-            -webkit-text-size-adjust:100%;
-            -moz-text-size-adjust:100%;
-            -ms-text-size-adjust:100%;
           }
         }
 
@@ -231,27 +85,6 @@
           .cardBody
           {
             height: 45px;
-          }
-
-          .closeButton
-          {
-            top: 100px;
-            right: 20px;
-          }
-
-          .datasetInfo
-          {
-            top: 100px;
-            left: 20px;
-            right: 20px;
-          }
-        }
-
-        @media (max-height:450px)
-        {
-          .scriptGithub iframe
-          {
-            height: 90vh;
           }
         }
         </style>
@@ -273,187 +106,42 @@
 
             <main class="main">
                 <h1>Data</h1>
-                <p>We are committed to the sourcing, preparation and publication of open data. We aim to ensure that all the open data we publish has a minimum <a href="http://5stardata.info/en/#by-example">3-star openness rating</a>. Our data must be accessible on the Web in a machine readable non-proprietary format with a licence that permits anyone to reuse it.</p>
-                <p>Select the datasets below to reveal information about them (metadata) and preview them in maps and tables. The datasets can be downloaded using the links provided and can also be found in our dedicated <a href="https://github.com/traffordDataLab/open_data" target="_blank">open_data repository</a> on GitHub.</p>
+                <p>We are committed to the sourcing, preparation and publication of open data. We aim to ensure that all the open data we publish has a minimum <a href="http://5stardata.info/en/#by-example">3-star openness rating</a>, is accessible on the Web in a machine readable non-proprietary format and with a licence that permits anyone to reuse it. We store our datasets in our dedicated <a href="https://github.com/traffordDataLab/open_data" target="_blank">open_data repository</a> on GitHub.</p>
+                <p>Select the following datasets to open a dedicated page in a new window containing the metadata (date of publication, source etc.), a preview and links to download the chosen dataset. <span id="filterContainer" style="display: inline-block;"></span></p>
 
-                <div class="card">
-                    <input id="cctv" type="checkbox" aria-labelledby="cctvHeaderLabel cctvCloseLabel" onChange="cardStateChange(this, [this,'open_data/master/cctv/trafford_cctv_cameras.geojson','open_data/cctv/trafford_cctv_cameras.csv'], document.getElementById('cctvCloseLabel'))"/>
-                    <label id="cctvHeaderLabel" for="cctv" class="cardHead">CCTV cameras</label>
-                    <div class="datasetInfo">
-                        <label id="cctvCloseLabel" for="cctv" class="fas fa-times closeButton"><span class="hideContent">close preview</span></label>
-                        <div class="tableFrame">
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th>Data property</th>
-                                        <th>Data value</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                    	<td>Dataset name</td>
-                                    	<td>CCTV</td>
-                                    </tr>
-                                    <tr>
-                                    	<td>Dataset description</td>
-                                    	<td>Locations of Local Authority controlled Closed-Circuit Television (CCTV) cameras in Trafford.</td>
-                                    </tr>
-                                    <tr>
-                                    	<td>Source</td>
-                                    	<td>Trafford Council</td>
-                                    </tr>
-                                    <tr>
-                                    	<td>Publisher</td>
-                                    	<td>Trafford Council</td>
-                                    </tr>
-                                    <tr>
-                                    	<td>Publisher URL</td>
-                                    	<td><a href="https://www.trafforddatalab.io/open_data/cctv">https://www.trafforddatalab.io/open_data/cctv</a></td>
-                                    </tr>
-                                    <tr>
-                                    	<td>Geography</td>
-                                    	<td>Local authority</td>
-                                    </tr>
-                                    <tr>
-                                    	<td>Geographic coverage</td>
-                                    	<td>Trafford</td>
-                                    </tr>
-                                    <tr>
-                                    	<td>Temporal coverage</td>
-                                    	<td>Correct as of May 2018</td>
-                                    </tr>
-                                    <tr>
-                                    	<td>Update frequency</td>
-                                    	<td>Unknown</td>
-                                    </tr>
-                                    <tr>
-                                    	<td>Licence</td>
-                                    	<td><a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence</a></td>
-                                    </tr>
-                                    <tr>
-                                    	<td>Attribution</td>
-                                    	<td></td>
-                                    </tr>
-                                    <tr>
-                                    	<td>Format</td>
-                                    	<td>GeoJSON, CSV</td>
-                                    </tr>
-                                    <tr>
-                                    	<td>Openness rating</td>
-                                    	<td>&#9733;&#9733;&#9733;&#9734;&#9734;&nbsp; Structured data in open format (e.g. CSV)</td>
-                                    </tr>
-                                    <tr>
-                                    	<td>Last updated</td>
-                                    	<td>May 2018</td>
-                                    </tr>
-                                    <tr>
-                                    	<td>Notes</td>
-                                    	<td></td>
-                                    </tr>
-                                    <tr>
-                                    	<td>Lab visualisation</td>
-                                    	<td>View data within the Lab's <a href="https://www.trafforddatalab.io/maps/explore/index.html?dataset=cctv">Explore application</a>.</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <a class="labButton" href="https://www.trafforddatalab.io/open_data/cctv/trafford_cctv_cameras.csv" aria-label="download in CSV format" download>CSV <span class="fas fa-download"></span></a>
-                            <a class="labButton" href="https://www.trafforddatalab.io/open_data/cctv/trafford_cctv_cameras.geojson" aria-label="download in GeoJSON format" download>GeoJSON <span class="fas fa-download"></span></a>
-                        </div>
-                        <div class="prevGeoJson">
-                            <noscript>
-                                <img src="https://www.trafforddatalab.io/open_data/cctv/thumbnail.png" alt="Preview of CCTV data represented spatially on a map">
-                            </noscript>
-                            <div class="scriptGithub"></div>
-                            <div class="tablePreview"></div>
-                        </div>
-                    </div>
+                <a href="https://www.trafforddatalab.io/open_data/allotments/" target="_blank" class="card">
+                    <span class="filterTags"><!-- allotments gardening gardens growing food vegetables fruit greenspaces green spaces --></span>
+                    <span class="cardHead">Allotments</span>
+                    <p class="cardBody">Allotment sites in Trafford.</p>
+                </a>
+
+                <a href="https://www.trafforddatalab.io/open_data/cctv/" target="_blank" class="card">
+                    <span class="filterTags"><!-- cctv closed circuit television cameras security surveillance public safety crime prevention police --></span>
+                    <span class="cardHead">CCTV cameras</span>
                     <p class="cardBody">Locations of Local Authority controlled Closed-Circuit Television (CCTV) cameras in Trafford.</p>
-                    <p class="cardFooter">
-                        <a class="labButton" href="https://www.trafforddatalab.io/open_data/cctv/trafford_cctv_cameras.csv" aria-label="download in CSV format" download>CSV <span class="fas fa-download"></span></a>
-                        <a class="labButton" href="https://www.trafforddatalab.io/open_data/cctv/trafford_cctv_cameras.geojson" aria-label="download in GeoJSON format" download>GeoJSON <span class="fas fa-download"></span></a>
-                    </p>
-                </div>
+                </a>
 
-                <div class="card">
+                <a href="https://www.trafforddatalab.io/open_data/electric_vehicle_charging_locations/" target="_blank" class="card">
+                    <span class="filterTags"><!-- electric vehicle charging charge ev air pollution reduction reducing reduce climate change low carbon zero --></span>
+                    <span class="cardHead">Electric vehicle charging</span>
+                    <p class="cardBody">Electric vehicle charging locations in Trafford and associated information.</p>
+                </a>
+
+                <a href="https://www.trafforddatalab.io/open_data/fast_food_outlets/" target="_blank" class="card">
+                    <span class="filterTags"><!-- fast food outlets take away take-away takeaway health eating diet hygiene rating standards --></span>
+                    <span class="cardHead">Fast food outlets</span>
+                    <p class="cardBody">The location of fast food outlets in Trafford.</p>
+                </a>
+
+                <a href="https://www.trafforddatalab.io/open_data/population/" target="_blank" class="card">
+                    <span class="filterTags"><!-- population estimates mid-year residents people 2018 --></span>
+                    <span class="cardHead">Population estimates</span>
+                    <p class="cardBody">Estimates of the usual resident population in Trafford during mid-2018.</p>
+                </a>
+
+                <!--div class="card">
                     <input id="grants" type="checkbox" aria-labelledby="grantsHeaderLabel grantsCloseLabel" onChange="cardStateChange(this, [this,'open_data/grants/trafford_council_voluntary_sector_grants_360_giving_format.csv'], document.getElementById('grantsCloseLabel'))"/>
                     <label id="grantsHeaderLabel" for="grants" class="cardHead">Grants</label>
-                    <div class="datasetInfo">
-                        <label id="grantsCloseLabel" for="grants" class="fas fa-times closeButton"><span class="hideContent">close preview</span></label>
-                        <div class="tableFrame">
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th>Data property</th>
-                                        <th>Data value</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Dataset name</td>
-                                        <td>Grants</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Dataset description</td>
-                                        <td>Grants allocated by Trafford Council via Trafford Partnership</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Source</td>
-                                        <td>Trafford Council</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Publisher</td>
-                                        <td>Trafford Council</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Publisher URL</td>
-                                        <td><a href="https://github.com/traffordDataLab/open_data/tree/master/grants">https://github.com/traffordDataLab/open_data/tree/master/grants</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Geography</td>
-                                        <td>Local authority</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Geographic coverage</td>
-                                        <td>Trafford borough</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Temporal coverage</td>
-                                        <td>2013 - 2017</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Update frequency</td>
-                                        <td>Regularly</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Licence</td>
-                                        <td><a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Format</td>
-                                        <td>CSV, JSON</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Openness rating</td>
-                                        <td>&#9733;&#9733;&#9733;&#9734;&#9734;&nbsp; Structured data in open format (e.g. CSV)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Last updated</td>
-                                        <td>November 2017</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Notes</td>
-                                        <td>The data are also available to view on <a href="http://grantnav.threesixtygiving.org/funder/GB-LAE-TRF">GrantNav</a></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <a class="labButton" href="https://www.trafforddatalab.io/open_data/grants/trafford_council_voluntary_sector_grants_360_giving_format.csv" aria-label="download in CSV format" download>CSV <span class="fas fa-download"></span></a>
-                            <a class="labButton" href="https://www.trafforddatalab.io/open_data/grants/trafford_council_voluntary_sector_grants_360_giving_format.json" aria-label="download in JSON format" download>JSON <span class="fas fa-download"></span></a>
-                        </div>
-                        <div class="prevGeoJson">
-                            <div class="scriptGithub"></div>
-                            <div class="tablePreview"></div>
-                        </div>
-                    </div>
                     <p class="cardBody">Grants allocated by Trafford Council via Trafford Partnership</p>
                     <p class="cardFooter">
                         <a class="labButton" href="https://www.trafforddatalab.io/open_data/grants/trafford_council_voluntary_sector_grants_360_giving_format.csv" aria-label="download in CSV format" download>CSV <span class="fas fa-download"></span></a>
@@ -1203,7 +891,7 @@
                     <p class="cardFooter">
                         <a class="labButton" href="https://www.trafforddatalab.io/spatial_data/council_defined/trafford_localities.geojson" aria-label="download in GeoJSON format" download>GeoJSON <span class="fas fa-download"></span></a>
                     </p>
-                </div>
+                </div-->
             </main>
 
             <footer class="footer">
@@ -1221,113 +909,18 @@
             </footer>
         </div>
 
-        <script src="https://d3js.org/d3.v4.min.js"></script>
+        <script src="https://www.trafforddatalab.io/assets/javascript/labFilter.js"></script>
         <script>
-        function cardStateChange(el, preview, close) {
-            /*
-                Each time a checkbox changes state, this function is called with the following parameters:
-                el      - the checkbox element that has changed state
-                preview - parameters required for previewing the content related to el if it is checked
-                close   - parameters required to remove the previews if el is unchecked
-
-                The onChange functionality is required as it is device-independant
-            */
-            if (el.checked) {
-                loadPreview(preview);
-            }
-            else {
-                removePreviews(close);
-            }
-        }
-
-        function loadPreview(arrayPaths){
-          var el=arrayPaths[0];
-          for (i = 1; i < arrayPaths.length; i++) {
-            var geo=/.geojson/
-            var csvF=/.csv/
-            if (geo.test(arrayPaths[i])){
-              var pathMap="https://render.githubusercontent.com/view/geojson?url=https://raw.githubusercontent.com/traffordDataLab/"+ arrayPaths[i];
-              loadMap(el,pathMap);
-            }else if (csvF.test(arrayPaths[i])){
-              var pathTable="https://www.trafforddatalab.io/" + arrayPaths[i];
-              loadTable(el,pathTable);
-            }
-          }
-        }
-
-        function loadMap(el,pathMap){
-          var ifr=document.createElement("iframe");
-          ifr.setAttribute("frameborder", "0");
-          ifr.setAttribute("src", pathMap);
-          try{
-          el.parentNode.getElementsByClassName("scriptGithub")[0].appendChild(ifr);
-          }
-          catch(error){
-            console.log(error+"error")
-          }
-        }
-
-        function loadTable(el,pathTable){
-
-          d3.csv(pathTable, function(error, data) {
-            if (error) throw error;
-
-            var divTable=el.parentNode.getElementsByClassName("tablePreview")[0];
-            divTable.style.border = "1px solid #cccccc";
-            var isMap=el.parentNode.getElementsByTagName("iframe")[0];
-            if (isMap){
-              var data=data.slice(1,4);
-            }
-            else {
-              var data=data.slice(1,20);
-            }
-
-            var colNames=Object.keys(data[1]);
-            var tableHeader=document.createElement("thead");
-            var headRow = document.createElement("tr")
-            var arrayLength = colNames.length;
-            for (var i = 0; i < arrayLength; i++) {
-              var colName = document.createElement("th");
-              var thText = document.createTextNode(colNames[i]);
-              colName.appendChild(thText);
-              headRow.appendChild(colName);
-            }
-
-            tableHeader.appendChild(headRow);
-            var table=document.createElement("table");
-            table.appendChild(tableHeader);
-
-            var dataLength = data.length;
-            for (var i = 0; i < dataLength; i++) {
-              var tableRow = document.createElement("tr");
-              for (var j = 0; j < arrayLength; j++) {
-                var tableCell = document.createElement("td");
-                var tdText = document.createTextNode(data[i][colNames[j]]);
-                tableCell.appendChild(tdText);
-                tableRow.appendChild(tableCell);
-              }
-              table.appendChild(tableRow);
-            }
-
-            divTable.appendChild(table);
-          })
-        }
-
-        function removePreviews(el){
-          var iframeDiv=el.parentNode.getElementsByClassName("scriptGithub")[0];
-          var iframeNode=iframeDiv.getElementsByTagName("iframe")[0];
-          if (iframeNode){
-            iframeDiv.removeChild(iframeNode);
-          }
-
-          var tableDiv=el.parentNode.getElementsByClassName("tablePreview")[0];
-          tableDiv.style.borderStyle = "none";
-          var tableNode=tableDiv.getElementsByTagName("table")[0];
-          if (tableNode){
-            tableDiv.removeChild(tableNode);
-          }
-        }
-
+            // Set up the filter
+            var dataFilter = new LabFilter({
+                filterContainer: document.getElementById('filterContainer'),    // where we want the filter input box creating
+                matchedClass: 'card',   // the data boxes need the CSS class 'card' adding when they are a match and removing when they aren't
+                filterClass: 'highlightFormElement',  // creates the orange focus outline
+                filterPlaceholder: 'enter keywords...',
+                filterTitle: '',
+                filterLabel: 'If you are looking for particular datasets you can search: ',
+                contentElements: document.getElementsByClassName('filterTags')
+            })
         </script>
     </body>
 </html>
