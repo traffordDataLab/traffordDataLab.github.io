@@ -10,7 +10,7 @@ html, body
 
 a
 {
-    color: #db3a00;
+    color: #046DC3;
     text-decoration: none;
 }
 
@@ -22,7 +22,7 @@ a:hover
 h1, h2, h3, h4, h5, h6, .header
 {
     font-family: 'Roboto', sans-serif;
-    color: #757575;
+    color: #545454;
 }
 
 img
@@ -48,7 +48,7 @@ img
 .labButton
 {
     font-size: 0.8em;
-    background-color: #757575;
+    background-color: #545454;
     color: #fff;
     padding: 3px 5px 3px 5px;
     margin: 0 10px 7px 0;

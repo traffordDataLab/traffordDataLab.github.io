@@ -14,7 +14,8 @@
     background-color: white;
     width: 100%;
     text-align: left;
-    border-bottom: 1px solid #757575;
+    border-bottom: 1px solid #5D77A3;
+    box-shadow: 0 0 5px #5D77A3;
     z-index: 2;
 }
 
@@ -37,13 +38,13 @@
     border-bottom: 1px solid white;        /* required so that we can simulate a link underline in the a:hover without the header wobbling by 1px */
     padding: 0 11px;
     margin: 0;
-    color: #757575;
+    color: #545454;
     text-decoration: none;
 }
 
 .menuItem a:hover
 {
-    border-bottom: 1px solid #db3a00;
+    border-bottom: 1px solid #046DC3;
 }
 
 .main
@@ -52,7 +53,7 @@
     margin: auto;
     margin-top: 70px;
     margin-bottom: 30px;
-    padding: 0 20px 5em 12px;     /* 5em padding-bottom Required for footer to be positioned always at the bottom of the page (This is the height of the footer) */
+    padding: 0 9% 5em 9%;     /* 5em padding-bottom Required for footer to be positioned always at the bottom of the page (This is the height of the footer) */
 }
 
 .main p
@@ -72,7 +73,7 @@
     height: 5em;               /* Required for footer to be positioned always at the bottom of the page (matched to the height of the Trafford logo) */
     margin: 0;
     padding: 0;
-    background-color:#f0f0f0;
+    background-color:#F5F9FF;
     overflow: hidden;
     position: absolute;
     bottom: 0;
@@ -110,6 +111,7 @@
 {
     margin: 9px 12px 0 12px;
     padding: 0;
+    color: #ff0000;
 }
 
 .logoTrafford
@@ -162,7 +164,7 @@
 .dataTable th
 {
     font-family: 'Roboto', sans-serif;
-    color: #757575;
+    color: #595959;
     font-size: 1.1em;
     text-align: right;  /* IE fix - ignores the declaration set on the main table class so have to repeat here */
 }
@@ -209,8 +211,8 @@
 
 .highlightFormElement:focus
 {
-    border: 1px solid #db3a00;
-    box-shadow: 0 0 5px #db3a00;
+    border: 1px solid #5D77A3;
+    box-shadow: 0 0 5px #5D77A3;
 }
 
 /* visualisations and/or text content layouts */
