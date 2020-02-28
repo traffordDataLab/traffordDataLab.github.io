@@ -35,10 +35,10 @@
 
 .menuItem a
 {
-    border-bottom: 1px solid white;        /* required so that we can simulate a link underline in the a:hover without the header wobbling by 1px */
+    border-bottom: 1px solid white;     /* required so that we can simulate a link underline in the a:hover without the header wobbling by 1px */
     padding: 0 11px;
     margin: 0;
-    color: #545454;
+    color: #707070;                     /* To prevent the text having the link colour  */
     text-decoration: none;
 }
 
@@ -89,7 +89,7 @@
 
 .rightFooter
 {
-    background-color: white;
+    background-color: #fff;
     height: 100%;
     display: inline-block;
     float: right;
@@ -111,7 +111,6 @@
 {
     margin: 9px 12px 0 12px;
     padding: 0;
-    color: #ff0000;
 }
 
 .logoTrafford
@@ -196,23 +195,6 @@
 .thumbnail:hover
 {
     border: 1px solid #db3a00;
-}
-
-/* These are for form elements such as the input used on pages containing the filter. Creates a Lab-orange gradient border which fades in when the element has focus. */
-.highlightFormElement
-{
-    transition: all 0.30s ease-in-out;
-    outline: none;  /* a custom outline is implemented in .highlightFormElement:focus maintaining accessibility and providing uniform appearance cross-browser */
-    padding: 3px 0px 3px 3px;
-    margin: 5px 1px 3px 0px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-}
-
-.highlightFormElement:focus
-{
-    border: 1px solid #5D77A3;
-    box-shadow: 0 0 5px #5D77A3;
 }
 
 /* visualisations and/or text content layouts */

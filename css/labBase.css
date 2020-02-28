@@ -22,7 +22,7 @@ a:hover
 h1, h2, h3, h4, h5, h6, .header
 {
     font-family: 'Roboto', sans-serif;
-    color: #545454;
+    color: #707070;
 }
 
 img
@@ -48,17 +48,27 @@ img
 .labButton
 {
     font-size: 0.8em;
-    background-color: #545454;
+    background-color: #707070;
     color: #fff;
     padding: 3px 5px 3px 5px;
     margin: 0 10px 7px 0;
-    border-radius: 3px;
     display: inline-block;
+}
+
+.labButton, .labBorder
+{
+    border: 1px solid #ccc;
+    border-radius: 3px;
 }
 
 .labButton:hover
 {
     cursor: pointer;
-    background-color: #db3a00;
     text-decoration: none;
+}
+
+.labButton:hover, .labBorder:hover
+{
+    border: 1px solid #5D77A3;
+    box-shadow: 0 0 5px #5D77A3;
 }
