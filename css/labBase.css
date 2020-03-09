@@ -1,4 +1,9 @@
-/* ### Base Trafford Data Lab styles ### */
+/*
+    Base Trafford Data Lab styles
+    -----------------------------
+    This CSS is intended to be used in every Lab web output to provide the basic styling.
+*/
+
 html, body
 {
     padding: 0;
@@ -7,6 +12,14 @@ html, body
     font-family: 'Open Sans', sans-serif;
     color: #212121;
 }
+
+/* HTML5 fallback styles for older browsers */
+main, header, footer, nav, figure, figcaption, time
+{
+    display: block;
+    box-sizing: border-box;
+}
+/* ---------------------------------------- */
 
 a
 {
@@ -19,7 +32,8 @@ a:hover
     text-decoration: underline;
 }
 
-h1, h2, h3, h4, h5, h6, .header
+/* We can remove the .header reference below once all pages have been converted to use HTML5 landmark tags */
+h1, h2, h3, h4, h5, h6, header, .header
 {
     font-family: 'Roboto', sans-serif;
     color: #707070;
@@ -30,7 +44,8 @@ img
     border: 0;
 }
 
-.noFloat /* renamed from resetDisplay */
+/* Used after floating elements, such as div 'cards' which wrap based on screen width, to prevent further content floating */
+.noFloat
 {
     clear: both;
 }
@@ -40,11 +55,17 @@ img
     display: none;
 }
 
-.download
+/* Used for reference text or clarification notes mostly */
+.smallText
 {
     font-size: 0.8em;
 }
 
+/*
+    .labButton is our style for HTML buttons.
+    .labBorder is for any boxed content e.g. input boxes, div 'cards' etc. It puts a thin border around the content which becomes a halo on-hover.
+    The two styles are created together below so that .labButton can be used on its own without having to specify .labBorder as well.
+*/
 .labButton
 {
     font-size: 0.8em;
