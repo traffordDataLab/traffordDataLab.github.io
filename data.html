@@ -17,7 +17,9 @@
         {
             width: 20%;
             height: 170px;
-            margin: 1em 2.2%;
+            xmargin: 1em 2.2%;
+            margin: 0;
+
             display: inline-block;
             background-color: #F5F9FF;
             border: 1px solid #ccc;
@@ -186,7 +188,7 @@
             var dataFilter = new LabFilter({
                 filterContainer: document.getElementById('filterContainer'),    // where we want the filter input box creating
                 matchedClass: 'card',   // the data boxes need the CSS class 'card' adding when they are a match and removing when they aren't
-                filterClass: 'highlightFormElement',  // creates the orange focus outline
+                filterClass: 'labBorder',  // creates the focus outline on-hover
                 filterPlaceholder: 'enter keywords...',
                 filterTitle: '',
                 filterLabel: 'If you are looking for particular datasets you can search: '
