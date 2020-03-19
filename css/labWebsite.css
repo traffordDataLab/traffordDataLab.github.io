@@ -151,6 +151,73 @@
     text-indent: -2em;
 }
 
+/*
+    Areas of content presented in a box/block-type format to stand out.
+    Cards are for mutiple items arranged in groups of columns and rows such as items on the home, data and charticles pages etc.
+    .blockCard type cards are ones which use the block layout style, the standard .card is clear
+    The individual pages can specialise these styles accordingly, e.g. for the size of the cards.
+*/
+.cardContainer
+{
+    /*
+        container to display the cards as a grid - see https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids
+        IE doesn't understand these so they have no effect.
+    */
+
+    /* latest spec definitions */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 2em;
+
+    /* legacy spec definitions for extra safety */
+    grid-gap: 2em;
+}
+
+.card, .blockCard
+{
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.blockCard
+{
+    background-color: #F5F9FF;
+}
+
+.cardHead, .blockCardHead
+{
+    display: block;
+    padding: 0 0.75em;  /* 0.75em here and 1em in the .cardBody keep text inline as the text in the body is smaller */
+}
+
+.blockCardHead, .blockHead
+{
+    background-color: #5D77A3;
+}
+
+.blockHead
+{
+    color: #000;
+}
+
+.blockHead a, .blockCardHead
+{
+    color: #FFF;
+}
+
+.cardBody, .blockBody
+{
+    font-size: 0.8em;
+    padding: 0 1em;     /* 1em here and 0.75em in the .cardHead keep text inline as the text in the body is smaller */
+    color: #212121;
+}
+
+.cardBody
+{
+    overflow-y: auto;   /* card body contents should scroll so that the size of the cards is uniform whereas block contents should be as big as required */
+}
+
 /* data tables */
 .dataTable
 {
@@ -241,9 +308,11 @@
 /* changes due to screen width */
 @media (min-width:1300px)
 {
+    /* This prevents the content going too wide once the screen goes beyond a maximum width. */
     .main
     {
-        width: 1240px;           /* Amended this from 800px so that the content width stays the same once the size expands beyond 1300px */
+        width: 1070px;
+        padding: 0 0 5em 0;
     }
 
     /* visualisations and/or text content layouts */

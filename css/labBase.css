@@ -50,7 +50,7 @@ img
     clear: both;
 }
 
-.hideContent
+.hideContent, .filterTags
 {
     display: none;
 }

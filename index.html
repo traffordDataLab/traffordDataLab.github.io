@@ -15,25 +15,33 @@
         <style>
             #banner
             {
-                background-color: #5D77A3;
-                color: #000;
                 font-size: 1.25em;
                 line-height: 1.75em;
-                margin: auto;
                 margin-top: 49px;
                 margin-bottom: 50px;
                 padding: 20px 9% 20px 9%;
-            }
-
-            #banner a
-            {
-                color: #FFF;
             }
 
             /* Overriden styles from the main CSS to accomodate the banner just on this page */
             .main
             {
                 margin-top: 30px;
+            }
+
+            @media (min-width:1300px)
+            {
+                /* This prevents the content going too wide once the screen goes beyond a maximum width. */
+                #banner
+                {
+                    padding: 20px 0;
+                }
+
+                #banner p
+                {
+                    width: 1070px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
             }
 
             @media (max-width:620px)
@@ -60,144 +68,148 @@
                 </nav>
             </header>
 
-            <div id="banner">
+            <div id="banner" class="blockHead">
                 <p>The Trafford Data Lab supports decision-making in <a href="https://www.trafford.gov.uk" target="_blank">Trafford</a>, Greater Manchester, by revealing patterns in data through visualisation. We provide various interactive and static outputs as well as <a href="data.html">open data</a> and <a href="learning.html">learning materials</a> for the tools and technologies we use. Discover more <a href="about.html">about us</a> and what we do.</p>
             </div>
 
             <main class="main">
                 <h1 class="hideContent">Trafford Data Lab</h1>   <!-- heading displayed only if we don't have CSS enabled -->
 
-                <h2>Applications</h2>
+                <section>
+                    <h2>Applications</h2>
 
-                <div>
-                    <a href="https://trafforddatalab.shinyapps.io/climate_emergency/" target="_blank"><img src="images/climate_slide_pack_thumbnail.png" class="thumbnail" alt=""/><strong>Climate emergency slide pack</strong></a><br />
-                    More than half of UK councils have declared a &quot;<a href="https://www.bbc.co.uk/news/newsbeat-47570654" target="_blank">climate emergency</a>&quot;. This tool is designed to support local councils by visualising open data relating to climate change. We have also created an accompanying <a href="http://www.trafforddatalab.io/climate_emergency/" target="_blank">climate emergency open data companion</a>.
-                </div>
+                    <div>
+                        <a href="https://trafforddatalab.shinyapps.io/climate_emergency/" target="_blank"><img src="images/climate_slide_pack_thumbnail.png" class="thumbnail" alt=""/><strong>Climate emergency slide pack</strong></a><br />
+                        More than half of UK councils have declared a &quot;<a href="https://www.bbc.co.uk/news/newsbeat-47570654" target="_blank">climate emergency</a>&quot;. This tool is designed to support local councils by visualising open data relating to climate change. We have also created an accompanying <a href="http://www.trafforddatalab.io/climate_emergency/" target="_blank">climate emergency open data companion</a>.
+                    </div>
 
-                <br class="noFloat"/>
-                <br />
+                    <br class="noFloat"/>
+                    <br />
 
-                <div>
-                    <a href="https://trafforddatalab.shinyapps.io/imd19" target="_blank"><img src="images/imd_2019_app_thumbnail.png" class="thumbnail" alt=""/><strong>English Indices of Deprivation 2019</strong></a><br />
-                    Interactive visualisation of the data released by the <a href="https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019" target="_blank">Ministry of Housing, Communities & Local Government</a> for Lower-layer Super Output Areas (LSOA) across England by Local Authority District. Please visit our <a href="deprivation.html">Indices of Deprivation 2019 page</a> for further resources.
-                </div>
+                    <div>
+                        <a href="https://trafforddatalab.shinyapps.io/imd19" target="_blank"><img src="images/imd_2019_app_thumbnail.png" class="thumbnail" alt=""/><strong>English Indices of Deprivation 2019</strong></a><br />
+                        Interactive visualisation of the data released by the <a href="https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019" target="_blank">Ministry of Housing, Communities & Local Government</a> for Lower-layer Super Output Areas (LSOA) across England by Local Authority District. Please visit our <a href="deprivation.html">Indices of Deprivation 2019 page</a> for further resources.
+                    </div>
 
-                <br class="noFloat"/>
-                <br />
+                    <br class="noFloat"/>
+                    <br />
 
-                <div>
-                    <a href="https://www.trafforddatalab.io/ward_profiler/" target="_blank"><img src="images/ward_profiler_thumbnail.png" class="thumbnail" alt=""/><strong>Ward Profiler</strong></a><br />
-                    In-depth information focussing on each of <a href="https://github.com/traffordDataLab/spatial_data/blob/master/ward/2017/trafford_ward_full_resolution.geojson" target="_blank">Trafford's wards</a>. The information is presented in thematic sections as interactive maps and charts allowing for easy comparisons to be made. You can also download the data and code behind the visualisations.
-                </div>
+                    <div>
+                        <a href="https://www.trafforddatalab.io/ward_profiler/" target="_blank"><img src="images/ward_profiler_thumbnail.png" class="thumbnail" alt=""/><strong>Ward Profiler</strong></a><br />
+                        In-depth information focussing on each of <a href="https://github.com/traffordDataLab/spatial_data/blob/master/ward/2017/trafford_ward_full_resolution.geojson" target="_blank">Trafford's wards</a>. The information is presented in thematic sections as interactive maps and charts allowing for easy comparisons to be made. You can also download the data and code behind the visualisations.
+                    </div>
 
-                <br class="noFloat"/>
-                <br />
+                    <br class="noFloat"/>
+                    <br />
 
-                <div>
-                    <a href="https://www.trafforddatalab.io/explore/" target="_blank"><img src="images/explore_thumbnail.png" class="thumbnail" alt=""/><strong>Explore</strong></a><br />
-                    Discover the different geographic areas of Trafford and visualise all of our spatial datasets in one application. Use the geolocation facility (on supported devices with the user's permission) to see where you are and discover what is around you.
-                </div>
+                    <div>
+                        <a href="https://www.trafforddatalab.io/explore/" target="_blank"><img src="images/explore_thumbnail.png" class="thumbnail" alt=""/><strong>Explore</strong></a><br />
+                        Discover the different geographic areas of Trafford and visualise all of our spatial datasets in one application. Use the geolocation facility (on supported devices with the user's permission) to see where you are and discover what is around you.
+                    </div>
 
-                <br class="noFloat"/>
-                <br />
+                    <br class="noFloat"/>
+                    <br />
 
-                <div>
-                    <a href="http://www.trafforddatalab.io/crime_scanner/" target="_blank"><img src="images/crime_scanner_thumbnail.png" class="thumbnail" alt=""/><strong>Crime Scanner</strong></a><br />
-                    Interactively visualise street level crime and anti-social behaviour (ASB) incidents in your area.
-                </div>
+                    <div>
+                        <a href="http://www.trafforddatalab.io/crime_scanner/" target="_blank"><img src="images/crime_scanner_thumbnail.png" class="thumbnail" alt=""/><strong>Crime Scanner</strong></a><br />
+                        Interactively visualise street level crime and anti-social behaviour (ASB) incidents in your area.
+                    </div>
 
-                <br class="noFloat"/>
-                <br />
+                    <br class="noFloat"/>
+                    <br />
 
-                <div>
-                    <a href="https://www.trafforddatalab.io/choroplether/" target="_blank"><img src="images/choroplether_thumbnail.png" class="thumbnail" alt=""/><strong>Choroplether</strong></a><br />
-                    Create <a href="https://www.axismaps.com/guide/univariate/choropleth/" target="_blank">choropleth maps</a> of your own data in <a href="https://vega.github.io/vega-lite/" target="_blank">Vega-Lite</a> without having to write all the code yourself. Export the output as an image or embed it in a web page.
-                </div>
+                    <div>
+                        <a href="https://www.trafforddatalab.io/choroplether/" target="_blank"><img src="images/choroplether_thumbnail.png" class="thumbnail" alt=""/><strong>Choroplether</strong></a><br />
+                        Create <a href="https://www.axismaps.com/guide/univariate/choropleth/" target="_blank">choropleth maps</a> of your own data in <a href="https://vega.github.io/vega-lite/" target="_blank">Vega-Lite</a> without having to write all the code yourself. Export the output as an image or embed it in a web page.
+                    </div>
 
-                <br class="noFloat"/>
-                <br />
+                    <br class="noFloat"/>
+                    <br />
 
-                <div>
-                    <a href="https://trafforddatalab.shinyapps.io/population_picker" target="_blank"><img src="images/population_picker_thumbnail.png" class="thumbnail" alt=""/><strong>Population Picker</strong></a><br />
-                    Discover single or aggregated population figures for the different statistical and administrative geographies. Choose the age range of interest by single year of age and export the data in various formats.
-                </div>
+                    <div>
+                        <a href="https://trafforddatalab.shinyapps.io/population_picker" target="_blank"><img src="images/population_picker_thumbnail.png" class="thumbnail" alt=""/><strong>Population Picker</strong></a><br />
+                        Discover single or aggregated population figures for the different statistical and administrative geographies. Choose the age range of interest by single year of age and export the data in various formats.
+                    </div>
 
-                <br class="noFloat"/>
-                <br />
+                    <br class="noFloat"/>
+                    <br />
 
-                <div>
-                    <a href="https://trafforddatalab.shinyapps.io/postcode_loader/" target="_blank"><img src="images/postcode_loader_thumbnail.png" class="thumbnail" alt=""/><strong>Postcode Loader</strong></a><br />
-                    An <a href="https://cran.r-project.org/" target="_blank">R</a> <a href="https://cran.r-project.org/web/packages/shiny/index.html" target="_blank">Shiny</a> app allowing users to download the latest <a href="https://geoportal.statistics.gov.uk/datasets/ons-postcode-directory-latest-centroids" target="_blank">postcode centroids</a> from the <a href="https://www.ons.gov.uk/" target="_blank">Office for National Statistics</a>' <a href="https://geoportal.statistics.gov.uk/" target="_blank">Open Geography Portal</a> API.
-                </div>
+                    <div>
+                        <a href="https://trafforddatalab.shinyapps.io/postcode_loader/" target="_blank"><img src="images/postcode_loader_thumbnail.png" class="thumbnail" alt=""/><strong>Postcode Loader</strong></a><br />
+                        An <a href="https://cran.r-project.org/" target="_blank">R</a> <a href="https://cran.r-project.org/web/packages/shiny/index.html" target="_blank">Shiny</a> app allowing users to download the latest <a href="https://geoportal.statistics.gov.uk/datasets/ons-postcode-directory-latest-centroids" target="_blank">postcode centroids</a> from the <a href="https://www.ons.gov.uk/" target="_blank">Office for National Statistics</a>' <a href="https://geoportal.statistics.gov.uk/" target="_blank">Open Geography Portal</a> API.
+                    </div>
 
-                <br class="noFloat"/>
-                <br />
+                    <br class="noFloat"/>
+                    <br />
 
-                <div>
-                    <a href="https://trafforddatalab.shinyapps.io/postcoder/" target="_blank"><img src="images/postcoder_thumbnail.png" class="thumbnail" alt=""/><strong>Postcoder</strong></a><br />
-                    This <a href="https://cran.r-project.org/" target="_blank">R</a> <a href="https://cran.r-project.org/web/packages/shiny/index.html" target="_blank">Shiny</a> application powered by <a href="http://postcodes.io/" target="_blank">Postcodes.io</a> allows you to find administrative and statistical geographies for a given postcode. You can either enter the postcode manually or click on the map to find the nearest postcode to the corresponding coordinates.
-                </div>
+                    <div>
+                        <a href="https://trafforddatalab.shinyapps.io/postcoder/" target="_blank"><img src="images/postcoder_thumbnail.png" class="thumbnail" alt=""/><strong>Postcoder</strong></a><br />
+                        This <a href="https://cran.r-project.org/" target="_blank">R</a> <a href="https://cran.r-project.org/web/packages/shiny/index.html" target="_blank">Shiny</a> application powered by <a href="http://postcodes.io/" target="_blank">Postcodes.io</a> allows you to find administrative and statistical geographies for a given postcode. You can either enter the postcode manually or click on the map to find the nearest postcode to the corresponding coordinates.
+                    </div>
 
-                <br class="noFloat"/>
-                <br />
+                    <br class="noFloat"/>
+                    <br />
 
-                <div>
-                    <a href="https://www.trafforddatalab.io/plotter/" target="_blank"><img src="images/plotter_thumbnail.png" class="thumbnail" alt=""/><strong>Plotter</strong></a><br />
-                    Create and edit map features in the form of lines, polygons, circles and markers and save the results. Load previously saved data and add to it, or use it in other applications such as Graphical Information Systems (GIS) software.
-                </div>
+                    <div>
+                        <a href="https://www.trafforddatalab.io/plotter/" target="_blank"><img src="images/plotter_thumbnail.png" class="thumbnail" alt=""/><strong>Plotter</strong></a><br />
+                        Create and edit map features in the form of lines, polygons, circles and markers and save the results. Load previously saved data and add to it, or use it in other applications such as Graphical Information Systems (GIS) software.
+                    </div>
 
-                <br class="noFloat"/>
-                <br />
+                    <br class="noFloat"/>
+                    <br />
 
-                <div>
-                    <a href="https://trafforddatalab.shinyapps.io/road_casualties" target="_blank"><img src="images/road_casualty_app_thumbnail.png" class="thumbnail" alt=""/><strong>Road casualties</strong></a><br />
-                    Application enabling users to explore GM reported road traffic accidents involving personal injury between 2005 and 2018.
-                </div>
+                    <div>
+                        <a href="https://trafforddatalab.shinyapps.io/road_casualties" target="_blank"><img src="images/road_casualty_app_thumbnail.png" class="thumbnail" alt=""/><strong>Road casualties</strong></a><br />
+                        Application enabling users to explore GM reported road traffic accidents involving personal injury between 2005 and 2018.
+                    </div>
 
-                <br class="noFloat"/>
-                <br />
+                    <br class="noFloat"/>
+                    <br />
 
-                <div>
-                    <a href="https://trafforddatalab.shinyapps.io/dashboard/" target="_blank"><img src="images/corporate_dashboard_thumbnail.png" class="thumbnail" alt=""/><strong>Trafford corporate dashboard</strong></a><br />
-                    Trafford Council has identified 7 strategic priorities in its <a href="https://www.trafford.gov.uk/about-your-council/strategies-plans-and-policies/Corporate-Plan.aspx" target="_blank">Corporate Plan</a> that it believes are key to enabling Trafford's residents, businesses and staff to thrive. This dashboard allows you to browse a range of indicators that relate to each of the strategic priorities.
-                </div>
+                    <div>
+                        <a href="https://trafforddatalab.shinyapps.io/dashboard/" target="_blank"><img src="images/corporate_dashboard_thumbnail.png" class="thumbnail" alt=""/><strong>Trafford corporate dashboard</strong></a><br />
+                        Trafford Council has identified 7 strategic priorities in its <a href="https://www.trafford.gov.uk/about-your-council/strategies-plans-and-policies/Corporate-Plan.aspx" target="_blank">Corporate Plan</a> that it believes are key to enabling Trafford's residents, businesses and staff to thrive. This dashboard allows you to browse a range of indicators that relate to each of the strategic priorities.
+                    </div>
 
-                <br class="noFloat"/>
-                <br /><br />
+                    <br class="noFloat"/>
+                    <br /><br />
+                </section>
 
-                <h2>Graphics</h2>
+                <section>
+                    <h2>Graphics</h2>
 
-                <div>
-                    <a href="charticles.html"><img src="images/charticles_thumbnail.png" class="thumbnail" alt=""/><strong>Charticles</strong></a><br />
-                    Bitesize articles with a chart or a map.
-                </div>
+                    <div>
+                        <a href="charticles.html"><img src="images/charticles_thumbnail.png" class="thumbnail" alt=""/><strong>Charticles</strong></a><br />
+                        Bitesize articles with a chart or a map.
+                    </div>
 
-                <br class="noFloat"/>
-                <br />
+                    <br class="noFloat"/>
+                    <br />
 
-                <div>
-                    <a href="https://www.trafforddatalab.io/maps/static/output/trafford_imd19.png" target="_blank"><img src="images/static_trafford_imd_2019_thumbnail.png" class="thumbnail" alt=""/><strong>Index of Multiple Deprivation 2019 for Trafford</strong></a><br />
-                    Visualising the data released by the <a href="https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019" target="_blank">Ministry of Housing, Communities & Local Government</a> for Lower-layer Super Output Areas (LSOA) in Trafford. The previous version based on the <a href="https://www.trafforddatalab.io/maps/static/output/trafford_imd15.png" target="_blank">Index of Multiple Deprivation 2015</a> is also available. Please visit our <a href="deprivation.html">Indices of Deprivation 2019 page</a> for further resources.
-                </div>
+                    <div>
+                        <a href="https://www.trafforddatalab.io/maps/static/output/trafford_imd19.png" target="_blank"><img src="images/static_trafford_imd_2019_thumbnail.png" class="thumbnail" alt=""/><strong>Index of Multiple Deprivation 2019 for Trafford</strong></a><br />
+                        Visualising the data released by the <a href="https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019" target="_blank">Ministry of Housing, Communities & Local Government</a> for Lower-layer Super Output Areas (LSOA) in Trafford. The previous version based on the <a href="https://www.trafforddatalab.io/maps/static/output/trafford_imd15.png" target="_blank">Index of Multiple Deprivation 2015</a> is also available. Please visit our <a href="deprivation.html">Indices of Deprivation 2019 page</a> for further resources.
+                    </div>
 
-                <br class="noFloat"/>
-                <br />
+                    <br class="noFloat"/>
+                    <br />
 
-                <div>
-                    <a href="https://www.trafforddatalab.io/maps/static/output/trafford_population.png" target="_blank"><img src="images/static_trafford_population_thumbnail.png" class="thumbnail" alt=""/><strong>Resident population of Trafford</strong></a><br />
-                    Mid-year 2017 resident population estimates for Trafford visualised by electoral ward.
-                </div>
+                    <div>
+                        <a href="https://www.trafforddatalab.io/maps/static/output/trafford_population.png" target="_blank"><img src="images/static_trafford_population_thumbnail.png" class="thumbnail" alt=""/><strong>Resident population of Trafford</strong></a><br />
+                        Mid-year 2017 resident population estimates for Trafford visualised by electoral ward.
+                    </div>
 
-                <br class="noFloat"/>
-                <br />
+                    <br class="noFloat"/>
+                    <br />
 
-                <div>
-                    <a href="https://www.trafforddatalab.io/maps/static/output/trafford_localities.png" target="_blank"><img src="images/static_trafford_localities_thumbnail.png" class="thumbnail" alt=""/><strong>Trafford locality and ward boundaries</strong></a><br />
-                    Map showing the boundaries of Trafford's localities and electoral wards.
-                </div>
+                    <div>
+                        <a href="https://www.trafforddatalab.io/maps/static/output/trafford_localities.png" target="_blank"><img src="images/static_trafford_localities_thumbnail.png" class="thumbnail" alt=""/><strong>Trafford locality and ward boundaries</strong></a><br />
+                        Map showing the boundaries of Trafford's localities and electoral wards.
+                    </div>
 
-                <br class="noFloat"/>
-                <br /><br/>
+                    <br class="noFloat"/>
+                    <br /><br/>
+                </section>
             </main>
 
             <footer class="footer">
