@@ -160,13 +160,13 @@
 .cardContainer
 {
     /*
-        container to display the cards as a grid - see https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids
-        IE doesn't understand these so they have no effect.
+        Container to display the cards as a grid - see https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids
+        In IE and browsers that don't support 'display: grid' these have no effect.
     */
 
     /* latest spec definitions */
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(239px, 1fr));
     gap: 2em;
 
     /* legacy spec definitions for extra safety */
