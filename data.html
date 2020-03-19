@@ -19,8 +19,19 @@
                 height: 170px;
 
                 /* For browsers which don't support grid layouts */
-                width: 31%;
-                margin: 1em 1.25%;
+                width: 20%;
+                margin: 1em 2.2%;
+            }
+
+            /* For browsers which support grid layouts */
+            @supports (display: grid)
+            {
+                /* Reset the widths and margins applied above as they aren't required when using grid layout */
+                .blockCard
+                {
+                    width: auto;
+                    margin: 0;
+                }
             }
 
             .blockCardHead
