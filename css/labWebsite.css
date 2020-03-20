@@ -47,6 +47,11 @@
     border-bottom: 1px solid #046DC3;
 }
 
+.noBulletPoints, .noBulletPoints * *
+{
+    list-style-type: none;  /* remove the list-item bullet from the top level and all sub-level list items */
+}
+
 .main
 {
     color: #212121;
@@ -85,6 +90,7 @@
 {
     display: inline-block;
     white-space: nowrap;
+    padding: 6px 0 0 12px;
 }
 
 .rightFooter
@@ -93,18 +99,6 @@
     height: 100%;
     display: inline-block;
     float: right;
-}
-
-/* Additions to the classes defined above - this is because we are using the <header>, <section> and <footer> HTML 5 tags */
-.header, .main, .footer
-{
-    display: block;
-    box-sizing: border-box;
-}
-
-.noBulletPoints, .noBulletPoints * *
-{
-    list-style-type: none;  /* remove the list-item bullet from the top level and all sub-level list items */
 }
 
 .traffordDataLabLogo
@@ -118,23 +112,11 @@
     height: 5em;
 }
 
-.logoMedia
-{
-    font-size: 2em;
-    padding: 18px 0 0 12px;
-    margin: 0;
-}
-
 .linkMedia
 {
+    font-size: 2em;
     color: #212121;
-    padding: 0px 10px 0px 0px;
-}
-
-.license
-{
-    font-size: 0.7em;
-    padding: 10px 0px 0px 12px;
+    padding: 0 0.6em 0 0;
 }
 
 /* end notes for references/credits etc. */
