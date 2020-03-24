@@ -13,6 +13,21 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
 
         <style>
+            section
+            {
+                margin-bottom: 2em;
+            }
+
+            section:first-child
+            {
+                border-bottom: 2px dotted #f0f0f0;
+            }
+
+            .thumbnail
+            {
+                padding-top: 0.3em;
+            }
+
             /* Specific customisation of the card for this page */
             .cardContainer
             {
@@ -24,8 +39,19 @@
                 padding: 0.2em 0.5em 0.5em 0.5em;   /* the top padding is different in order to get thumbnail vertically aligned with the cardHead - the missing 0.3em is on .thumbnail below */
 
                 /* For browsers which don't support grid layouts */
-                width: 45%;
+                width: 45%; /* only want a max of 2 columns due to the contents of each being so large */
                 margin: 1em 2%;
+            }
+
+            /* For browsers which support grid layouts */
+            @supports (display: grid)
+            {
+                /* Reset the widths and margins applied above as they aren't required when using grid layout */
+                .card
+                {
+                    width: auto;
+                    margin: 0;
+                }
             }
 
             .cardHead
@@ -40,52 +66,8 @@
                 padding: 0;
             }
 
-            /* For browsers which support grid layouts */
-            @supports (display: grid)
-            {
-                /* Reset the widths and margins applied above as they aren't required when using grid layout */
-                .card
-                {
-                    width: auto;
-                    margin: 0;
-                }
-            }
 
-            .main
-            {
-                margin-top: 30px;   /* Overriden styles from the main CSS to accomodate the banner just on this page */
-            }
-
-            .thumbnail
-            {
-                padding-top: 0.3em;
-            }
-
-            #banner
-            {
-                font-size: 1.25em;
-                line-height: 1.75em;
-                margin-top: 49px;
-                margin-bottom: 50px;
-                padding: 20px 9% 20px 9%;
-            }
-
-            @media (min-width:1300px)
-            {
-                /* This prevents the content going too wide once the screen goes beyond a maximum width. */
-                #banner
-                {
-                    padding: 20px 0;
-                }
-
-                #banner p
-                {
-                    width: 1070px;
-                    margin-left: auto;
-                    margin-right: auto;
-                }
-            }
-
+            /* Change the display of cards to a single column */
             @media (max-width:850px)
             {
                 /* For browsers which don't support grid layouts */
@@ -94,22 +76,11 @@
                     width: 100%;
                     margin: 1em 0;
                 }
-            }
 
-            @media (max-width:620px)
-            {
-                #banner
-                {
-                    margin-top: 93px;
-                }
-            }
-
-            /* For browsers which support grid layouts */
-            @media (max-width:1300px), @media (max-width:850px)
-            {
-                /* Reset the widths and margins applied above as they aren't required when using grid layout */
+                /* For browsers which support grid layouts */
                 @supports (display: grid)
                 {
+                    /* Reset the widths and margins applied above as they aren't required when using grid layout */
                     .card
                     {
                         width: auto;
@@ -134,16 +105,15 @@
                 </nav>
             </header>
 
-            <div id="banner" class="blockHead">
-                <p>The Trafford Data Lab supports decision-making in <a href="https://www.trafford.gov.uk" target="_blank">Trafford</a>, Greater Manchester, by revealing patterns in data through visualisation. We provide various interactive and static outputs as well as <a href="data.html">open data</a> and <a href="learning.html">learning materials</a> for the tools and technologies we use. Discover more <a href="about.html">about us</a> and what we do.</p>
-            </div>
-
             <main class="main">
-                <h1 class="hideContent">Trafford Data Lab</h1>   <!-- heading displayed only if we don't have CSS enabled -->
-                <span id="filterContainer" style="display: inline-block;"></span>
+                <section>
+                    <h1>Trafford Data Lab</h1>
+
+                    <p>We visualise and provide open data about Trafford, Greater Manchester and beyond through interactive and static open source outputs. <span id="filterContainer" style="display: inline-block;"></span></p>
+                </section>
 
                 <section>
-                    <h2>Applications</h2>
+                    <h2>Apps</h2>
 
                     <div class="cardContainer">
                         <div class="card labBorder">
@@ -220,8 +190,6 @@
                     </div>
                 </section>
 
-                <br />
-
                 <section>
                     <h2>Graphics</h2>
 
@@ -279,7 +247,7 @@
                 filterClass: 'labBorder',  // creates the focus outline on-hover
                 filterPlaceholder: 'enter keywords...',
                 filterTitle: '',
-                filterLabel: 'Search for outputs on this page: '
+                filterLabel: 'Search for particular items on this page: '
             })
         </script>
     </body>
