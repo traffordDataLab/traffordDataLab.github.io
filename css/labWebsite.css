@@ -237,13 +237,7 @@
 {
     float: left;
     margin-right: 20px;
-    border: 1px solid #f0f0f0;
     box-shadow: 3px 3px 5px #f0f0f0;
-}
-
-.thumbnail:hover
-{
-    border: 1px solid #db3a00;
 }
 
 /* visualisations and/or text content layouts */
