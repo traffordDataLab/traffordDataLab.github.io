@@ -15,7 +15,7 @@
         <style>
             h1
             {
-                margin-bottom: 0;
+                margin-bottom: 0;   /* to make the heading closer to the intro text */
             }
 
             section, #filterContainer
@@ -25,23 +25,23 @@
 
             .intro
             {
-                margin-top: 0;
+                margin-top: 0;  /* to make the text closer to the heading */
             }
 
             .thumbnail
             {
-                padding-top: 0.3em;
+                margin-top: 0.5em;
             }
 
             /* Specific customisation of the card for this page */
             .cardContainer
             {
-                grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));   /* only want a max of 2 columns due to the contents of each being large - so I've overridden the minmax card width from the defaul in labWebsite.css */
+                grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));   /* only want a max of 2 columns due to the contents of each being large - so I've overridden the minmax card width from the default in labWebsite.css */
             }
 
             .card
             {
-                padding: 0.2em 0.5em 0.5em 0.5em;   /* the top padding is different in order to get thumbnail vertically aligned with the cardHead - the missing 0.3em is on .thumbnail below */
+                padding: 0.2em 0.5em 0.5em 0.5em;   /* the top padding is different to make the gap look balanced all around as the .cardHead content has padding of its own. */
 
                 /* For browsers which don't support grid layouts */
                 width: 45%; /* only want a max of 2 columns due to the contents of each being so large */
@@ -122,79 +122,79 @@
                     <div class="cardContainer">
                         <div class="card labBorder">
                             <span class="filterTags"><!-- covid-19 monitoring coronavirus dashboard public health government uk local councils authorities charts daily confirmed cases and deaths rate --></span>
-                            <a href="https://trafforddatalab.shinyapps.io/covid-19/" target="_blank"><img src="images/c19_dashboard_thumbnail.png" class="thumbnail" alt=""/><span class="cardHead">COVID-19 monitor</span></a>
+                            <a href="https://trafforddatalab.shinyapps.io/covid-19/" target="_blank"><span class="cardHead">COVID-19 monitor</span><img src="images/c19_dashboard_thumbnail.png" class="thumbnail" alt=""/></a>
                             <span class="cardBody">This dashboard visualises daily confirmed coronavirus cases and deaths in the UK published by <a href="https://www.gov.uk/government/publications/covid-19-track-coronavirus-cases" target="_blank">Public Health England</a>. Further information about Coronavirus (COVID-19) can be found at: <a href="https://www.gov.uk/coronavirus" target="_blank">gov.uk/coronavirus</a>.</span>
                         </div>
 
                         <div class="card labBorder">
                             <span class="filterTags"><!-- climate change emergency slides presentation uk local councils authorities charts --></span>
-                            <a href="https://trafforddatalab.shinyapps.io/climate_emergency/" target="_blank"><img src="images/climate_slide_pack_thumbnail.png" class="thumbnail" alt=""/><span class="cardHead">Climate emergency slide pack</span></a>
+                            <a href="https://trafforddatalab.shinyapps.io/climate_emergency/" target="_blank"><span class="cardHead">Climate emergency slide pack</span><img src="images/climate_slide_pack_thumbnail.png" class="thumbnail" alt=""/></a>
                             <span class="cardBody">More than half of UK councils have declared a &quot;<a href="https://www.bbc.co.uk/news/newsbeat-47570654" target="_blank">climate emergency</a>&quot;. This tool is designed to support local councils by visualising open data relating to climate change. We have also created an accompanying <a href="http://www.trafforddatalab.io/climate_emergency/" target="_blank">climate emergency open data companion</a>.</span>
                         </div>
 
                         <div class="card labBorder">
                             <span class="filterTags"><!-- english indices of deprivation england local authority district authorities 2019 lower-layer super output areas lsoa imd maps charts --></span>
-                            <a href="https://trafforddatalab.shinyapps.io/imd19" target="_blank"><img src="images/imd_2019_app_thumbnail.png" class="thumbnail" alt=""/><span class="cardHead">English Indices of Deprivation 2019</span></a>
+                            <a href="https://trafforddatalab.shinyapps.io/imd19" target="_blank"><span class="cardHead">English Indices of Deprivation 2019</span><img src="images/imd_2019_app_thumbnail.png" class="thumbnail" alt=""/></a>
                             <span class="cardBody">Interactive visualisation of the data released by the <a href="https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019" target="_blank">Ministry of Housing, Communities & Local Government</a> for Lower-layer Super Output Areas (LSOA) across England by Local Authority District. Please visit our <a href="deprivation.html">Indices of Deprivation 2019 page</a> for further resources.</span>
                         </div>
 
                         <div class="card labBorder">
                             <span class="filterTags"><!-- electoral ward profiler trafford thematic themes benchmarking communications community safety demographics deprivation economy education environment governance health housing labour market transport maps charts --></span>
-                            <a href="https://www.trafforddatalab.io/ward_profiler/" target="_blank"><img src="images/ward_profiler_thumbnail.png" class="thumbnail" alt=""/><span class="cardHead">Ward Profiler</span></a>
+                            <a href="https://www.trafforddatalab.io/ward_profiler/" target="_blank"><span class="cardHead">Ward Profiler</span><img src="images/ward_profiler_thumbnail.png" class="thumbnail" alt=""/></a>
                             <span class="cardBody">In-depth information focussing on each of <a href="https://github.com/traffordDataLab/spatial_data/blob/master/ward/2017/trafford_ward_full_resolution.geojson" target="_blank">Trafford's wards</a>. The information is presented in thematic sections as interactive maps and charts allowing for easy comparisons to be made. You can also download the data and code behind the visualisations.</span>
                         </div>
 
                         <div class="card labBorder">
                             <span class="filterTags"><!-- explore discover maps spatial geographical location agricultural land air quality buildings care homes cctv defibrillators education schools and colleges electric car charging points fire stations flood risk food banks gps general practices green spaces parks hospitals jobcentre plus listed buildings metrolink stops motorway junctions open plaques commemorative pharmacies chemists roads terrain watercourses woodland libraries transport train stations gambling premises leisure centres sports clubs fast food outlets religious mental health services public transports accessibility tennis courts swimming pools fitness studios squash ski slopes ice rinks grass pitches golf courses facilities dentists allotments trees polling stations childrens greater manchester gm trafford local authority authorities districts electoral wards lower-layer middle-layer super output areas lsoa msoa localities locality --></span>
-                            <a href="https://www.trafforddatalab.io/explore/" target="_blank"><img src="images/explore_thumbnail.png" class="thumbnail" alt=""/><span class="cardHead">Explore</span></a>
+                            <a href="https://www.trafforddatalab.io/explore/" target="_blank"><span class="cardHead">Explore</span><img src="images/explore_thumbnail.png" class="thumbnail" alt=""/></a>
                             <span class="cardBody">Discover the different geographic areas of Trafford and visualise all of our spatial datasets in one application. Use the geolocation facility (on supported devices with the user's permission) to see where you are and discover what is around you.</span>
                         </div>
 
                         <div class="card labBorder">
                             <span class="filterTags"><!-- crime scanner anti-social behaviour asb street level police incidents community safety local uk local authority authorities districts electoral wards lower-layer super output areas lsoa maps charts --></span>
-                            <a href="http://www.trafforddatalab.io/crime_scanner/" target="_blank"><img src="images/crime_scanner_thumbnail.png" class="thumbnail" alt=""/><span class="cardHead">Crime Scanner</span></a>
+                            <a href="http://www.trafforddatalab.io/crime_scanner/" target="_blank"><span class="cardHead">Crime Scanner</span><img src="images/crime_scanner_thumbnail.png" class="thumbnail" alt=""/></a>
                             <span class="cardBody">Interactively visualise street level crime and anti-social behaviour (ASB) incidents in your area.</span>
                         </div>
 
                         <div class="card labBorder">
                             <span class="filterTags"><!-- create choropleth maps creation --></span>
-                            <a href="https://www.trafforddatalab.io/choroplether/" target="_blank"><img src="images/choroplether_thumbnail.png" class="thumbnail" alt=""/><span class="cardHead">Choroplether</span></a>
+                            <a href="https://www.trafforddatalab.io/choroplether/" target="_blank"><span class="cardHead">Choroplether</span><img src="images/choroplether_thumbnail.png" class="thumbnail" alt=""/></a>
                             <span class="cardBody">Create <a href="https://www.axismaps.com/guide/univariate/choropleth/" target="_blank">choropleth maps</a> of your own data in <a href="https://vega.github.io/vega-lite/" target="_blank">Vega-Lite</a> without having to write all the code yourself. Export the output as an image or embed it in a web page.</span>
                         </div>
 
                         <div class="card labBorder">
                             <span class="filterTags"><!-- population people demographics statistical administrative geography geographies oa lsoa msoa electoral ward localities locality local authority district lower-layer middle-layer super output area charts --></span>
-                            <a href="https://trafforddatalab.shinyapps.io/population_picker" target="_blank"><img src="images/population_picker_thumbnail.png" class="thumbnail" alt=""/><span class="cardHead">Population Picker</span></a>
+                            <a href="https://trafforddatalab.shinyapps.io/population_picker" target="_blank"><span class="cardHead">Population Picker</span><img src="images/population_picker_thumbnail.png" class="thumbnail" alt=""/></a>
                             <span class="cardBody">Discover single or aggregated population figures for the different statistical and administrative geographies. Choose the age range of interest by single year of age and export the data in various formats.</span>
                         </div>
 
                         <div class="card labBorder">
                             <span class="filterTags"><!-- postcodes list geography uk local authority authorities electoral wards centroids maps --></span>
-                            <a href="https://trafforddatalab.shinyapps.io/postcode_loader/" target="_blank"><img src="images/postcode_loader_thumbnail.png" class="thumbnail" alt=""/><span class="cardHead">Postcode Loader</span></a>
+                            <a href="https://trafforddatalab.shinyapps.io/postcode_loader/" target="_blank"><span class="cardHead">Postcode Loader</span><img src="images/postcode_loader_thumbnail.png" class="thumbnail" alt=""/></a>
                             <span class="cardBody">An <a href="https://cran.r-project.org/web/packages/shiny/index.html" target="_blank">R Shiny</a> app allowing users to download the latest <a href="https://geoportal.statistics.gov.uk/datasets/ons-postcode-directory-latest-centroids" target="_blank">postcode centroids</a> from the <a href="https://www.ons.gov.uk/" target="_blank">Office for National Statistics</a>' <a href="https://geoportal.statistics.gov.uk/" target="_blank">Open Geography Portal</a> API.</span>
                         </div>
 
                         <div class="card labBorder">
                             <span class="filterTags"><!-- find postcodes geography uk local authority authorities electoral wards centroids lower-layer middle-layer super output areas parliamentary constituency constituencies clinical commissioning group ccg maps --></span>
-                            <a href="https://trafforddatalab.shinyapps.io/postcoder/" target="_blank"><img src="images/postcoder_thumbnail.png" class="thumbnail" alt=""/><span class="cardHead">Postcoder</span></a>
+                            <a href="https://trafforddatalab.shinyapps.io/postcoder/" target="_blank"><span class="cardHead">Postcoder</span><img src="images/postcoder_thumbnail.png" class="thumbnail" alt=""/></a>
                             <span class="cardBody">This <a href="https://cran.r-project.org/web/packages/shiny/index.html" target="_blank">R Shiny</a> application powered by <a href="http://postcodes.io/" target="_blank">Postcodes.io</a> allows you to find administrative and statistical geographies for a given postcode. You can either enter the postcode manually or click on the map to find the nearest postcode to the corresponding coordinates.</span>
                         </div>
 
                         <div class="card labBorder">
                             <span class="filterTags"><!-- create draw maps spatial features gis geographical information systems --></span>
-                            <a href="https://www.trafforddatalab.io/plotter/" target="_blank"><img src="images/plotter_thumbnail.png" class="thumbnail" alt=""/><span class="cardHead">Plotter</span></a>
+                            <a href="https://www.trafforddatalab.io/plotter/" target="_blank"><span class="cardHead">Plotter</span><img src="images/plotter_thumbnail.png" class="thumbnail" alt=""/></a>
                             <span class="cardBody">Create and edit map features in the form of lines, polygons, circles and markers and save the results. Load previously saved data and add to it, or use it in other applications such as Graphical Information Systems (GIS) software.</span>
                         </div>
 
                         <div class="card labBorder">
                             <span class="filterTags"><!-- road casualties casualty safety accidents personal killed seriously injury injuries injured greater manchester gm charts --></span>
-                            <a href="https://trafforddatalab.shinyapps.io/road_casualties" target="_blank"><img src="images/road_casualty_app_thumbnail.png" class="thumbnail" alt=""/><span class="cardHead">Road casualties</span></a>
+                            <a href="https://trafforddatalab.shinyapps.io/road_casualties" target="_blank"><span class="cardHead">Road casualties</span><img src="images/road_casualty_app_thumbnail.png" class="thumbnail" alt=""/></a>
                             <span class="cardBody">Application enabling users to explore GM reported road traffic accidents involving personal injury between 2005 and 2018.</span>
                         </div>
 
                         <div class="card labBorder">
                             <span class="filterTags"><!-- trafford council corporate dashboard strategic priorities plan benchmarking gm greater manchester england national charts affordable and quality homes health and wellbeing successful and thriving places children and young people pride in our area green and connected targeted support --></span>
-                            <a href="https://trafforddatalab.shinyapps.io/dashboard/" target="_blank"><img src="images/corporate_dashboard_thumbnail.png" class="thumbnail" alt=""/><span class="cardHead">Trafford corporate dashboard</span></a>
+                            <a href="https://trafforddatalab.shinyapps.io/dashboard/" target="_blank"><span class="cardHead">Trafford corporate dashboard</span><img src="images/corporate_dashboard_thumbnail.png" class="thumbnail" alt=""/></a>
                             <span class="cardBody">Trafford Council has identified 7 strategic priorities in its <a href="https://www.trafford.gov.uk/about-your-council/strategies-plans-and-policies/Corporate-Plan.aspx" target="_blank">Corporate Plan</a> that it believes are key to enabling Trafford's residents, businesses and staff to thrive. This dashboard allows you to browse a range of indicators that relate to each of the strategic priorities.</span>
                         </div>
                     </div>
@@ -206,25 +206,25 @@
                     <div class="cardContainer">
                         <div class="card labBorder">
                             <span class="filterTags"><!-- charticles graphics charts maps old age dependancy ratio gaps in life expectancy employment rate population projections claimant count fuel poverty deprivation house prices air pollution climate change environmental electric vehicles travel to work commuting recycling green belt crime community safety broadband speed eco ecological heating gross value added gva deprivation deprived businesses co2 carbon dioxide emissions childhood obesity health road casualties casualty safety accidents personal killed seriously injury injuries injured living alone isolation alcohol related deaths living wages green flags parks outdoor --></span>
-                            <a href="charticles.html"><img src="images/charticles_thumbnail.png" class="thumbnail" alt=""/><span class="cardHead">Charticles</span></a>
+                            <a href="charticles.html"><span class="cardHead">Charticles</span><img src="images/charticles_thumbnail.png" class="thumbnail" alt=""/></a>
                             <span class="cardBody">Bitesize articles with a chart or a map. Following this link will take you to a page listing all of the available charticles, allowing you to search and select ones of interest.</span>
                         </div>
 
                         <div class="card labBorder">
                             <span class="filterTags"><!-- english indices of deprivation england local authority district authorities 2015 2019 lower-layer super output areas lsoa imd maps --></span>
-                            <a href="https://www.trafforddatalab.io/maps/static/output/trafford_imd19.png" target="_blank"><img src="images/static_trafford_imd_2019_thumbnail.png" class="thumbnail" alt=""/><span class="cardHead">Index of Multiple Deprivation 2019 for Trafford</span></a>
+                            <a href="https://www.trafforddatalab.io/maps/static/output/trafford_imd19.png" target="_blank"><span class="cardHead">Index of Multiple Deprivation 2019 for Trafford</span><img src="images/static_trafford_imd_2019_thumbnail.png" class="thumbnail" alt=""/></a>
                             <span class="cardBody">Visualising the data released by the <a href="https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019" target="_blank">Ministry of Housing, Communities & Local Government</a> for Lower-layer Super Output Areas (LSOA) in Trafford. The <a href="https://www.trafforddatalab.io/maps/static/output/trafford_imd15.png" target="_blank">Index of Multiple Deprivation 2015</a> version is also available. Please visit our <a href="deprivation.html">Indices of Deprivation 2019 page</a> for further resources.</span>
                         </div>
 
                         <div class="card labBorder">
                             <span class="filterTags"><!-- residents population estimates trafford electoral ward mid-year demographics people count maps --></span>
-                            <a href="https://www.trafforddatalab.io/maps/static/output/trafford_population.png" target="_blank"><img src="images/static_trafford_population_thumbnail.png" class="thumbnail" alt=""/><span class="cardHead">Resident population of Trafford</span></a>
+                            <a href="https://www.trafforddatalab.io/maps/static/output/trafford_population.png" target="_blank"><span class="cardHead">Resident population of Trafford</span><img src="images/static_trafford_population_thumbnail.png" class="thumbnail" alt=""/></a>
                             <span class="cardBody">Mid-year 2017 resident population estimates for Trafford visualised by electoral ward.</span>
                         </div>
 
                         <div class="card labBorder">
                             <span class="filterTags"><!-- trafford boundary boundaries locality localities electoral wards maps --></span>
-                            <a href="https://www.trafforddatalab.io/maps/static/output/trafford_localities.png" target="_blank"><img src="images/static_trafford_localities_thumbnail.png" class="thumbnail" alt=""/><span class="cardHead">Trafford locality and ward boundaries</span></a>
+                            <a href="https://www.trafforddatalab.io/maps/static/output/trafford_localities.png" target="_blank"><span class="cardHead">Trafford locality and ward boundaries</span><img src="images/static_trafford_localities_thumbnail.png" class="thumbnail" alt=""/></a>
                             <span class="cardBody">Map showing the boundaries of Trafford's localities and electoral wards.</span>
                         </div>
                     </div>
