@@ -14,7 +14,7 @@ html, body
 }
 
 /* HTML5 fallback styles for older browsers */
-main, header, footer, nav, figure, figcaption, time
+main, section, header, footer, nav, figure, figcaption, time
 {
     display: block;
     box-sizing: border-box;

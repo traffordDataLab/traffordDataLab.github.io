@@ -13,14 +13,25 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
 
         <style>
-            section
+            h1
+            {
+                margin-bottom: 0;
+            }
+
+            section, #filterContainer
             {
                 margin-bottom: 2em;
             }
 
-            section:first-child
+            #filterContainer
             {
+                padding-bottom: 0.5em;
                 border-bottom: 2px dotted #f0f0f0;
+            }
+
+            .intro
+            {
+                margin-top: 0;
             }
 
             .thumbnail
@@ -106,11 +117,10 @@
             </header>
 
             <main class="main">
-                <section>
-                    <h1>Trafford Data Lab</h1>
+                <h1>Trafford Data Lab</h1>
 
-                    <p>We visualise and provide open data about Trafford, Greater Manchester and beyond through interactive and static open source outputs. <span id="filterContainer" style="display: inline-block;"></span></p>
-                </section>
+                <p class="intro">Supporting decision-making in Trafford by revealing patterns in data through visualisation.</p>
+                <p id="filterContainer"></p>
 
                 <section>
                     <h2>Apps</h2>
