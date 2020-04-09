@@ -19,21 +19,21 @@ header
     z-index: 2;
 }
 
+/* Contains the menu items within the <nav>igation section */
 .navbar
 {
     float: right;
-    margin: 15px 0 0 0;
+    margin: 15px 0 15px 0;
+    list-style-type: none;  /* remove the list-item bullets */
 }
 
-.menuItem
+.navbar li
 {
-    display: block;
     float: left;
     font-size: 16px;
-    margin-bottom: 15px;
 }
 
-.menuItem a
+.navbar li a
 {
     border-bottom: 1px solid white;     /* required so that we can simulate a link underline in the a:hover without the header wobbling by 1px */
     padding: 0 11px;
@@ -42,14 +42,9 @@ header
     text-decoration: none;
 }
 
-.menuItem a:hover
+.navbar li a:hover
 {
     border-bottom: 1px solid #046DC3;
-}
-
-.noBulletPoints, .noBulletPoints * *
-{
-    list-style-type: none;  /* remove the list-item bullet from the top level and all sub-level list items */
 }
 
 main
