@@ -1,0 +1,232 @@
+/* ### Trafford Data Lab website styles (extending the base styles) ### */
+
+.container
+{
+    overflow: auto;
+    position: relative;     /* Required for footer to be positioned always at the bottom of the page */
+    min-height: 100%;       /* Required for footer to be positioned always at the bottom of the page */
+}
+
+/* NOTE: all sizes are expressed within the header elements are in px not em as we don't want the header to increase in size. This is because it might become too big on a small phone screen and prevent the user seeing the page content. */
+header
+{
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    text-align: left;
+    border-bottom: 1px solid #5D77A3;
+    box-shadow: 0 0 5px #5D77A3;
+    z-index: 2;
+}
+
+.navbar
+{
+    float: right;
+    margin: 15px 0 0 0;
+}
+
+.menuItem
+{
+    display: block;
+    float: left;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.menuItem a
+{
+    border-bottom: 1px solid white;     /* required so that we can simulate a link underline in the a:hover without the header wobbling by 1px */
+    padding: 0 11px;
+    margin: 0;
+    color: #707070;                     /* To prevent the text having the link colour  */
+    text-decoration: none;
+}
+
+.menuItem a:hover
+{
+    border-bottom: 1px solid #046DC3;
+}
+
+.noBulletPoints, .noBulletPoints * *
+{
+    list-style-type: none;  /* remove the list-item bullet from the top level and all sub-level list items */
+}
+
+main
+{
+    margin: auto;
+    margin-top: 70px;
+    margin-bottom: 30px;
+    padding: 0 9% 5em 9%;     /* 5em padding-bottom Required for footer to be positioned always at the bottom of the page (This is the height of the footer) */
+}
+
+main p
+{
+    line-height: 1.8em;
+}
+
+main li
+{
+    line-height: 2em;
+}
+
+footer
+{
+    width: 100%;
+    height: 5em;               /* Required for footer to be positioned always at the bottom of the page (matched to the height of the Trafford logo) */
+    margin: 0;
+    padding: 0;
+    background-color:#F5F9FF;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.leftFooter
+{
+    display: inline-block;
+    white-space: nowrap;
+    padding: 6px 0 0 12px;
+}
+
+.rightFooter
+{
+    background-color: #fff;
+    height: 100%;
+    display: inline-block;
+    float: right;
+}
+
+.traffordDataLabLogo
+{
+    margin: 9px 12px 0 12px;
+    padding: 0;
+}
+
+.logoTrafford
+{
+    height: 5em;
+}
+
+.linkMedia
+{
+    font-size: 2em;
+    color: #212121;
+    padding: 0 0.6em 0 0;
+}
+
+/* end notes for references/credits etc. */
+.endNotes
+{
+    border-top: 2px dotted #f0f0f0;
+    font-size: 0.8em;
+    margin-top: 30px;
+}
+
+.endNotes div p     /* these are for the references to indent any lines following the first */
+{
+    padding-left: 2em;
+    text-indent: -2em;
+}
+
+/*
+    Areas of content presented in a box/block-type format to stand out.
+    Cards are for mutiple items arranged in groups of columns and rows such as items on the home, data and charticles pages etc.
+    .blockCard type cards are ones which use the block layout style, the standard .card is clear
+    The individual pages can specialise these styles accordingly, e.g. for the size of the cards.
+*/
+.cardContainer
+{
+    /*
+        Container to display the cards as a grid - see https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids
+        In IE and browsers that don't support 'display: grid' these have no effect.
+    */
+
+    /* latest spec definitions */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(239px, 1fr));
+    gap: 2em;
+
+    /* legacy spec definitions for extra safety */
+    grid-gap: 2em;
+}
+
+.card, .blockCard
+{
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.blockCard
+{
+    background-color: #F5F9FF;
+}
+
+.cardHead, .blockCardHead
+{
+    display: block;
+    padding: 0 0.75em;  /* 0.75em here and 1em in the .cardBody keep text inline as the text in the body is smaller */
+}
+
+.blockCardHead, .blockHead
+{
+    background-color: #5D77A3;
+}
+
+.blockHead
+{
+    color: #000;
+}
+
+.blockHead a, .blockCardHead
+{
+    color: #FFF;
+}
+
+.cardBody, .blockBody
+{
+    font-size: 0.8em;
+    padding: 0 1em;     /* 1em here and 0.75em in the .cardHead keep text inline as the text in the body is smaller */
+    color: #212121;
+}
+
+.cardBody
+{
+    overflow-y: auto;   /* card body contents should scroll so that the size of the cards is uniform whereas block contents should be as big as required */
+}
+
+/* thumbnail images */
+.thumbnail
+{
+    float: left;
+    margin-right: 20px;
+    box-shadow: 3px 3px 5px #f0f0f0;
+}
+
+/* changes due to screen width */
+@media (min-width:1300px)
+{
+    /* This prevents the content going too wide once the screen goes beyond a maximum width. */
+    main
+    {
+        width: 1070px;
+        padding: 0 0 5em 0;
+    }
+}
+
+@media (max-width:620px)
+{
+    .navbar
+    {
+        float: none;
+        padding: 0 0 20px 0;
+    }
+
+    main
+    {
+        margin-top: 120px;
+    }
+}

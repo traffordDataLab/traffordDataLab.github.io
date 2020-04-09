@@ -1,9 +1,4 @@
-/*
-    Base Trafford Data Lab styles
-    -----------------------------
-    This CSS is intended to be used in every Lab web output to provide the basic styling.
-*/
-
+/* ### Base Trafford Data Lab styles ### */
 html, body
 {
     padding: 0;
@@ -13,17 +8,9 @@ html, body
     color: #212121;
 }
 
-/* HTML5 fallback styles for older browsers */
-main, section, header, footer, nav, figure, figcaption, time
-{
-    display: block;
-    box-sizing: border-box;
-}
-/* ---------------------------------------- */
-
 a
 {
-    color: #046DC3;
+    color: #db3a00;
     text-decoration: none;
 }
 
@@ -32,11 +19,10 @@ a:hover
     text-decoration: underline;
 }
 
-/* We can remove the .header reference below once all pages have been converted to use HTML5 landmark tags */
-h1, h2, h3, h4, h5, h6, header, .header
+h1, h2, h3, h4, h5, h6, .header
 {
     font-family: 'Roboto', sans-serif;
-    color: #707070;
+    color: #757575;
 }
 
 img
@@ -44,52 +30,35 @@ img
     border: 0;
 }
 
-/* Used after floating elements, such as div 'cards' which wrap based on screen width, to prevent further content floating */
-.noFloat
+.noFloat /* renamed from resetDisplay */
 {
     clear: both;
 }
 
-.hideContent, .filterTags
+.hideContent
 {
     display: none;
 }
 
-/* Used for reference text or clarification notes mostly */
-.smallText
+.download
 {
     font-size: 0.8em;
 }
 
-/*
-    .labButton is our style for HTML buttons.
-    .labBorder is for any boxed content e.g. input boxes, div 'cards' etc. It puts a thin border around the content which becomes a halo on-hover.
-    The two styles are created together below so that .labButton can be used on its own without having to specify .labBorder as well.
-*/
 .labButton
 {
     font-size: 0.8em;
-    background-color: #707070;
+    background-color: #757575;
     color: #fff;
     padding: 3px 5px 3px 5px;
     margin: 0 10px 7px 0;
-    display: inline-block;
-}
-
-.labButton, .labBorder
-{
-    border: 1px solid #ccc;
     border-radius: 3px;
+    display: inline-block;
 }
 
 .labButton:hover
 {
     cursor: pointer;
+    background-color: #db3a00;
     text-decoration: none;
-}
-
-.labButton:hover, .labBorder:hover
-{
-    border: 1px solid #5D77A3;
-    box-shadow: 0 0 5px #5D77A3;
 }

@@ -1,0 +1,92 @@
+/*
+    Base Trafford Data Lab styles to provide the basic styling.
+*/
+
+html, body
+{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+    color: #212121;
+}
+
+/* HTML5 fallback styles for older browsers */
+main, section, header, footer, nav, figure, figcaption, time
+{
+    display: block;
+    box-sizing: border-box;
+}
+/* ---------------------------------------- */
+
+a
+{
+    color: #046DC3;
+    text-decoration: none;
+}
+
+a:hover
+{
+    text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6, header
+{
+    font-family: 'Roboto', sans-serif;
+    color: #707070;
+}
+
+img
+{
+    border: 0;
+}
+
+/* Used after floating elements, such as div 'cards' which wrap based on screen width, to prevent further content floating */
+.noFloat
+{
+    clear: both;
+}
+
+.hideContent, .filterTags
+{
+    display: none;
+}
+
+/* Used for reference text or clarification notes mostly */
+.smallText
+{
+    font-size: 0.8em;
+}
+
+/*
+    .labButton is our style for HTML buttons.
+    .labBorder is for any boxed content e.g. input boxes, div 'cards' etc. It puts a thin border around the content which becomes a halo on-hover.
+    The two styles are created together below so that .labButton can be used on its own without having to specify .labBorder as well.
+*/
+.labButton
+{
+    font-size: 0.8em;
+    background-color: #707070;
+    color: #fff;
+    padding: 3px 5px 3px 5px;
+    margin: 0 10px 7px 0;
+    display: inline-block;
+}
+
+.labButton, .labBorder
+{
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.labButton:hover
+{
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.labButton:hover, .labBorder:hover
+{
+    border: 1px solid #5D77A3;
+    box-shadow: 0 0 5px #5D77A3;
+}
