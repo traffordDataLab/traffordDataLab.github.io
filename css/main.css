@@ -178,7 +178,7 @@ footer
 .thumbnail
 {
     float: left;
-    margin-right: 20px;
+    margin-right: 1em;
     box-shadow: 3px 3px 5px #f0f0f0;
 }
 
