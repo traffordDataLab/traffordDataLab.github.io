@@ -41,12 +41,6 @@ img
     border: 0;
 }
 
-/* Used after floating elements, such as div 'cards' which wrap based on screen width, to prevent further content floating */
-.noFloat
-{
-    clear: both;
-}
-
 .hideContent, .filterTags
 {
     display: none;
@@ -89,4 +83,21 @@ img
 {
     border: 1px solid #5d77a3;
     box-shadow: 0 0 5px #5d77a3;
+}
+
+/* For areas of block colour such as div "card" layouts with no images, info panels, banners etc. */
+.themeBlockDark
+{
+    background-color: #5d77a3;
+    color: #000;
+}
+
+.themeBlockDark a, a .themeBlockDark    /* Links within a .themeBlockDark area need to be white for contrast. The "mirror" declaration here ensures that any .themeBlockDark content surrounded by a link is also rendered white */
+{
+    color: #fff;
+}
+
+.themeBlockLight
+{
+    background-color: #f5f9ff;
 }

@@ -14,7 +14,7 @@
 
         <style>
             /* Specific customisation of the card for this page */
-            .blockCard
+            .card
             {
                 height: 170px;
 
@@ -27,14 +27,14 @@
             @supports (display: grid)
             {
                 /* Reset the widths and margins applied above as they aren't required when using grid layout */
-                .blockCard
+                .card
                 {
                     width: auto;
                     margin: 0;
                 }
             }
 
-            .blockCardHead
+            .cardHead
             {
                 height: 40px;
                 line-height: 40px;
@@ -45,12 +45,12 @@
                 height: 103px;
             }
 
-            .blockCard:hover
+            .card:hover
             {
-                text-decoration: none;  /* prevents the text in the card body being underlined - we only want the text in the card head underlined on hover, see .blockCard:hover span */
+                text-decoration: none;  /* prevents the text in the card body being underlined - we only want the text in the card head underlined on hover, see .card:hover span */
             }
 
-            .blockCard:hover span
+            .card:hover span
             {
                 text-decoration: underline; /* Ensures the text in the card header is underlined on-hover */
             }
@@ -59,7 +59,7 @@
             /* For browsers which don't support grid layouts */
             @media (max-width:1300px)
             {
-                .blockCard
+                .card
                 {
                     width: 28%;
                     margin: 1em 2.2%;
@@ -68,7 +68,7 @@
 
             @media (max-width:850px)
             {
-                .blockCard
+                .card
                 {
                     width: 40%;
                     margin: 1em 4.5%;
@@ -77,7 +77,7 @@
 
             @media (max-width:620px)
             {
-                .blockCard
+                .card
                 {
                     width: 100%;
                     height: 150px;
@@ -97,7 +97,7 @@
                 /* Reset the widths and margins applied above as they aren't required when using grid layout */
                 @supports (display: grid)
                 {
-                    .blockCard
+                    .card
                     {
                         width: auto;
                         margin: 0;
@@ -127,57 +127,57 @@
                 <p>Select the following datasets to open a dedicated page in a new window containing the metadata (date of publication, source etc.), a preview and links to download the chosen dataset. <span id="filterContainer" style="display: inline-block;"></span></p>
 
                 <div class="cardContainer">
-                    <a href="https://www.trafforddatalab.io/open_data/allotments/" target="_blank" class="blockCard labBorder">
+                    <a href="https://www.trafforddatalab.io/open_data/allotments/" target="_blank" class="card themeBlockLight labBorder">
                         <span class="filterTags"><!-- allotments gardening gardens growing food vegetables fruit greenspaces green spaces --></span>
-                        <span class="blockCardHead">Allotments</span>
+                        <span class="cardHead themeBlockDark">Allotments</span>
                         <p class="cardBody">Allotment sites in Trafford.</p>
                     </a>
 
-                    <a href="https://www.trafforddatalab.io/council_open_data/boundaries/" target="_blank" class="blockCard labBorder">
+                    <a href="https://www.trafforddatalab.io/council_open_data/boundaries/" target="_blank" class="card themeBlockLight labBorder">
                         <span class="filterTags"><!-- boundary boundaries spatial geographic geography vector administrative electoral statistical lad local authority district wards localities locality msoa lsoa oa middle-layer lower-layer super output area westminster parliamentary constituency constituencies --></span>
-                        <span class="blockCardHead">Boundaries</span>
+                        <span class="cardHead themeBlockDark">Boundaries</span>
                         <p class="cardBody">Vector boundary layers for administrative, electoral and statistical geographies..</p>
                     </a>
 
-                    <a href="https://www.trafforddatalab.io/open_data/cctv/" target="_blank" class="blockCard labBorder">
+                    <a href="https://www.trafforddatalab.io/open_data/cctv/" target="_blank" class="card themeBlockLight labBorder">
                         <span class="filterTags"><!-- cctv closed circuit television cameras security surveillance public safety crime prevention police --></span>
-                        <span class="blockCardHead">CCTV cameras</span>
+                        <span class="cardHead themeBlockDark">CCTV cameras</span>
                         <p class="cardBody">Locations of Local Authority controlled Closed-Circuit Television (CCTV) cameras in Trafford.</p>
                     </a>
 
-                    <a href="https://www.trafforddatalab.io/open_data/elections/" target="_blank" class="blockCard labBorder">
+                    <a href="https://www.trafforddatalab.io/open_data/elections/" target="_blank" class="card themeBlockLight labBorder">
                         <span class="filterTags"><!-- elections by election by-election district and borough democracy democratic voter voting ballot  --></span>
-                        <span class="blockCardHead">Elections</span>
+                        <span class="cardHead themeBlockDark">Elections</span>
                         <p class="cardBody">Results from Trafford council local elections/by-elections from 2016 onwards.</p>
                     </a>
 
-                    <a href="https://www.trafforddatalab.io/open_data/electric_vehicle_charging_locations/" target="_blank" class="blockCard labBorder">
+                    <a href="https://www.trafforddatalab.io/open_data/electric_vehicle_charging_locations/" target="_blank" class="card themeBlockLight labBorder">
                         <span class="filterTags"><!-- electric vehicle charging charge ev air pollution reduction reducing reduce climate change low carbon zero --></span>
-                        <span class="blockCardHead">Electric vehicle charging</span>
+                        <span class="cardHead themeBlockDark">Electric vehicle charging</span>
                         <p class="cardBody">Electric vehicle charging locations in Trafford and associated information.</p>
                     </a>
 
-                    <a href="https://www.trafforddatalab.io/open_data/fast_food_outlets/" target="_blank" class="blockCard labBorder">
+                    <a href="https://www.trafforddatalab.io/open_data/fast_food_outlets/" target="_blank" class="card themeBlockLight labBorder">
                         <span class="filterTags"><!-- fast food outlets take away take-away takeaway health eating diet hygiene rating standards --></span>
-                        <span class="blockCardHead">Fast food outlets</span>
+                        <span class="cardHead themeBlockDark">Fast food outlets</span>
                         <p class="cardBody">The location of fast food outlets in Trafford.</p>
                     </a>
 
-                    <a href="https://www.trafforddatalab.io/open_data/grants/" target="_blank" class="blockCard labBorder">
+                    <a href="https://www.trafforddatalab.io/open_data/grants/" target="_blank" class="card themeBlockLight labBorder">
                         <span class="filterTags"><!-- grants voluntary sector community social enterprise organisations 360 giving grantnav --></span>
-                        <span class="blockCardHead">Grants</span>
+                        <span class="cardHead themeBlockDark">Grants</span>
                         <p class="cardBody">Grants allocated by Trafford Council via Trafford Partnership to voluntary, community and social enterprise organisations.</p>
                     </a>
 
-                    <a href="https://www.trafforddatalab.io/open_data/population/" target="_blank" class="blockCard labBorder">
+                    <a href="https://www.trafforddatalab.io/open_data/population/" target="_blank" class="card themeBlockLight labBorder">
                         <span class="filterTags"><!-- population estimates mid-year residents people 2018 --></span>
-                        <span class="blockCardHead">Population estimates</span>
+                        <span class="cardHead themeBlockDark">Population estimates</span>
                         <p class="cardBody">Estimates of the usual resident population in Trafford during mid-2018.</p>
                     </a>
 
-                    <a href="https://www.trafforddatalab.io/spatial_data/postcodes/" target="_blank" class="blockCard labBorder">
+                    <a href="https://www.trafforddatalab.io/spatial_data/postcodes/" target="_blank" class="card themeBlockLight labBorder">
                         <span class="filterTags"><!-- postcodes trafford greater manchester centroids electoral wards localities locality spatial geography geographies --></span>
-                        <span class="blockCardHead">Postcodes</span>
+                        <span class="cardHead themeBlockDark">Postcodes</span>
                         <p class="cardBody">Postcode list for Trafford by ward and locality with centroids.</p>
                     </a>
                 </div>
@@ -205,7 +205,7 @@
             // Set up the filter
             var dataFilter = new LabFilter({
                 filterContainer: document.getElementById('filterContainer'),    // where we want the filter input box creating
-                matchedClass: 'blockCard',   // the data boxes need the CSS class .blockCard' adding when they are a match and removing when they aren't
+                matchedClass: 'card',   // the data boxes need the CSS class .card' adding when they are a match and removing when they aren't
                 filterClass: 'labBorder',  // creates the focus outline on-hover
                 filterPlaceholder: 'enter keywords...',
                 filterTitle: '',

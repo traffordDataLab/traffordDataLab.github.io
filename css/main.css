@@ -153,49 +153,25 @@ footer
     grid-gap: 2em;
 }
 
-.card, .blockCard
+.card
 {
     box-sizing: border-box;
     display: inline-block;
     vertical-align: top;
 }
 
-.blockCard
-{
-    background-color: #f5f9ff;
-}
-
-.cardHead, .blockCardHead
+.cardHead
 {
     display: block;
     padding: 0 0.75em;  /* 0.75em here and 1em in the .cardBody keep text inline as the text in the body is smaller */
 }
 
-.blockCardHead, .blockHead
-{
-    background-color: #5d77a3;
-}
-
-.blockHead
-{
-    color: #000;
-}
-
-.blockHead a, .blockCardHead
-{
-    color: #fff;
-}
-
-.cardBody, .blockBody
+.cardBody
 {
     font-size: 0.8em;
     padding: 0 1em;     /* 1em here and 0.75em in the .cardHead keep text inline as the text in the body is smaller */
-    color: #212121;
-}
-
-.cardBody
-{
-    overflow-y: auto;   /* card body contents should scroll so that the size of the cards is uniform whereas block contents should be as big as required */
+    overflow-y: auto;
+    color: #212121;     /* Required in case the card is surrounded by a link - otherwise the text is the link colour */
 }
 
 /* thumbnail images */
