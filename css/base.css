@@ -21,7 +21,7 @@ main, section, header, footer, nav, figure, figcaption, time
 
 a
 {
-    color: #046DC3;
+    color: #046dc3;
     text-decoration: none;
 }
 
@@ -87,6 +87,6 @@ img
 
 .labButton:hover, .labBorder:hover
 {
-    border: 1px solid #5D77A3;
-    box-shadow: 0 0 5px #5D77A3;
+    border: 1px solid #5d77a3;
+    box-shadow: 0 0 5px #5d77a3;
 }

@@ -14,8 +14,8 @@ header
     background-color: white;
     width: 100%;
     text-align: left;
-    border-bottom: 1px solid #5D77A3;
-    box-shadow: 0 0 5px #5D77A3;
+    border-bottom: 1px solid #5d77a3;
+    box-shadow: 0 0 5px #5d77a3;
     z-index: 2;
 }
 
@@ -44,7 +44,7 @@ header
 
 .navbar li a:hover
 {
-    border-bottom: 1px solid #046DC3;
+    border-bottom: 1px solid #046dc3;
 }
 
 main
@@ -65,13 +65,18 @@ main li
     line-height: 2em;
 }
 
+section
+{
+    margin-top: 2em;    /* usually pages have a couple of sections, this is to provide a bit of space between them */
+}
+
 footer
 {
     width: 100%;
     height: 5em;               /* Required for footer to be positioned always at the bottom of the page (matched to the height of the Trafford logo) */
     margin: 0;
     padding: 0;
-    background-color:#F5F9FF;
+    background-color:#f5f9ff;
     overflow: hidden;
     position: absolute;
     bottom: 0;
@@ -157,7 +162,7 @@ footer
 
 .blockCard
 {
-    background-color: #F5F9FF;
+    background-color: #f5f9ff;
 }
 
 .cardHead, .blockCardHead
@@ -168,7 +173,7 @@ footer
 
 .blockCardHead, .blockHead
 {
-    background-color: #5D77A3;
+    background-color: #5d77a3;
 }
 
 .blockHead
@@ -178,7 +183,7 @@ footer
 
 .blockHead a, .blockCardHead
 {
-    color: #FFF;
+    color: #fff;
 }
 
 .cardBody, .blockBody
