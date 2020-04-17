@@ -113,7 +113,7 @@ footer
 .linkMedia
 {
     font-size: 2em;
-    color: #212121;
+    color: #212121;     /* As these icons are links this is required otherwise they would be the link colour */
     padding: 0 0.6em 0 0;
 }
 
@@ -163,13 +163,19 @@ footer
 .cardHead
 {
     display: block;
-    padding: 0 0.75em;  /* 0.75em here and 1em in the .cardBody keep text inline as the text in the body is smaller */
+}
+
+h2.cardHead, h3.cardHead, h4.cardHead, h5.cardHead, h6.cardHead
+{
+    /* Use the appropriate heading level (but never h1) as the titles for the cards, that way they give semantic sense to the list of cards.
+       The styles here just ensure that the text is rendered consistently no matter which heading level is used. */
+    margin: 0;
+    font-size: 1em;
 }
 
 .cardBody
 {
     font-size: 0.8em;
-    padding: 0 1em;     /* 1em here and 0.75em in the .cardHead keep text inline as the text in the body is smaller */
     overflow-y: auto;
     color: #212121;     /* Required in case the card is surrounded by a link - otherwise the text is the link colour */
 }

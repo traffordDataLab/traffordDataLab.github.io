@@ -19,15 +19,36 @@ main, section, header, footer, nav, figure, figcaption, time
 }
 /* ---------------------------------------- */
 
-a
+a, .themeLink
 {
     color: #046dc3;
+}
+
+a
+{
     text-decoration: none;
 }
 
 a:hover
 {
     text-decoration: underline;
+}
+
+/* For areas of block colour such as div "card" layouts with no images, info panels, banners etc. */
+.themeBlockDark
+{
+    background-color: #5d77a3;
+    color: #000;
+}
+
+.themeBlockDark a, a .themeBlockDark    /* Links within a .themeBlockDark area need to be white for contrast. The "mirror" declaration here ensures that any .themeBlockDark content surrounded by a link is also rendered white */
+{
+    color: #fff;
+}
+
+.themeBlockLight
+{
+    background-color: #f5f9ff;
 }
 
 h1, h2, h3, h4, h5, h6, header
@@ -83,21 +104,4 @@ img
 {
     border: 1px solid #5d77a3;
     box-shadow: 0 0 5px #5d77a3;
-}
-
-/* For areas of block colour such as div "card" layouts with no images, info panels, banners etc. */
-.themeBlockDark
-{
-    background-color: #5d77a3;
-    color: #000;
-}
-
-.themeBlockDark a, a .themeBlockDark    /* Links within a .themeBlockDark area need to be white for contrast. The "mirror" declaration here ensures that any .themeBlockDark content surrounded by a link is also rendered white */
-{
-    color: #fff;
-}
-
-.themeBlockLight
-{
-    background-color: #f5f9ff;
 }

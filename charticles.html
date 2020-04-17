@@ -17,6 +17,7 @@
                 height: 230px;
                 overflow: hidden;
                 text-indent: 0.25em;
+                padding-top: 0.1em;
 
                 /* For browsers which don't support grid layouts */
                 width: 20%;
@@ -43,6 +44,17 @@
                     width: 28%;
                     margin: 1em 2.2%;
                 }
+
+                /* For browsers which support grid layouts */
+                @supports (display: grid)
+                {
+                    /* Reset the widths and margins applied above as they aren't required when using grid layout */
+                    .card
+                    {
+                        width: auto;
+                        margin: 0;
+                    }
+                }
             }
 
             @media (max-width:850px)
@@ -51,6 +63,17 @@
                 {
                     width: 40%;
                     margin: 1em 4.5%;
+                }
+
+                /* For browsers which support grid layouts */
+                @supports (display: grid)
+                {
+                    /* Reset the widths and margins applied above as they aren't required when using grid layout */
+                    .card
+                    {
+                        width: auto;
+                        margin: 0;
+                    }
                 }
             }
 
@@ -62,15 +85,11 @@
                     height: 300px;
                     margin: 1em 0;
                 }
-            }
 
-
-            /* For browsers which support grid layouts */
-            @media (max-width:1300px), @media (max-width:850px), @media (max-width:620px)
-            {
-                /* Reset the widths and margins applied above as they aren't required when using grid layout */
+                /* For browsers which support grid layouts */
                 @supports (display: grid)
                 {
+                    /* Reset the widths and margins applied above as they aren't required when using grid layout */
                     .card
                     {
                         width: auto;
@@ -99,31 +118,31 @@
                 <h1>Charticles</h1>
                 <p>Bite-size articles with a chart or a map. Choose a charticle to read from the list below, the latest ones are presented first. <span id="filterContainer" style="display: block;"></span></p>
                 <div class="cardContainer">
-                    <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2019-11-13-green-flags/" target="_blank"><span class="filterTags"><!-- green flags parks awards --></span>Green Flag Awards<img src="https://www.trafforddatalab.io/charticles/2019-11-13-green-flags/plot.svg" alt=""/></a>
-                    <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2019-11-12-living-wage/" target="_blank"><span class="filterTags"><!-- living wages employment jobs deprivation poverty working --></span>Living wage<img src="https://www.trafforddatalab.io/charticles/2019-11-12-living-wage/plot.svg" alt=""/></a>
-                    <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2019-11-11-alcohol-related-deaths/" target="_blank"><span class="filterTags"><!-- alcohol related deaths drinking unhealthy --></span>Alcohol-related deaths<img src="https://www.trafforddatalab.io/charticles/2019-11-11-alcohol-related-deaths/plot.svg" alt=""/></a>
-                    <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2019-11-08-living-alone/" target="_blank"><span class="filterTags"><!-- living alone loneliness lonely --></span>Living alone<img src="https://www.trafforddatalab.io/charticles/2019-11-08-living-alone/plot.svg" alt=""/></a>
-                    <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2019-11-07-road-casualties/" target="_blank"><span class="filterTags"><!-- road casualties casualty road safety --></span>Road casualties<img src="https://www.trafforddatalab.io/charticles/2019-11-07-road-casualties/plot.svg" alt=""/></a>
-                    <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2019-11-06-childhood-obesity/" target="_blank"><span class="filterTags"><!-- childhood obesity obese unhealthy --></span>Childhood obesity<img src="https://www.trafforddatalab.io/charticles/2019-11-06-childhood-obesity/plot.svg" alt=""/></a>
-                    <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2019-11-05-co2-emissions/" target="_blank"><span class="filterTags"><!-- co2 emissions carbon dioxide climate environment --></span>CO2 emissions<img src="https://www.trafforddatalab.io/charticles/2019-11-05-co2-emissions/plot.svg" alt=""/></a>
-                    <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2019-11-04-businesses/" target="_blank"><span class="filterTags"><!-- businesses employment jobs --></span>Businesses<img src="https://www.trafforddatalab.io/charticles/2019-11-04-businesses/table.png" alt=""/></a>
-                    <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2019-11-01-relative-deprivation/" target="_blank"><span class="filterTags"><!-- relative deprivation poverty --></span>Relative deprivation<img src="https://www.trafforddatalab.io/charticles/2019-11-01-relative-deprivation/plot.svg" alt=""/></a>
-                    <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2019-10-31-gva/" target="_blank"><span class="filterTags"><!-- gross value added gva --></span>Gross Value Added<img src="https://www.trafforddatalab.io/charticles/2019-10-31-gva/plot.svg" alt=""/></a>
-                    <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2019-10-30-eco-heating/" target="_blank"><span class="filterTags"><!-- eco-heating heating climate environment --></span>Eco-heating<img src="https://www.trafforddatalab.io/charticles/2019-10-30-eco-heating/plot.svg" alt=""/></a>
-                    <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2019-10-29-broadband-speed/" target="_blank"><span class="filterTags"><!-- broadband speed connection internet web --></span>Broadband speed<img src="https://www.trafforddatalab.io/charticles/2019-10-29-broadband-speed/plot.svg" alt=""/></a>
-                    <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2019-10-28-crime-rate/" target="_blank"><span class="filterTags"><!-- crime rate criminality police --></span>Crime rate<img src="https://www.trafforddatalab.io/charticles/2019-10-28-crime-rate/plot.svg" alt=""/></a>
-                    <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2019-10-25-green-belt/" target="_blank"><span class="filterTags"><!-- green belt land environment --></span>Green Belt<img src="https://www.trafforddatalab.io/charticles/2019-10-25-green-belt/plot.svg" alt=""/></a>
-                    <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2019-10-24-recycling/" target="_blank"><span class="filterTags"><!-- recycling environment --></span>Recycling<img src="https://www.trafforddatalab.io/charticles/2019-10-24-recycling/plot.svg" alt=""/></a>
-                    <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2019-10-23-travel-to-work/" target="_blank"><span class="filterTags"><!-- travel to work commute employment jobs working --></span>Travel to work<img src="https://www.trafforddatalab.io/charticles/2019-10-23-travel-to-work/plot.svg" alt=""/></a>
-                    <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2019-10-22-electric-vehicles/" target="_blank"><span class="filterTags"><!-- electric vehicles climate environment --></span>Electric vehicles<img src="https://www.trafforddatalab.io/charticles/2019-10-22-electric-vehicles/plot.svg" alt=""/></a>
-                    <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2019-10-21-air-pollution/" target="_blank"><span class="filterTags"><!-- air pollution climate environment --></span>Air pollution<img src="https://www.trafforddatalab.io/charticles/2019-10-21-air-pollution/plot.svg" alt=""/></a>
-                    <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2019-10-18-median-house-prices/" target="_blank"><span class="filterTags"><!-- median house prices housing --></span>Median house prices<img src="https://www.trafforddatalab.io/charticles/2019-10-18-median-house-prices/plot.svg" alt=""/></a>
-                    <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2019-10-17-fuel-poverty/" target="_blank"><span class="filterTags"><!-- fuel poverty deprivation housing --></span>Fuel poverty<img src="https://www.trafforddatalab.io/charticles/2019-10-17-fuel-poverty/plot.svg" alt=""/></a>
-                    <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2019-10-16-claimant-count/" target="_blank"><span class="filterTags"><!-- claimant count employment jobs deprivation poverty working --></span>Claimant count<img src="https://www.trafforddatalab.io/charticles/2019-10-16-claimant-count/plot.svg" alt=""/></a>
-                    <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2019-10-15-population-projection/" target="_blank"><span class="filterTags"><!-- population projection people census --></span>Population projection<img src="https://www.trafforddatalab.io/charticles/2019-10-15-population-projection/plot.svg" alt=""/></a>
-                    <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2019-10-14-employment-rate/" target="_blank"><span class="filterTags"><!-- employment rates jobs working --></span>Employment rate<img src="https://www.trafforddatalab.io/charticles/2019-10-14-employment-rate/plot.svg" alt=""/></a>
-                    <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2019-04-12-gaps-in-life-expectancy/" target="_blank"><span class="filterTags"><!-- gaps in life expectancy living unhealthy poverty --></span>Gaps in life expectancy<img src="https://www.trafforddatalab.io/charticles/2019-04-12-gaps-in-life-expectancy/plot.svg" alt=""/></a>
-                    <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2019-04-04-old-age-dependency-ratio/" target="_blank"><span class="filterTags"><!-- old age dependency ratio jobs working --></span>Old age dependency ratio<img src="https://www.trafforddatalab.io/charticles/2019-04-04-old-age-dependency-ratio/plot.svg" alt=""/></a>
+                    <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2019-11-13-green-flags/" target="_blank"><span class="filterTags"><!-- green flags parks awards --></span><h2 class="cardHead themeLink">Green Flag Awards</h2><img src="https://www.trafforddatalab.io/charticles/2019-11-13-green-flags/plot.svg" alt=""/></a>
+                    <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2019-11-12-living-wage/" target="_blank"><span class="filterTags"><!-- living wages employment jobs deprivation poverty working --></span><h2 class="cardHead themeLink">Living wage</h2><img src="https://www.trafforddatalab.io/charticles/2019-11-12-living-wage/plot.svg" alt=""/></a>
+                    <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2019-11-11-alcohol-related-deaths/" target="_blank"><span class="filterTags"><!-- alcohol related deaths drinking unhealthy --></span><h2 class="cardHead themeLink">Alcohol-related deaths</h2><img src="https://www.trafforddatalab.io/charticles/2019-11-11-alcohol-related-deaths/plot.svg" alt=""/></a>
+                    <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2019-11-08-living-alone/" target="_blank"><span class="filterTags"><!-- living alone loneliness lonely --></span><h2 class="cardHead themeLink">Living alone</h2><img src="https://www.trafforddatalab.io/charticles/2019-11-08-living-alone/plot.svg" alt=""/></a>
+                    <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2019-11-07-road-casualties/" target="_blank"><span class="filterTags"><!-- road casualties casualty road safety --></span><h2 class="cardHead themeLink">Road casualties</h2><img src="https://www.trafforddatalab.io/charticles/2019-11-07-road-casualties/plot.svg" alt=""/></a>
+                    <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2019-11-06-childhood-obesity/" target="_blank"><span class="filterTags"><!-- childhood obesity obese unhealthy --></span><h2 class="cardHead themeLink">Childhood obesity</h2><img src="https://www.trafforddatalab.io/charticles/2019-11-06-childhood-obesity/plot.svg" alt=""/></a>
+                    <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2019-11-05-co2-emissions/" target="_blank"><span class="filterTags"><!-- co2 emissions carbon dioxide climate environment --></span><h2 class="cardHead themeLink">CO2 emissions</h2><img src="https://www.trafforddatalab.io/charticles/2019-11-05-co2-emissions/plot.svg" alt=""/></a>
+                    <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2019-11-04-businesses/" target="_blank"><span class="filterTags"><!-- businesses employment jobs --></span><h2 class="cardHead themeLink">Businesses</h2><img src="https://www.trafforddatalab.io/charticles/2019-11-04-businesses/table.png" alt=""/></a>
+                    <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2019-11-01-relative-deprivation/" target="_blank"><span class="filterTags"><!-- relative deprivation poverty --></span><h2 class="cardHead themeLink">Relative deprivation</h2><img src="https://www.trafforddatalab.io/charticles/2019-11-01-relative-deprivation/plot.svg" alt=""/></a>
+                    <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2019-10-31-gva/" target="_blank"><span class="filterTags"><!-- gross value added gva --></span><h2 class="cardHead themeLink">Gross Value Added</h2><img src="https://www.trafforddatalab.io/charticles/2019-10-31-gva/plot.svg" alt=""/></a>
+                    <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2019-10-30-eco-heating/" target="_blank"><span class="filterTags"><!-- eco-heating heating climate environment --></span><h2 class="cardHead themeLink">Eco-heating</h2><img src="https://www.trafforddatalab.io/charticles/2019-10-30-eco-heating/plot.svg" alt=""/></a>
+                    <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2019-10-29-broadband-speed/" target="_blank"><span class="filterTags"><!-- broadband speed connection internet web --></span><h2 class="cardHead themeLink">Broadband speed</h2><img src="https://www.trafforddatalab.io/charticles/2019-10-29-broadband-speed/plot.svg" alt=""/></a>
+                    <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2019-10-28-crime-rate/" target="_blank"><span class="filterTags"><!-- crime rate criminality police --></span><h2 class="cardHead themeLink">Crime rate</h2><img src="https://www.trafforddatalab.io/charticles/2019-10-28-crime-rate/plot.svg" alt=""/></a>
+                    <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2019-10-25-green-belt/" target="_blank"><span class="filterTags"><!-- green belt land environment --></span><h2 class="cardHead themeLink">Green Belt</h2><img src="https://www.trafforddatalab.io/charticles/2019-10-25-green-belt/plot.svg" alt=""/></a>
+                    <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2019-10-24-recycling/" target="_blank"><span class="filterTags"><!-- recycling environment --></span><h2 class="cardHead themeLink">Recycling</h2><img src="https://www.trafforddatalab.io/charticles/2019-10-24-recycling/plot.svg" alt=""/></a>
+                    <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2019-10-23-travel-to-work/" target="_blank"><span class="filterTags"><!-- travel to work commute employment jobs working --></span><h2 class="cardHead themeLink">Travel to work</h2><img src="https://www.trafforddatalab.io/charticles/2019-10-23-travel-to-work/plot.svg" alt=""/></a>
+                    <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2019-10-22-electric-vehicles/" target="_blank"><span class="filterTags"><!-- electric vehicles climate environment --></span><h2 class="cardHead themeLink">Electric vehicles</h2><img src="https://www.trafforddatalab.io/charticles/2019-10-22-electric-vehicles/plot.svg" alt=""/></a>
+                    <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2019-10-21-air-pollution/" target="_blank"><span class="filterTags"><!-- air pollution climate environment --></span><h2 class="cardHead themeLink">Air pollution</h2><img src="https://www.trafforddatalab.io/charticles/2019-10-21-air-pollution/plot.svg" alt=""/></a>
+                    <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2019-10-18-median-house-prices/" target="_blank"><span class="filterTags"><!-- median house prices housing --></span><h2 class="cardHead themeLink">Median house prices</h2><img src="https://www.trafforddatalab.io/charticles/2019-10-18-median-house-prices/plot.svg" alt=""/></a>
+                    <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2019-10-17-fuel-poverty/" target="_blank"><span class="filterTags"><!-- fuel poverty deprivation housing --></span><h2 class="cardHead themeLink">Fuel poverty</h2><img src="https://www.trafforddatalab.io/charticles/2019-10-17-fuel-poverty/plot.svg" alt=""/></a>
+                    <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2019-10-16-claimant-count/" target="_blank"><span class="filterTags"><!-- claimant count employment jobs deprivation poverty working --></span><h2 class="cardHead themeLink">Claimant count</h2><img src="https://www.trafforddatalab.io/charticles/2019-10-16-claimant-count/plot.svg" alt=""/></a>
+                    <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2019-10-15-population-projection/" target="_blank"><span class="filterTags"><!-- population projection people census --></span><h2 class="cardHead themeLink">Population projection</h2><img src="https://www.trafforddatalab.io/charticles/2019-10-15-population-projection/plot.svg" alt=""/></a>
+                    <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2019-10-14-employment-rate/" target="_blank"><span class="filterTags"><!-- employment rates jobs working --></span><h2 class="cardHead themeLink">Employment rate</h2><img src="https://www.trafforddatalab.io/charticles/2019-10-14-employment-rate/plot.svg" alt=""/></a>
+                    <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2019-04-12-gaps-in-life-expectancy/" target="_blank"><span class="filterTags"><!-- gaps in life expectancy living unhealthy poverty --></span><h2 class="cardHead themeLink">Gaps in life expectancy</h2><img src="https://www.trafforddatalab.io/charticles/2019-04-12-gaps-in-life-expectancy/plot.svg" alt=""/></a>
+                    <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2019-04-04-old-age-dependency-ratio/" target="_blank"><span class="filterTags"><!-- old age dependency ratio jobs working --></span><h2 class="cardHead themeLink">Old age dependency ratio</h2><img src="https://www.trafforddatalab.io/charticles/2019-04-04-old-age-dependency-ratio/plot.svg" alt=""/></a>
                 </div>
             </main>
 

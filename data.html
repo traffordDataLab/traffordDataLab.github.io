@@ -38,11 +38,13 @@
             {
                 height: 40px;
                 line-height: 40px;
+                padding: 0 0.75em;  /* 0.75em here and 1em in the .cardBody keep text inline as the text in the body is smaller */
             }
 
             .cardBody
             {
                 height: 103px;
+                padding: 0 1em;     /* 1em here and 0.75em in the .cardHead keep text inline as the text in the body is smaller */
             }
 
             .card:hover
@@ -50,7 +52,7 @@
                 text-decoration: none;  /* prevents the text in the card body being underlined - we only want the text in the card head underlined on hover, see .card:hover span */
             }
 
-            .card:hover span
+            .card:hover .cardHead
             {
                 text-decoration: underline; /* Ensures the text in the card header is underlined on-hover */
             }
@@ -64,6 +66,17 @@
                     width: 28%;
                     margin: 1em 2.2%;
                 }
+
+                /* For browsers which support grid layouts */
+                @supports (display: grid)
+                {
+                    /* Reset the widths and margins applied above as they aren't required when using grid layout */
+                    .card
+                    {
+                        width: auto;
+                        margin: 0;
+                    }
+                }
             }
 
             @media (max-width:850px)
@@ -72,6 +85,17 @@
                 {
                     width: 40%;
                     margin: 1em 4.5%;
+                }
+
+                /* For browsers which support grid layouts */
+                @supports (display: grid)
+                {
+                    /* Reset the widths and margins applied above as they aren't required when using grid layout */
+                    .card
+                    {
+                        width: auto;
+                        margin: 0;
+                    }
                 }
             }
 
@@ -88,15 +112,11 @@
                 {
                     height: 45px;
                 }
-            }
 
-
-            /* For browsers which support grid layouts */
-            @media (max-width:1300px), @media (max-width:850px), @media (max-width:620px)
-            {
-                /* Reset the widths and margins applied above as they aren't required when using grid layout */
+                /* For browsers which support grid layouts */
                 @supports (display: grid)
                 {
+                    /* Reset the widths and margins applied above as they aren't required when using grid layout */
                     .card
                     {
                         width: auto;
@@ -129,55 +149,55 @@
                 <div class="cardContainer">
                     <a href="https://www.trafforddatalab.io/open_data/allotments/" target="_blank" class="card themeBlockLight labBorder">
                         <span class="filterTags"><!-- allotments gardening gardens growing food vegetables fruit greenspaces green spaces --></span>
-                        <span class="cardHead themeBlockDark">Allotments</span>
+                        <h2 class="cardHead themeBlockDark">Allotments</h2>
                         <p class="cardBody">Allotment sites in Trafford.</p>
                     </a>
 
                     <a href="https://www.trafforddatalab.io/council_open_data/boundaries/" target="_blank" class="card themeBlockLight labBorder">
                         <span class="filterTags"><!-- boundary boundaries spatial geographic geography vector administrative electoral statistical lad local authority district wards localities locality msoa lsoa oa middle-layer lower-layer super output area westminster parliamentary constituency constituencies --></span>
-                        <span class="cardHead themeBlockDark">Boundaries</span>
+                        <h2 class="cardHead themeBlockDark">Boundaries</h2>
                         <p class="cardBody">Vector boundary layers for administrative, electoral and statistical geographies..</p>
                     </a>
 
                     <a href="https://www.trafforddatalab.io/open_data/cctv/" target="_blank" class="card themeBlockLight labBorder">
                         <span class="filterTags"><!-- cctv closed circuit television cameras security surveillance public safety crime prevention police --></span>
-                        <span class="cardHead themeBlockDark">CCTV cameras</span>
+                        <h2 class="cardHead themeBlockDark">CCTV cameras</h2>
                         <p class="cardBody">Locations of Local Authority controlled Closed-Circuit Television (CCTV) cameras in Trafford.</p>
                     </a>
 
                     <a href="https://www.trafforddatalab.io/open_data/elections/" target="_blank" class="card themeBlockLight labBorder">
                         <span class="filterTags"><!-- elections by election by-election district and borough democracy democratic voter voting ballot  --></span>
-                        <span class="cardHead themeBlockDark">Elections</span>
+                        <h2 class="cardHead themeBlockDark">Elections</h2>
                         <p class="cardBody">Results from Trafford council local elections/by-elections from 2016 onwards.</p>
                     </a>
 
                     <a href="https://www.trafforddatalab.io/open_data/electric_vehicle_charging_locations/" target="_blank" class="card themeBlockLight labBorder">
                         <span class="filterTags"><!-- electric vehicle charging charge ev air pollution reduction reducing reduce climate change low carbon zero --></span>
-                        <span class="cardHead themeBlockDark">Electric vehicle charging</span>
+                        <h2 class="cardHead themeBlockDark">Electric vehicle charging</h2>
                         <p class="cardBody">Electric vehicle charging locations in Trafford and associated information.</p>
                     </a>
 
                     <a href="https://www.trafforddatalab.io/open_data/fast_food_outlets/" target="_blank" class="card themeBlockLight labBorder">
                         <span class="filterTags"><!-- fast food outlets take away take-away takeaway health eating diet hygiene rating standards --></span>
-                        <span class="cardHead themeBlockDark">Fast food outlets</span>
+                        <h2 class="cardHead themeBlockDark">Fast food outlets</h2>
                         <p class="cardBody">The location of fast food outlets in Trafford.</p>
                     </a>
 
                     <a href="https://www.trafforddatalab.io/open_data/grants/" target="_blank" class="card themeBlockLight labBorder">
                         <span class="filterTags"><!-- grants voluntary sector community social enterprise organisations 360 giving grantnav --></span>
-                        <span class="cardHead themeBlockDark">Grants</span>
+                        <h2 class="cardHead themeBlockDark">Grants</h2>
                         <p class="cardBody">Grants allocated by Trafford Council via Trafford Partnership to voluntary, community and social enterprise organisations.</p>
                     </a>
 
                     <a href="https://www.trafforddatalab.io/open_data/population/" target="_blank" class="card themeBlockLight labBorder">
                         <span class="filterTags"><!-- population estimates mid-year residents people 2018 --></span>
-                        <span class="cardHead themeBlockDark">Population estimates</span>
+                        <h2 class="cardHead themeBlockDark">Population estimates</h2>
                         <p class="cardBody">Estimates of the usual resident population in Trafford during mid-2018.</p>
                     </a>
 
                     <a href="https://www.trafforddatalab.io/spatial_data/postcodes/" target="_blank" class="card themeBlockLight labBorder">
                         <span class="filterTags"><!-- postcodes trafford greater manchester centroids electoral wards localities locality spatial geography geographies --></span>
-                        <span class="cardHead themeBlockDark">Postcodes</span>
+                        <h2 class="cardHead themeBlockDark">Postcodes</h2>
                         <p class="cardBody">Postcode list for Trafford by ward and locality with centroids.</p>
                     </a>
                 </div>
