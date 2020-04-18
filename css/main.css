@@ -163,11 +163,8 @@ footer
 .cardHead
 {
     display: block;
-}
 
-h2.cardHead, h3.cardHead, h4.cardHead, h5.cardHead, h6.cardHead
-{
-    /* Use the appropriate heading level (but never h1) as the titles for the cards, that way they give semantic sense to the list of cards.
+    /* NOTE: the intention is to use an appropriate heading level (but never h1) as the titles for the cards, that way they give semantic sense to the list of cards.
        The styles here just ensure that the text is rendered consistently no matter which heading level is used. */
     margin: 0;
     font-size: 1em;
