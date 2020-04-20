@@ -13,6 +13,16 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
 
         <style>
+            section
+            {
+                margin-bottom: 3em;
+            }
+
+            section:last-of-type
+            {
+                margin: 0;
+            }
+
             .bioPhoto
             {
                 width: 70px;
@@ -21,6 +31,17 @@
                 border: 1px solid #f0f0f0;
                 box-shadow: 3px 3px 5px #f0f0f0;
                 border-radius: 35px;
+            }
+
+            #whoWeAre p
+            {
+                clear: both;
+                margin-bottom: 3em;
+            }
+
+            #whoWeAre p:last-of-type
+            {
+                margin-bottom: 0;
             }
         </style>
     </head>
@@ -43,28 +64,20 @@
 
                 <p>The Trafford Data Lab supports decision-making in Trafford by revealing patterns in data through visualisation. It is committed to publishing open data and using open source tools to encourage a transparent and reproducible analytical workflow.</p>
 
-                <section>
+                <section id="whoWeAre">
                     <h2>Who we are</h2>
                     <p>
                         <img src="images/henry.png" class="bioPhoto" alt=""/><strong>Henry Partridge</strong> - <span class="smallText">Trafford Data Lab Manager</span><br />
                         I have previously worked at Manchester Metropolitan University and Transport for London. I have particular expertise in #rstats, data visualisation and spatial analysis. I like cats and making beautiful maps.
                     </p>
-
-                    <br class="noFloat"/>
-
                     <p>
                         <img src="images/iris.png" class="bioPhoto" alt=""/><strong>Iris Garc&iacute;a R&iacute;os</strong> - <span class="smallText">Data Visualisation Developer</span><br />
                         My past experience includes areas such as app development and biomechanics research at the University of Manchester. I enjoy cycling and walking in the country.
                     </p>
-
-                    <br class="noFloat"/>
-
                     <p>
                         <img src="images/james.png" class="bioPhoto" alt=""/><strong>James Austin</strong> - <span class="smallText">Data Visualisation Developer</span><br />
                         I have been working at Trafford Council in various data-related capacities since 2006. Previously I worked as a web applications developer for 8 years on a diverse range of projects. I enjoy creative activities and cycling.
                     </p>
-
-                    <br class="noFloat"/>
                 </section>
 
                 <section>
@@ -77,8 +90,6 @@
 
                     <h3>Reproducibility</h3>
                     <p>We are strong advocates of reproducibility: the ability to copy methods and achieve similar results. We have adopted a completely reproducible workflow by using open source code (R, JavaScript etc) and publishing it on <a href="https://github.com/trafforddatalab" target="_blank">GitHub</a>, a software development platform. Other programmers are welcome to fork any of the repositories containing our code and adapt it for their own purposes.</p>
-
-                    <br />
                 </section>
 
                 <section>
@@ -87,7 +98,9 @@
                     <p>The Lab is using <a href="https://cran.r-project.org" target="_blank">R</a>, an open-source programming language for statistical analysis to import, tidy, transform, visualise, model and communicate data. R is central to the Lab's workflow because it provides an efficient and reproducible way of working that encourages both openness and collaboration. We also code in javascript, particularly using the <a href="http://leafletjs.com" target="_blank">Leaflet</a> and <a href="https://d3js.org" target="_blank">D3</a> libraries.</p>
                 </section>
 
-                <section class="endNotes">
+                <hr />
+
+                <section class="smallText">
                     <h2>Credits</h2>
                     <p>The Trafford Data Lab logo is a combination of <a href="https://thenounproject.com/search/?q=lab&creator=318968&i=42649" target="_blank">Laboratory</a> by <a href="http://www.thenounproject.com/hunotika" target="_blank">hunotika</a> from the <a href="http://www.thenounproject.com" target="_blank">Noun Project</a> licenced under the <a href="https://creativecommons.org/licenses/by/3.0/us/" target="_blank">Creative Commons Attribution</a> and &quot;Trafford Data Lab&quot; written using the <a href="https://fonts.google.com/specimen/Roboto" target="_blank">Roboto Google Font</a>. We use <a href="http://fontawesome.io/" target="_blank">Font Awesome</a> icons for the links to our <a href="https://twitter.com/traffordDataLab" target="_blank">Twitter</a> , <a href="https://github.com/traffordDataLab" target="_blank">GitHub</a> and <a href="https://medium.com/@traffordDataLab" target="_blank">Medium</a> accounts and also in our apps.</p>
                 </section>

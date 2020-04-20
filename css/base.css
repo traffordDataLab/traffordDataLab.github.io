@@ -62,6 +62,14 @@ img
     border: 0;
 }
 
+hr
+{
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    background-image: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0);
+}
+
 .hideContent, .filterTags
 {
     display: none;
