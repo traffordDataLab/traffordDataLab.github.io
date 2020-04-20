@@ -14,8 +14,8 @@ header
     background-color: white;
     width: 100%;
     text-align: left;
-    border-bottom: 1px solid #5d77a3;
-    box-shadow: 0 0 5px #5d77a3;
+    border-bottom: 1px solid #ccc;
+    box-shadow: 0 0 5px #ccc;
     z-index: 2;
 }
 
