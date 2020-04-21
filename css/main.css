@@ -7,7 +7,7 @@
     min-height: 100%;       /* Required for footer to be positioned always at the bottom of the page */
 }
 
-/* NOTE: all sizes are expressed within the header elements are in px not em as we don't want the header to increase in size. This is because it might become too big on a small phone screen and prevent the user seeing the page content. */
+/* NOTE: all property sizes for elements within the header are expressed in px not em as we don't want the header to increase in size. This is because it might become too big on a small phone screen and prevent the user seeing the page content. */
 header
 {
     position: fixed;
@@ -17,6 +17,12 @@ header
     border-bottom: 1px solid #ccc;
     box-shadow: 0 0 5px #f0f0f0;
     z-index: 2;
+}
+
+.traffordDataLabLogo
+{
+    margin: 9px 12px 0 12px;
+    padding: 0;
 }
 
 /* Contains the menu items within the <nav>igation section */
@@ -29,7 +35,7 @@ header
 
 .navbar li
 {
-    float: left;
+    float: left;        /* prevent the list items appearing underneath each other */
     font-size: 16px;
 }
 
@@ -91,30 +97,23 @@ footer
     padding: 6px 0 0 12px;
 }
 
-.rightFooter
+.linkMedia
 {
-    background-color: #fff;
-    height: 100%;
-    display: inline-block;
-    float: right;
+    font-size: 2em;
+    color: #212121;         /* As these icons are links this is required otherwise they would be the link colour */
+    margin: 0 0.6em 0 0;    /* Using margin not padding so that the "space" is not included in the link "hit" area. Using padding the links are too close together and it's easy to accidentally hit the wrong one on touch devices */
 }
 
-.traffordDataLabLogo
+.linkMedia:hover
 {
-    margin: 9px 12px 0 12px;
-    padding: 0;
+    color: #046dc3;
 }
 
 .logoTrafford
 {
     height: 5em;
-}
-
-.linkMedia
-{
-    font-size: 2em;
-    color: #212121;     /* As these icons are links this is required otherwise they would be the link colour */
-    padding: 0 0.6em 0 0;
+    background-color: #fff;
+    float: right;
 }
 
 /*
