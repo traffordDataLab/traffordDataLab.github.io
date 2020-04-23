@@ -43,17 +43,6 @@
                 margin: 1em 2%;
             }
 
-            /* For browsers which support grid layouts */
-            @supports (display: grid)
-            {
-                /* Reset the widths and margins applied above as they aren't required when using grid layout */
-                .card
-                {
-                    width: auto;
-                    margin: 0;
-                }
-            }
-
             .cardHead
             {
                 font-size: 1.15em;
@@ -61,25 +50,23 @@
             }
 
 
-            /* Change the display of cards to a single column */
+            /* For browsers which don't support grid layouts */
             @media (max-width:850px)
             {
-                /* For browsers which don't support grid layouts */
                 .card
                 {
                     width: 100%;
                     margin: 1em 0;
                 }
+            }
 
-                /* For browsers which support grid layouts */
-                @supports (display: grid)
+            /* For browsers which support grid layouts - Reset the widths and margins applied above as they aren't required when using grid layout */
+            @supports (display: grid)
+            {
+                .card
                 {
-                    /* Reset the widths and margins applied above as they aren't required when using grid layout */
-                    .card
-                    {
-                        width: auto;
-                        margin: 0;
-                    }
+                    width: auto;
+                    margin: 0;
                 }
             }
         </style>

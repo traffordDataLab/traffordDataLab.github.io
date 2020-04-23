@@ -23,17 +23,6 @@
                 margin: 1em 2.2%;
             }
 
-            /* For browsers which support grid layouts */
-            @supports (display: grid)
-            {
-                /* Reset the widths and margins applied above as they aren't required when using grid layout */
-                .card
-                {
-                    width: auto;
-                    margin: 0;
-                }
-            }
-
             .cardHead
             {
                 height: 40px;
@@ -58,7 +47,6 @@
                 text-decoration: underline; /* Ensures the text in the card header is underlined on-hover */
             }
 
-
             /* For browsers which don't support grid layouts */
             @media (max-width:1300px)
             {
@@ -66,17 +54,6 @@
                 {
                     width: 28%;
                     margin: 1em 2.2%;
-                }
-
-                /* For browsers which support grid layouts */
-                @supports (display: grid)
-                {
-                    /* Reset the widths and margins applied above as they aren't required when using grid layout */
-                    .card
-                    {
-                        width: auto;
-                        margin: 0;
-                    }
                 }
             }
 
@@ -86,17 +63,6 @@
                 {
                     width: 40%;
                     margin: 1em 4.5%;
-                }
-
-                /* For browsers which support grid layouts */
-                @supports (display: grid)
-                {
-                    /* Reset the widths and margins applied above as they aren't required when using grid layout */
-                    .card
-                    {
-                        width: auto;
-                        margin: 0;
-                    }
                 }
             }
 
@@ -113,16 +79,15 @@
                 {
                     height: 95px;
                 }
+            }
 
-                /* For browsers which support grid layouts */
-                @supports (display: grid)
+            /* For browsers which support grid layouts - Reset the widths and margins applied above as they aren't required when using grid layout */
+            @supports (display: grid)
+            {
+                .card
                 {
-                    /* Reset the widths and margins applied above as they aren't required when using grid layout */
-                    .card
-                    {
-                        width: auto;
-                        margin: 0;
-                    }
+                    width: auto;
+                    margin: 0;
                 }
             }
         </style>
