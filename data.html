@@ -35,16 +35,7 @@
                 height: 110px;
                 padding: 0 1em;     /* 1em here and 0.75em in the .cardHead keep text inline as the text in the body is smaller */
                 margin: 0.5em 0;
-            }
-
-            .card:hover
-            {
-                text-decoration: none;  /* prevents the text in the card body being underlined - we only want the text in the card head underlined on hover, see .card:hover span */
-            }
-
-            .card:hover .cardHead
-            {
-                text-decoration: underline; /* Ensures the text in the card header is underlined on-hover */
+                overflow-y: auto;
             }
 
             /* For browsers which don't support grid layouts */
