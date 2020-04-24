@@ -13,32 +13,80 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
 
         <style>
-            /* override labWebsite.css styles */
-            .doubleColumn img
+            section div
             {
-                width: auto;
+                padding: 0.3em 0.5em 0.5em 0.5em;
+                margin-bottom: 2em;
+                overflow: auto;
             }
 
-            .doubleColumn div:nth-child(1) div, .doubleColumn div:nth-child(2) div
+            section div:last-of-type
             {
-                width: 100%;
+                margin-bottom: 0;   /* remove the margin applied above from the last item on the page */
             }
 
-            .doubleColumn div:nth-child(2) div
+            p.smallText, .cardBody
             {
-                margin-left: 20px;
+                margin: 0.1em 0 0 0;  /* the purpose of the paragraph tags within each item is for semantic meaning and improved layout if the CSS isn't loaded - we don't want the default padding for styling */
+            }
+
+            /* Specific customisation of the card for this page */
+            .cardContainer
+            {
+                grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));   /* only want a max of 3 columns and want to break into 2 columns sooner than the data or charticles pages - so I've overridden the minmax card width from the default */
+                xpadding: 0;         /* override the styles set above in section div */
+            }
+
+            .card
+            {
+                padding: 0.2em 0.5em 0.5em 0.5em;   /* the top padding is different to make the gap look balanced all around as the .cardHead content has padding of its own. */
+
+                /* For browsers which don't support grid layouts */
+                width: 28%;
+                margin: 1em 2.2%;
+            }
+
+            .card:hover
+            {
+                text-decoration: none;  /* prevents the text in the card body being underlined - we only want the text in the card head underlined on hover, see .card:hover .cardHead */
+            }
+
+            .card:hover .cardHead
+            {
+                text-decoration: underline; /* Ensures the text in the card header is underlined on-hover */
+            }
+
+            .cardBody
+            {
+                overflow: visible;
+            }
+
+            /* For browsers which don't support grid layouts */
+            @media (max-width:1150px)
+            {
+                .card
+                {
+                    width: 40%;
+                    margin: 1em 4.5%;
+                }
             }
 
             @media (max-width:800px)
             {
-                .doubleColumn
+                .card
                 {
                     width: 100%;
+                    margin: 1em 0;
                 }
+            }
 
-                .doubleColumn div:nth-child(2) div
+            /* For browsers which support grid layouts - Reset the widths and margins applied above as they aren't required when using grid layout */
+            @supports (display: grid)
+            {
+                .card
                 {
-                    margin-left: 0px;
+                    width: auto;
+                    margin: 0;
                 }
             }
         </style>
@@ -61,260 +109,233 @@
             <main>
                 <h1>Indices of Deprivation 2019</h1>
                 <p>The <a href="https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019" target="_blank">English Indices of Deprivation</a> were published by the <a href="https://www.gov.uk/government/organisations/ministry-of-housing-communities-and-local-government" target="_blank">Ministry of Housing, Communities &amp; Local Government</a> in September 2019. The Indices measure relative levels of deprivation in 32,844 Lower-layer Super Output Areas (LSOAs) in England. Each LSOA contains approximately 1,500 residents or 650 households. They are ranked from 1 (most deprived) to 32,844 (least deprived) and assigned to a decile ranging from 1 (most deprived 10%) to 10 (least deprived 10%). Local authorities in England are also ranked from 1 to 317 based on a population weighted average rank or score of the LSOA data.</p>
-
                 <p>Relative deprivation is measured using 39 indicators which are grouped across seven different domains: <span style="font-style: italic;">Income; Employment; Education, skills &amp; training; Health & disability; Crime; Barriers to housing &amp; services; Living environment</span>. Each domain is combined and weighted to create the <span style="font-weight: bold;">Index of Multiple Deprivation (IMD)</span>, an overall measure of relative deprivation.</p>
-
                 <p>We have created interactive apps and reports to provide visualisation and analysis of the Indices of Deprivation 2019 data.</p>
-                <br />
 
-                <h2>LSOA and Local Authority District resources across England</h2>
-                <div>
-                    <a href="https://trafforddatalab.shinyapps.io/imd19" target="_blank"><img src="images/imd_2019_app_thumbnail.png" class="thumbnail" alt=""/><strong>Interactive IoD 2019 app</strong></a><br />
-                    Interactive visualisations of the Indices of Deprivation 2019 and 2015 data releases for Lower-layer Super Output Areas (LSOA) across England. The LSOAs are visualised geographically and within a chart via the Local Authority Districts they belong to.
-                </div>
-
-                <br class="noFloat"/>
-                <br />
-
-                <div>
-                    <a href="https://www.trafforddatalab.io/open_data/IndicesOfDeprivation/IoD2019/lsoa/IoD2019.csv" target="_blank"><img src="images/csv_data_thumbnail.png" class="thumbnail" alt=""/><strong>LSOA data</strong></a><br />
-                    Indices of Deprivation 2019 data at Lower-layer Super Output Area (LSOA) level across England. The <a href="https://github.com/traffordDataLab/open_data/tree/master/IndicesOfDeprivation/IoD2019" target="_blank">metadata</a> page contains links to the source data and more information.
-                </div>
-
-                <br class="noFloat"/>
-                <br />
-
-                <div>
-                    <a href="https://www.trafforddatalab.io/open_data/IndicesOfDeprivation/IoD2019/local_authority_district/IoD2019.csv" target="_blank"><img src="images/csv_data_thumbnail.png" class="thumbnail" alt=""/><strong>Local Authority District data</strong></a><br />
-                    Indices of Deprivation 2019 data at Local Authority District level across England. The <a href="https://github.com/traffordDataLab/open_data/tree/master/IndicesOfDeprivation/IoD2019" target="_blank">metadata</a> page contains links to the source data and more information.
-                </div>
-
-                <br class="noFloat"/>
-                <br /><br />
-
-                <h2>Local Authority District and Electoral Ward resources for Trafford</h2>
-
-                <p>The following Trafford-specific resources are provided at Local Authority District level, including context with Greater Manchester (GM) and Chartered Institute of Public Finance and Accountancy (CIPFA) nearest neighbours, and Electoral Ward.</p>
-                <br />
-
-                <h3>Local Authority District</h3>
-
-                <div>
-                    <a href="https://www.trafforddatalab.io/analysis/IoD2019/report/" target="_blank"><img src="images/iod_2019_trafford_report_thumbnail.png" class="thumbnail" alt=""/><strong>Trafford compared to other GM authorities</strong></a><br />
-                    Report visualising and analysing the Indices of Deprivation data for 2019 and the changes from 2015 for Trafford in comparison to the other Local Authorities within Greater Manchester.
-                </div>
-
-                <br class="noFloat"/>
-                <br />
-
-                <div>
-                    <a href="https://www.trafforddatalab.io/analysis/IoD2019/nearest_neighbours/" target="_blank"><img src="images/iod_2019_cipfa_app_thumbnail.png" class="thumbnail" alt=""/><strong>Trafford compared to CIPFA nearest neighbours</strong></a><br />
-                    Interactive app visualising the Indices of Deprivation 2019 for Trafford and its Chartered Institute of Public Finance and Accountancy (CIPFA) nearest neighbours.
-                </div>
-
-                <br class="noFloat"/>
-                <br />
-
-                <div>
-                    <a href="https://www.trafforddatalab.io/maps/static/output/trafford_imd19.png" target="_blank"><img src="images/static_trafford_imd_2019_thumbnail.png" class="thumbnail" alt=""/><strong>Index of Multiple Deprivation 2019 for Trafford</strong></a><br />
-                    Static graphic visualising the overall Index of Multiple Deprivation (IMD) for Lower-layer Super Output Areas (LSOA) in Trafford. The previous version based on the <a href="https://www.trafforddatalab.io/maps/static/output/trafford_imd15.png" target="_blank">Index of Multiple Deprivation 2015</a> is also available.
-                </div>
-
-                <br class="noFloat"/>
-                <br />
-
-                <h3>Electoral Wards</h3>
-
-                <p>Electoral Ward boundaries and LSOA boundaries do not always perfectly align and so it is impossible to aggregate from LSOA to ward exactly. Instead a ‘best-fit’ methodology is used by the <a href="http://geoportal.statistics.gov.uk/datasets/500d4283cbe54e3fa7f358399ba3783e_0" target="_blank">Office for National Statistics (ONS)</a> to assign LSOAs to the most appropriate ward.</p>
-
-                <div class="doubleColumn">
-                    <div>
-                        <div>
-                            <a href="https://www.trafforddatalab.io/analysis/IoD2019/wards/altrincham.html" target="_blank"><img src="images/iod_2019_altrincham_report_thumbnail.png" class="thumbnail" alt=""/><strong>Altrincham</strong></a><br />
-                            <span>Altrincham ranks 16<sup>th</sup> out of 21 wards in Trafford where 1 is the most deprived and 21 is the least deprived on the IMD 2019.</span>
-                        </div>
-
-                        <br class="noFloat"/>
-                        <br />
-
-                        <div>
-                            <a href="https://www.trafforddatalab.io/analysis/IoD2019/wards/ashton_upon_mersey.html" target="_blank"><img src="images/iod_2019_ashton_upon_mersey_report_thumbnail.png" class="thumbnail" alt=""/><strong>Ashton upon Mersey</strong></a><br />
-                            Ashton upon Mersey ranks 14<sup>th</sup> (with Broadheath) out of 21 wards in Trafford where 1 is the most deprived and 21 is the least deprived on the IMD 2019.
-                        </div>
-
-                        <br class="noFloat"/>
-                        <br />
-
-                        <div>
-                            <a href="https://www.trafforddatalab.io/analysis/IoD2019/wards/bowdon.html" target="_blank"><img src="images/iod_2019_bowdon_report_thumbnail.png" class="thumbnail" alt=""/><strong>Bowdon</strong></a><br />
-                            Bowdon ranks 19<sup>th</sup> out of 21 wards in Trafford where 1 is the most deprived and 21 is the least deprived on the IMD 2019.
-                        </div>
-
-                        <br class="noFloat"/>
-                        <br />
-
-                        <div>
-                            <a href="https://www.trafforddatalab.io/analysis/IoD2019/wards/broadheath.html" target="_blank"><img src="images/iod_2019_broadheath_report_thumbnail.png" class="thumbnail" alt=""/><strong>Broadheath</strong></a><br />
-                            Broadheath ranks 14<sup>th</sup> (with Ashton upon Mersey) out of 21 wards in Trafford where 1 is the most deprived and 21 is the least deprived on the IMD 2019.
-                        </div>
-
-                        <br class="noFloat"/>
-                        <br />
-
-                        <div>
-                            <a href="https://www.trafforddatalab.io/analysis/IoD2019/wards/brooklands.html" target="_blank"><img src="images/iod_2019_brooklands_report_thumbnail.png" class="thumbnail" alt=""/><strong>Brooklands</strong></a><br />
-                            Brooklands ranks 18<sup>th</sup> out of 21 wards in Trafford where 1 is the most deprived and 21 is the least deprived on the IMD 2019.
-                        </div>
-
-                        <br class="noFloat"/>
-                        <br />
-
-                        <div>
-                            <a href="https://www.trafforddatalab.io/analysis/IoD2019/wards/bucklow-st_martins.html" target="_blank"><img src="images/iod_2019_bucklow-st_martins_report_thumbnail.png" class="thumbnail" alt=""/><strong>Bucklow-St Martins</strong></a><br />
-                            Bucklow-St Martins ranks 1<sup>st</sup> out of 21 wards in Trafford where 1 is the most deprived and 21 is the least deprived on the IMD 2019.
-                        </div>
-
-                        <br class="noFloat"/>
-                        <br />
-
-                        <div>
-                            <a href="https://www.trafforddatalab.io/analysis/IoD2019/wards/clifford.html" target="_blank"><img src="images/iod_2019_clifford_report_thumbnail.png" class="thumbnail" alt=""/><strong>Clifford</strong></a><br />
-                            Clifford ranks 2<sup>nd</sup> out of 21 wards in Trafford where 1 is the most deprived and 21 is the least deprived on the IMD 2019.
-                        </div>
-
-                        <br class="noFloat"/>
-                        <br />
-
-                        <div>
-                            <a href="https://www.trafforddatalab.io/analysis/IoD2019/wards/davyhulme_east.html" target="_blank"><img src="images/iod_2019_davyhulme_east_report_thumbnail.png" class="thumbnail" alt=""/><strong>Davyhulme East</strong></a><br />
-                            Davyhulme East ranks 11<sup>th</sup> out of 21 wards in Trafford where 1 is the most deprived and 21 is the least deprived on the IMD 2019.
-                        </div>
-
-                        <br class="noFloat"/>
-                        <br />
-
-                        <div>
-                            <a href="https://www.trafforddatalab.io/analysis/IoD2019/wards/davyhulme_west.html" target="_blank"><img src="images/iod_2019_davyhulme_west_report_thumbnail.png" class="thumbnail" alt=""/><strong>Davyhulme West</strong></a><br />
-                            Davyhulme West ranks 10<sup>th</sup> out of 21 wards in Trafford where 1 is the most deprived and 21 is the least deprived on the IMD 2019.
-                        </div>
-
-                        <br class="noFloat"/>
-                        <br />
-
-                        <div>
-                            <a href="https://www.trafforddatalab.io/analysis/IoD2019/wards/flixton.html" target="_blank"><img src="images/iod_2019_flixton_report_thumbnail.png" class="thumbnail" alt=""/><strong>Flixton</strong></a><br />
-                            Flixton ranks 13<sup>th</sup> out of 21 wards in Trafford where 1 is the most deprived and 21 is the least deprived on the IMD 2019.
-                        </div>
-
-                        <br class="noFloat"/>
-                        <br />
-
-                        <div>
-                            <a href="https://www.trafforddatalab.io/analysis/IoD2019/wards/gorse_hill.html" target="_blank"><img src="images/iod_2019_gorse_hill_report_thumbnail.png" class="thumbnail" alt=""/><strong>Gorse Hill</strong></a><br />
-                            Gorse Hill ranks 4<sup>th</sup> out of 21 wards in Trafford where 1 is the most deprived and 21 is the least deprived on the IMD 2019.
-                        </div>
-
-                        <br class="noFloat"/>
-                        <br />
+                <section>
+                    <h2>LSOA and Local Authority District resources across England</h2>
+                    <div class="labBorder">
+                        <a href="https://trafforddatalab.shinyapps.io/imd19" target="_blank"><img src="images/imd_2019_app_thumbnail.png" class="thumbnail" alt=""/><h3 class="cardHead themeLink">Interactive IoD 2019 app</h3></a>
+                        <p class="smallText">Interactive visualisations of the Indices of Deprivation 2019 and 2015 data releases for Lower-layer Super Output Areas (LSOA) across England. The LSOAs are visualised geographically and within a chart via the Local Authority Districts they belong to.</p>
                     </div>
-                    <div>
-                        <div>
-                            <a href="https://www.trafforddatalab.io/analysis/IoD2019/wards/hale_barns.html" target="_blank"><img src="images/iod_2019_hale_barns_report_thumbnail.png" class="thumbnail" alt=""/><strong>Hale Barns</strong></a><br />
-                            Hale Barns ranks 20<sup>th</sup> out of 21 wards in Trafford where 1 is the most deprived and 21 is the least deprived on the IMD 2019.
-                        </div>
 
-                        <br class="noFloat"/>
-                        <br />
-
-                        <div>
-                            <a href="https://www.trafforddatalab.io/analysis/IoD2019/wards/hale_central.html" target="_blank"><img src="images/iod_2019_hale_central_report_thumbnail.png" class="thumbnail" alt=""/><strong>Hale Central</strong></a><br />
-                            Hale Central ranks 17<sup>th</sup> out of 21 wards in Trafford where 1 is the most deprived and 21 is the least deprived on the IMD 2019.
-                        </div>
-
-                        <br class="noFloat"/>
-                        <br />
-
-                        <div>
-                            <a href="https://www.trafforddatalab.io/analysis/IoD2019/wards/longford.html" target="_blank"><img src="images/iod_2019_longford_report_thumbnail.png" class="thumbnail" alt=""/><strong>Longford</strong></a><br />
-                            Longford ranks 5<sup>th</sup> out of 21 wards in Trafford where 1 is the most deprived and 21 is the least deprived on the IMD 2019.
-                        </div>
-
-                        <br class="noFloat"/>
-                        <br />
-
-                        <div>
-                            <a href="https://www.trafforddatalab.io/analysis/IoD2019/wards/priory.html" target="_blank"><img src="images/iod_2019_priory_report_thumbnail.png" class="thumbnail" alt=""/><strong>Priory</strong></a><br />
-                            Priory ranks 12<sup>th</sup> out of 21 wards in Trafford where 1 is the most deprived and 21 is the least deprived on the IMD 2019.
-                        </div>
-
-                        <br class="noFloat"/>
-                        <br />
-
-                        <div>
-                            <a href="https://www.trafforddatalab.io/analysis/IoD2019/wards/sale_moor.html" target="_blank"><img src="images/iod_2019_sale_moor_report_thumbnail.png" class="thumbnail" alt=""/><strong>Sale Moor</strong></a><br />
-                            Sale Moor ranks 8<sup>th</sup> out of 21 wards in Trafford where 1 is the most deprived and 21 is the least deprived on the IMD 2019.
-                        </div>
-
-                        <br class="noFloat"/>
-                        <br />
-
-                        <div>
-                            <a href="https://www.trafforddatalab.io/analysis/IoD2019/wards/st_mary's.html" target="_blank"><img src="images/iod_2019_st_mary's_report_thumbnail.png" class="thumbnail" alt=""/><strong>St Mary's</strong></a><br />
-                            St Mary's ranks 6<sup>th</sup> out of 21 wards in Trafford where 1 is the most deprived and 21 is the least deprived on the IMD 2019.
-                        </div>
-
-                        <br class="noFloat"/>
-                        <br />
-
-                        <div>
-                            <a href="https://www.trafforddatalab.io/analysis/IoD2019/wards/stretford.html" target="_blank"><img src="images/iod_2019_stretford_report_thumbnail.png" class="thumbnail" alt=""/><strong>Stretford</strong></a><br />
-                            Stretford ranks 3<sup>rd</sup> out of 21 wards in Trafford where 1 is the most deprived and 21 is the least deprived on the IMD 2019.
-                        </div>
-
-                        <br class="noFloat"/>
-                        <br />
-
-                        <div>
-                            <a href="https://www.trafforddatalab.io/analysis/IoD2019/wards/timperley.html" target="_blank"><img src="images/iod_2019_timperley_report_thumbnail.png" class="thumbnail" alt=""/><strong>Timperley</strong></a><br />
-                            Timperley ranks 21<sup>st</sup> out of 21 wards in Trafford where 1 is the most deprived and 21 is the least deprived on the IMD 2019.
-                        </div>
-
-                        <br class="noFloat"/>
-                        <br />
-
-                        <div>
-                            <a href="https://www.trafforddatalab.io/analysis/IoD2019/wards/urmston.html" target="_blank"><img src="images/iod_2019_urmston_report_thumbnail.png" class="thumbnail" alt=""/><strong>Urmston</strong></a><br />
-                            Urmston ranks 7<sup>th</sup> out of 21 wards in Trafford where 1 is the most deprived and 21 is the least deprived on the IMD 2019.
-                        </div>
-
-                        <br class="noFloat"/>
-                        <br />
-
-                        <div>
-                            <a href="https://www.trafforddatalab.io/analysis/IoD2019/wards/village.html" target="_blank"><img src="images/iod_2019_village_report_thumbnail.png" class="thumbnail" alt=""/><strong>Village</strong></a><br />
-                            Village ranks 9<sup>th</sup> out of 21 wards in Trafford where 1 is the most deprived and 21 is the least deprived on the IMD 2019.
-                        </div>
-
-                        <br class="noFloat"/>
-                        <br />
+                    <div class="labBorder">
+                        <a href="https://www.trafforddatalab.io/open_data/IndicesOfDeprivation/IoD2019/lsoa/IoD2019.csv" target="_blank"><img src="images/csv_data_thumbnail.png" class="thumbnail" alt=""/><h3 class="cardHead themeLink">LSOA data</h3></a>
+                        <p class="smallText">Indices of Deprivation 2019 data at Lower-layer Super Output Area (LSOA) level across England. The <a href="https://github.com/traffordDataLab/open_data/tree/master/IndicesOfDeprivation/IoD2019" target="_blank">metadata</a> page contains links to the source data and more information.</p>
                     </div>
-                </div>
 
-                <div>
-                    <a href="https://www.trafforddatalab.io/ward_profiler/" target="_blank"><img src="images/ward_profiler_thumbnail.png" class="thumbnail" alt=""/><strong>Ward Profiler</strong></a><br />
-                    Our Ward Profiler app presents thematic information as interactive maps and charts. The Indices of Deprivation 2019, along with other deprivation datasets, can be found by choosing &quot;Deprivation&quot; from the selection list.
-                </div>
+                    <div class="labBorder">
+                        <a href="https://www.trafforddatalab.io/open_data/IndicesOfDeprivation/IoD2019/local_authority_district/IoD2019.csv" target="_blank"><img src="images/csv_data_thumbnail.png" class="thumbnail" alt=""/><h3 class="cardHead themeLink">Local Authority District data</h3></a>
+                        <p class="smallText">Indices of Deprivation 2019 data at Local Authority District level across England. The <a href="https://github.com/traffordDataLab/open_data/tree/master/IndicesOfDeprivation/IoD2019" target="_blank">metadata</a> page contains links to the source data and more information.</p>
+                    </div>
+                </section>
 
-                <br class="noFloat"/>
-                <br />
+                <section>
+                    <h2>Local Authority District resources for Trafford</h2>
+                    <p>The following Trafford-specific resources are provided at Local Authority District level, including context with Greater Manchester (GM) and Chartered Institute of Public Finance and Accountancy (CIPFA) nearest neighbours.</p>
 
-                <div>
-                    <a href="https://github.com/traffordDataLab/ward_data/tree/master/deprivation" target="_blank"><img src="images/csv_data_thumbnail.png" class="thumbnail" alt=""/><strong>Electoral ward data</strong></a><br />
-                    Indices of Deprivation 2019 data at Electoral Ward level for Trafford. The metadata page contains links to the individual domain dataset files and other information.
-                </div>
+                    <div class="labBorder">
+                        <a href="https://www.trafforddatalab.io/analysis/IoD2019/report/" target="_blank"><img src="images/iod_2019_trafford_report_thumbnail.png" class="thumbnail" alt=""/><h3 class="cardHead themeLink">Trafford compared to other GM authorities</h3></a>
+                        <p class="smallText">Report visualising and analysing the Indices of Deprivation data for 2019 and the changes from 2015 for Trafford in comparison to the other Local Authorities within Greater Manchester.</p>
+                    </div>
 
-                <br class="noFloat"/>
-                <br /><br />
+                    <div class="labBorder">
+                        <a href="https://www.trafforddatalab.io/analysis/IoD2019/nearest_neighbours/" target="_blank"><img src="images/iod_2019_cipfa_app_thumbnail.png" class="thumbnail" alt=""/><h3 class="cardHead themeLink">Trafford compared to CIPFA nearest neighbours</h3></a>
+                        <p class="smallText">Interactive app visualising the Indices of Deprivation 2019 for Trafford and its Chartered Institute of Public Finance and Accountancy (CIPFA) nearest neighbours.</p>
+                    </div>
+
+                    <div class="labBorder">
+                        <a href="https://www.trafforddatalab.io/maps/static/output/trafford_imd19.png" target="_blank"><img src="images/static_trafford_imd_2019_thumbnail.png" class="thumbnail" alt=""/><h3 class="cardHead themeLink">Index of Multiple Deprivation 2019 for Trafford</h3></a>
+                        <p class="smallText">Static graphic visualising the overall Index of Multiple Deprivation (IMD) for Lower-layer Super Output Areas (LSOA) in Trafford. The previous version based on the <a href="https://www.trafforddatalab.io/maps/static/output/trafford_imd15.png" target="_blank">Index of Multiple Deprivation 2015</a> is also available.</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>Electoral Ward resources for Trafford</h2>
+                    <p>Electoral Ward boundaries and LSOA boundaries do not always perfectly align and so it is impossible to aggregate from LSOA to ward exactly. Instead a ‘best-fit’ methodology is used by the <a href="http://geoportal.statistics.gov.uk/datasets/500d4283cbe54e3fa7f358399ba3783e_0" target="_blank">Office for National Statistics (ONS)</a> to assign LSOAs to the most appropriate ward.</p>
+
+                    <div class="labBorder">
+                        <a href="https://www.trafforddatalab.io/ward_profiler/" target="_blank"><img src="images/ward_profiler_thumbnail.png" class="thumbnail" alt=""/><h3 class="cardHead themeLink">Ward Profiler</h3></a>
+                        <p class="smallText">Our Ward Profiler app presents thematic information as interactive maps and charts. The Indices of Deprivation 2019, along with other deprivation datasets, can be found by choosing &quot;Deprivation&quot; from the selection list.</p>
+                    </div>
+
+                    <div class="labBorder">
+                        <a href="https://github.com/traffordDataLab/ward_data/tree/master/deprivation" target="_blank"><img src="images/csv_data_thumbnail.png" class="thumbnail" alt=""/><h3 class="cardHead themeLink">Electoral ward data</h3></a>
+                        <p class="smallText">Indices of Deprivation 2019 data at Electoral Ward level for Trafford. The metadata page contains links to the individual domain dataset files and other information.</p>
+                    </div>
+
+                    <p>The following reports present the Indices of Deprivation 2019 data for each of the 21 wards in Trafford, based on the best-fit LSOAs. The wards have been ranked where 1 is the most deprived and 21 is the least deprived on the IMD 2019.</p>
+
+                    <div class="cardContainer">
+                        <a href="https://www.trafforddatalab.io/analysis/IoD2019/wards/altrincham.html" target="_blank" class="card labBorder">
+                            <h3 class="cardHead themeLink">Altrincham</h3>
+                            <p class="cardBody">
+                                <img src="images/iod_2019_altrincham_report_thumbnail.png" class="thumbnail" alt=""/>
+                                Rank: 16 out of 21.
+                            </p>
+                        </a>
+
+                        <a href="https://www.trafforddatalab.io/analysis/IoD2019/wards/ashton_upon_mersey.html" target="_blank" class="card labBorder">
+                            <h3 class="cardHead themeLink">Ashton upon Mersey</h3>
+                            <p class="cardBody">
+                                <img src="images/iod_2019_ashton_upon_mersey_report_thumbnail.png" class="thumbnail" alt=""/>
+                                Rank: 14 out of 21 (with Broadheath).
+                            </p>
+                        </a>
+
+                        <a href="https://www.trafforddatalab.io/analysis/IoD2019/wards/bowdon.html" target="_blank" class="card labBorder">
+                            <h3 class="cardHead themeLink">Bowdon</h3>
+                            <p class="cardBody">
+                                <img src="images/iod_2019_bowdon_report_thumbnail.png" class="thumbnail" alt=""/>
+                                Rank: 19 out of 21.
+                            </p>
+                        </a>
+
+                        <a href="https://www.trafforddatalab.io/analysis/IoD2019/wards/broadheath.html" target="_blank" class="card labBorder">
+                            <h3 class="cardHead themeLink">Broadheath</h3>
+                            <p class="cardBody">
+                                <img src="images/iod_2019_broadheath_report_thumbnail.png" class="thumbnail" alt=""/>
+                                Rank: 14 out of 21 (with Ashton upon Mersey).
+                            </p>
+                        </a>
+
+                        <a href="https://www.trafforddatalab.io/analysis/IoD2019/wards/brooklands.html" target="_blank" class="card labBorder">
+                            <h3 class="cardHead themeLink">Brooklands</h3>
+                            <p class="cardBody">
+                                <img src="images/iod_2019_brooklands_report_thumbnail.png" class="thumbnail" alt=""/>
+                                Rank: 18 out of 21.
+                            </p>
+                        </a>
+
+                        <a href="https://www.trafforddatalab.io/analysis/IoD2019/wards/bucklow-st_martins.html" target="_blank" class="card labBorder">
+                            <h3 class="cardHead themeLink">Bucklow-St Martins</h3>
+                            <p class="cardBody">
+                                <img src="images/iod_2019_bucklow-st_martins_report_thumbnail.png" class="thumbnail" alt=""/>
+                                Rank: 1 out of 21.
+                            </p>
+                        </a>
+
+                        <a href="https://www.trafforddatalab.io/analysis/IoD2019/wards/clifford.html" target="_blank" class="card labBorder">
+                            <h3 class="cardHead themeLink">Clifford</h3>
+                            <p class="cardBody">
+                                <img src="images/iod_2019_clifford_report_thumbnail.png" class="thumbnail" alt=""/>
+                                Rank: 2 out of 21.
+                            </p>
+                        </a>
+
+                        <a href="https://www.trafforddatalab.io/analysis/IoD2019/wards/davyhulme_east.html" target="_blank" class="card labBorder">
+                            <h3 class="cardHead themeLink">Davyhulme East</h3>
+                            <p class="cardBody">
+                                <img src="images/iod_2019_davyhulme_east_report_thumbnail.png" class="thumbnail" alt=""/>
+                                Rank: 11 out of 21.
+                            </p>
+                        </a>
+
+                        <a href="https://www.trafforddatalab.io/analysis/IoD2019/wards/davyhulme_west.html" target="_blank" class="card labBorder">
+                            <h3 class="cardHead themeLink">Davyhulme West</h3>
+                            <p class="cardBody">
+                                <img src="images/iod_2019_davyhulme_west_report_thumbnail.png" class="thumbnail" alt=""/>
+                                Rank: 10 out of 21.
+                            </p>
+                        </a>
+
+                        <a href="https://www.trafforddatalab.io/analysis/IoD2019/wards/flixton.html" target="_blank" class="card labBorder">
+                            <h3 class="cardHead themeLink">Flixton</h3>
+                            <p class="cardBody">
+                                <img src="images/iod_2019_flixton_report_thumbnail.png" class="thumbnail" alt=""/>
+                                Rank: 13 out of 21.
+                            </p>
+                        </a>
+
+                        <a href="https://www.trafforddatalab.io/analysis/IoD2019/wards/gorse_hill.html" target="_blank" class="card labBorder">
+                            <h3 class="cardHead themeLink">Gorse Hill</h3>
+                            <p class="cardBody">
+                                <img src="images/iod_2019_gorse_hill_report_thumbnail.png" class="thumbnail" alt=""/>
+                                Rank: 4 out of 21.
+                            </p>
+                        </a>
+
+                        <a href="https://www.trafforddatalab.io/analysis/IoD2019/wards/hale_barns.html" target="_blank" class="card labBorder">
+                            <h3 class="cardHead themeLink">Hale Barns</h3>
+                            <p class="cardBody">
+                                <img src="images/iod_2019_hale_barns_report_thumbnail.png" class="thumbnail" alt=""/>
+                                Rank: 20 out of 21.
+                            </p>
+                        </a>
+
+                        <a href="https://www.trafforddatalab.io/analysis/IoD2019/wards/hale_central.html" target="_blank" class="card labBorder">
+                            <h3 class="cardHead themeLink">Hale Central</h3>
+                            <p class="cardBody">
+                                <img src="images/iod_2019_hale_central_report_thumbnail.png" class="thumbnail" alt=""/>
+                                Rank: 17 out of 21.
+                            </p>
+                        </a>
+
+                        <a href="https://www.trafforddatalab.io/analysis/IoD2019/wards/longford.html" target="_blank" class="card labBorder">
+                            <h3 class="cardHead themeLink">Longford</h3>
+                            <p class="cardBody">
+                                <img src="images/iod_2019_longford_report_thumbnail.png" class="thumbnail" alt=""/>
+                                Rank: 5 out of 21.
+                            </p>
+                        </a>
+
+                        <a href="https://www.trafforddatalab.io/analysis/IoD2019/wards/priory.html" target="_blank" class="card labBorder">
+                            <h3 class="cardHead themeLink">Priory</h3>
+                            <p class="cardBody">
+                                <img src="images/iod_2019_priory_report_thumbnail.png" class="thumbnail" alt=""/>
+                                Rank: 12 out of 21.
+                            </p>
+                        </a>
+
+                        <a href="https://www.trafforddatalab.io/analysis/IoD2019/wards/sale_moor.html" target="_blank" class="card labBorder">
+                            <h3 class="cardHead themeLink">Sale Moor</h3>
+                            <p class="cardBody">
+                                <img src="images/iod_2019_sale_moor_report_thumbnail.png" class="thumbnail" alt=""/>
+                                Rank: 8 out of 21.
+                            </p>
+                        </a>
+
+                        <a href="https://www.trafforddatalab.io/analysis/IoD2019/wards/st_mary's.html" target="_blank" class="card labBorder">
+                            <h3 class="cardHead themeLink">St Mary's</h3>
+                            <p class="cardBody">
+                                <img src="images/iod_2019_st_mary's_report_thumbnail.png" class="thumbnail" alt=""/>
+                                Rank: 6 out of 21.
+                            </p>
+                        </a>
+
+                        <a href="https://www.trafforddatalab.io/analysis/IoD2019/wards/stretford.html" target="_blank" class="card labBorder">
+                            <h3 class="cardHead themeLink">Stretford</h3>
+                            <p class="cardBody">
+                                <img src="images/iod_2019_stretford_report_thumbnail.png" class="thumbnail" alt=""/>
+                                Rank: 3 out of 21.
+                            </p>
+                        </a>
+
+                        <a href="https://www.trafforddatalab.io/analysis/IoD2019/wards/timperley.html" target="_blank" class="card labBorder">
+                            <h3 class="cardHead themeLink">Timperley</h3>
+                            <p class="cardBody">
+                                <img src="images/iod_2019_timperley_report_thumbnail.png" class="thumbnail" alt=""/>
+                                Rank: 21 out of 21.
+                            </p>
+                        </a>
+
+                        <a href="https://www.trafforddatalab.io/analysis/IoD2019/wards/urmston.html" target="_blank" class="card labBorder">
+                            <h3 class="cardHead themeLink">Urmston</h3>
+                            <p class="cardBody">
+                                <img src="images/iod_2019_urmston_report_thumbnail.png" class="thumbnail" alt=""/>
+                                Rank: 7 out of 21.
+                            </p>
+                        </a>
+
+                        <a href="https://www.trafforddatalab.io/analysis/IoD2019/wards/village.html" target="_blank" class="card labBorder">
+                            <h3 class="cardHead themeLink">Village</h3>
+                            <p class="cardBody">
+                                <img src="images/iod_2019_village_report_thumbnail.png" class="thumbnail" alt=""/>
+                                Rank: 9 out of 21.
+                            </p>
+                        </a>
+                    </div>
+                </section>
             </main>
 
             <footer>
