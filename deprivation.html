@@ -13,28 +13,10 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
 
         <style>
-            section div
-            {
-                padding: 0.3em 0.5em 0.5em 0.5em;
-                margin-bottom: 2em;
-                overflow: auto;
-            }
-
-            section div:last-of-type
-            {
-                margin-bottom: 0;   /* remove the margin applied above from the last item on the page */
-            }
-
-            p.smallText, .cardBody
-            {
-                margin: 0.1em 0 0 0;  /* the purpose of the paragraph tags within each item is for semantic meaning and improved layout if the CSS isn't loaded - we don't want the default padding for styling */
-            }
-
             /* Specific customisation of the card for this page */
             .cardContainer
             {
                 grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));   /* only want a max of 3 columns and want to break into 2 columns sooner than the data or charticles pages - so I've overridden the minmax card width from the default */
-                xpadding: 0;         /* override the styles set above in section div */
             }
 
             .card
@@ -54,11 +36,6 @@
             .card:hover .cardHead
             {
                 text-decoration: underline; /* Ensures the text in the card header is underlined on-hover */
-            }
-
-            .cardBody
-            {
-                overflow: visible;
             }
 
             /* For browsers which don't support grid layouts */
@@ -112,41 +89,41 @@
                 <p>Relative deprivation is measured using 39 indicators which are grouped across seven different domains: <span style="font-style: italic;">Income; Employment; Education, skills &amp; training; Health & disability; Crime; Barriers to housing &amp; services; Living environment</span>. Each domain is combined and weighted to create the <span style="font-weight: bold;">Index of Multiple Deprivation (IMD)</span>, an overall measure of relative deprivation.</p>
                 <p>We have created interactive apps and reports to provide visualisation and analysis of the Indices of Deprivation 2019 data.</p>
 
-                <section>
+                <section class="itemContainer">
                     <h2>LSOA and Local Authority District resources across England</h2>
                     <div class="labBorder">
                         <a href="https://trafforddatalab.shinyapps.io/imd19" target="_blank"><img src="images/imd_2019_app_thumbnail.png" class="thumbnail" alt=""/><h3 class="cardHead themeLink">Interactive IoD 2019 app</h3></a>
-                        <p class="smallText">Interactive visualisations of the Indices of Deprivation 2019 and 2015 data releases for Lower-layer Super Output Areas (LSOA) across England. The LSOAs are visualised geographically and within a chart via the Local Authority Districts they belong to.</p>
+                        <p class="cardBody">Interactive visualisations of the Indices of Deprivation 2019 and 2015 data releases for Lower-layer Super Output Areas (LSOA) across England. The LSOAs are visualised geographically and within a chart via the Local Authority Districts they belong to.</p>
                     </div>
 
                     <div class="labBorder">
                         <a href="https://www.trafforddatalab.io/open_data/IndicesOfDeprivation/IoD2019/lsoa/IoD2019.csv" target="_blank"><img src="images/csv_data_thumbnail.png" class="thumbnail" alt=""/><h3 class="cardHead themeLink">LSOA data</h3></a>
-                        <p class="smallText">Indices of Deprivation 2019 data at Lower-layer Super Output Area (LSOA) level across England. The <a href="https://github.com/traffordDataLab/open_data/tree/master/IndicesOfDeprivation/IoD2019" target="_blank">metadata</a> page contains links to the source data and more information.</p>
+                        <p class="cardBody">Indices of Deprivation 2019 data at Lower-layer Super Output Area (LSOA) level across England. The <a href="https://github.com/traffordDataLab/open_data/tree/master/IndicesOfDeprivation/IoD2019" target="_blank">metadata</a> page contains links to the source data and more information.</p>
                     </div>
 
                     <div class="labBorder">
                         <a href="https://www.trafforddatalab.io/open_data/IndicesOfDeprivation/IoD2019/local_authority_district/IoD2019.csv" target="_blank"><img src="images/csv_data_thumbnail.png" class="thumbnail" alt=""/><h3 class="cardHead themeLink">Local Authority District data</h3></a>
-                        <p class="smallText">Indices of Deprivation 2019 data at Local Authority District level across England. The <a href="https://github.com/traffordDataLab/open_data/tree/master/IndicesOfDeprivation/IoD2019" target="_blank">metadata</a> page contains links to the source data and more information.</p>
+                        <p class="cardBody">Indices of Deprivation 2019 data at Local Authority District level across England. The <a href="https://github.com/traffordDataLab/open_data/tree/master/IndicesOfDeprivation/IoD2019" target="_blank">metadata</a> page contains links to the source data and more information.</p>
                     </div>
                 </section>
 
-                <section>
+                <section class="itemContainer">
                     <h2>Local Authority District resources for Trafford</h2>
                     <p>The following Trafford-specific resources are provided at Local Authority District level, including context with Greater Manchester (GM) and Chartered Institute of Public Finance and Accountancy (CIPFA) nearest neighbours.</p>
 
                     <div class="labBorder">
                         <a href="https://www.trafforddatalab.io/analysis/IoD2019/report/" target="_blank"><img src="images/iod_2019_trafford_report_thumbnail.png" class="thumbnail" alt=""/><h3 class="cardHead themeLink">Trafford compared to other GM authorities</h3></a>
-                        <p class="smallText">Report visualising and analysing the Indices of Deprivation data for 2019 and the changes from 2015 for Trafford in comparison to the other Local Authorities within Greater Manchester.</p>
+                        <p class="cardBody">Report visualising and analysing the Indices of Deprivation data for 2019 and the changes from 2015 for Trafford in comparison to the other Local Authorities within Greater Manchester.</p>
                     </div>
 
                     <div class="labBorder">
                         <a href="https://www.trafforddatalab.io/analysis/IoD2019/nearest_neighbours/" target="_blank"><img src="images/iod_2019_cipfa_app_thumbnail.png" class="thumbnail" alt=""/><h3 class="cardHead themeLink">Trafford compared to CIPFA nearest neighbours</h3></a>
-                        <p class="smallText">Interactive app visualising the Indices of Deprivation 2019 for Trafford and its Chartered Institute of Public Finance and Accountancy (CIPFA) nearest neighbours.</p>
+                        <p class="cardBody">Interactive app visualising the Indices of Deprivation 2019 for Trafford and its Chartered Institute of Public Finance and Accountancy (CIPFA) nearest neighbours.</p>
                     </div>
 
                     <div class="labBorder">
                         <a href="https://www.trafforddatalab.io/maps/static/output/trafford_imd19.png" target="_blank"><img src="images/static_trafford_imd_2019_thumbnail.png" class="thumbnail" alt=""/><h3 class="cardHead themeLink">Index of Multiple Deprivation 2019 for Trafford</h3></a>
-                        <p class="smallText">Static graphic visualising the overall Index of Multiple Deprivation (IMD) for Lower-layer Super Output Areas (LSOA) in Trafford. The previous version based on the <a href="https://www.trafforddatalab.io/maps/static/output/trafford_imd15.png" target="_blank">Index of Multiple Deprivation 2015</a> is also available.</p>
+                        <p class="cardBody">Static graphic visualising the overall Index of Multiple Deprivation (IMD) for Lower-layer Super Output Areas (LSOA) in Trafford. The previous version based on the <a href="https://www.trafforddatalab.io/maps/static/output/trafford_imd15.png" target="_blank">Index of Multiple Deprivation 2015</a> is also available.</p>
                     </div>
                 </section>
 
@@ -154,14 +131,16 @@
                     <h2>Electoral Ward resources for Trafford</h2>
                     <p>Electoral Ward boundaries and LSOA boundaries do not always perfectly align and so it is impossible to aggregate from LSOA to ward exactly. Instead a ‘best-fit’ methodology is used by the <a href="http://geoportal.statistics.gov.uk/datasets/500d4283cbe54e3fa7f358399ba3783e_0" target="_blank">Office for National Statistics (ONS)</a> to assign LSOAs to the most appropriate ward.</p>
 
-                    <div class="labBorder">
-                        <a href="https://www.trafforddatalab.io/ward_profiler/" target="_blank"><img src="images/ward_profiler_thumbnail.png" class="thumbnail" alt=""/><h3 class="cardHead themeLink">Ward Profiler</h3></a>
-                        <p class="smallText">Our Ward Profiler app presents thematic information as interactive maps and charts. The Indices of Deprivation 2019, along with other deprivation datasets, can be found by choosing &quot;Deprivation&quot; from the selection list.</p>
-                    </div>
+                    <div class="itemContainer">
+                        <div class="labBorder">
+                            <a href="https://www.trafforddatalab.io/ward_profiler/" target="_blank"><img src="images/ward_profiler_thumbnail.png" class="thumbnail" alt=""/><h3 class="cardHead themeLink">Ward Profiler</h3></a>
+                            <p class="cardBody">Our Ward Profiler app presents thematic information as interactive maps and charts. The Indices of Deprivation 2019, along with other deprivation datasets, can be found by choosing &quot;Deprivation&quot; from the selection list.</p>
+                        </div>
 
-                    <div class="labBorder">
-                        <a href="https://github.com/traffordDataLab/ward_data/tree/master/deprivation" target="_blank"><img src="images/csv_data_thumbnail.png" class="thumbnail" alt=""/><h3 class="cardHead themeLink">Electoral ward data</h3></a>
-                        <p class="smallText">Indices of Deprivation 2019 data at Electoral Ward level for Trafford. The metadata page contains links to the individual domain dataset files and other information.</p>
+                        <div class="labBorder">
+                            <a href="https://github.com/traffordDataLab/ward_data/tree/master/deprivation" target="_blank"><img src="images/csv_data_thumbnail.png" class="thumbnail" alt=""/><h3 class="cardHead themeLink">Electoral ward data</h3></a>
+                            <p class="cardBody">Indices of Deprivation 2019 data at Electoral Ward level for Trafford. The metadata page contains links to the individual domain dataset files and other information.</p>
+                        </div>
                     </div>
 
                     <p>The following reports present the Indices of Deprivation 2019 data for each of the 21 wards in Trafford, based on the best-fit LSOAs. The wards have been ranked where 1 is the most deprived and 21 is the least deprived on the IMD 2019.</p>

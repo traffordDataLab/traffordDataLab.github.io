@@ -116,28 +116,19 @@ footer
     float: right;
 }
 
-/*
-    Areas of content presented in a box/block-type format to stand out.
-    Cards are for mutiple items arranged in groups of columns and rows such as items on the home, data and charticles pages etc.
-    .blockCard type cards are ones which use the block layout style, the standard .card is clear
-    The individual pages can specialise these styles accordingly, e.g. for the size of the cards.
-*/
-.cardContainer
+/* thumbnail images */
+.thumbnail
 {
-    /*
-        Container to display the cards as a grid - see https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids
-        In IE and browsers that don't support 'display: grid' these have no effect.
-    */
-
-    /* latest spec definitions */
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(239px, 1fr));
-    gap: 2em;
-
-    /* legacy spec definitions for extra safety */
-    grid-gap: 2em;
+    float: left;
+    margin-right: 1em;
+    box-shadow: 3px 3px 5px #f0f0f0;
 }
 
+/*
+    Areas of content presented in a box/card-type format to stand out.
+    Cards are for mutiple items arranged in groups of columns and rows such as items on the home, data and charticles pages etc.
+    The individual pages can specialise these styles accordingly, e.g. for the size of the cards.
+*/
 .card
 {
     box-sizing: border-box;
@@ -160,14 +151,36 @@ footer
     font-size: 0.8em;
     overflow-y: auto;
     color: #212121;     /* Required in case the card is surrounded by a link - otherwise the text is the link colour */
+    margin: 0.1em 0 0 0;
 }
 
-/* thumbnail images */
-.thumbnail
+.cardContainer
 {
-    float: left;
-    margin-right: 1em;
-    box-shadow: 3px 3px 5px #f0f0f0;
+    /*
+        Container to display the cards as a grid - see https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids
+        In IE and browsers that don't support 'display: grid' these have no effect.
+    */
+
+    /* latest spec definitions */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(239px, 1fr));   /* Override this if necessary in page for the type of layout required */
+    gap: 2em;
+
+    /* legacy spec definitions for extra safety */
+    grid-gap: 2em;
+}
+
+.itemContainer div
+{
+    /* These appear similar to cards but are 100% wide and remain in a single column. They don't use the grid system */
+    padding: 0.3em 0.5em 0.5em 0.5em;
+    margin-bottom: 2em;
+    overflow: auto;
+}
+
+.itemContainer div:last-of-type
+{
+    margin-bottom: 0;   /* remove the margin applied above from the last item on the page */
 }
 
 /* changes due to screen width */
