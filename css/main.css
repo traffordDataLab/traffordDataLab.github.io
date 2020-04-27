@@ -7,31 +7,6 @@
     min-height: 100%;       /* Required for footer to be positioned always at the bottom of the page */
 }
 
-/* Contains the accessibility skip links */
-#allyNav
-{
-    position: absolute;
-	top: -30em;
-	z-index: 333;
-}
-
-#allyNav a
-{
-    position: absolute;
-    left: 0;
-    width: 20em;
-    text-align: center;
-    font-weight: bold;
-    color: #fff;
-    padding: 0.75em 0;
-    border-bottom-right-radius: 2.25em;
-}
-
-#allyNav a:focus, #allyNav a:hover
-{
-    top: 29em;
-}
-
 /* NOTE: all property sizes for elements within the header are expressed in px not em as we don't want the header to increase in size. This is because it might become too big on a small phone screen and prevent the user seeing the page content. */
 header
 {
@@ -50,8 +25,33 @@ header
     padding: 0;
 }
 
+/* Contains the accessibility skip links - these are positioned off screen not hidden, so that they can be read out as well as focussed using keyboard */
+#a11yNav
+{
+    position: absolute;
+	top: -30em;
+	z-index: 333;
+}
+
+#a11yNav a
+{
+    position: absolute;
+    left: 0;
+    width: 20em;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    padding: 0.75em 0;
+    border-bottom-right-radius: 2.25em;
+}
+
+#a11yNav a:focus, #a11yNav a:hover
+{
+    top: 29em;
+}
+
 /* Contains the menu items within the <nav>igation section */
-.navbar
+.navbar, #a11yNav
 {
     list-style-type: none;  /* remove the list-item bullets */
 }

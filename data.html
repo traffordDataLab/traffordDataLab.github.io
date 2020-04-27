@@ -88,6 +88,11 @@
         <div class="container">
             <header>
                 <nav>
+                    <ul id="a11yNav">
+                        <li><a href="#main" class="themeBlockDark">Skip to main content</a></li>
+                        <li><a href="#footer" class="themeBlockDark">Skip to footer</a></li>
+                    </ul>
+                    <p class="hideContent">Main Menu</p>
                     <a href="index.html" aria-label="Return to Trafford Data Lab home page"><img src="https://www.trafforddatalab.io/assets/logo/trafforddatalab_logo.svg" alt="Trafford Data Lab" width="93" class="traffordDataLabLogo"/></a>
                     <ul class="navbar">
                         <li><a href="charticles.html">Charticles</a></li>
@@ -98,7 +103,7 @@
                 </nav>
             </header>
 
-            <main>
+            <main id="main">
                 <h1>Data</h1>
                 <p>We are committed to the sourcing, preparation and publication of open data. We aim to ensure that all the open data we publish has a minimum <a href="http://5stardata.info/en/#by-example">3-star openness rating</a>, is accessible on the Web in a machine readable non-proprietary format and with a licence that permits anyone to reuse it. We store our datasets in our dedicated <a href="https://github.com/traffordDataLab/open_data" target="_blank">open_data repository</a> on GitHub.</p>
                 <p>Select the following datasets to open a dedicated page in a new window containing the metadata (date of publication, source etc.), a preview and links to download the chosen dataset. <span id="filterContainer" style="display: inline-block;"></span></p>
@@ -166,7 +171,7 @@
                 </div>
             </main>
 
-            <footer>
+            <footer id="footer">
                 <div class="leftFooter">
                     <p class="hideContent">Trafford Data Lab are on the following platforms: </p>
                     <a class="linkMedia" href="https://twitter.com/traffordDataLab" aria-label="Trafford Data Lab on Twitter" target="_blank"><span class="fab fa-twitter-square" title="Trafford Data Lab on Twitter"></span><span class="hideContent">Twitter, </span></a>
