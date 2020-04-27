@@ -31,7 +31,7 @@
             /* Specific customisation of the card for this page */
             .cardContainer
             {
-                grid-template-columns: repeat(auto-fill, minmax(317px, 1fr));   /* only want a max of 3 columns on the largest width displays due to the contents of each being large - so I've overridden the minmax card width from the default */
+                grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));   /* only want a max of 2 columns on normal displays due to the contents of each being large - so I've overridden the minmax card width from the default */
             }
 
             .card
@@ -51,8 +51,13 @@
 
 
             /* For browsers which don't support grid layouts */
-            @media (max-width:850px)
+            @media (max-width:750px)
             {
+                .cardContainer
+                {
+                    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));   /* to fix issue on small displays where the minimum width is still to large and so causes horizontal scrolling */
+                }
+
                 .card
                 {
                     width: 100%;
