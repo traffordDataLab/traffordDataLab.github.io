@@ -31,7 +31,7 @@
             /* Specific customisation of the card for this page */
             .cardContainer
             {
-                grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));   /* only want a max of 2 columns due to the contents of each being large - so I've overridden the minmax card width from the default */
+                grid-template-columns: repeat(auto-fill, minmax(317px, 1fr));   /* only want a max of 3 columns on the largest width displays due to the contents of each being large - so I've overridden the minmax card width from the default */
             }
 
             .card
@@ -39,7 +39,7 @@
                 padding: 0.2em 0.5em 0.5em 0.5em;   /* the top padding is different to make the gap look balanced all around as the .cardHead content has padding of its own. */
 
                 /* For browsers which don't support grid layouts */
-                width: 45%; /* only want a max of 2 columns due to the contents of each being so large */
+                width: 45%; /* these cards are larger than the default due to the contents of each being so large */
                 margin: 1em 2%;
             }
 
