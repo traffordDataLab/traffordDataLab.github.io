@@ -105,10 +105,10 @@
 
             <main id="main">
                 <h1>Data</h1>
-                <p>We are committed to the sourcing, preparation and publication of open data. We aim to ensure that all the open data we publish has a minimum <a href="http://5stardata.info/en/#by-example">3-star openness rating</a>, is accessible on the Web in a machine readable non-proprietary format and with a licence that permits anyone to reuse it. We store our datasets in our dedicated <a href="https://github.com/traffordDataLab/open_data" target="_blank">open_data repository</a> on GitHub.</p>
-                <p>Select the following datasets to open a dedicated page in a new window containing the metadata (date of publication, source etc.), a preview and links to download the chosen dataset. <span id="filterContainer" style="display: inline-block;"></span></p>
+                <p>We are committed to the sourcing, preparation and publication of open data. We aim to ensure that all the open data we publish has a minimum <a href="http://5stardata.info/en/#by-example">3-star openness rating</a>, is accessible on the Web in a machine readable non-proprietary format and with a licence that permits anyone to reuse it. We store our datasets in our dedicated <a href="https://github.com/traffordDataLab/open_data" target="_blank">open data repository</a> on GitHub.</p>
+                <p>Choose from the following datasets to open a page in a new window containing a preview, download links and further information, e.g. date of publication, source etc. (metadata). <span id="filterContainer" style="display: inline-block;"></span></p>
 
-                <div class="cardContainer">
+                <section class="cardContainer">
                     <a href="https://www.trafforddatalab.io/open_data/allotments/" target="_blank" class="card themeBlockLight labBorder">
                         <span class="filterTags"><!-- allotments gardening gardens growing food vegetables fruit greenspaces green spaces --></span>
                         <h2 class="cardHead themeBlockDark">Allotments</h2>
@@ -168,7 +168,7 @@
                         <h2 class="cardHead themeBlockDark">Postcodes</h2>
                         <p class="cardBody">Postcode list for Trafford by ward and locality with centroids.</p>
                     </a>
-                </div>
+                </section>
             </main>
 
             <footer id="footer">
@@ -184,16 +184,15 @@
             </footer>
         </div>
 
-        <script src="https://www.trafforddatalab.io/assets/javascript/labFilter.js"></script>
+        <!--script src="https://www.trafforddatalab.io/assets/javascript/labFilter.js"></script-->
+        <script src="javascript/labFilter.js"></script>
         <script>
             // Set up the filter
             var dataFilter = new LabFilter({
                 filterContainer: document.getElementById('filterContainer'),    // where we want the filter input box creating
-                matchedClass: 'card',   // the data boxes need the CSS class .card' adding when they are a match and removing when they aren't
                 filterClass: 'labBorder',  // creates the focus outline on-hover
-                filterPlaceholder: 'enter keywords...',
-                filterTitle: '',
-                filterLabel: 'If you are looking for particular datasets you can search: '
+                filterLabel: 'You can filter the list for datasets of interest: ',
+                noMatchesClass: 'contentBlock themeBlockLight'
             })
         </script>
     </body>

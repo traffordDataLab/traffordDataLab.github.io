@@ -86,8 +86,8 @@
 
             <main id="main">
                 <h1>Charticles</h1>
-                <p>Bite-size articles with a chart or a map. Choose a charticle to read from the list below, the latest ones are presented first. <span id="filterContainer" style="display: block;"></span></p>
-                <div class="cardContainer">
+                <p>Bite-size articles with a chart or a map. Choose a charticle from the following list to read in a new window, the latest ones are presented first. <span id="filterContainer" style="display: inline-block;"></span></p>
+                <section class="cardContainer">
                     <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2019-11-13-green-flags/" target="_blank"><span class="filterTags"><!-- green flags parks awards --></span><h2 class="cardHead themeLink">Green Flag Awards</h2><img src="https://www.trafforddatalab.io/charticles/2019-11-13-green-flags/plot.svg" alt=". Parks across Greater Manchester awarded a Green Flag, 2019."/></a>
                     <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2019-11-12-living-wage/" target="_blank"><span class="filterTags"><!-- living wages employment jobs deprivation poverty working --></span><h2 class="cardHead themeLink">Living wage</h2><img src="https://www.trafforddatalab.io/charticles/2019-11-12-living-wage/plot.svg" alt=". Jobs below the living wage in each Local Authority within Greater Manchester, 2017 - 2018."/></a>
                     <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2019-11-11-alcohol-related-deaths/" target="_blank"><span class="filterTags"><!-- alcohol related deaths drinking unhealthy --></span><h2 class="cardHead themeLink">Alcohol-related deaths</h2><img src="https://www.trafforddatalab.io/charticles/2019-11-11-alcohol-related-deaths/plot.svg" alt=". Deaths from alcohol related conditions in each Local Authority within Greater Manchester, 2017."/></a>
@@ -113,7 +113,7 @@
                     <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2019-10-14-employment-rate/" target="_blank"><span class="filterTags"><!-- employment rates jobs working --></span><h2 class="cardHead themeLink">Employment rate</h2><img src="https://www.trafforddatalab.io/charticles/2019-10-14-employment-rate/plot.svg" alt=". Rates of employment in Trafford, Greater Manchester and England, June 2010 - June 2019."/></a>
                     <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2019-04-12-gaps-in-life-expectancy/" target="_blank"><span class="filterTags"><!-- gaps in life expectancy living unhealthy poverty --></span><h2 class="cardHead themeLink">Gaps in life expectancy</h2><img src="https://www.trafforddatalab.io/charticles/2019-04-12-gaps-in-life-expectancy/plot.svg" alt=". Life expectancy at birth vs deprivation in Trafford's wards, 2011-2015."/></a>
                     <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2019-04-04-old-age-dependency-ratio/" target="_blank"><span class="filterTags"><!-- old age dependency ratio jobs working --></span><h2 class="cardHead themeLink">Old age dependency ratio</h2><img src="https://www.trafforddatalab.io/charticles/2019-04-04-old-age-dependency-ratio/plot.svg" alt=". Old-age dependency ratios in Trafford's wards, 2017."/></a>
-                </div>
+                </section>
             </main>
 
             <footer id="footer">
@@ -129,16 +129,15 @@
             </footer>
         </div>
 
-        <script src="https://www.trafforddatalab.io/assets/javascript/labFilter.js"></script>
+        <!--script src="https://www.trafforddatalab.io/assets/javascript/labFilter.js"></script-->
+        <script src="javascript/labFilter.js"></script>
         <script>
             // Set up the filter
             var charticleFilter = new LabFilter({
                 filterContainer: document.getElementById('filterContainer'),    // where we want the filter input box creating
-                matchedClass: 'card',   // the charticle boxes need the CSS class 'card' adding when they are a match and removing when they aren't
                 filterClass: 'labBorder',  // creates the focus outline on-hover
-                filterPlaceholder: 'enter keywords...',
-                filterTitle: '',
-                filterLabel: 'Search charticles: '
+                filterLabel: 'You can filter the charticles for topics of interest: ',
+                noMatchesClass: 'contentBlock themeBlockLight'
             })
         </script>
     </body>

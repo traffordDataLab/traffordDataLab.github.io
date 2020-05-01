@@ -221,6 +221,13 @@ a.card:hover .cardHead
     margin-bottom: 0;   /* remove the margin applied above from the last item on the page */
 }
 
+/* content block usually paired with themeBlockLight */
+.contentBlock
+{
+    padding: 1em;
+    border-left: 4px solid #757575;
+}
+
 /* changes due to screen width */
 @media (min-width:1300px)
 {
