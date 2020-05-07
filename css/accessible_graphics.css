@@ -1,0 +1,44 @@
+body
+{
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    color: #212121;
+}
+
+h1
+{
+    font-family: 'Roboto', sans-serif;
+    color: #707070;
+    margin-bottom: 0.1em;   /* to make the heading closer to the citation text */
+}
+
+h1, cite
+{
+    margin-left: 2rem;
+}
+
+cite
+{
+    font-size: 0.75em;
+}
+
+img
+{
+    border: 0;
+    max-height: 100vh;  /* we want the graphic to be completely visible in the full height of the display */
+    max-width: 90vw;    /* we also want the graphic to be completely visible in the width of the display with out scrolling - NOTE: the img has a width attribute set to 100% to prevent it appearing full size if the page is rendered without CSS */
+    width: auto;
+    display: block;
+    margin: auto;
+}
+
+figcaption
+{
+    display: block;
+    margin-top: 1em;
+    padding: 0.5em;
+    line-height: 1.75em;
+    background-color: #ddd;
+    box-shadow: 0 0 9px #ccc;
+}
