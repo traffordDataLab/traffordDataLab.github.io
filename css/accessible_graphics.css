@@ -1,16 +1,8 @@
-h1
-{
-    margin-bottom: 0.1em;   /* to make the heading closer to the citation text */
-}
-
+/* The header and source of data are removed from the visible display as they are duplicated within the image, but are able to be read by screen readers. If CSS is turned off they appear in the correct location within the document to make sense of the content. */
 h1, cite
 {
-    margin-left: 2rem;
-}
-
-cite
-{
-    font-size: 0.75em;
+    position: absolute;
+	top: -30em;
 }
 
 img
