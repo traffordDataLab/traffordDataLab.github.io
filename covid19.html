@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+    <head>
+        <title>Trafford Data Lab: COVID-19</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+        <meta charset="UTF-8"/>
+
+        <link rel="stylesheet" href="css/base.css"/>
+        <link rel="stylesheet" href="css/main.css"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans%7CRoboto"/>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+
+        <style>
+        /* Specific customisation of the card for this page */
+        .card
+        {
+            height: 230px;
+            overflow: hidden;
+            text-indent: 0.25em;
+            padding-top: 0.1em;
+
+            /* For browsers which don't support grid layouts */
+            width: 20%;
+            margin: 2.2% 2.2%;
+        }
+
+        /* For browsers which don't support grid layouts */
+        @media (max-width:1300px)
+        {
+            .card
+            {
+                width: 28%;
+                margin: 1em 2.2%;
+            }
+        }
+
+        @media (max-width:850px)
+        {
+            .card
+            {
+                width: 40%;
+                margin: 1em 4.5%;
+            }
+        }
+
+        @media (max-width:620px)
+        {
+            .card
+            {
+                width: 100%;
+                height: 300px;
+                margin: 1em 0;
+            }
+        }
+
+        /* For browsers which support grid layouts - Reset the widths and margins applied above as they aren't required when using grid layout */
+        @supports (display: grid)
+        {
+            .card
+            {
+                width: auto;
+                margin: 0;
+            }
+        }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <header>
+                <nav>
+                    <ul id="a11yNav">
+                        <li><a href="#main" class="themeBlockDark">Skip to main content</a></li>
+                        <li><a href="#footer" class="themeBlockDark">Skip to footer</a></li>
+                    </ul>
+                    <p class="hideContent">Main Menu</p>
+                    <a href="index.html" aria-label="Return to Trafford Data Lab home page"><img src="https://www.trafforddatalab.io/assets/logo/trafforddatalab_logo.svg" alt="Trafford Data Lab" width="93" class="traffordDataLabLogo"/></a>
+                    <ul class="navbar">
+                        <li><a href="charticles.html">Charticles</a></li>
+                        <li><a href="data.html">Data</a></li>
+                        <li><a href="learning.html">Learning</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <main id="main">
+                <h1>COVID-19 Resources</h1>
+                <p>This page collates all the outputs we have produced relating to the coronavirus pandemic.</p>
+
+                <section id="apps" class="itemContainer" aria-label="items will open in a new window">
+                    <h2>Apps</h2>
+
+                    <div class="labBorder">
+                        <a href="https://trafforddatalab.shinyapps.io/covid-19/" target="_blank"><img src="images/c19_dashboard_thumbnail.png" class="thumbnail" alt=""/><h3 class="cardHead themeLink">COVID-19 monitor</h3></a>
+                        <p class="cardBody">Dashboard visualising the week-on-week change in coronavirus cases in English local authorities using <a href="https://www.gov.uk/government/publications/covid-19-track-coronavirus-cases" target="_blank">Public Health England</a> data. Further information about Coronavirus (COVID-19) can be found at: <a href="https://www.gov.uk/coronavirus" target="_blank">gov.uk/coronavirus</a>.</p>
+                    </div>
+
+                    <div class="labBorder">
+                        <a href="https://trafforddatalab.shinyapps.io/local_covid-19/" target="_blank"><img src="images/local_covid-19_thumbnail.png" class="thumbnail" alt=""/><h3 class="cardHead themeLink">Local COVID-19</h3></a>
+                        <p class="cardBody">Explore confirmed cases of coronavirus, registered deaths and clinical vulnerabilities at local authority level.</p>
+                    </div>
+                </section>
+
+                <section id="charticles">
+                    <h2>Charticles</h2>
+
+                    <div class="cardContainer">
+                        <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2020-07-13-claimant-rate/"><span class="filterTags"><!-- claimants universal credit benefits covid-19 coronavirus unemployment jobs working --></span><h3 class="cardHead themeLink">Claimant Rate</h3><img src="https://www.trafforddatalab.io/charticles/2020-07-13-claimant-rate/plot.svg" alt=". Claimant rate in Trafford's wards during the COVID-19 outbreak."/></a>
+                        <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2020-04-30-no2-covid-19/"><span class="filterTags"><!-- air pollution nitrogen dioxide coronavirus covid-19 lockdown --></span><h3 class="cardHead themeLink">Air pollution levels during COVID-19</h3><img src="https://www.trafforddatalab.io/charticles/2020-04-30-no2-covid-19/plot.svg" alt=". Air pollution levels in Trafford during the COVID-19 lockdown compared to 2018 and 2019 levels."/></a>
+                    </div>
+                </section>
+
+                <section id="data" class="itemContainer" aria-label="items will open in a new window">
+                    <h2>Data</h2>
+
+                    <div class="labBorder">
+                        <a href="https://github.com/traffordDataLab/covid-19_data" target="_blank"><img src="images/csv_data_thumbnail.png" class="thumbnail" alt=""/><h3 class="cardHead themeLink">Open Datasets</h3></a>
+                        <p class="cardBody">Trafford specific open datasets in CSV format that help to identify residents most vulnerable to the health, economic and social effects of COVID-19. Other Local Authorities in England can use the scripts provided and links to the data sources to create the same datasets for their area.</p>
+                    </div>
+                </section>
+            </main>
+
+            <footer id="footer">
+                <div class="leftFooter">
+                    <p class="hideContent">Trafford Data Lab are on the following platforms: </p>
+                    <a class="linkMedia" href="https://twitter.com/traffordDataLab" aria-label="Trafford Data Lab on Twitter" target="_blank"><span class="fab fa-twitter-square" title="Trafford Data Lab on Twitter"></span><span class="hideContent">Twitter, </span></a>
+                    <a class="linkMedia" href="https://github.com/traffordDataLab" aria-label="Trafford Data Lab on GitHub" target="_blank"><span class="fab fa-github" title="Trafford Data Lab on GitHub"></span><span class="hideContent">GitHub, </span></a>
+                    <a class="linkMedia" href="https://medium.com/@traffordDataLab" aria-label="Trafford Data Lab on Medium" target="_blank"><span class="fab fa-medium" title="Trafford Data Lab on Medium"></span><span class="hideContent">Medium</span></a>
+                    <br />
+                    <a href="accessibility.html" class="smallText" aria-label="Accessibility statement for the Trafford Data Lab website">Accessibility statement</a>
+                </div>
+                <a href="https://www.trafford.gov.uk" target="_blank" aria-label="Visit the Trafford Council website"><img class="logoTrafford" src="images/trafford_council_logo_black_on_white_100px.png" alt="Trafford Council"/></a>
+            </footer>
+        </div>
+    </body>
+</html>

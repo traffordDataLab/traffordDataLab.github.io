@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="css/base.css"/>
         <link rel="stylesheet" href="css/main.css"/>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans%7CRoboto"/>
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"/>
 
         <style>
             h1
@@ -47,6 +47,47 @@
             {
                 font-size: 1.15em;
                 padding: 0 0 0.25em 0;
+            }
+
+            .fa-head-side-mask
+            {
+                display: inline-block;
+                float: left;
+                margin-right: 0.1em;
+                font-size: 7em;
+                color: #fff;
+            }
+
+            #covid19
+            {
+                display: block;
+                border-radius: 3.5em;
+                min-height: 7em;
+                margin: 2em 0 2em 0;
+                padding-right: 2em;
+            }
+
+            #covid19:hover, #covid19:hover h2
+            {
+                color: #fff;
+                background-color: #5d77a3;
+            }
+
+            #covid19Content
+            {
+                display: inline-block;
+                margin-left: 0.5em;
+            }
+
+            #covid19Content h2
+            {
+                margin-bottom: 0;
+            }
+
+            #covid19Content p
+            {
+                margin-top: 0.25em;
+                margin-left: 2px;
             }
 
 
@@ -100,6 +141,14 @@
                 <h1>Trafford Data Lab</h1>
 
                 <p class="intro">Supporting decision-making in Trafford by revealing patterns in data through visualisation.</p>
+
+                <a href="covid19.html" id="covid19" class="themeBlockLight smallText">
+                    <span class="fas fa-head-side-mask"></span>
+                    <span id="covid19Content">
+                        <h2>COVID-19 Resources</h2>
+                        <p>Visit the COVID-19 page for all our outputs relating to the coronavirus pandemic.</p>
+                    </span>
+                </a>
 
                 <section id="apps" aria-label="items will open in a new window">
                     <h2>Apps</h2>
