@@ -1,5 +1,10 @@
-Code within this repository is released under the MIT Licence.
-All other resources are released under the Open Government Licence 3.0 (OGL).
+Licensing for outputs created by the Trafford Data Lab (https://www.trafforddatalab.io).
+----------------------------------------------------------------------------------------
+
+* Code/script outputs are published under the MIT Licence (https://opensource.org/licenses/MIT).
+* All other outputs such as data, visualisations etc. are published under the Open Government Licence v3.0 (http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/).
+
+Please see the sections below for the relevant licence text.
 
 ---
 
@@ -27,7 +32,7 @@ SOFTWARE.
 
 ---
 
-Open Government Licence 3.0
+Open Government Licence v3.0
 
 You are encouraged to use and re-use the Information that is available under this licence freely and flexibly, with only a few conditions.
 
