@@ -9,6 +9,7 @@ html, body
     height: 100%;
     font-family: 'Open Sans', sans-serif;
     color: #212121;
+    background-color: #fff;
 }
 
 /* HTML5 fallback styles for older browsers */
