@@ -202,8 +202,8 @@
             </footer>
         </div>
 
-        <!--script src="https://www.trafforddatalab.io/assets/javascript/labFilter.js"></script-->
-        <script src="javascript/labFilter.js"></script>
+        <script src="https://www.trafforddatalab.io/assets/javascript/labFilter.js"></script>
+        <script src="https://www.trafforddatalab.io/assets/javascript/labGetQryStrValByKey.js"></script>
         <script>
             // Set up the filter
             var dataFilter = new LabFilter({
@@ -212,6 +212,14 @@
                 filterLabel: 'You can filter the datasets: ',
                 noMatchesClass: 'contentBlock themeBlockLight'
             })
+
+            // Check if we have any filter terms in the querystring
+            // If so, put them in the filter box and perform the filter action
+            var filterQS = labGetQryStrValByKey('filter', location.search);
+            if (filterQS !== null) {
+                dataFilter.input.value = filterQS;
+                dataFilter.doFilter();
+            }
         </script>
     </body>
 </html>

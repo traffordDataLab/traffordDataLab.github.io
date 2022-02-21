@@ -154,7 +154,8 @@
             </footer>
         </div>
 
-        <script src="javascript/labFilter.js"></script>
+        <script src="https://www.trafforddatalab.io/assets/javascript/labFilter.js"></script>
+        <script src="https://www.trafforddatalab.io/assets/javascript/labGetQryStrValByKey.js"></script>
         <script>
             // Set up the filter
             var charticleFilter = new LabFilter({
@@ -163,6 +164,14 @@
                 filterLabel: 'You can filter the charticles: ',
                 noMatchesClass: 'contentBlock themeBlockLight'
             })
+
+            // Check if we have any filter terms in the querystring
+            // If so, put them in the filter box and perform the filter action
+            var filterQS = labGetQryStrValByKey('filter', location.search);
+            if (filterQS !== null) {
+                charticleFilter.input.value = filterQS;
+                charticleFilter.doFilter();
+            }
         </script>
     </body>
 </html>
