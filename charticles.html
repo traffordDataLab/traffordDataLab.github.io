@@ -167,10 +167,15 @@
 
             // Check if we have any filter terms in the querystring
             // If so, put them in the filter box and perform the filter action
-            var filterQS = labGetQryStrValByKey('filter', location.search);
-            if (filterQS !== null) {
-                charticleFilter.input.value = filterQS;
-                charticleFilter.doFilter();
+            try {
+                var filterQS = labGetQryStrValByKey('filter', location.search);
+                if (filterQS !== null) {
+                    charticleFilter.input.value = filterQS;
+                    charticleFilter.doFilter();
+                }
+            }
+            catch (e) {
+                // Try-catch here just in case there is something wrong with the filter control and it doesn't exist (i.e. it failed to initialise - the filter component has its own try-catch to capture this event) or we can't obtain the querystring value.  No need to take any further action, just let the page display all items.
             }
         </script>
     </body>
