@@ -49,7 +49,8 @@
                 padding: 0 0 0.25em 0;
             }
 
-            .fa-head-side-mask
+            /* Styles for the Census 2021 and COVID-19 lozenges */
+            .fa-head-side-mask, .fa-check-circle
             {
                 display: inline-block;
                 float: left;
@@ -58,15 +59,32 @@
                 color: #fff;
             }
 
-            #covid19
+            .fa-check-circle
+            {
+                margin-left: 0.08em;
+                padding-top: 0.081em;
+                font-size: 6em;
+            }
+
+            #covid19, #census2021
             {
                 display: block;
                 border-radius: 3.5em;
                 min-height: 7em;
                 margin: 2em 0 2em 0;
                 padding-right: 2em;
+            }
+
+            #covid19
+            {
                 background-color: #ccc;
                 color: #212121;
+            }
+
+            #census2021
+            {
+                background-color: #902082;
+                color: #fff;
             }
 
             #covid19:hover, #covid19:hover h2
@@ -75,19 +93,34 @@
                 background-color: #5d77a3;
             }
 
-            #covid19Content
+            #census2021:hover, #census2021:hover h2
+            {
+                color: #fff;
+                background-color: #41378d;
+            }
+
+            #covid19Content, #census2021Content
             {
                 display: inline-block;
                 margin-left: 0.5em;
             }
 
-            #covid19Content h2
+            #covid19Content h2, #census2021Content h2
             {
                 margin-bottom: 0;
+            }
+
+            #covid19Content h2
+            {
                 color: #212121;
             }
 
-            #covid19Content p
+            #census2021Content h2
+            {
+                color: #fff;
+            }
+
+            #covid19Content p, #census2021Content p
             {
                 margin-top: 0.25em;
                 margin-left: 2px;
@@ -145,6 +178,14 @@
 
                 <p class="intro">Supporting decision-making in Trafford by revealing patterns in data through visualisation.</p>
 
+                <a href="census2021.html" id="census2021" class="smallText">
+                    <span class="far fa-check-circle"></span>
+                    <span id="census2021Content">
+                        <h2><img src="images/Census 2021 Web Logo White Landscape RGB.png" height="20" alt="Census 2021" id="census2021Logo"/></h2>
+                        <p>Visit our dedicated page for all outputs relating to the census conducted in 2021.</p>
+                    </span>
+                </a>
+
                 <a href="covid19.html" id="covid19" class="smallText">
                     <span class="fas fa-head-side-mask"></span>
                     <span id="covid19Content">
@@ -157,6 +198,11 @@
                     <h2>Apps</h2>
 
                     <div class="cardContainer">
+                        <div class="card labBorder">
+                            <a href="https://trafforddatalab.shinyapps.io/corporate-plan/" target="_blank"><h3 class="cardHead themeLink">Corporate plan dashboard</h3><img src="images/corporate_dashboard_thumbnail.png" class="thumbnail" alt=""/></a><br class="hideContent"/>
+                            <span class="cardBody">The <a href="https://www.trafford.gov.uk/about-your-council/strategies-plans-and-policies/Corporate-Plan.aspx" target="_blank">corporate plan</a> describes Trafford Council's strategic vision, outcomes and priorities for the borough. This dashboard interactively visualises data for a range of indicators that relate to each of the three strategic priorities.</span>
+                        </div>
+
                         <div class="card labBorder">
                             <a href="https://www.trafforddatalab.io/schools/" target="_blank"><h3 class="cardHead themeLink">Schools in Trafford</h3><img src="images/schools_thumbnail.png" class="thumbnail" alt=""/></a><br class="hideContent"/>
                             <span class="cardBody">Find schools and colleges in Trafford by phase, type, Ofsted rating and other filters. Links to Ofsted reports, performance comparisons and the schools' websites are also provided.</span>
@@ -220,11 +266,6 @@
                         <div class="card labBorder">
                             <a href="https://trafforddatalab.shinyapps.io/road_casualties" target="_blank"><h3 class="cardHead themeLink">Road casualties</h3><img src="images/road_casualty_app_thumbnail.png" class="thumbnail" alt=""/></a><br class="hideContent"/>
                             <span class="cardBody">Application enabling users to explore GM reported road traffic accidents involving personal injury between 2005 and 2018.</span>
-                        </div>
-
-                        <div class="card labBorder">
-                            <a href="https://trafforddatalab.shinyapps.io/corporate-plan/" target="_blank"><h3 class="cardHead themeLink">Corporate plan dashboard</h3><img src="images/corporate_dashboard_thumbnail.png" class="thumbnail" alt=""/></a><br class="hideContent"/>
-                            <span class="cardBody">The <a href="https://www.trafford.gov.uk/about-your-council/strategies-plans-and-policies/Corporate-Plan.aspx" target="_blank">corporate plan</a> describes Trafford Council's strategic vision, outcomes and priorities for the borough. This dashboard interactively visualises data for a range of indicators that relate to each of the three strategic priorities.</span>
                         </div>
                     </div>
                 </section>
