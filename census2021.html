@@ -13,83 +13,109 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
 
         <style>
-        .card time
-        {
-            display: block;
-            padding: 0 3px 1px 3px;
-            margin-top: -3px;
-            text-transform: uppercase;
-            text-align: right;
-            font-style: italic;
-            font-size: 0.6em;
-            color: #4D4D4D;
-        }
-
-        /* Specific customisation of the card for this page */
-        .card
-        {
-            height: 230px;
-            overflow: hidden;
-            text-indent: 0.25em;
-            padding-top: 0.1em;
-
-            /* For browsers which don't support grid layouts */
-            width: 20%;
-            margin: 2.2% 2.2%;
-        }
-
-        /* Census 2021 banner */
-        #census2021Banner
-        {
-            background-color: #902082;
-            color: #fff;
-            padding: 0.5em 1em;
-            border-radius: 0.5em;
-        }
-
-        #notes
-        {
-            font-size: small;
-        }
-
-        /* For browsers which don't support grid layouts */
-        @media (max-width:1300px)
-        {
+            /* Specific customisation of the card for this page */
             .card
             {
-                width: 28%;
+                height: 230px;
+                overflow: hidden;
+                text-indent: 0.25em;
+                padding-top: 0.1em;
+
+                /* For browsers which don't support grid layouts */
+                width: 20%;
+                margin: 2.2% 2.2%;
+            }
+
+            .dataCard
+            {
+                height: 170px;
+                text-indent: 0;
+                padding-top: 0;
+
+                /* For browsers which don't support grid layouts */
+                width: 20%;
                 margin: 1em 2.2%;
             }
-        }
 
-        @media (max-width:850px)
-        {
-            .card
+            .dataCard .cardHead
             {
-                width: 40%;
-                margin: 1em 4.5%;
+                height: 40px;
+                line-height: 40px;
+                padding: 0 0.75em;  /* 0.75em here and 1em in the .cardBody keep text inline as the text in the body is smaller */
             }
-        }
 
-        @media (max-width:620px)
-        {
-            .card
+            .dataCard .cardBody
             {
-                width: 100%;
-                height: 300px;
-                margin: 1em 0;
+                height: 110px;
+                padding: 0 1em;     /* 1em here and 0.75em in the .cardHead keep text inline as the text in the body is smaller */
+                margin: 0.5em 0;
+                overflow-y: auto;
             }
-        }
 
-        /* For browsers which support grid layouts - Reset the widths and margins applied above as they aren't required when using grid layout */
-        @supports (display: grid)
-        {
-            .card
+            /* Census 2021 banner */
+            #census2021Banner
             {
-                width: auto;
-                margin: 0;
+                background-color: #902082;
+                color: #fff;
+                padding: 0.5em 1em;
+                border-radius: 0.5em;
             }
-        }
+
+            #notes
+            {
+                font-size: small;
+            }
+
+            /* For browsers which don't support grid layouts */
+            @media (max-width:1300px)
+            {
+                .card
+                {
+                    width: 28%;
+                    margin: 1em 2.2%;
+                }
+            }
+
+            @media (max-width:850px)
+            {
+                .card
+                {
+                    width: 40%;
+                    margin: 1em 4.5%;
+                }
+            }
+
+            @media (max-width:620px)
+            {
+                .card
+                {
+                    width: 100%;
+                    height: 300px;
+                    margin: 1em 0;
+                }
+
+                .dataCard .card
+                {
+                    width: 100%;
+                    height: 155px;
+                    margin: 1em 0;
+                }
+
+                .dataCard .cardBody
+                {
+                    height: 95px;
+                }
+            }
+
+            /* For browsers which support grid layouts - Reset the widths and margins applied above as they aren't required when using grid layout */
+            @supports (display: grid)
+            {
+                .card
+                {
+                    width: auto;
+                    margin: 0;
+                }
+            }
         </style>
     </head>
 
@@ -168,25 +194,46 @@
                     </div>
                 </section>
 
-                <section id="data" class="itemContainer">
+                <section id="data">
                     <h2>Data</h2>
+                    <p>Open datasets in <abbr title="Comma Separated Values">CSV</abbr> format. Data is provided at local authority level for the whole of Greater Manchester and then at smaller geographies for Trafford only.</p>
 
-                    <div class="labBorder">
-                        <a href="https://www.trafforddatalab.io/open_data/census2021/armed_forces_veterans/"><img src="images/csv_data_thumbnail.png" class="thumbnail" alt=""/><h3 class="cardHead themeLink">UK Armed Forces Veterans Datasets</h3></a>
-                        <p class="cardBody">Open data in <abbr title="Comma Separated Values">CSV</abbr> format relating to residents who have previously served in the UK armed forces. Data is provided by population and household for Trafford and each of the Greater Manchester (GM) authorities. Data for Trafford is also available at a smaller geographical area.</p>
-                    </div>
+                    <div class="cardContainer">
+                        <a href="https://www.trafforddatalab.io/open_data/census2021/armed_forces_veterans/" class="card dataCard themeBlockLight labBorder">
+                            <h3 class="cardHead themeBlockDark">Armed Forces Veterans</h3>
+                            <p class="cardBody">Classifying residents who have previously served in the UK armed forces. Data is provided by population and household.</p>
+                        </a>
 
-                    <div class="labBorder">
-                        <a href="https://www.trafforddatalab.io/open_data/census2021/population/"><img src="images/csv_data_thumbnail.png" class="thumbnail" alt=""/><h3 class="cardHead themeLink">Population Datasets</h3></a>
-                        <p class="cardBody">Open data in <abbr title="Comma Separated Values">CSV</abbr> format containing population estimates by sex and single year of age, population densities, household size and household composition for Trafford and each of the Greater Manchester (GM) authorities. Data for Trafford is also available at smaller geographical areas.</p>
+                        <a href="https://www.trafforddatalab.io/open_data/census2021/ethnicity/" class="card dataCard themeBlockLight labBorder">
+                            <h3 class="cardHead themeBlockDark">Ethnicity</h3>
+                            <p class="cardBody">Classifying usual residents in England and Wales by ethnic group. Data is provided by population and household.</p>
+                        </a>
+
+                        <a href="https://www.trafforddatalab.io/open_data/census2021/language/" class="card dataCard themeBlockLight labBorder">
+                            <h3 class="cardHead themeBlockDark">Language</h3>
+                            <p class="cardBody">Classifying usual residents in England and Wales by languages spoken. Data is provided by population and household.</p>
+                        </a>
+
+                        <a href="https://www.trafforddatalab.io/open_data/census2021/national_identity/" class="card dataCard themeBlockLight labBorder">
+                            <h3 class="cardHead themeBlockDark">National Identity</h3>
+                            <p class="cardBody">Classifying usual residents in England and Wales by national identity. Data is provided by population.</p>
+                        </a>
+
+                        <a href="https://www.trafforddatalab.io/open_data/census2021/population/" class="card dataCard themeBlockLight labBorder">
+                            <h3 class="cardHead themeBlockDark">Population &amp Households</h3>
+                            <p class="cardBody">Population estimates by sex and single year of age, population densities, household size and household composition.</p>
+                        </a>
+
+                        <a href="https://www.trafforddatalab.io/open_data/census2021/religion/" class="card dataCard themeBlockLight labBorder">
+                            <h3 class="cardHead themeBlockDark">Religious Affiliation</h3>
+                            <p class="cardBody">Classifying usual residents in England and Wales by religious affiliation. Data is provided by population and household.</p>
+                        </a>
                     </div>
                 </section>
 
-                <br />
-                <p>Further information and resources published by the ONS are available in the following section:</p>
-
                 <section id="releases" aria-label="links will open in a new window">
                     <h2>ONS Publications</h2>
+                    <p>Information and resources published by the Office for National Statistics.</p>
 
                     <ul>
                         <li>
