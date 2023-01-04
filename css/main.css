@@ -228,6 +228,37 @@ a.card:hover .cardHead
     border-left: 4px solid #757575;
 }
 
+/* Notifications added to items, e.g. to indicate new content */
+.notification   /* This class is applied to the outer element/container of the new content e.g. <a class="card labBorder notification"... */
+{
+    position: relative;
+    display: inline-block;
+}
+
+.notification .badge    /* Implementation: <span class="badge highContrastBlock" aria-label="This item is new">new</span> This is the last child element within the parent container (which has the class .notification applied). The class "highContrastBlock" can be interchanged for others such as "themeBlockDark" etc. */
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.25em 0.5em;
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    border-bottom-left-radius: 10px;
+    font-size: 0.75em;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.notification .themeBlockDark   /* Adjustment to the text colour for notifications styled with themeBlockDark - default is black */
+{
+    color: #fff;
+}
+
+.notification .themeBlockLight  /* Adjustment to the text colour for notifications styled with themeBlockLight - default is #212121 but without this override notification items within links have the same text colour as links. */
+{
+    color: #212121;
+}
+
 /* changes due to screen width */
 @media (min-width:1300px)
 {

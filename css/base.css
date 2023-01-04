@@ -52,6 +52,18 @@ a:hover
     background-color: #f5f9ff;
 }
 
+.highContrastBlock
+{
+    background-color: #212121;
+    color: #fff;
+}
+
+.highContrastBlockDyslexia
+{
+    background-color: #ffff00;
+    color: #000;
+}
+
 h1, h2, h3, h4, h5, h6, header
 {
     font-family: 'Roboto', sans-serif;
