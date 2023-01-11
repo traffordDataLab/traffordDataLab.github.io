@@ -185,7 +185,7 @@
                         <span class="filterTags"><!-- population estimates residents people households housing accommodation tenure central heating second addresses communal establishments census 2021 --></span>
                         <h2 class="cardHead themeBlockDark">Housing</h2>
                         <p class="cardBody">Residents and households census 2021 data based on accommodation type, tenure, rooms and bedrooms, central heating, car or van availability and second addresses.</p>
-                        <span class="badge highContrastBlockDyslexia" aria-label="This item is new"><span aria-hidden="true">new</span></span>
+                        <span class="badge highContrastBlockDyslexia" aria-label="This item is new" data-added="2023-01-11"><span aria-hidden="true">new</span></span>
                     </a>
 
                     <a href="https://www.trafforddatalab.io/open_data/census2021/labour_market_travel_to_work/" class="card dataCard themeBlockLight labBorder">
@@ -253,6 +253,7 @@
 
         <script src="https://www.trafforddatalab.io/assets/javascript/labFilter.js"></script>
         <script src="https://www.trafforddatalab.io/assets/javascript/labGetQryStrValByKey.js"></script>
+        <script src="https://www.trafforddatalab.io/assets/javascript/removeElapsedLabNotifications.js"></script>
         <script>
             // Set up the filter
             var dataFilter = new LabFilter({
@@ -274,6 +275,11 @@
             catch (e) {
                 // Try-catch here just in case there is something wrong with the filter control and it doesn't exist (i.e. it failed to initialise - the filter component has its own try-catch to capture this event) or we can't obtain the querystring value.  No need to take any further action, just let the page display all items.
             }
+            
+
+            // Automatically remove any "new" notifications from content items after the specified number of days.
+            // NOTE: The notification code should still be removed manually as this helper function simply hides the elements.
+            RemoveElapsedLabNotifications({ daysElapsed: 14 });
         </script>
     </body>
 </html>

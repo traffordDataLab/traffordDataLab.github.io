@@ -214,7 +214,7 @@
                         <a href="https://www.trafforddatalab.io/open_data/census2021/housing/" class="card dataCard themeBlockLight labBorder notification">
                             <h3 class="cardHead themeBlockDark">Housing</h3>
                             <p class="cardBody">Residents and households data based on accommodation type, tenure, rooms and bedrooms, central heating, car or van availability and second addresses.</p>
-                            <span class="badge highContrastBlockDyslexia" aria-label="This item is new"><span aria-hidden="true">new</span></span>
+                            <span class="badge highContrastBlockDyslexia" aria-label="This item is new" data-added="2023-01-11"><span aria-hidden="true">new</span></span>
                         </a>
 
                         <a href="https://www.trafforddatalab.io/open_data/census2021/labour_market_travel_to_work/" class="card dataCard themeBlockLight labBorder">
@@ -297,5 +297,12 @@
                 <a href="https://www.trafford.gov.uk" target="_blank" aria-label="Visit the Trafford Council website"><img class="logoTrafford" src="images/trafford_council_logo_black_on_white_100px.png" alt="Trafford Council"/></a>
             </footer>
         </div>
+
+        <script src="https://www.trafforddatalab.io/assets/javascript/removeElapsedLabNotifications.js"></script>
+        <script>
+            // Automatically remove any "new" notifications from content items after the specified number of days.
+            // NOTE: The notification code should still be removed manually as this helper function simply hides the elements.
+            RemoveElapsedLabNotifications({ daysElapsed: 14 });
+        </script>
     </body>
 </html>
