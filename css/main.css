@@ -130,7 +130,7 @@ footer
 {
     font-size: 2em;
     color: #212121;         /* As these icons are links this is required otherwise they would be the link colour */
-    margin: 0 0.6em 0 0;    /* Using margin not padding so that the "space" is not included in the link "hit" area. Using padding the links are too close together and it's easy to accidentally hit the wrong one on touch devices */
+    margin: 0 0.4em 0 0;    /* Using margin not padding so that the "space" is not included in the link "hit" area. Using padding the links are too close together and it's easy to accidentally hit the wrong one on touch devices */
 }
 
 .linkMedia:hover
