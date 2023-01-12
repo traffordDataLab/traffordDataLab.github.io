@@ -165,12 +165,13 @@
 
                 <p class="intro">Supporting decision-making in Trafford by revealing patterns in data through visualisation.</p>
 
-                <a href="census2021.html" id="census2021" class="smallText">
+                <a href="census2021.html" id="census2021" class="smallText notification">
                     <span class="far fa-check-circle"></span>
                     <span id="census2021Content">
                         <h2><img src="images/Census 2021 Web Logo White Landscape RGB.png" height="20" alt="Census 2021" id="census2021Logo"/></h2>
                         <p>Visit our dedicated page for all outputs relating to the census conducted in 2021.</p>
                     </span>
+                    <span class="badge highContrastBlock" aria-label="This item has new content" data-added="2023-01-11"><span aria-hidden="true">new</span></span>
                 </a>
 
                 <section id="apps" aria-label="items will open in a new window">
@@ -253,9 +254,10 @@
                     <h2>Collections</h2>
 
                     <div class="cardContainer">
-                        <div class="card labBorder">
+                        <div class="card labBorder notification">
                             <a href="census2021.html"><h3 class="cardHead themeLink">Census 2021</h3><span class="far fa-check-circle"></span></a><br class="hideContent"/>
                             <span class="cardBody">Visit our Census 2021 collections page for all our outputs relating to the census conducted by the <a href="https://www.ons.gov.uk/" target="_blank">Office for National Statistics</a> in 2021 and published between 2022-2023.</span>
+                            <span class="badge highContrastBlock" aria-label="This item has new content" data-added="2023-01-11"><span aria-hidden="true">new</span></span>
                         </div>
 
                         <div class="card labBorder">
@@ -335,5 +337,12 @@
                 <a href="https://www.trafford.gov.uk" target="_blank" aria-label="Visit the Trafford Council website"><img class="logoTrafford" src="images/trafford_council_logo_black_on_white_100px.png" alt="Trafford Council"/></a>
             </footer>
         </div>
+
+        <script src="https://www.trafforddatalab.io/assets/javascript/removeElapsedLabNotifications.js"></script>
+        <script>
+            // Automatically remove any "new" notifications from content items after the specified number of days.
+            // NOTE: The notification code should still be removed manually as this helper function simply hides the elements.
+            RemoveElapsedLabNotifications({ daysElapsed: 14 });
+        </script>
     </body>
 </html>
