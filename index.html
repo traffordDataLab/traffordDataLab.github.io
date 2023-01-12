@@ -49,48 +49,44 @@
                 padding: 0 0 0.25em 0;
             }
 
-            /* Styles for the Census 2021 and COVID-19 lozenges */
-            .fa-head-side-mask, .fa-check-circle
+            /* Styles for the the "Collections" Font Awesome icons and Census 2021 lozenge */
+            .fa-check-circle, .fa-head-side-mask
             {
-                display: inline-block;
                 float: left;
+            }
+
+            .card .fa-check-circle
+            {
+                font-size: 6em;
+                color: #902082;
+                margin-right: 0.12em;
+            }
+
+            .fa-head-side-mask
+            {
+                font-size: 5.75em;
+                color: #999;
+                margin-right: 0.13em;
+            }
+
+            #census2021 .fa-check-circle
+            {
+                margin-left: 0.08em;
                 margin-right: 0.1em;
-                font-size: 7em;
+                padding-top: 0.081em;
+                font-size: 6em;
                 color: #fff;
             }
 
-            .fa-check-circle
-            {
-                margin-left: 0.08em;
-                padding-top: 0.081em;
-                font-size: 6em;
-            }
-
-            #covid19, #census2021
+            #census2021
             {
                 display: block;
                 border-radius: 3.5em;
                 min-height: 7em;
                 margin: 2em 0 2em 0;
                 padding-right: 2em;
-            }
-
-            #covid19
-            {
-                background-color: #ccc;
-                color: #212121;
-            }
-
-            #census2021
-            {
                 background-color: #902082;
                 color: #fff;
-            }
-
-            #covid19:hover, #covid19:hover h2
-            {
-                color: #fff;
-                background-color: #5d77a3;
             }
 
             #census2021:hover, #census2021:hover h2
@@ -99,28 +95,19 @@
                 background-color: #41378d;
             }
 
-            #covid19Content, #census2021Content
+            #census2021Content
             {
                 display: inline-block;
                 margin-left: 0.5em;
             }
 
-            #covid19Content h2, #census2021Content h2
-            {
-                margin-bottom: 0;
-            }
-
-            #covid19Content h2
-            {
-                color: #212121;
-            }
-
             #census2021Content h2
             {
+                margin-bottom: 0;
                 color: #fff;
             }
 
-            #covid19Content p, #census2021Content p
+            #census2021Content p
             {
                 margin-top: 0.25em;
                 margin-left: 2px;
@@ -183,14 +170,6 @@
                     <span id="census2021Content">
                         <h2><img src="images/Census 2021 Web Logo White Landscape RGB.png" height="20" alt="Census 2021" id="census2021Logo"/></h2>
                         <p>Visit our dedicated page for all outputs relating to the census conducted in 2021.</p>
-                    </span>
-                </a>
-
-                <a href="covid19.html" id="covid19" class="smallText">
-                    <span class="fas fa-head-side-mask"></span>
-                    <span id="covid19Content">
-                        <h2>COVID-19 Resources</h2>
-                        <p>Visit the COVID-19 page for all our outputs relating to the coronavirus pandemic.</p>
                     </span>
                 </a>
 
@@ -270,10 +249,36 @@
                     </div>
                 </section>
 
+                <section id="collections">
+                    <h2>Collections</h2>
+
+                    <div class="cardContainer">
+                        <div class="card labBorder">
+                            <a href="census2021.html"><h3 class="cardHead themeLink">Census 2021</h3><span class="far fa-check-circle"></span></a><br class="hideContent"/>
+                            <span class="cardBody">Visit our Census 2021 collections page for all our outputs relating to the census conducted by the <a href="https://www.ons.gov.uk/" target="_blank">Office for National Statistics</a> in 2021 and published between 2022-2023.</span>
+                        </div>
+
+                        <div class="card labBorder">
+                            <a href="covid19.html"><h3 class="cardHead themeLink">COVID-19</h3><span class="fas fa-head-side-mask"></span></a><br class="hideContent"/>
+                            <span class="cardBody">Visit our COVID-19 collections page for all our outputs and resources relating to the coronavirus pandemic.</p>
+                        </div>
+
+                        <div class="card labBorder">
+                            <a href="deprivation.html"><h3 class="cardHead themeLink">English Indices of Deprivation 2019</h3><img src="images/iod_2019_reports_thumbnail.png" class="thumbnail" alt=""/></a><br class="hideContent"/>
+                            <span class="cardBody">Resources, including Local Authority and <a href="http://geoportal.statistics.gov.uk/datasets/500d4283cbe54e3fa7f358399ba3783e_0" target="_blank">ONS ‘best-fit’ ward</a> reports, relating to the Indices of Deprivation 2019 data released by the <a href="https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019" target="_blank">Ministry of Housing, Communities & Local Government</a>.</span>
+                        </div>
+                    </div>
+                </section>
+
                 <section id="reports">
                     <h2>Reports</h2>
 
                     <div class="cardContainer">
+                        <div class="card labBorder">
+                            <a href="https://www.trafforddatalab.io/analysis/unemployment_covid-19/claimant_count_and_universal_credit.html"><h3 class="cardHead themeLink">Claimant Count and Universal Credit in Trafford</h3><img src="images/claimant_count_and_universal_credit_report_thumbnail.png" class="thumbnail" alt=""/></a><br class="hideContent"/>
+                            <span class="cardBody">Analysis of claimant count and Universal Credit claims in Trafford over time, including area and age-group breakdowns. This report is updated on a regular basis using <a href="https://www.nomisweb.co.uk/sources/cc" target="_blank">data from Nomis</a>.</span>
+                        </div>
+
                         <div class="card labBorder">
                             <a href="https://www.trafforddatalab.io/analysis/census2021/ethnicity.html"><h3 class="cardHead themeLink">2021 Ethnicity, Identity, Language and Religion</h3><img src="images/census_2021_ethnicity_identity_language_religion_report_thumbnail.png" class="thumbnail" alt=""/></a><br class="hideContent"/>
                             <span class="cardBody">This report analyses the data published regarding the <a href="https://www.ons.gov.uk/releases/ethnicgroupnationalidentitylanguageandreligioncensus2021inenglandandwales" target="_blank">ethnic group, national identity, language, and religion</a> of residents from the 2021 census and compares it to similar data from the census in 2011.</span>
@@ -288,16 +293,6 @@
                             <a href="https://www.trafforddatalab.io/analysis/census2021/index.html"><h3 class="cardHead themeLink">2021 Demography &amp; Migration</h3><img src="images/census_2021_population_and_households_report_thumbnail.png" class="thumbnail" alt=""/></a><br class="hideContent"/>
                             <span class="cardBody">Following the release of <a href="https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/articles/demographyandmigrationdatacontent/2022-11-02" target="_blank">demography and migration data from the 2021 census</a>, this report contains analysis of the change in Trafford's population and households from the previous census and provides comparisons with the other local authorities in Greater Manchester. Additionally for Trafford, analysis is also provided for international migration.</span>
                         </div>
-
-                        <div class="card labBorder">
-                            <a href="https://www.trafforddatalab.io/analysis/unemployment_covid-19/claimant_count_and_universal_credit.html"><h3 class="cardHead themeLink">Claimant Count and Universal Credit in Trafford</h3><img src="images/claimant_count_and_universal_credit_report_thumbnail.png" class="thumbnail" alt=""/></a><br class="hideContent"/>
-                            <span class="cardBody">Analysis of claimant count and Universal Credit claims in Trafford over time, including area and age-group breakdowns. This report is updated on a regular basis using <a href="https://www.nomisweb.co.uk/sources/cc" target="_blank">data from Nomis</a>.</span>
-                        </div>
-
-                        <div class="card labBorder">
-                            <a href="deprivation.html"><h3 class="cardHead themeLink">English Indices of Deprivation 2019</h3><img src="images/iod_2019_reports_thumbnail.png" class="thumbnail" alt=""/></a><br class="hideContent"/>
-                            <span class="cardBody">Resources, including Local Authority and <a href="http://geoportal.statistics.gov.uk/datasets/500d4283cbe54e3fa7f358399ba3783e_0" target="_blank">ONS ‘best-fit’ ward</a> reports, relating to the Indices of Deprivation 2019 data released by the <a href="https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019" target="_blank">Ministry of Housing, Communities & Local Government</a>.</span>
-                        </div>
                     </div>
                 </section>
 
@@ -306,38 +301,13 @@
 
                     <div class="cardContainer">
                         <div class="card labBorder">
-                            <a href="accessible_graphics/census_2021_ethnicity_infographic.html"><h3 class="cardHead themeLink">2021 Ethnicity</h3><img src="images/census_2021_ethnicity_infographic_thumbnail.png" class="thumbnail" alt=""/></a><br class="hideContent"/>
-                            <span class="cardBody">Infographic containing ethnicity statistics from the <a href="https://www.ons.gov.uk/releases/ethnicgroupnationalidentitylanguageandreligioncensus2021inenglandandwales" target="_blank">Ethnic group, national identity, language, and religion: Census 2021 in England and Wales</a> publication.</span>
-                        </div>
-
-                        <div class="card labBorder">
-                            <a href="accessible_graphics/census_2021_language_and_religion_infographic.html"><h3 class="cardHead themeLink">2021 Language &amp; Religion</h3><img src="images/census_2021_language_and_religion_infographic_thumbnail.png" class="thumbnail" alt=""/></a><br class="hideContent"/>
-                            <span class="cardBody">Infographic containing language and religion statistics from the <a href="https://www.ons.gov.uk/releases/ethnicgroupnationalidentitylanguageandreligioncensus2021inenglandandwales" target="_blank">Ethnic group, national identity, language, and religion: Census 2021 in England and Wales</a> publication.</span>
-                        </div>
-
-                        <div class="card labBorder">
-                            <a href="accessible_graphics/census_2021_population_country_of_birth_infographic.html"><h3 class="cardHead themeLink">2021 Population by Country of Birth</h3><img src="images/census_2021_population_country_of_birth_infographic_thumbnail.png" class="thumbnail" alt=""/></a><br class="hideContent"/>
-                            <span class="cardBody">Infographic containing population statistics by country of birth from the <a href="https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/articles/demographyandmigrationdatacontent/2022-11-02" target="_blank">Demography and migration data, England and Wales: Census 2021</a>.</span>
-                        </div>
-
-                        <div class="card labBorder">
-                            <a href="accessible_graphics/census_2021_household_composition_infographic.html"><h3 class="cardHead themeLink">2021 Household Composition</h3><img src="images/census_2021_household_composition_infographic_thumbnail.png" class="thumbnail" alt=""/></a><br class="hideContent"/>
-                            <span class="cardBody">Infographic containing household composition statistics from the <a href="https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/articles/demographyandmigrationdatacontent/2022-11-02" target="_blank">Demography and migration data, England and Wales: Census 2021</a>.</span>
-                        </div>
-
-                        <div class="card labBorder">
-                            <a href="accessible_graphics/census_2021_population_and_households_infographic.html"><h3 class="cardHead themeLink">2021 Population &amp; Households</h3><img src="images/census_2021_population_and_households_infographic_thumbnail.png" class="thumbnail" alt=""/></a><br class="hideContent"/>
-                            <span class="cardBody">Infographic containing population and household statistics from the <a href="https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/populationandhouseholdestimatesenglandandwalescensus2021" target="_blank">2021 census data first release</a>.</span>
+                            <a href="accessible_graphics/resident_population_2020.html"><h3 class="cardHead themeLink">Resident population of Trafford</h3><img src="images/static_trafford_population_thumbnail.png" class="thumbnail" alt=""/></a><br class="hideContent"/>
+                            <span class="cardBody">Mid-year 2020 resident population estimates for Trafford visualised by electoral ward.</span>
                         </div>
 
                         <div class="card labBorder">
                             <a href="accessible_graphics/output_area_classification_2011.html"><h3 class="cardHead themeLink">2011 Output Area Classification</h3><img src="images/static_trafford_OAC_2011_thumbnail.png" class="thumbnail" alt=""/></a><br class="hideContent"/>
                             <span class="cardBody">The <a href="https://www.ons.gov.uk/methodology/geography/geographicalproducts/areaclassifications/2011areaclassifications" target="_blank">Output Area Classification</a> is an open source geodemographic classification that uses the <a href="https://www.ons.gov.uk/census/2011census" target="_blank">2011 Census</a> to group the UK's <a href="https://www.ons.gov.uk/methodology/geography/ukgeographies/censusgeography#output-area-oa" target="_blank">Output Areas</a>. Explore the <a href="https://www.ons.gov.uk/methodology/geography/geographicalproducts/areaclassifications/2011areaclassifications/penportraitsandradialplots" target="_blank">pen portraits and radial plots</a> for information about the classifications.</span>
-                        </div>
-
-                        <div class="card labBorder">
-                            <a href="accessible_graphics/resident_population_2020.html"><h3 class="cardHead themeLink">Resident population of Trafford</h3><img src="images/static_trafford_population_thumbnail.png" class="thumbnail" alt=""/></a><br class="hideContent"/>
-                            <span class="cardBody">Mid-year 2020 resident population estimates for Trafford visualised by electoral ward.</span>
                         </div>
 
                         <div class="card labBorder">
