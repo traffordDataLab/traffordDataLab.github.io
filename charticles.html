@@ -100,7 +100,8 @@
                 <h1>Charticles</h1>
                 <p>Bite-size articles with a chart or a map. Choose a charticle from the following list to open in a new window, the latest ones are presented first. <span id="filterContainer" style="display: inline-block;"></span></p>
                 <section class="cardContainer">
-                  <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2022-10-21-covid-vaccination/"><span class="filterTags"><!-- covid vaccination dose booster MSOA local" --></span><h2 class="cardHead themeLink">COVID 19 Vaccinations</h2><time datetime="2022-10-21" class="themeBlockLight">October, 2022</time><img src="https://www.trafforddatalab.io/charticles/2022-10-21-covid-vaccination/plot.svg" alt="COVID-19 vaccination uptake rate for Trafford MSOAs on the 19th of October 2022" style="width: 92%;"/></a>
+                    <a class="card labBorder notification" href="https://www.trafforddatalab.io/charticles/2023-04-20-traffords-changing-wards/"><span class="filterTags"><!-- electoral wards locality localities boundaries changing local elections" --></span><h2 class="cardHead themeLink">Trafford's changing wards</h2><time datetime="2023-04-20" class="themeBlockLight">April 20, 2023</time><img src="https://www.trafforddatalab.io/charticles/2023-04-20-traffords-changing-wards/plot_2023.svg" alt="Visualising the changes to the ward and locality boundaries in Trafford" style="width: 88%;"/><span class="badge highContrastBlock" aria-label="This item is new" data-added="2023-04-20"><span aria-hidden="true">new</span></span></a>
+                    <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2022-10-21-covid-vaccination/"><span class="filterTags"><!-- covid vaccination dose booster MSOA local" --></span><h2 class="cardHead themeLink">COVID 19 Vaccinations</h2><time datetime="2022-10-21" class="themeBlockLight">October, 2022</time><img src="https://www.trafforddatalab.io/charticles/2022-10-21-covid-vaccination/plot.svg" alt="COVID-19 vaccination uptake rate for Trafford MSOAs on the 19th of October 2022" style="width: 92%;"/></a>
                     <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2022-08-25-affordability-ratio/"><span class="filterTags"><!-- housing affordability ratio earnings house price" --></span><h2 class="cardHead themeLink">Housing affordability</h2><time datetime="2022-08-25" class="themeBlockLight">August, 2022</time><img src="https://www.trafforddatalab.io/charticles/2022-08-25-affordability-ratio/plot.svg" alt="Housing affordability ratio from 2010 to 2021 for Trafford, England and similar local authorities." style="width: 92%;"/></a>
                     <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2022-03-31-digital-exclusion/"><span class="filterTags"><!-- digital exclusion DERI index population trafford LSOA" --></span><h2 class="cardHead themeLink">Digital Exclusion</h2><time datetime="2022-03-23" class="themeBlockLight">March, 2022</time><img src="https://www.trafforddatalab.io/charticles/2022-03-31-digital-exclusion/plot.svg" alt=". Population percent at risk of Digital exclusion in Trafford based on the LSOAs DERI score." style="width: 92%;"/></a>
                     <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2021-09-23-no2-mid-2021/"><span class="filterTags"><!-- air pollution nitrogen dioxide coronavirus covid-19 lockdown emissions roadside no2 --></span><h2 class="cardHead themeLink">Roadside pollution</h2><time datetime="2021-09-23" class="themeBlockLight">September 23, 2021</time><img src="https://www.trafforddatalab.io/charticles/2021-09-23-no2-mid-2021/plot.svg" alt=". Monthly mean NO2 concentrations along the A56 September 2018 to August 2021." style="width: 150%;"/></a>
@@ -159,6 +160,7 @@
 
         <script src="https://www.trafforddatalab.io/assets/javascript/labFilter.js"></script>
         <script src="https://www.trafforddatalab.io/assets/javascript/labGetQryStrValByKey.js"></script>
+        <script src="https://www.trafforddatalab.io/assets/javascript/removeElapsedLabNotifications.js"></script>
         <script>
             // Set up the filter
             var charticleFilter = new LabFilter({
@@ -180,6 +182,11 @@
             catch (e) {
                 // Try-catch here just in case there is something wrong with the filter control and it doesn't exist (i.e. it failed to initialise - the filter component has its own try-catch to capture this event) or we can't obtain the querystring value.  No need to take any further action, just let the page display all items.
             }
+            
+            
+            // Automatically remove any "new" notifications from content items after the specified number of days.
+            // NOTE: The notification code should still be removed manually as this helper function simply hides the elements.
+            RemoveElapsedLabNotifications({ daysElapsed: 14 });
         </script>
     </body>
 </html>
