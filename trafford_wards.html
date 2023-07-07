@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-GB">
     <head>
-        <title>Trafford Data Lab: Traford Wards</title>
+        <title>Trafford Data Lab: Trafford Wards</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
         <meta charset="UTF-8"/>
         <meta name="keywords" content="ward, wards, electoral ward, electoral wards, ward profiles, electoral ward profiles, open, data, open data, data visualisation, visualisation, visualisations, trafford"/>
@@ -24,7 +24,7 @@
                 font-size: 0.6em;
                 color: #4D4D4D;
             }
-        
+
             /* Specific customisation of the cards for this page - the profile cards are the main cards so they use the .card style - charticles and graphics cards need to have other versions for them as they are the different ones on the page */
             .card
             {
@@ -37,7 +37,7 @@
                 width: 28%;
                 margin: 1em 2.2%;
             }
-            
+
             .charticleCard
             {
                 height: 230px;
@@ -49,7 +49,7 @@
                 width: 20%;
                 margin: 2.2% 2.2%;
             }
-            
+
             .graphicsCard
             {
                 height: auto;
@@ -59,25 +59,25 @@
                 width: 45%; /* these cards are larger than the default due to the contents of each being so large */
                 margin: 1em 2%;
             }
-            
+
             .graphicsCard .cardHead
             {
                 padding: 0 0 0.25em 0;
             }
-            
-            
+
+
             /* Variations on the .cardContainer style - this time we create custom ones for the profiles and graphics as they deviate from the standard */
             .profileContainer
             {
                 grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));   /* only want a max of 3 columns and want to break into 2 columns sooner than the data or charticles pages - so I've overridden the minmax card width from the default */
             }
-            
+
             .graphicsContainer
             {
                 grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));   /* only want a max of 2 columns on normal displays due to the contents of each being large - so I've overridden the minmax card width from the default */
             }
-            
-            
+
+
             /* For browsers which don't support grid layouts */
             @media (max-width:1300px)
             {
@@ -87,7 +87,7 @@
                     margin: 1em 2.2%;
                 }
             }
-            
+
             @media (max-width:1150px)
             {
                 .card
@@ -96,7 +96,7 @@
                     margin: 1em 4.5%;
                 }
             }
-            
+
             @media (max-width:850px)
             {
                 .charticleCard
@@ -114,21 +114,21 @@
                     margin: 1em 0;
                 }
             }
-            
+
             @media (max-width:750px)
             {
                 .graphicsContainer
                 {
                     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));   /* to fix issue on small displays where the minimum width is still to large and so causes horizontal scrolling */
                 }
-                
+
                 .graphicsCard
                 {
                     width: 100%;
                     margin: 1em 0;
                 }
             }
-            
+
             @media (max-width:620px)
             {
                 .charticleCard
@@ -187,140 +187,140 @@
                                 <img src="images/ward_profiles/altrincham_map.png" alt="Map showing the ward of Altrincham boundary."/>
                             </p>
                         </a>
-                        
+
                         <a href="https://www.trafforddatalab.io/analysis/wards2023/Ashton_upon_Mersey.html" class="card labBorder">
                             <h3 class="cardHead themeLink">Ashton Upon Mersey</h3>
                             <p class="cardBody">
                                 <img src="images/ward_profiles/ashton_upon_mersey_map.png" alt="Map showing the ward of Ashton Upon Mersey boundary."/>
                             </p>
                         </a>
-                        
+
                         <a href="https://www.trafforddatalab.io/analysis/wards2023/Bowdon.html" class="card labBorder">
                             <h3 class="cardHead themeLink">Bowdon</h3>
                             <p class="cardBody">
                                 <img src="images/ward_profiles/bowdon_map.png" alt="Map showing the ward of Bowdon boundary."/>
                             </p>
                         </a>
-                        
+
                         <a href="https://www.trafforddatalab.io/analysis/wards2023/Broadheath.html" class="card labBorder">
                             <h3 class="cardHead themeLink">Broadheath</h3>
                             <p class="cardBody">
                                 <img src="images/ward_profiles/broadheath_map.png" alt="Map showing the ward of Broadheath boundary."/>
                             </p>
                         </a>
-                        
+
                         <a href="https://www.trafforddatalab.io/analysis/wards2023/Brooklands.html" class="card labBorder">
                             <h3 class="cardHead themeLink">Brooklands</h3>
                             <p class="cardBody">
                                 <img src="images/ward_profiles/brooklands_map.png" style="width: 130%;" alt="Map showing the ward of Brooklands boundary."/>
                             </p>
                         </a>
-                        
+
                         <a href="https://www.trafforddatalab.io/analysis/wards2023/Bucklow-St_Martins.html" class="card labBorder">
                             <h3 class="cardHead themeLink">Bucklow-St Martins</h3>
                             <p class="cardBody">
                                 <img src="images/ward_profiles/bucklow-st_martins_map.png" alt="Map showing the ward of Bucklow-St Martins boundary."/>
                             </p>
                         </a>
-                        
+
                         <a href="https://www.trafforddatalab.io/analysis/wards2023/Davyhulme.html" class="card labBorder">
                             <h3 class="cardHead themeLink">Davyhulme</h3>
                             <p class="cardBody">
                                 <img src="images/ward_profiles/davyhulme_map.png" style="width: 108%;" alt="Map showing the ward of Davyhulme boundary."/>
                             </p>
                         </a>
-                        
+
                         <a href="https://www.trafforddatalab.io/analysis/wards2023/Flixton.html" class="card labBorder">
                             <h3 class="cardHead themeLink">Flixton</h3>
                             <p class="cardBody">
                                 <img src="images/ward_profiles/flixton_map.png" style="width: 130%;" alt="Map showing the ward of Flixton boundary."/>
                             </p>
                         </a>
-                        
+
                         <a href="https://www.trafforddatalab.io/analysis/wards2023/Gorse_Hill_&_Cornbrook.html" class="card labBorder">
                             <h3 class="cardHead themeLink">Gorse Hill &amp; Cornbrook</h3>
                             <p class="cardBody">
                                 <img src="images/ward_profiles/gorse_hill_and_cornbrook_map.png" alt="Map showing the ward of Gorse Hill and Cornbrook boundary."/>
                             </p>
                         </a>
-                        
+
                         <a href="https://www.trafforddatalab.io/analysis/wards2023/Hale_Barns_&_Timperley_South.html" class="card labBorder">
                             <h3 class="cardHead themeLink">Hale Barns &amp; Timperley South</h3>
                             <p class="cardBody">
                                 <img src="images/ward_profiles/hale_barns_and_timperley_south_map.png" alt="Map showing the ward of Hale Barns and Timperley South boundary."/>
                             </p>
                         </a>
-                        
+
                         <a href="https://www.trafforddatalab.io/analysis/wards2023/Hale.html" class="card labBorder">
                             <h3 class="cardHead themeLink">Hale</h3>
                             <p class="cardBody">
                                 <img src="images/ward_profiles/hale_map.png" alt="Map showing the ward of Hale boundary."/>
                             </p>
                         </a>
-                        
+
                         <a href="https://www.trafforddatalab.io/analysis/wards2023/Longford.html" class="card labBorder">
                             <h3 class="cardHead themeLink">Longford</h3>
                             <p class="cardBody">
                                 <img src="images/ward_profiles/longford_map.png" style="width: 99%;" alt="Map showing the ward of Longford boundary."/>
                             </p>
                         </a>
-                        
+
                         <a href="https://www.trafforddatalab.io/analysis/wards2023/Lostock_&_Barton.html" class="card labBorder">
                             <h3 class="cardHead themeLink">Lostock &amp; Barton</h3>
                             <p class="cardBody">
                                 <img src="images/ward_profiles/lostock_and_barton_map.png" style="width: 99%;" alt="Map showing the ward of Lostock and Barton boundary."/>
                             </p>
                         </a>
-                        
+
                         <a href="https://www.trafforddatalab.io/analysis/wards2023/Manor.html" class="card labBorder">
                             <h3 class="cardHead themeLink">Manor</h3>
                             <p class="cardBody">
                                 <img src="images/ward_profiles/manor_map.png" alt="Map showing the ward of Manor boundary."/>
                             </p>
                         </a>
-                        
+
                         <a href="https://www.trafforddatalab.io/analysis/wards2023/Old_Trafford.html" class="card labBorder">
                             <h3 class="cardHead themeLink">Old Trafford</h3>
                             <p class="cardBody">
                                 <img src="images/ward_profiles/old_trafford_map.png" alt="Map showing the ward of Old Trafford boundary."/>
                             </p>
                         </a>
-                        
+
                         <a href="https://www.trafforddatalab.io/analysis/wards2023/Sale_Central.html" class="card labBorder">
                             <h3 class="cardHead themeLink">Sale Central</h3>
                             <p class="cardBody">
                                 <img src="images/ward_profiles/sale_central_map.png" style="width: 99%;" alt="Map showing the ward of Sale Central boundary."/>
                             </p>
                         </a>
-                        
+
                         <a href="https://www.trafforddatalab.io/analysis/wards2023/Sale_Moor.html" class="card labBorder">
                             <h3 class="cardHead themeLink">Sale Moor</h3>
                             <p class="cardBody">
                                 <img src="images/ward_profiles/sale_moor_map.png" alt="Map showing the ward of Sale Moor boundary."/>
                             </p>
                         </a>
-                        
+
                         <a href="https://www.trafforddatalab.io/analysis/wards2023/Stretford_&_Humphrey_Park.html" class="card labBorder">
                             <h3 class="cardHead themeLink">Stretford &amp; Humphrey Park</h3>
                             <p class="cardBody">
                                 <img src="images/ward_profiles/stretford_and_humphrey_park_map.png" style="width: 103%;" alt="Map showing the ward of Stretford and Humphrey Park boundary."/>
                             </p>
                         </a>
-                        
+
                         <a href="https://www.trafforddatalab.io/analysis/wards2023/Timperley_Central.html" class="card labBorder">
                             <h3 class="cardHead themeLink">Timperley Central</h3>
                             <p class="cardBody">
                                 <img src="images/ward_profiles/timperley_central_map.png" style="width: 120%;" alt="Map showing the ward of Timperley Central boundary."/>
                             </p>
                         </a>
-                        
+
                         <a href="https://www.trafforddatalab.io/analysis/wards2023/Timperley_North.html" class="card labBorder">
                             <h3 class="cardHead themeLink">Timperley North</h3>
                             <p class="cardBody">
                                 <img src="images/ward_profiles/timperley_north_map.png" style="width: 105%;" alt="Map showing the ward of Timperley North boundary."/>
                             </p>
                         </a>
-                        
+
                         <a href="https://www.trafforddatalab.io/analysis/wards2023/Urmston.html" class="card labBorder">
                             <h3 class="cardHead themeLink">Urmston</h3>
                             <p class="cardBody">
@@ -329,7 +329,7 @@
                         </a>
                     </div>
                 </section>
-                
+
                 <p>
                     <br />
                     Further information and resources concerning the wards in Trafford is available from the following items.
@@ -342,7 +342,7 @@
                         <a class="card charticleCard labBorder" href="https://www.trafforddatalab.io/charticles/2023-04-20-traffords-changing-wards/"><span class="filterTags"><!-- electoral wards locality localities boundaries changing local elections" --></span><h3 class="cardHead themeLink">Trafford's changing wards</h3><time datetime="2023-04-20" class="themeBlockLight">April 20, 2023</time><img src="https://www.trafforddatalab.io/charticles/2023-04-20-traffords-changing-wards/plot_2023.svg" alt="Visualising the changes to the ward and locality boundaries in Trafford" style="width: 88%;"/></a>
                     </div>
                 </section>
-                
+
                 <section id="graphics">
                     <h2>Graphics</h2>
 
