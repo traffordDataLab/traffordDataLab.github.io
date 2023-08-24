@@ -25,7 +25,12 @@
                 color: #4D4D4D;
             }
 
-            /* Specific customisation of the cards for this page - the profile cards are the main cards so they use the .card style - charticles and graphics cards need to have other versions for them as they are the different ones on the page */
+            /* Specific customisation of the cards for this page - the profile cards are the main cards so they use the .card style - apps, charticles and graphics cards need to have other versions for them as they are the different ones on the page */
+            .thumbnail
+            {
+                margin-top: 0.5em;
+            }
+            
             .card
             {
                 height: 230px;
@@ -36,6 +41,11 @@
                 /* For browsers which don't support grid layouts */
                 width: 28%;
                 margin: 1em 2.2%;
+            }
+            
+            .appsGraphicsCard .cardHead
+            {
+                padding: 0 0 0.25em 0;
             }
 
             .charticleCard
@@ -50,7 +60,7 @@
                 margin: 2.2% 2.2%;
             }
 
-            .graphicsCard
+            .appsGraphicsCard
             {
                 height: auto;
                 padding: 0.2em 0.5em 0.5em 0.5em;   /* the top padding is different to make the gap look balanced all around as the .cardHead content has padding of its own. */
@@ -60,11 +70,6 @@
                 margin: 1em 2%;
             }
 
-            .graphicsCard .cardHead
-            {
-                padding: 0 0 0.25em 0;
-            }
-
 
             /* Variations on the .cardContainer style - this time we create custom ones for the profiles and graphics as they deviate from the standard */
             .profileContainer
@@ -72,7 +77,7 @@
                 grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));   /* only want a max of 3 columns and want to break into 2 columns sooner than the data or charticles pages - so I've overridden the minmax card width from the default */
             }
 
-            .graphicsContainer
+            .appsGraphicsContainer
             {
                 grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));   /* only want a max of 2 columns on normal displays due to the contents of each being large - so I've overridden the minmax card width from the default */
             }
@@ -117,12 +122,12 @@
 
             @media (max-width:750px)
             {
-                .graphicsContainer
+                .appsGraphicsContainer
                 {
                     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));   /* to fix issue on small displays where the minimum width is still to large and so causes horizontal scrolling */
                 }
 
-                .graphicsCard
+                .appsGraphicsCard
                 {
                     width: 100%;
                     margin: 1em 0;
@@ -142,7 +147,7 @@
             /* For browsers which support grid layouts - Reset the widths and margins applied above as they aren't required when using grid layout */
             @supports (display: grid)
             {
-                .card, .charticleCard, .graphicsCard
+                .card, .charticleCard, .appsGraphicsCard
                 {
                     width: auto;
                     margin: 0;
@@ -335,6 +340,18 @@
                     Further information and resources concerning the wards in Trafford is available from the following items.
                 </p>
 
+                <section id="apps">
+                    <h2>Apps</h2>
+                    
+                    <div class="cardContainer appsGraphicsContainer">
+                        <div class="card appsGraphicsCard labBorder">
+                            <span class="filterTags"><!-- visualisation residents interactive electoral ward profiler ward profiles trafford wards spatial maps mapping thematic themes communications community safety demographics deprivation economy education environment governance health housing labour market transport crime population ethnicity language religion religious beliefs age apps webapps applications --></span>
+                            <a href="https://www.trafforddatalab.io/ward_profiler/" target="_blank"><h3 class="cardHead themeLink">Ward Profiler</h3><img src="images/ward_profiler_thumbnail.png" class="thumbnail" alt=""/></a><br class="hideContent"/>
+                            <span class="cardBody">In-depth information focussing on each of Trafford's wards. The information is presented in thematic sections as interactive maps and charts allowing for easy comparisons to be made. You can also download the data and code behind the visualisations.</span>
+                        </div>
+                    </div>
+                </section>
+
                 <section id="charticles">
                     <h2>Charticles</h2>
 
@@ -346,8 +363,8 @@
                 <section id="graphics">
                     <h2>Graphics</h2>
 
-                    <div class="cardContainer graphicsContainer">
-                        <div class="card graphicsCard labBorder">
+                    <div class="cardContainer appsGraphicsContainer">
+                        <div class="card appsGraphicsCard labBorder">
                             <span class="filterTags"><!-- visualisation geographies geography trafford's locality boundaries localities maps mapping electoral wards accessible static graphics infographics --></span>
                             <a href="accessible_graphics/trafford_wards_localities.html"><h3 class="cardHead themeLink">Trafford wards and localities</h3><img src="images/static_trafford_wards_localities_thumbnail.png" class="thumbnail" alt=""/></a><br class="hideContent"/>
                             <span class="cardBody">Map of Trafford showing the boundaries of the 21 wards and 4 localities.</span>
