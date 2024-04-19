@@ -37,8 +37,13 @@
             
             .cardHead
             {
-                height: 40px;
-                padding: 0 0.25em;  /* 0.75em here and 1em in the .cardBody keep text inline as the text in the body is smaller */
+                padding: 0 0.25em;
+                margin-top: 0.15em;
+                margin-bottom: 0.1em;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
             }
 
             /* For browsers which don't support grid layouts */
@@ -105,7 +110,7 @@
                 <h1>Charticles</h1>
                 <p>Bite-size articles with a chart or a map. Choose a charticle from the following list to open in a new window, the latest ones are presented first. <span id="filterContainer" style="display: inline-block;"></span></p>
                 <section class="cardContainer">
-                    <a class="card labBorder notification" href="https://www.trafforddatalab.io/charticles/2024-03-19-population-growth/"><span class="filterTags"><!-- population estimates people census residents births deaths international migration inflow outflow components change" --></span><time datetime="2024-03-19" class="themeBlockLight">March 19, 2024</time><h2 class="cardHead themeLink">Components of population change</h2><img src="https://www.trafforddatalab.io/charticles/2024-03-19-population-growth/plot.png" alt=". Trafford's drivers of population change inthe year to mid-2022." style="width: 95%; padding: 0.2em;"/>
+                    <a class="card labBorder notification" href="https://www.trafforddatalab.io/charticles/2024-03-19-population-growth/"><span class="filterTags"><!-- population estimates people census residents births deaths international migration inflow outflow components change" --></span><time datetime="2024-03-19" class="themeBlockLight">March 19, 2024</time><h2 class="cardHead themeLink">Components of population change with a very very long heading</h2><img src="https://www.trafforddatalab.io/charticles/2024-03-19-population-growth/plot.png" alt=". Trafford's drivers of population change inthe year to mid-2022." style="width: 95%; padding: 0.2em;"/>
                     <span class="badge highContrastBlock" aria-label="This item is new" data-added="2024-03-19"><span aria-hidden="true">new</span></span></a>
                     
                     <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2023-04-20-traffords-changing-wards/"><span class="filterTags"><!-- electoral wards locality localities boundaries changing local elections" --></span><time datetime="2023-04-20" class="themeBlockLight">April 20, 2023</time><h2 class="cardHead themeLink">Trafford's changing wards</h2><img src="https://www.trafforddatalab.io/charticles/2023-04-20-traffords-changing-wards/plot_2023.svg" alt=". Visualising the changes to the ward and locality boundaries in Trafford." style="width: 88%;"/></a>
@@ -126,7 +131,7 @@
                     
                     <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2020-11-16-suicides/"><span class="filterTags"><!-- suicides mental health --></span><time datetime="2020-11-16" class="themeBlockLight">November 16, 2020</time><h2 class="cardHead themeLink">Suicide registrations</h2><img src="https://www.trafforddatalab.io/charticles/2020-11-16-suicides/plot.svg" alt=". Age-standardised suicide rate in Trafford, North West & England over 3-year rolling periods."/></a>
                     
-                    <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2020-11-11-golf-courses/"><span class="filterTags"><!-- outdoors spaces environment green golf courses --></span><time datetime="2020-11-11" class="themeBlockLight">November 11, 2020</time><h2 class="cardHead themeLink">Golf courses</h2><img src="https://www.trafforddatalab.io/charticles/2020-11-11-golf-courses/plot.svg" alt=". Maps showing the area covered by golf courses in Trafford's electoral wards."/></a>
+                    <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2020-11-11-golf-courses/"><span class="filterTags"><!-- outdoors spaces environment green golf courses --></span><time datetime="2020-11-11" class="themeBlockLight">November 11, 2020</time><h2 class="cardHead themeLink">Golf courses</h2><img src="https://www.trafforddatalab.io/charticles/2020-11-11-golf-courses/plot.svg" alt=". Maps showing the area covered by golf courses in Trafford's electoral wards." style="width: 100%"/></a>
                     
                     <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2020-11-09-dwellings-no-outdoor-space/"><span class="filterTags"><!-- outdoors spaces environment green gardens dwellings housing covid-19 coronavirus --></span><time datetime="2020-11-09" class="themeBlockLight">November 09, 2020</time><h2 class="cardHead themeLink">Dwellings with no outdoor space</h2><img src="https://www.trafforddatalab.io/charticles/2020-11-09-dwellings-no-outdoor-space/plot.svg" alt=". Percentage of households with no access to a private or shared garden by MSOA."/></a>
                     
@@ -156,7 +161,7 @@
                     
                     <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2019-11-05-co2-emissions/"><span class="filterTags"><!-- co2 emissions carbon dioxide climate environment air pollution --></span><time datetime="2019-11-05" class="themeBlockLight">November 05, 2019</time><h2 class="cardHead themeLink">CO2 emissions</h2><img src="https://www.trafforddatalab.io/charticles/2019-11-05-co2-emissions/plot.svg" alt=". Change in carbon dioxide emissions in Trafford, Greater Manchester and England, 2005 - 2017."/></a>
                     
-                    <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2019-11-04-businesses/"><span class="filterTags"><!-- businesses employment jobs --></span><time datetime="2019-11-04" class="themeBlockLight">November 04, 2019</time><h2 class="cardHead themeLink">Businesses</h2><img src="https://www.trafforddatalab.io/charticles/2019-11-04-businesses/table.png" alt=". Businesses by employment size band in Trafford, Greater Manchester and England, 2019."/></a>
+                    <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2019-11-04-businesses/"><span class="filterTags"><!-- businesses employment jobs --></span><time datetime="2019-11-04" class="themeBlockLight">November 04, 2019</time><h2 class="cardHead themeLink">Businesses</h2><img src="https://www.trafforddatalab.io/charticles/2019-11-04-businesses/table.png" alt=". Businesses by employment size band in Trafford, Greater Manchester and England, 2019." style="width: 200%;"/></a>
                     
                     <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2019-11-01-relative-deprivation/"><span class="filterTags"><!-- relative deprivation poverty --></span><time datetime="2019-11-01" class="themeBlockLight">November 01, 2019</time><h2 class="cardHead themeLink">Relative deprivation</h2><img src="https://www.trafforddatalab.io/charticles/2019-11-01-relative-deprivation/plot.svg" alt=". Index of Multiple Deprivation of small areas in Trafford, 2019."/></a>
                     
