@@ -11,69 +11,81 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css"/>
 
         <style>
-        time
-        {
-            display: block;
-            padding: 0 3px 1px 3px;
-            margin-top: -3px;
-            text-transform: uppercase;
-            text-align: right;
-            font-style: italic;
-            font-size: 0.6em;
-            color: #4D4D4D;
-        }
-
-        /* Specific customisation of the card for this page */
-        .card
-        {
-            height: 230px;
-            overflow: hidden;
-            text-indent: 0.25em;
-            padding-top: 0.1em;
-
+            time
+            {
+                display: block;
+                padding: 0 3px 1px 3px;
+                margin-top: -3px;
+                text-transform: uppercase;
+                text-align: right;
+                font-style: italic;
+                font-size: 0.6em;
+                color: #4D4D4D;
+            }
+    
+            /* Specific customisation of the card for this page */
+            .card
+            {
+                height: 230px;
+                overflow: hidden;
+                text-indent: 0.25em;
+                padding-top: 0.1em;
+    
+                /* For browsers which don't support grid layouts */
+                width: 20%;
+                margin: 2.2% 2.2%;
+            }
+            
+            .cardContainer .cardHead
+            {
+                text-indent: 0;
+                padding: 0 0.25em;
+                margin-top: 0.15em;
+                margin-bottom: 0.1em;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+            }
+    
             /* For browsers which don't support grid layouts */
-            width: 20%;
-            margin: 2.2% 2.2%;
-        }
-
-        /* For browsers which don't support grid layouts */
-        @media (max-width:1300px)
-        {
-            .card
+            @media (max-width:1300px)
             {
-                width: 28%;
-                margin: 1em 2.2%;
+                .card
+                {
+                    width: 28%;
+                    margin: 1em 2.2%;
+                }
             }
-        }
-
-        @media (max-width:850px)
-        {
-            .card
+    
+            @media (max-width:850px)
             {
-                width: 40%;
-                margin: 1em 4.5%;
+                .card
+                {
+                    width: 40%;
+                    margin: 1em 4.5%;
+                }
             }
-        }
-
-        @media (max-width:620px)
-        {
-            .card
+    
+            @media (max-width:620px)
             {
-                width: 100%;
-                height: 300px;
-                margin: 1em 0;
+                .card
+                {
+                    width: 100%;
+                    height: 300px;
+                    margin: 1em 0;
+                }
             }
-        }
-
-        /* For browsers which support grid layouts - Reset the widths and margins applied above as they aren't required when using grid layout */
-        @supports (display: grid)
-        {
-            .card
+    
+            /* For browsers which support grid layouts - Reset the widths and margins applied above as they aren't required when using grid layout */
+            @supports (display: grid)
             {
-                width: auto;
-                margin: 0;
+                .card
+                {
+                    width: auto;
+                    margin: 0;
+                }
             }
-        }
         </style>
     </head>
 
@@ -136,11 +148,11 @@
                     <h2>Charticles</h2>
 
                     <div class="cardContainer">
-                        <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2021-04-15-claimant-rate-age/"><span class="filterTags"><!-- claimant rate universal credit benefits covid-19 coronavirus unemployment jobs working age band --></span><h2 class="cardHead themeLink">Claimant rate by age band</h2><time datetime="2021-04-15" class="themeBlockLight">April 15, 2021</time><img src="https://www.trafforddatalab.io/charticles/2021-04-15-claimant-rate-age/plot.svg" alt=". Claimant rate by five age bands in Trafford from January 2020 to February 2021." style="width: 99%;"/></a>
-                        <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2020-11-09-dwellings-no-outdoor-space/"><span class="filterTags"><!-- outdoors spaces environment green gardens dwellings housing covid-19 coronavirus --></span><h3 class="cardHead themeLink">Dwellings with no outdoor space</h3><time datetime="2020-11-09" class="themeBlockLight">November 09, 2020</time><img src="https://www.trafforddatalab.io/charticles/2020-11-09-dwellings-no-outdoor-space/plot.svg" alt=". Percentage of households with no access to a private or shared garden by MSOA."/></a>
-                        <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2020-10-16-mobility-trends/"><span class="filterTags"><!-- mobility trends retail supermarkets pharmacies parks coronavirus covid-19 restaurants cafes shopping centres theme parks museums libraries cinemas --></span><h3 class="cardHead themeLink">Mobility trends</h3><time datetime="2020-10-16" class="themeBlockLight">October 16, 2020</time><img src="https://www.trafforddatalab.io/charticles/2020-10-16-mobility-trends/plot.svg" alt=". Visits to retail locations, supermarkets and local parks in Trafford since mid-February 2020."/></a>
-                        <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2020-07-13-claimant-rate/"><span class="filterTags"><!-- claimants universal credit benefits covid-19 coronavirus unemployment jobs working --></span><h3 class="cardHead themeLink">Claimant Rate</h3><time datetime="2020-07-13" class="themeBlockLight">July 13, 2020</time><img src="https://www.trafforddatalab.io/charticles/2020-07-13-claimant-rate/plot.svg" alt=". Claimant rate in Trafford's wards during the COVID-19 outbreak."/></a>
-                        <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2020-04-30-no2-covid-19/"><span class="filterTags"><!-- air pollution nitrogen dioxide coronavirus covid-19 lockdown --></span><h3 class="cardHead themeLink">Air pollution levels during COVID-19</h3><time datetime="2020-04-30" class="themeBlockLight">April 30, 2020</time><img src="https://www.trafforddatalab.io/charticles/2020-04-30-no2-covid-19/plot.svg" alt=". Air pollution levels in Trafford during the COVID-19 lockdown compared to 2018 and 2019 levels."/></a>
+                        <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2021-04-15-claimant-rate-age/"><span class="filterTags"><!-- claimant rate universal credit benefits covid-19 coronavirus unemployment jobs working age band --></span><time datetime="2021-04-15" class="themeBlockLight">April 15, 2021</time><h3 class="cardHead themeLink">Claimant rate by age band</h3><img src="https://www.trafforddatalab.io/charticles/2021-04-15-claimant-rate-age/plot.svg" alt=". Claimant rate by five age bands in Trafford from January 2020 to February 2021." style="width: 99%;"/></a>
+                        <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2020-11-09-dwellings-no-outdoor-space/"><span class="filterTags"><!-- outdoors spaces environment green gardens dwellings housing covid-19 coronavirus --></span><time datetime="2020-11-09" class="themeBlockLight">November 09, 2020</time><h3 class="cardHead themeLink">Dwellings with no outdoor space</h3><img src="https://www.trafforddatalab.io/charticles/2020-11-09-dwellings-no-outdoor-space/plot.svg" alt=". Percentage of households with no access to a private or shared garden by MSOA."/></a>
+                        <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2020-10-16-mobility-trends/"><span class="filterTags"><!-- mobility trends retail supermarkets pharmacies parks coronavirus covid-19 restaurants cafes shopping centres theme parks museums libraries cinemas --></span><time datetime="2020-10-16" class="themeBlockLight">October 16, 2020</time><h3 class="cardHead themeLink">Mobility trends</h3><img src="https://www.trafforddatalab.io/charticles/2020-10-16-mobility-trends/plot.svg" alt=". Visits to retail locations, supermarkets and local parks in Trafford since mid-February 2020."/></a>
+                        <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2020-07-13-claimant-rate/"><span class="filterTags"><!-- claimants universal credit benefits covid-19 coronavirus unemployment jobs working --></span><time datetime="2020-07-13" class="themeBlockLight">July 13, 2020</time><h3 class="cardHead themeLink">Claimant Rate</h3><img src="https://www.trafforddatalab.io/charticles/2020-07-13-claimant-rate/plot.svg" alt=". Claimant rate in Trafford's wards during the COVID-19 outbreak."/></a>
+                        <a class="card labBorder" href="https://www.trafforddatalab.io/charticles/2020-04-30-no2-covid-19/"><span class="filterTags"><!-- air pollution nitrogen dioxide coronavirus covid-19 lockdown --></span><time datetime="2020-04-30" class="themeBlockLight">April 30, 2020</time><h3 class="cardHead themeLink">Air pollution levels during COVID-19</h3><img src="https://www.trafforddatalab.io/charticles/2020-04-30-no2-covid-19/plot.svg" alt=". Air pollution levels in Trafford during the COVID-19 lockdown compared to 2018 and 2019 levels."/></a>
                     </div>
                 </section>
 
