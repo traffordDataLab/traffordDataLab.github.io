@@ -201,7 +201,7 @@ a.card:hover .cardHead
 
     /* latest spec definitions */
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(239px, 1fr));   /* Override this if necessary in page for the type of layout required */
+    grid-template-columns: repeat(auto-fill, minmax(244px, 1fr));   /* Override this if necessary in page for the type of layout required */
     gap: 2em;
 
     /* legacy spec definitions for extra safety */

@@ -52,12 +52,23 @@
             {
                 height: 230px;
                 overflow: hidden;
-                text-indent: 0.25em;
-                padding-top: 0.1em;
+                padding: 0.1em 0 0 0;
 
                 /* For browsers which don't support grid layouts */
-                width: 20%;
+                width: 28.5%;
                 margin: 2.2% 2.2%;
+            }
+            
+            .charticleCard .cardHead
+            {
+                text-indent: 0;
+                padding: 0 0.25em;
+                margin-top: 0.15em;
+                margin-bottom: 0.1em;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
             }
 
             .appsGraphicsCard
@@ -84,15 +95,6 @@
 
 
             /* For browsers which don't support grid layouts */
-            @media (max-width:1300px)
-            {
-                .charticleCard
-                {
-                    width: 28%;
-                    margin: 1em 2.2%;
-                }
-            }
-
             @media (max-width:1150px)
             {
                 .card
@@ -106,8 +108,7 @@
             {
                 .charticleCard
                 {
-                    width: 40%;
-                    margin: 1em 4.5%;
+                    width: 45%;
                 }
             }
 
@@ -356,7 +357,7 @@
                     <h2>Charticles</h2>
 
                     <div class="cardContainer">
-                        <a class="card charticleCard labBorder" href="https://www.trafforddatalab.io/charticles/2023-04-20-traffords-changing-wards/"><span class="filterTags"><!-- electoral wards locality localities boundaries changing local elections" --></span><h3 class="cardHead themeLink">Trafford's changing wards</h3><time datetime="2023-04-20" class="themeBlockLight">April 20, 2023</time><img src="https://www.trafforddatalab.io/charticles/2023-04-20-traffords-changing-wards/plot_2023.svg" alt="Visualising the changes to the ward and locality boundaries in Trafford" style="width: 88%;"/></a>
+                        <a class="card charticleCard labBorder" href="https://www.trafforddatalab.io/charticles/2023-04-20-traffords-changing-wards/"><span class="filterTags"><!-- electoral wards locality localities boundaries changing local elections" --></span><time datetime="2023-04-20" class="themeBlockLight">April 20, 2023</time><h3 class="cardHead themeLink">Trafford's changing wards</h3><img src="https://www.trafforddatalab.io/charticles/2023-04-20-traffords-changing-wards/plot_2023.svg" alt="Visualising the changes to the ward and locality boundaries in Trafford" style="width: 88%;"/></a>
                     </div>
                 </section>
 

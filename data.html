@@ -19,7 +19,7 @@
                 height: 170px;
 
                 /* For browsers which don't support grid layouts */
-                width: 20%;
+                width: 28.5%;
                 margin: 1em 2.2%;
             }
 
@@ -28,6 +28,9 @@
                 height: 40px;
                 line-height: 40px;
                 padding: 0 0.75em;  /* 0.75em here and 1em in the .cardBody keep text inline as the text in the body is smaller */
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
 
             .cardBody
@@ -39,21 +42,11 @@
             }
 
             /* For browsers which don't support grid layouts */
-            @media (max-width:1300px)
-            {
-                .card
-                {
-                    width: 28%;
-                    margin: 1em 2.2%;
-                }
-            }
-
             @media (max-width:850px)
             {
                 .card
                 {
-                    width: 40%;
-                    margin: 1em 4.5%;
+                    width: 45%;
                 }
             }
 
@@ -133,11 +126,10 @@
                         <p class="cardBody">Nursing and residential care homes in Trafford.</p>
                     </a>
 
-                    <a href="https://www.trafforddatalab.io/council_open_data/assets/cctv/" class="card themeBlockLight labBorder notification">
+                    <a href="https://www.trafforddatalab.io/council_open_data/assets/cctv/" class="card themeBlockLight labBorder">
                         <span class="filterTags"><!-- cctv closed circuit television cameras security surveillance public safety crime prevention police --></span>
                         <h2 class="cardHead themeBlockDark">CCTV cameras</h2>
                         <p class="cardBody">Locations of Local Authority controlled Closed-Circuit Television (CCTV) cameras in Trafford.</p>
-                        <span class="badge highContrastBlock" aria-label="This item is new" data-added="2024-03-08"><span aria-hidden="true">new</span></span>
                     </a>
 
                     <a href="https://www.trafforddatalab.io/open_data/charities/" class="card themeBlockLight labBorder">
@@ -152,7 +144,7 @@
                         <p class="cardBody">Locations and details of the 6 Community Hubs across Trafford.</p>
                     </a>
 
-                    <a href="https://www.trafforddatalab.io/open_data/census2021/education/" class="card dataCard themeBlockLight labBorder">
+                    <a href="https://www.trafforddatalab.io/open_data/census2021/education/" class="card themeBlockLight labBorder">
                         <span class="filterTags"><!-- population estimates residents people education qualifications full-time students schoolchildren census 2021 --></span>
                         <h2 class="cardHead themeBlockDark">Education</h2>
                         <p class="cardBody">Highest level of qualification held by usual residents aged 16+, as well as the number of schoolchildren and full-time students from the 2021 census.</p>
@@ -164,11 +156,10 @@
                         <p class="cardBody">Results from Trafford council local elections/by-elections from 2016 onwards.</p>
                     </a>
 
-                    <a href="https://www.trafforddatalab.io/open_data/electric_vehicle_charging_locations/" class="card themeBlockLight labBorder notification">
+                    <a href="https://www.trafforddatalab.io/open_data/electric_vehicle_charging_locations/" class="card themeBlockLight labBorder">
                         <span class="filterTags"><!-- electric vehicle charging charge ev air pollution reduction reducing reduce climate change low carbon zero --></span>
                         <h2 class="cardHead themeBlockDark">Electric vehicle charging</h2>
                         <p class="cardBody">Electric vehicle charging locations in Trafford and associated information.</p>
-                        <span class="badge highContrastBlock" aria-label="This item is new" data-added="2024-03-14"><span aria-hidden="true">new</span></span>
                     </a>
 
                     <a href="https://www.trafforddatalab.io/open_data/census2021/ethnicity/" class="card themeBlockLight labBorder">
@@ -195,19 +186,19 @@
                         <p class="cardBody">Number of patients registered at GP practices in Trafford.</p>
                     </a>
 
-                    <a href="https://www.trafforddatalab.io/open_data/census2021/health_disability_unpaid_care/" class="card dataCard themeBlockLight labBorder">
+                    <a href="https://www.trafforddatalab.io/open_data/census2021/health_disability_unpaid_care/" class="card themeBlockLight labBorder">
                         <span class="filterTags"><!-- population estimates residents people households general health very good fair bad disability disabled unpaid carers age-standardised proportions assessments census 2021 --></span>
                         <h2 class="cardHead themeBlockDark">Health, disability, and unpaid care</h2>
                         <p class="cardBody">Census 2021 estimates that classify usual residents in England and Wales by health, disability, and unpaid care.</p>
                     </a>
 
-                    <a href="https://www.trafforddatalab.io/open_data/census2021/housing/" class="card dataCard themeBlockLight labBorder">
+                    <a href="https://www.trafforddatalab.io/open_data/census2021/housing/" class="card themeBlockLight labBorder">
                         <span class="filterTags"><!-- population estimates residents people households housing accommodation tenure central heating second addresses communal establishments census 2021 --></span>
                         <h2 class="cardHead themeBlockDark">Housing</h2>
                         <p class="cardBody">Residents and households census 2021 data based on accommodation type, tenure, rooms and bedrooms, central heating, car or van availability and second addresses.</p>
                     </a>
 
-                    <a href="https://www.trafforddatalab.io/open_data/census2021/labour_market_travel_to_work/" class="card dataCard themeBlockLight labBorder">
+                    <a href="https://www.trafforddatalab.io/open_data/census2021/labour_market_travel_to_work/" class="card themeBlockLight labBorder">
                         <span class="filterTags"><!-- population estimates residents people labour market work employment industry occupation economy economic socio-economic travel transport census 2021 --></span>
                         <h3 class="cardHead themeBlockDark">Labour Market &amp; Travel to Work</h3>
                         <p class="cardBody">Census 2021 estimates that classify usual residents in England and Wales relating to the labour market and travel to work.</p>
@@ -261,7 +252,7 @@
                         <p class="cardBody">Classifying usual residents in England and Wales by religious affiliation from the 2021 census. Data is provided by population and household.</p>
                     </a>
 
-                    <a href="https://www.trafforddatalab.io/open_data/census2021/sexual_orientation_gender_identity/" class="card dataCard themeBlockLight labBorder">
+                    <a href="https://www.trafforddatalab.io/open_data/census2021/sexual_orientation_gender_identity/" class="card themeBlockLight labBorder">
                         <span class="filterTags"><!-- population estimates residents people sexual orientation gender identity census 2021 --></span>
                         <h3 class="cardHead themeBlockDark">Sexual orientation &amp gender identity</h3>
                         <p class="cardBody">Classifying usual residents from the 2021 census by their self-reported sexual orientation and by their gender identity.</p>
