@@ -49,70 +49,82 @@
                 padding: 0 0 0.25em 0;
             }
 
-            /* Styles for the the "Collections" Font Awesome icons and Census 2021 lozenge */
-            .fa-check-circle, .fa-head-side-mask
-            {
-                float: left;
-            }
-
-            .card .fa-check-circle
-            {
-                font-size: 6em;
-                color: #902082;
-                margin-right: 0.12em;
-            }
-
-            .fa-head-side-mask
-            {
-                font-size: 5.75em;
-                color: #999;
-                margin-right: 0.13em;
-            }
-
-            #census2021 .fa-check-circle
-            {
-                margin-left: 0.08em;
-                margin-right: 0.1em;
-                padding-top: 0.081em;
-                font-size: 6em;
-                color: #fff;
-            }
-
-            #census2021
+            /* Styles for the the spotlight banner at the top of the page and the "Collections" Font Awesome icons */
+            #spotlightBanner
             {
                 display: block;
                 border-radius: 3.5em;
                 min-height: 7em;
                 margin: 2em 0 2em 0;
                 padding-right: 2em;
-                background-color: #902082;
+                background-color: #00445e; /* BIU dark blue */
                 color: #fff;
             }
 
-            #census2021:hover, #census2021:hover h2
+            #spotlightBanner:hover
             {
-                color: #fff;
-                background-color: #41378d;
+                background-color: #0bc2d2; /* BIU light blue */
+            }
+            
+            #spotlightBanner:hover, #spotlightBanner:hover h2, #spotlightBanner:hover .fa-chart-line, #spotlightBanner:hover .fa-circle
+            {
+                color: #002738; /* Tweaked to be darker than the BIU dark blue (#00445e) to achieve 7.17:1 contrast for WCAG AAA accessibility rating */
+            }
+            
+            #spotlightBanner:hover .fa-chart-simple
+            {
+                color: #ffcb00; /* BIU yellow */
             }
 
-            #census2021Content
+            #spotlightBannerText
             {
                 display: inline-block;
                 margin-left: 0.5em;
             }
 
-            #census2021Content h2
+            #spotlightBannerText h2
             {
                 margin-bottom: 0;
                 color: #fff;
+                font-size: 1.75em;
             }
 
-            #census2021Content p
+            #spotlightBannerText p
             {
                 margin-top: 0.25em;
                 margin-left: 2px;
             }
+            
+            #spotlightBannerIcon
+            {
+                margin-left: -0.08em;
+                padding-top: 0.16em;
+                font-size: 3em;
+            }
+            
+            #spotlightBannerIcon, .fa-check-circle, .fa-head-side-mask
+            {
+                float: left;
+            }
+            
+            .fa-chart-simple /* Lowest level stacked icon in the spotlight banner for Trafford Themes */
+            {
+                color: #0bc2d2; /* BIU light blue */
+            }
 
+            .card .fa-check-circle /* Census 2021 collection */
+            {
+                font-size: 6em;
+                color: #902082;
+                margin-right: 0.12em;
+            }
+
+            .card .fa-head-side-mask /* COVID-19 resources collection */
+            {
+                font-size: 5.75em;
+                color: #999;
+                margin-right: 0.13em;
+            }
 
             /* For browsers which don't support grid layouts */
             @media (max-width:750px)
@@ -165,11 +177,15 @@
 
                 <p class="intro">Supporting decision-making in Trafford by revealing patterns in data through visualisation.</p>
 
-                <a href="census2021.html" id="census2021" class="smallText">
-                    <span class="far fa-check-circle"></span>
-                    <span id="census2021Content">
-                        <h2><img src="images/Census 2021 Web Logo White Landscape RGB.png" height="20" alt="Census 2021" id="census2021Logo"/></h2>
-                        <p>Visit our dedicated page for all outputs relating to the census conducted in 2021.</p>
+                <a href="https://trafforddatalab.shinyapps.io/trafford_themes/" id="spotlightBanner" class="smallText">
+                    <span id="spotlightBannerIcon" class="fa-stack fa-2x">
+                        <span class="fa-solid fa-chart-simple fa-stack-1x"></span>
+                        <span class="fa-solid fa-chart-line fa-stack-1x"></span>
+                        <span class="fa-regular fa-circle fa-stack-2x"></span>
+                    </span>
+                    <span id="spotlightBannerText">
+                        <h2>Trafford Themes</h2>
+                        <p>Interactive dashboard with a range of themed indicators relating to work undertaken by Trafford Council.</p>
                     </span>
                 </a>
 
