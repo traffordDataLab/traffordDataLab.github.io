@@ -125,6 +125,17 @@
                 color: #999;
                 margin-right: 0.13em;
             }
+            
+            .labBorderPopular
+            {
+                border-color: #5d77a3;
+            }
+            
+            .labBorderPopular:hover
+            {
+                border-color: #00445e;
+                box-shadow: 0 0 5px #00445e;
+            }
 
             /* For browsers which don't support grid layouts */
             @media (max-width:750px)
@@ -197,7 +208,35 @@
                     <h2>Apps</h2>
 
                     <div class="cardContainer">
-                        <div class="card labBorder notification">
+                        <div class="card labBorder labBorderPopular themeBlockLight notification">
+                            <span class="filterTags"><!-- visualisation residents interactive electoral ward profiler ward profiles trafford wards spatial maps mapping thematic themes communications community safety demographics deprivation economy education environment governance health housing labour market transport crime population ethnicity language religion religious beliefs age apps webapps applications --></span>
+                            <a href="https://www.trafforddatalab.io/ward_profiler/" target="_blank"><h3 class="cardHead themeLink">Ward Profiler</h3><img src="images/ward_profiler_thumbnail.png" class="thumbnail" alt=""/></a><br class="hideContent"/>
+                            <span class="cardBody">In-depth information focussing on each of Trafford's wards. The information is presented in thematic sections as interactive maps and charts allowing for easy comparisons to be made. You can also download the data and code behind the visualisations.</span>
+                            <span class="badge themeBlockDark" aria-label="This is a popular app"><span aria-hidden="true">popular</span></span>
+                        </div>
+                        
+                        <div class="card labBorder labBorderPopular themeBlockLight notification">
+                            <span class="filterTags"><!-- visualisation interactive maps mapping geojson geography geographies geospatial point data location amenities community safety education elections environment health historical interest housing labour market religion transport roads rail points of interest outdoor reachability nearest parks greenspaces green spaces travel loctions explore exploring trafford apps webapps applications --></span>
+                            <a href="https://www.trafforddatalab.io/explore/" target="_blank"><h3 class="cardHead themeLink">Explore</h3><img src="images/explore_thumbnail.png" class="thumbnail" alt=""/></a><br class="hideContent"/>
+                            <span class="cardBody">Discover the different geographic areas of Trafford and visualise all of our spatial datasets in one application. Use the geolocation facility (on supported devices with the user's permission) to see where you are and discover what is around you.</span>
+                            <span class="badge themeBlockDark" aria-label="This is a popular app"><span aria-hidden="true">popular</span></span>
+                        </div>
+                        
+                        <div class="card labBorder labBorderPopular themeBlockLight notification">
+                            <span class="filterTags"><!-- visualisation residents interactive trafford council themes dashboard corporate plan priorities strategic vision outcomes indicators performance borough children and families children & families family healthy lives health economy and homes economy & homes businesses housing climate crisis environment comparators apps webapps applications --></span>
+                            <a href="https://trafforddatalab.shinyapps.io/trafford_themes/" target="_blank"><h3 class="cardHead themeLink">Trafford Themes</h3><img src="images/trafford_themes_thumbnail.png" class="thumbnail" alt=""/></a><br class="hideContent"/>
+                            <span class="cardBody">Interactive dashboard visualising data and comparisons for a range of themed indicators. These themes relate to the work undertaken by Trafford Council, including those defined by the <a href="https://www.trafford.gov.uk/about-your-council/strategies-plans-and-policies/Corporate-Plan.aspx" target="_blank">corporate priorities</a>, as well as other areas, providing an overview of the borough.</span>
+                            <span class="badge themeBlockDark" aria-label="This is a popular app"><span aria-hidden="true">popular</span></span>
+                        </div>
+                        
+                        <div class="card labBorder labBorderPopular themeBlockLight notification">
+                            <span class="filterTags"><!-- residents visualisation interactive trafford population picker single year of age statistical administrative geographies geography apps webapps applications --></span>
+                            <a href="https://trafforddatalab.shinyapps.io/population_picker" target="_blank"><h3 class="cardHead themeLink">Population Picker</h3><img src="images/population_picker_thumbnail.png" class="thumbnail" alt=""/></a><br class="hideContent"/>
+                            <span class="cardBody">Discover population figures for the different statistical and administrative geographies. Choose areas of interest and export the aggregated data.</span>
+                            <span class="badge themeBlockDark" aria-label="This is a popular app"><span aria-hidden="true">popular</span></span>
+                        </div>
+                        
+                        <div class="card labBorder">
                             <span class="filterTags"><!-- flooding floods flood risk monitoring water lakes rivers streams brooks water levels watercourses apps webapps applications --></span>
                             <a href="https://www.trafforddatalab.io/maps/flood_risk_monitor" target="_blank">
                                 <h3 class="cardHead themeLink">Flood Risk Monitor</h3>
@@ -209,13 +248,48 @@
                                 </div>
                             </a><br class="hideContent"/>
                             <span class="cardBody">Interactive map combining datasets from the <a href="https://www.gov.uk/government/organisations/environment-agency" target="_blank">Environment Agency</a> and <a href="https://www.ordnancesurvey.co.uk/" target="_blank">Ordnance Survey</a> showing flood risk from watercourses in and around Trafford and the latest available water level readings.</span>
-                            <span class="badge highContrastBlock" aria-label="This item is new" data-added="2025-04-11"><span aria-hidden="true">new</span></span>
                         </div>
                         
                         <div class="card labBorder">
-                            <span class="filterTags"><!-- visualisation residents interactive trafford council themes dashboard corporate plan priorities strategic vision outcomes indicators performance borough children and families children & families family healthy lives health economy and homes economy & homes businesses housing climate crisis environment comparators apps webapps applications --></span>
-                            <a href="https://trafforddatalab.shinyapps.io/trafford_themes/" target="_blank"><h3 class="cardHead themeLink">Trafford Themes</h3><img src="images/trafford_themes_thumbnail.png" class="thumbnail" alt=""/></a><br class="hideContent"/>
-                            <span class="cardBody">Interactive dashboard visualising data and comparisons for a range of themed indicators. These themes relate to the work undertaken by Trafford Council, including those defined by the <a href="https://www.trafford.gov.uk/about-your-council/strategies-plans-and-policies/Corporate-Plan.aspx" target="_blank">corporate priorities</a>, as well as other areas, providing an overview of the borough.</span>
+                            <span class="filterTags"><!-- visualisation interactive reported road traffic accidents rta casualty road casualties personal injury injuries crashes apps webapps applications --></span>
+                            <a href="https://trafforddatalab.shinyapps.io/road_casualties" target="_blank"><h3 class="cardHead themeLink">Road casualties</h3><img src="images/road_casualty_app_thumbnail.png" class="thumbnail" alt=""/></a><br class="hideContent"/>
+                            <span class="cardBody">Application enabling users to explore GM reported road traffic accidents involving personal injury between 2010 and 2023.</span>
+                        </div>
+                        
+                        <div class="card labBorder">
+                            <span class="filterTags"><!-- interactive trafford greater manchester local authorities postcodes centroids electoral wards download administrative geographies geography coordinates maps mapping apps webapps applications --></span>
+                            <a href="https://trafforddatalab.shinyapps.io/postcode_loader/" target="_blank"><h3 class="cardHead themeLink">Postcode Loader</h3><img src="images/postcode_loader_thumbnail.png" class="thumbnail" alt=""/></a><br class="hideContent"/>
+                            <span class="cardBody">An <a href="https://cran.r-project.org/web/packages/shiny/index.html" target="_blank">R Shiny</a> app allowing users to download the latest <a href="https://geoportal.statistics.gov.uk/datasets/ons::onspd-online-latest-centroids/about" target="_blank">postcode centroids</a> from the <a href="https://www.ons.gov.uk/" target="_blank">Office for National Statistics</a>' <a href="https://geoportal.statistics.gov.uk/" target="_blank">Open Geography Portal</a> API.</span>
+                        </div>
+
+                        <div class="card labBorder">
+                            <span class="filterTags"><!-- interactive trafford greater manchester england uk postcoder postcodes statistical administrative geographies geography coordinates maps mapping apps webapps applications --></span>
+                            <a href="https://trafforddatalab.shinyapps.io/postcoder/" target="_blank"><h3 class="cardHead themeLink">Postcoder</h3><img src="images/postcoder_thumbnail.png" class="thumbnail" alt=""/></a><br class="hideContent"/>
+                            <span class="cardBody">This <a href="https://cran.r-project.org/web/packages/shiny/index.html" target="_blank">R Shiny</a> application powered by <a href="http://postcodes.io/" target="_blank">Postcodes.io</a> allows you to find administrative and statistical geographies for a given postcode. You can either enter the postcode manually or click on the map to find the nearest postcode to the corresponding coordinates.</span>
+                        </div>
+                        
+                        <div class="card labBorder">
+                            <span class="filterTags"><!-- visualisation trafford national local authorities uk united kingdom climate emergency slide pack slide deck climate change climate crisis environment environmental councils energy carbon electricity gas biomass nuclear green wind wave solar renewables apps webapps applications --></span>
+                            <a href="https://trafforddatalab.shinyapps.io/climate_emergency/" target="_blank"><h3 class="cardHead themeLink">Climate emergency slide pack</h3><img src="images/climate_slide_pack_thumbnail.png" class="thumbnail" alt=""/></a><br class="hideContent"/>
+                            <span class="cardBody">More than half of UK councils have declared a &quot;<a href="https://www.bbc.co.uk/news/newsbeat-47570654" target="_blank">climate emergency</a>&quot;. This tool is designed to support local councils by visualising open data relating to climate change. We have also created an accompanying <a href="http://www.trafforddatalab.io/climate_emergency/">climate emergency open data companion</a>.</span>
+                        </div>
+
+                        <div class="card labBorder">
+                            <span class="filterTags"><!-- visualisation residents trafford interactive english indices of deprivation 2019 english index of deprivation 2019 deprived areas income employment education, skills and training health deprivation and disability crime barriers to housing and services living environment income deprivation affecting children index idaci income deprivation affecting older people index idaopi most deprived least deprived deciles lsoas lower-layer super output areas lower layer super output areas apps webapps applications --></span>
+                            <a href="https://trafforddatalab.shinyapps.io/imd19" target="_blank"><h3 class="cardHead themeLink">English Indices of Deprivation 2019</h3><img src="images/imd_2019_app_thumbnail.png" class="thumbnail" alt=""/></a><br class="hideContent"/>
+                            <span class="cardBody">Interactive visualisation of the data released by the <a href="https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019" target="_blank">Ministry of Housing, Communities & Local Government</a> for Lower-layer Super Output Areas (LSOA) across England by Local Authority District. Please visit our <a href="deprivation.html">Indices of Deprivation 2019 page</a> for further resources.</span>
+                        </div>
+                        
+                        <div class="card labBorder">
+                            <span class="filterTags"><!-- visualisation interactive create choropleth maps mapping choroplether export geospatial geography geographies geojson apps webapps applications --></span>
+                            <a href="https://www.trafforddatalab.io/choroplether/" target="_blank"><h3 class="cardHead themeLink">Choroplether</h3><img src="images/choroplether_thumbnail.png" class="thumbnail" alt=""/></a><br class="hideContent"/>
+                            <span class="cardBody">Create <a href="https://www.axismaps.com/guide/univariate/choropleth/" target="_blank">choropleth maps</a> of your own data in <a href="https://vega.github.io/vega-lite/" target="_blank">Vega-Lite</a> without having to write all the code yourself. Export the output as an image or embed it in a web page.</span>
+                        </div>
+
+                        <div class="card labBorder">
+                            <span class="filterTags"><!-- interactive maps mapping geojson geography geographies geospatial point data location features lines polygons circles markers graphical information system gis export geospatial geography geographies plotter apps webapps applications --></span>
+                            <a href="https://www.trafforddatalab.io/plotter/" target="_blank"><h3 class="cardHead themeLink">Plotter</h3><img src="images/plotter_thumbnail.png" class="thumbnail" alt=""/></a><br class="hideContent"/>
+                            <span class="cardBody">Create and edit map features in the form of lines, polygons, circles and markers and save the results. Load previously saved data and add to it, or use it in other applications such as Graphical Information Systems (GIS) software.</span>
                         </div>
 
                         <div class="card labBorder">
@@ -229,72 +303,12 @@
                             <a href="https://www.trafforddatalab.io/parks/" target="_blank"><h3 class="cardHead themeLink">Public Parks in Trafford</h3><img src="images/parks_thumbnail.png" class="thumbnail" alt=""/></a><br class="hideContent"/>
                             <span class="cardBody">Discover the facilities available within the public parks in Trafford. Information regarding the various friends' groups is also available.</span>
                         </div>
-
-                        <div class="card labBorder">
-                            <span class="filterTags"><!-- visualisation trafford national local authorities uk united kingdom climate emergency slide pack slide deck climate change climate crisis environment environmental councils energy carbon electricity gas biomass nuclear green wind wave solar renewables apps webapps applications --></span>
-                            <a href="https://trafforddatalab.shinyapps.io/climate_emergency/" target="_blank"><h3 class="cardHead themeLink">Climate emergency slide pack</h3><img src="images/climate_slide_pack_thumbnail.png" class="thumbnail" alt=""/></a><br class="hideContent"/>
-                            <span class="cardBody">More than half of UK councils have declared a &quot;<a href="https://www.bbc.co.uk/news/newsbeat-47570654" target="_blank">climate emergency</a>&quot;. This tool is designed to support local councils by visualising open data relating to climate change. We have also created an accompanying <a href="http://www.trafforddatalab.io/climate_emergency/">climate emergency open data companion</a>.</span>
-                        </div>
-
-                        <div class="card labBorder">
-                            <span class="filterTags"><!-- visualisation residents trafford interactive english indices of deprivation 2019 english index of deprivation 2019 deprived areas income employment education, skills and training health deprivation and disability crime barriers to housing and services living environment income deprivation affecting children index idaci income deprivation affecting older people index idaopi most deprived least deprived deciles lsoas lower-layer super output areas lower layer super output areas apps webapps applications --></span>
-                            <a href="https://trafforddatalab.shinyapps.io/imd19" target="_blank"><h3 class="cardHead themeLink">English Indices of Deprivation 2019</h3><img src="images/imd_2019_app_thumbnail.png" class="thumbnail" alt=""/></a><br class="hideContent"/>
-                            <span class="cardBody">Interactive visualisation of the data released by the <a href="https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019" target="_blank">Ministry of Housing, Communities & Local Government</a> for Lower-layer Super Output Areas (LSOA) across England by Local Authority District. Please visit our <a href="deprivation.html">Indices of Deprivation 2019 page</a> for further resources.</span>
-                        </div>
-
-                        <div class="card labBorder">
-                            <span class="filterTags"><!-- visualisation residents interactive electoral ward profiler ward profiles trafford wards spatial maps mapping thematic themes communications community safety demographics deprivation economy education environment governance health housing labour market transport crime population ethnicity language religion religious beliefs age apps webapps applications --></span>
-                            <a href="https://www.trafforddatalab.io/ward_profiler/" target="_blank"><h3 class="cardHead themeLink">Ward Profiler</h3><img src="images/ward_profiler_thumbnail.png" class="thumbnail" alt=""/></a><br class="hideContent"/>
-                            <span class="cardBody">In-depth information focussing on each of Trafford's wards. The information is presented in thematic sections as interactive maps and charts allowing for easy comparisons to be made. You can also download the data and code behind the visualisations.</span>
-                        </div>
-
-                        <div class="card labBorder">
-                            <span class="filterTags"><!-- visualisation interactive maps mapping geojson geography geographies geospatial point data location amenities community safety education elections environment health historical interest housing labour market religion transport roads rail points of interest outdoor reachability nearest parks greenspaces green spaces travel loctions explore exploring trafford apps webapps applications --></span>
-                            <a href="https://www.trafforddatalab.io/explore/" target="_blank"><h3 class="cardHead themeLink">Explore</h3><img src="images/explore_thumbnail.png" class="thumbnail" alt=""/></a><br class="hideContent"/>
-                            <span class="cardBody">Discover the different geographic areas of Trafford and visualise all of our spatial datasets in one application. Use the geolocation facility (on supported devices with the user's permission) to see where you are and discover what is around you.</span>
-                        </div>
-
+                        
                         <!-- TEMPORARILY REMOVED DUE TO NO DATA AVAILABLE FROM GMP: 2023-01-11 div class="card labBorder">
                             <span class="filterTags"></span>
                             <a href="http://www.trafforddatalab.io/crime_scanner/" target="_blank"><h3 class="cardHead themeLink">Crime Scanner</h3><img src="images/crime_scanner_thumbnail.png" class="thumbnail" alt=""/></a><br class="hideContent"/>
                             <span class="cardBody">Interactively visualise street level crime and anti-social behaviour (ASB) incidents in your area.</span>
                         </div-->
-
-                        <div class="card labBorder">
-                            <span class="filterTags"><!-- visualisation interactive create choropleth maps mapping choroplether export geospatial geography geographies geojson apps webapps applications --></span>
-                            <a href="https://www.trafforddatalab.io/choroplether/" target="_blank"><h3 class="cardHead themeLink">Choroplether</h3><img src="images/choroplether_thumbnail.png" class="thumbnail" alt=""/></a><br class="hideContent"/>
-                            <span class="cardBody">Create <a href="https://www.axismaps.com/guide/univariate/choropleth/" target="_blank">choropleth maps</a> of your own data in <a href="https://vega.github.io/vega-lite/" target="_blank">Vega-Lite</a> without having to write all the code yourself. Export the output as an image or embed it in a web page.</span>
-                        </div>
-
-                        <div class="card labBorder">
-                            <span class="filterTags"><!-- residents visualisation interactive trafford population picker single year of age statistical administrative geographies geography apps webapps applications --></span>
-                            <a href="https://trafforddatalab.shinyapps.io/population_picker" target="_blank"><h3 class="cardHead themeLink">Population Picker</h3><img src="images/population_picker_thumbnail.png" class="thumbnail" alt=""/></a><br class="hideContent"/>
-                            <span class="cardBody">Discover population figures for the different statistical and administrative geographies. Choose areas of interest and export the aggregated data.</span>
-                        </div>
-
-                        <div class="card labBorder">
-                            <span class="filterTags"><!-- interactive trafford greater manchester local authorities postcodes centroids electoral wards download administrative geographies geography coordinates maps mapping apps webapps applications --></span>
-                            <a href="https://trafforddatalab.shinyapps.io/postcode_loader/" target="_blank"><h3 class="cardHead themeLink">Postcode Loader</h3><img src="images/postcode_loader_thumbnail.png" class="thumbnail" alt=""/></a><br class="hideContent"/>
-                            <span class="cardBody">An <a href="https://cran.r-project.org/web/packages/shiny/index.html" target="_blank">R Shiny</a> app allowing users to download the latest <a href="https://geoportal.statistics.gov.uk/datasets/ons::onspd-online-latest-centroids/about" target="_blank">postcode centroids</a> from the <a href="https://www.ons.gov.uk/" target="_blank">Office for National Statistics</a>' <a href="https://geoportal.statistics.gov.uk/" target="_blank">Open Geography Portal</a> API.</span>
-                        </div>
-
-                        <div class="card labBorder">
-                            <span class="filterTags"><!-- interactive trafford greater manchester england uk postcoder postcodes statistical administrative geographies geography coordinates maps mapping apps webapps applications --></span>
-                            <a href="https://trafforddatalab.shinyapps.io/postcoder/" target="_blank"><h3 class="cardHead themeLink">Postcoder</h3><img src="images/postcoder_thumbnail.png" class="thumbnail" alt=""/></a><br class="hideContent"/>
-                            <span class="cardBody">This <a href="https://cran.r-project.org/web/packages/shiny/index.html" target="_blank">R Shiny</a> application powered by <a href="http://postcodes.io/" target="_blank">Postcodes.io</a> allows you to find administrative and statistical geographies for a given postcode. You can either enter the postcode manually or click on the map to find the nearest postcode to the corresponding coordinates.</span>
-                        </div>
-
-                        <div class="card labBorder">
-                            <span class="filterTags"><!-- interactive maps mapping geojson geography geographies geospatial point data location features lines polygons circles markers graphical information system gis export geospatial geography geographies plotter apps webapps applications --></span>
-                            <a href="https://www.trafforddatalab.io/plotter/" target="_blank"><h3 class="cardHead themeLink">Plotter</h3><img src="images/plotter_thumbnail.png" class="thumbnail" alt=""/></a><br class="hideContent"/>
-                            <span class="cardBody">Create and edit map features in the form of lines, polygons, circles and markers and save the results. Load previously saved data and add to it, or use it in other applications such as Graphical Information Systems (GIS) software.</span>
-                        </div>
-
-                        <div class="card labBorder">
-                            <span class="filterTags"><!-- visualisation interactive reported road traffic accidents rta casualty road casualties personal injury injuries crashes apps webapps applications --></span>
-                            <a href="https://trafforddatalab.shinyapps.io/road_casualties" target="_blank"><h3 class="cardHead themeLink">Road casualties</h3><img src="images/road_casualty_app_thumbnail.png" class="thumbnail" alt=""/></a><br class="hideContent"/>
-                            <span class="cardBody">Application enabling users to explore GM reported road traffic accidents involving personal injury between 2010 and 2023.</span>
-                        </div>
                     </div>
                 </section>
 
@@ -349,11 +363,10 @@
                             <span class="badge highContrastBlock" aria-label="This item is new" data-added="2025-08-05"><span aria-hidden="true">new</span></span>
                         </div>
                         
-                        <div class="card labBorder notification">
+                        <div class="card labBorder">
                             <span class="filterTags"><!-- visualisation residents population projections 2032 2022 GM grater Manchester England growth change births young old age natural pyramid analysis --></span>
                             <a href="https://www.trafforddatalab.io/analysis/demographics/population/Population_Projections.html"><h3 class="cardHead themeLink">Trafford's population projections</h3><img src="images/projections_thumbnail.png" class="thumbnail" alt=""/></a><br class="hideContent"/>
                             <span class="cardBody">Analysis of Trafford's population projections based on 2022 including growth to 2032 and splits by age.</span>
-                            <span class="badge highContrastBlock" aria-label="This item is new" data-added="2025-07-23"><span aria-hidden="true">new</span></span>
                         </div>
                         
                         <div class="card labBorder">
@@ -375,11 +388,10 @@
                             <span class="cardBody">This report analyses the data published regarding the <a href="https://www.ons.gov.uk/releases/ethnicgroupnationalidentitylanguageandreligioncensus2021inenglandandwales" target="_blank">ethnic group, national identity, language, and religion</a> of residents from the 2021 census and compares it to similar data from the census in 2011.</span>
                         </div>
                         
-                            <div class="card labBorder notification">
+                        <div class="card labBorder">
                             <span class="filterTags"><!-- pip benefits personal independence payment welfare DWP claimants claims health disability mental depression anxiety age ward --></span>
                             <a href="https://www.trafforddatalab.io/analysis/welfare_benefits/PIP.html"><h3 class="cardHead themeLink">Trafford's PIP claims </h3><img src="images/pip_thumbnail.png" class="thumbnail" alt=""/></a><br class="hideContent"/>
                             <span class="cardBody">Analysis of Personal Independence Payment (PIP) claim figures in Trafford by disability or disorder, age and MSOA in January 2025, as well as changes from January 2020. </span>
-                            <span class="badge highContrastBlock" aria-label="This item is new" data-added="2025-04-11"><span aria-hidden="true">new</span></span>
                         </div>
 
                     </div>
@@ -457,7 +469,7 @@
 
             // Automatically remove any "new" notifications from content items after the specified number of days.
             // NOTE: The notification code should still be removed manually as this helper function simply hides the elements.
-            RemoveElapsedLabNotifications({ daysElapsed: 14 });
+            RemoveElapsedLabNotifications({ daysElapsed: 14, notificationType: 'new' });
         </script>
     </body>
 </html>
