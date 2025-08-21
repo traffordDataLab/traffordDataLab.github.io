@@ -106,10 +106,8 @@
             
             #outputCategoriesMenu /* APPS | COLLECTIONS | REPORTS | GRAPHICS */
             {
-                padding-top: 3.4em;
-                margin-top: 0;
-                margin-bottom: 0;
-                margin-left: 2.5em;
+                padding-top: 3.5em;
+                margin: 0 0 0 2.5em;
             }
             
             #outputCategoriesMenu a
@@ -119,6 +117,9 @@
                 padding: 3px 6px 0 6px;
                 text-transform: uppercase;
                 font-weight: bold;
+                display: block;
+                float: left;
+                margin-right: 2px;
             }
             
             #outputCategoriesMenu a:hover
@@ -191,16 +192,20 @@
                     grid-gap: 1em;
                 }
                 
+                .backToOutputCategoriesMenu
+                {
+                    margin-top: 1em;
+                }
+                
                 #outputCategoriesMenu /* APPS | COLLECTIONS | REPORTS | GRAPHICS */
                 {
                     padding-top: 3.2em;
-                    margin-bottom: -2px;
                     margin-left: 1.1em;
                 }
                 
                 #outputCategoriesMenu a
                 {
-                    font-size: 0.7em;  
+                    font-size: 0.7em;
                 }
                 
                 #featured
@@ -214,7 +219,7 @@
             {
                 #outputCategoriesMenu /* APPS | COLLECTIONS | REPORTS | GRAPHICS */
                 {
-                    padding-top: 5.9em;
+                    padding-top: 6em;
                 }
             }
         </style>
@@ -250,7 +255,7 @@
                     <a href="#reports">Reports</a>
                     <a href="#graphics">Graphics</a>
                 </nav>
-                <section id="featured" aria-label="items will open in a new window">
+                <section id="featured" aria-label="items will open in a new window" style="clear: both;">
                     <div class="cardContainer">
                         <div class="card labBorder labBorderfeatured themeBlockLight notification">
                             <a href="https://www.trafforddatalab.io/explore/" target="_blank"><h3 class="cardHead themeLink">Explore</h3><img src="images/explore_thumbnail.png" class="thumbnail" alt=""/></a><br class="hideContent"/>
@@ -391,7 +396,7 @@
                     </div>
                 </section>
                 
-                <a href="#outputCategoriesMenu" class="backToOutputCategoriesMenu"><span aria-label="return to output categories" class="fa-solid fa-circle-up"></span></span></a>
+                <a href="#outputCategoriesMenu" class="backToOutputCategoriesMenu"><span aria-label="return to output category links" class="fa-solid fa-circle-up"></span><span class="hideContent">Top</span></a>
 
                 <section id="collections">
                     <h2>Collections</h2>
@@ -433,7 +438,7 @@
                     </div>
                 </section>
                 
-                <a href="#outputCategoriesMenu" class="backToOutputCategoriesMenu"><span aria-label="return to output categories" class="fa-solid fa-circle-up"></span></span></a>
+                <a href="#outputCategoriesMenu" class="backToOutputCategoriesMenu"><span aria-label="return to output category links" class="fa-solid fa-circle-up"></span><span class="hideContent">Top</span></a>
 
                 <section id="reports">
                     <h2>Reports</h2>
@@ -480,7 +485,7 @@
                     </div>
                 </section>
                 
-                <a href="#outputCategoriesMenu" class="backToOutputCategoriesMenu"><span aria-label="return to output categories" class="fa-solid fa-circle-up"></span></span></a>
+                <a href="#outputCategoriesMenu" class="backToOutputCategoriesMenu"><span aria-label="return to output category links" class="fa-solid fa-circle-up"></span><span class="hideContent">Top</span></a>
 
                 <section id="graphics">
                     <h2>Graphics</h2>
@@ -512,7 +517,7 @@
                     </div>
                 </section>
                 
-                <a href="#outputCategoriesMenu" class="backToOutputCategoriesMenu"><span aria-label="return to output categories" class="fa-solid fa-circle-up"></span></span></a>
+                <a href="#outputCategoriesMenu" class="backToOutputCategoriesMenu"><span aria-label="return to output category links" class="fa-solid fa-circle-up"></span><span class="hideContent">Top</span></a>
             </main>
 
             <footer id="footer">
