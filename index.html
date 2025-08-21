@@ -74,6 +74,16 @@
                 width: 100%; /* these cards are larger than the default due to the contents of each being so large */
                 margin: 0.5em 0;
             }
+            
+            /* For browsers which support grid layouts - Reset the widths and margins applied in the initial .card styles above as they aren't required when using grid layout */
+            @supports (display: grid)
+            {
+                .card
+                {
+                    width: auto;
+                    margin: 0;
+                }
+            }
 
             .cardHead
             {
@@ -96,7 +106,7 @@
             
             #outputCategoriesMenu /* APPS | COLLECTIONS | REPORTS | GRAPHICS */
             {
-                padding-top: 3.3em;
+                padding-top: 3.4em;
                 margin-top: 0;
                 margin-bottom: 0;
                 margin-left: 2.5em;
@@ -168,36 +178,43 @@
             }
 
 
-            /* Display cards in a single column on smaller displays, rather than in the default 2-column */
+            /* Reduce the size of certain elements on very small displays */
             @media (max-width:750px)
             {
+                /* Display cards in a single column on smaller displays, rather than in the default 2-column */
                 .cardContainer
                 {
-                    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));   /* to fix issue on small displays where the minimum width is still to large and so causes horizontal scrolling */
+                    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));   /* to fix issue on small displays where the minimum width is still to large and so causes horizontal scrolling */
+                    gap: 1em;
+
+                    /* legacy spec definitions for extra safety */
+                    grid-gap: 1em;
                 }
-            }
-            
-            /* Reduce the size of the output categories menu on very small displays */
-            @media (max-width:640px) {    
+                
                 #outputCategoriesMenu /* APPS | COLLECTIONS | REPORTS | GRAPHICS */
                 {
                     padding-top: 3.2em;
-                    margin-bottom: -1px;
+                    margin-bottom: -2px;
+                    margin-left: 1.1em;
                 }
                 
                 #outputCategoriesMenu a
                 {
-                    font-size: 0.80em;  
+                    font-size: 0.7em;  
+                }
+                
+                #featured
+                {
+                    border-radius: 1em;
+                    padding: 0.7em;   
                 }
             }
             
-            /* For browsers which support grid layouts - Reset the widths and margins applied in the .card styles above as they aren't required when using grid layout */
-            @supports (display: grid)
+            @media (max-width:620px)
             {
-                .card
+                #outputCategoriesMenu /* APPS | COLLECTIONS | REPORTS | GRAPHICS */
                 {
-                    width: auto;
-                    margin: 0;
+                    padding-top: 5.9em;
                 }
             }
         </style>
@@ -212,8 +229,8 @@
                         <li><a href="#footer" class="themeBlockDark">Skip to footer</a></li>
                     </ul>
                     <img src="https://www.trafforddatalab.io/assets/logo/trafforddatalab_logo.svg" alt="Trafford Data Lab" width="93" class="traffordDataLabLogo"/>
-                    <p class="hideContent">Main Menu</p>
-                    <ul class="navbar">
+                    <p id="mainMenu" class="hideContent">Main Menu</p>
+                    <ul class="navbar" labelled-by="mainMenu">
                         <li><a href="charticles.html">Charticles</a></li>
                         <li><a href="data.html">Data</a></li>
                         <li><a href="learning.html">Learning</a></li>
