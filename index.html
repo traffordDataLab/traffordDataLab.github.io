@@ -26,9 +26,14 @@
             
             h2
             {
-                border-bottom: 3px dotted #00445e;
+                border-bottom: 3px dotted #5d77a3;
                 padding-bottom: 3px;
                 margin-bottom: 1.5em;
+            }
+            
+            #featured h2
+            {
+                border-bottom: 0;
             }
 
             .thumbnail
@@ -36,18 +41,18 @@
                 margin-top: 0.5em;
             }
             
-            .backToOutputCategoriesMenu
+            .backToFeatured
             {
                 display: block;
                 margin-top: 1.5em;
                 font-size: 1.5em;
-                color: #0bc2d2;
+                color: #5d77a3;
                 border: 1px solid #f0f0f0;
                 border-radius: 0.75em;
                 text-align: center;
             }
             
-            .backToOutputCategoriesMenu:hover
+            .backToFeatured:hover
             {
                 color: #00445e;
                 background-color: #f9f9f9;
@@ -68,12 +73,32 @@
 
             .card
             {
+                background-color: #fff;
                 padding: 0.2em 0.5em 0.5em 0.5em;   /* the top padding is different to make the gap look balanced all around as the .cardHead content has padding of its own. */
 
                 /* For browsers which don't support grid layouts */
                 width: 100%; /* these cards are larger than the default due to the contents of each being so large */
                 margin: 0.5em 0;
             }
+            
+            #featured .card
+            {
+                padding: 0 0 0.5em 0;
+            }
+            
+            #featured .card div:first-child
+            {
+                text-align: right;
+                text-transform: uppercase;
+                font-weight: bold;
+                padding-right: 0.5em;
+            }
+            
+            #featured .card div:nth-child(2)
+            {
+                padding: 0.2em 0.5em 0.5em 0.5em;
+            }
+            
             
             /* For browsers which support grid layouts - Reset the widths and margins applied in the initial .card styles above as they aren't required when using grid layout */
             @supports (display: grid)
@@ -104,57 +129,11 @@
                 box-shadow: 0 0 5px #00445e;
             }
             
-            #outputCategoriesMenu /* APPS | COLLECTIONS | REPORTS | GRAPHICS */
+            #featuredContainer /* Container for the featured item cards */
             {
-                padding-top: 3.5em;
-                margin: 0 0 0 2.5em;
-            }
-            
-            #outputCategoriesMenu a
-            {
-                background-color: #00445e;
-                color: #fff;
-                padding: 3px 6px 0 6px;
-                text-transform: uppercase;
-                font-weight: bold;
-                display: block;
-                float: left;
-                margin-right: 2px;
-            }
-            
-            #outputCategoriesMenu a:hover
-            {
-                background-color: #ffcb00;
-                color: #212121;
-            }
-            
-            #outputCategoriesMenu a:first-child
-            {
-                border-top-left-radius: 10px;
-            }
-            
-            #outputCategoriesMenu a:last-child
-            {
-                border-top-right-radius: 10px;
-            }
-            
-            #featured /* Container for the featured item cards */
-            {
-                border: 6px solid #00445e;
-                border-radius: 1.70em;
+                border: 3px solid #5d77a3;
+                border-radius: 0.5em;
                 padding: 2em;
-                background-color: #0bc2d2;
-            }
-            
-            #featured .badge
-            {
-                background-color: #00445e;
-                color: #fff;
-            }
-            
-            #featured .badge .fa-star
-            {
-                color: #ffcb00;
             }
 
 
@@ -177,10 +156,34 @@
                 color: #999;
                 margin-right: 0.13em;
             }
+            
+            
+            /* To highlight the menu as a visual aid when selecting the "main menu" link referred to in the text above the apps collection */
+            @keyframes highlightMenu
+            {
+                50% {
+                    background-color: #ffcb00;
+                }
+                100% {
+                    background-color: #fff;
+                }
+            }
+            
+            /* Give the main menu items rounded corners for a nicer appearance when they are highlighted by the animation */
+            #mainMenu li
+            {
+                border-radius: 1em;
+            }
+            
+            /* Apply the animation to highlight the menu when the "main menu" link is selected */
+            #mainMenu:target li
+            {
+                animation: highlightMenu 2s;
+            }
 
 
             /* Reduce the size of certain elements on very small displays */
-            @media (max-width:750px)
+            @media (max-width:650px)
             {
                 /* Display cards in a single column on smaller displays, rather than in the default 2-column */
                 .cardContainer
@@ -192,34 +195,14 @@
                     grid-gap: 1em;
                 }
                 
-                .backToOutputCategoriesMenu
+                .backToFeatured
                 {
                     margin-top: 1em;
                 }
                 
-                #outputCategoriesMenu /* APPS | COLLECTIONS | REPORTS | GRAPHICS */
+                #featuredContainer
                 {
-                    padding-top: 3.2em;
-                    margin-left: 1.1em;
-                }
-                
-                #outputCategoriesMenu a
-                {
-                    font-size: 0.7em;
-                }
-                
-                #featured
-                {
-                    border-radius: 1em;
-                    padding: 0.7em;   
-                }
-            }
-            
-            @media (max-width:620px)
-            {
-                #outputCategoriesMenu /* APPS | COLLECTIONS | REPORTS | GRAPHICS */
-                {
-                    padding-top: 6em;
+                    padding: 1em;   
                 }
             }
         </style>
@@ -228,14 +211,14 @@
     <body>
         <div class="container">
             <header>
-                <nav aria-label="primary-navigation">
+                <nav>
                     <ul id="a11yNav">
                         <li><a href="#main" class="themeBlockDark">Skip to main content</a></li>
                         <li><a href="#footer" class="themeBlockDark">Skip to footer</a></li>
                     </ul>
                     <img src="https://www.trafforddatalab.io/assets/logo/trafforddatalab_logo.svg" alt="Trafford Data Lab" width="93" class="traffordDataLabLogo"/>
-                    <p id="mainMenu" class="hideContent">Main Menu</p>
-                    <ul class="navbar" labelled-by="mainMenu">
+                    <p class="hideContent">Main Menu</p>
+                    <ul id="mainMenu" class="navbar">
                         <li><a href="charticles.html">Charticles</a></li>
                         <li><a href="data.html">Data</a></li>
                         <li><a href="learning.html">Learning</a></li>
@@ -247,49 +230,49 @@
             <main id="main">
                 <h1>Trafford Data Lab</h1>
 
-                <p id="intro">Supporting decision-making in Trafford by revealing patterns in data through visualisation. On this page you can find outputs arranged into 4 categories, with a selection of these featured below. The category links take you directly to each section.</p>
+                <p id="intro">Supporting decision-making in Trafford by revealing patterns in data through visualisation. We produce a variety of different types of output with a selection featured below. The headings link to more outputs of the same type and commonly used terms are in our <a href="glossary.html">glossary</a>.</p>
 
-                <nav id="outputCategoriesMenu" aria-label="in-page navigation for output categories">
-                    <a href="#apps">Apps</a>
-                    <a href="#collections">Collections</a>
-                    <a href="#reports">Reports</a>
-                    <a href="#graphics">Graphics</a>
-                </nav>
-                <section id="featured" aria-label="items will open in a new window" style="clear: both;">
-                    <div class="cardContainer">
-                        <div class="card labBorder labBorderfeatured themeBlockLight notification">
-                            <a href="https://www.trafforddatalab.io/explore/" target="_blank"><h3 class="cardHead themeLink">Explore</h3><img src="images/explore_thumbnail.png" class="thumbnail" alt=""/></a><br class="hideContent"/>
-                            <span class="cardBody">Discover the different geographic areas of Trafford and visualise all of our spatial datasets in one application. Use the geolocation facility (on supported devices with the user's permission) to see where you are and discover what is around you.</span>
-                            <span class="badge" aria-label="This is a featured app"><span aria-hidden="true"><span class="fa-solid fa-star"></span> app</span></span>
+                <section id="featured" aria-label="app items will open in a new window">
+                    <h2>Featured:</h2>
+                    
+                    <div id="featuredContainer" class="cardContainer themeBlockLight">
+                        <div class="card labBorder labBorderfeatured">
+                            <div class="themeBlockDark"><a href="#apps">more apps <span class="fa-solid fa-circle-chevron-right" aria-hidden="true"></span></a></div>
+                            <div>
+                                <a href="https://trafforddatalab.shinyapps.io/trafford_themes/" target="_blank"><h3 class="cardHead themeLink">Trafford Themes</h3><img src="images/trafford_themes_thumbnail.png" class="thumbnail" alt=""/></a><br class="hideContent"/>
+                                <span class="cardBody">Interactive dashboard visualising data and comparisons for a range of themed indicators. These themes relate to the work undertaken by Trafford Council, including those defined by the <a href="https://www.trafford.gov.uk/about-your-council/strategies-plans-and-policies/Corporate-Plan.aspx" target="_blank">corporate priorities</a>, as well as other areas, providing an overview of the borough.</span>
+                            </div>
                         </div>
                         
-                        <div class="card labBorder labBorderfeatured themeBlockLight notification">
-                            <a href="census2021.html">
-                                <h3 class="cardHead themeLink">Census 2021</h3>
-                                <div class="thumbnail" style="width: 150px; height: 100px; background-color: #f9f9f9;">
-                                    <span class="far fa-check-circle" style="margin-left: 26px; margin-top: 2px;"></span>
-                                </div>
-                            </a><br class="hideContent"/>
-                            <span class="cardBody">Visit our Census 2021 collections page for all our outputs relating to the census conducted by the <a href="https://www.ons.gov.uk/" target="_blank">Office for National Statistics</a> in 2021 and published between 2022-2023.</span>
-                            <span class="badge" aria-label="This is a featured collection"><span aria-hidden="true"><span class="fa-solid fa-star"></span> collection</span></span>
+                        <div class="card labBorder labBorderfeatured">
+                            <div class="themeBlockDark"><a href="#collections">more collections <span class="fa-solid fa-circle-chevron-right" aria-hidden="true"></span></a></div>
+                            <div>
+                                <a href="trafford_wards.html"><h3 class="cardHead themeLink">Trafford Wards</h3><img src="images/trafford_wards_collection_thumbnail.png" class="thumbnail" alt=""/></a><br class="hideContent"/>
+                                <span class="cardBody">All our outputs and resources relating to Trafford's wards which came into force in May 2023. Profiles are available for each ward which include data from the 2021 census.</span>
+                            </div>
                         </div>
                         
-                        <div class="card labBorder labBorderfeatured themeBlockLight notification">
-                            <a href="https://www.trafforddatalab.io/analysis/demographics/population/populationEstimates.html"><h3 class="cardHead themeLink">Trafford's population estimates</h3><img src="images/population_estimates_trafford_thumbnail.png" class="thumbnail" alt=""/></a><br class="hideContent"/>
-                            <span class="cardBody">Analysis of Trafford's population change by age and components such as migration, deaths and births from mid-2022 to mid 2023.</span>
-                            <span class="badge" aria-label="This is a featured report"><span aria-hidden="true"><span class="fa-solid fa-star"></span> report</span></span>
+                        <div class="card labBorder labBorderfeatured">
+                            <div class="themeBlockDark"><a href="#reports">more reports <span class="fa-solid fa-circle-chevron-right" aria-hidden="true"></span></a></div>
+                            <div>
+                                <a href="https://www.trafforddatalab.io/analysis/demographics/population/populationEstimates.html"><h3 class="cardHead themeLink">Trafford's population estimates</h3><img src="images/population_estimates_trafford_thumbnail.png" class="thumbnail" alt=""/></a><br class="hideContent"/>
+                                <span class="cardBody">Analysis of Trafford's population change by age and components such as migration, deaths and births from mid-2022 to mid 2023.</span>
+                            </div>
                         </div>
                         
-                        <div class="card labBorder labBorderfeatured themeBlockLight notification">
-                            <a href="accessible_graphics/trafford_wards_localities.html"><h3 class="cardHead themeLink">Trafford wards and localities</h3><img src="images/static_trafford_wards_localities_thumbnail.png" class="thumbnail" alt=""/></a><br class="hideContent"/>
-                            <span class="cardBody">Map of Trafford showing the boundaries of the 21 wards and 4 localities.</span>
-                            <span class="badge" aria-label="This is a featured graphic"><span aria-hidden="true"><span class="fa-solid fa-star"></span> graphic</span></span>
+                        <div class="card labBorder labBorderfeatured">
+                            <div class="themeBlockDark"><a href="#graphics">more graphics <span class="fa-solid fa-circle-chevron-right" aria-hidden="true"></span></a></div>
+                            <div>
+                                <a href="accessible_graphics/trafford_wards_localities.html"><h3 class="cardHead themeLink">Trafford wards and localities</h3><img src="images/static_trafford_wards_localities_thumbnail.png" class="thumbnail" alt=""/></a><br class="hideContent"/>
+                                <span class="cardBody">Map of Trafford showing the boundaries of the 21 wards and 4 localities.</span>
+                            </div>
                         </div>
                     </div>
                 </section>
 
                 <p style="margin-top: 2em;">
-                    <span id="filterContainer" style="display: inline-block;"></span>  Further outputs are available from the main menu and common terms used throughout the website are in our <a href="glossary.html">glossary</a>.
+                    <a href="charticles.html">Charticles</a>, <a href="data.html">Data</a> and <a href="learning.html">Learning</a> outputs are available from the <a id="menuHighlighter" href="#mainMenu">main menu</a>.
+                    The following sections contain interactive <a href="#apps">apps</a>, <a href="#collections">collections</a> of multiple outputs based on a theme, in-depth analysis <a href="#reports">reports</a> and static <a href="#graphics">graphics</a>. <span id="filterContainer" style="display: inline-block;"></span>
                 </p>
 
                 <section id="apps" aria-label="items will open in a new window">
@@ -396,7 +379,7 @@
                     </div>
                 </section>
                 
-                <a href="#outputCategoriesMenu" class="backToOutputCategoriesMenu"><span aria-label="return to output category links" class="fa-solid fa-circle-up"></span><span class="hideContent">Top</span></a>
+                <a href="#featured" class="backToFeatured"><span aria-label="return to output category links" class="fa-solid fa-circle-up"></span><span class="hideContent">Top</span></a>
 
                 <section id="collections">
                     <h2>Collections</h2>
@@ -438,7 +421,7 @@
                     </div>
                 </section>
                 
-                <a href="#outputCategoriesMenu" class="backToOutputCategoriesMenu"><span aria-label="return to output category links" class="fa-solid fa-circle-up"></span><span class="hideContent">Top</span></a>
+                <a href="#featured" class="backToFeatured"><span aria-label="return to output category links" class="fa-solid fa-circle-up"></span><span class="hideContent">Top</span></a>
 
                 <section id="reports">
                     <h2>Reports</h2>
@@ -485,7 +468,7 @@
                     </div>
                 </section>
                 
-                <a href="#outputCategoriesMenu" class="backToOutputCategoriesMenu"><span aria-label="return to output category links" class="fa-solid fa-circle-up"></span><span class="hideContent">Top</span></a>
+                <a href="#featured" class="backToFeatured"><span aria-label="return to output category links" class="fa-solid fa-circle-up"></span><span class="hideContent">Top</span></a>
 
                 <section id="graphics">
                     <h2>Graphics</h2>
@@ -517,7 +500,7 @@
                     </div>
                 </section>
                 
-                <a href="#outputCategoriesMenu" class="backToOutputCategoriesMenu"><span aria-label="return to output category links" class="fa-solid fa-circle-up"></span><span class="hideContent">Top</span></a>
+                <a href="#featured" class="backToFeatured"><span aria-label="return to output category links" class="fa-solid fa-circle-up"></span><span class="hideContent">Top</span></a>
             </main>
 
             <footer id="footer">
@@ -541,7 +524,7 @@
             var contentFilter = new LabFilter({
                 filterContainer: document.getElementById('filterContainer'),    // where we want the filter input box creating
                 filterClass: 'labBorder',  // creates the focus outline on-hover
-                filterLabel: 'You can filter the outputs in all categories to help find what you need: ',
+                filterLabel: 'You can filter them: ',
                 noMatchesClass: 'contentBlock themeBlockLight'
             })
 
